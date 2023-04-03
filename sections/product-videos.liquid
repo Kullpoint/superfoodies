@@ -1,0 +1,220 @@
+
+{% style %}
+    .product_videos{
+        background-image: url('{{section.settings.background_image | img_url: "master" }}');
+        background-color: {{section.settings.background_color}};
+    }
+    .product_videos_wrapper{
+        padding-top: {{section.settings.padding_top}}px;
+        padding-bottom: {{section.settings.padding_bottom}}px;
+    }
+    {% if section.settings.gradient_overlay != false %}
+        .product_videos_item_video::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(78, 74, 51, 0.5), rgba(78, 74, 51, 0.5));
+            z-index: 1;
+            cursor: pointer;
+            transition: all 0.2s linear;
+        }
+    {% endif %}
+{% endstyle %}
+
+<style>
+    .product_videos_item{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+    }
+    .product_videos_item:last-of-type{
+        margin-bottom: 0px;
+    }
+    .product_videos_item.product_videos_item_left{
+        flex-direction: row-reverse;
+    }
+    .product_videos_item_text{
+        max-width: 640px;
+        margin-right: 44px;
+    }
+    .product_videos_item.product_videos_item_left .product_videos_item_text{
+        margin-right: 0px;
+        margin-left: 44px;
+    }
+    .product_videos_item_video{
+        position: relative;
+        max-width: 43.3%;
+        width: 100%;
+        display: flex;
+    }
+    .product_videos_item_video-button{
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        max-width: 48px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+    .product_videos_item_video video{
+        width: 100%;
+        object-fit: cover;
+    }
+    .product_videos_item_text-title{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 47px;
+        color: #2D392E;
+        margin-bottom: 24px;
+    }
+    .product_videos_item_text-content p{
+        margin: 0;
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: #2D392E;
+    }
+    .product_videos_item_video.video_played::after{
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+        transition: all 0.2s linear;
+        z-index: -1;
+    }   
+    .product_videos_item_video.video_played > .product_videos_item_video-button{
+        display: none;
+    }
+</style>
+
+
+<div class="product_videos">
+    <div class="product_videos_wrapper page_width">
+        {% for block in section.blocks %}
+            <div class="product_videos_item product_videos_item_{{block.settings.video_position}}">
+                <div class="product_videos_item_text">
+                    <div class="product_videos_item_text-title">{{block.settings.title}}</div>
+                    <div class="product_videos_item_text-content">
+                        {{block.settings.content}}
+                    </div>
+                </div>
+                <div class="product_videos_item_video">
+                    <div class="product_videos_item_video-button">{{section.settings.play_icon}}</div>
+                    <video src="{{block.settings.video_url}}" preload="metadata" ></video>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    let allSectionVideos = document.querySelectorAll('.product_videos_item_video')
+    allSectionVideos.forEach( videoWrapper => {
+        videoWrapper.addEventListener('click', ()=> {
+            let video = videoWrapper.querySelector('video')
+            if (video.paused) {
+                video.play()
+                video.controls = true
+                videoWrapper.classList.add('video_played')
+            } else {
+                video.pause()
+                video.controls = false
+                videoWrapper.classList.remove('video_played')
+            }
+        })
+    });
+</script>
+
+{% schema %}
+{
+    "name": "Product videos",
+    "settings": [
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding top",
+            "unit": "px",
+            "min": 10,
+            "max": 200,
+            "step": 5,
+            "default": 80
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding bottom",
+            "unit": "px",
+            "min": 10,
+            "max": 200,
+            "step": 5,
+            "default": 80
+        },
+        {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background image"
+        },
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background color",
+            "default": "#CFD3B8"
+        },
+        {
+            "type": "html",
+            "id": "play_icon",
+            "label": "Play icon"
+        },
+        {
+            "type": "checkbox",
+            "id": "gradient_overlay",
+            "label": "Use gradient overlay",
+            "default": true
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Video with Text",
+            "type": "block",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "LOREM IPSUM DOLOREM"
+                },
+                {
+                    "type": "richtext",
+                    "id": "content",
+                    "label": "Content"
+                },
+                {
+                    "type": "select",
+                    "id": "video_position",
+                    "label": "Video position",
+                    "options": [
+                        {
+                            "value": "right",
+                            "label": "Right"
+                        },
+                        {
+                            "value": "left",
+                            "label": "Left"
+                        }
+                    ]
+                },
+                {
+                    "type": "url",
+                    "id": "video_url",
+                    "label": "Video"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

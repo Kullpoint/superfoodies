@@ -1,0 +1,78 @@
+{% assign collection = collections[section.settings.collection] %}
+
+<section class="f-collection container">
+  <div class="f-collection__inner">
+    <div class="f-collection__info" style="background-image: url({{ section.settings.image | img_url: '550x' }})">
+      <div class="f-collection__title">
+        {{ section.settings.title }}
+      </div>
+      <div class="f-collection__subtitle">
+        {{ section.settings.subtitle }}
+      </div>
+      <a href="{{ collection.url }}" class="btn f-collection__link">
+        {{ section.settings.button_text }}
+      </a>
+    </div>
+    <div class="f-collection__list">
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        <div class="f-collection__product-wrap">
+          {% include 'product-item' %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured collection",
+  "class": "featured-collection-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured collection",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

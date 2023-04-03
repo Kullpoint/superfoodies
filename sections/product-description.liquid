@@ -1,0 +1,194 @@
+
+{% style %}
+    .product_description_collapsible{
+        background-color: {{section.settings.background}};
+    }
+    .product_description_collapsible_wrapper{
+        padding-top: {{section.settings.padding_top}}px;
+        padding-bottom: {{section.settings.padding_bottom}}px;
+    }
+{% endstyle %}
+
+<style>
+    .product_description_collapsible-title{
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 47px;
+        text-align: left;
+        color: #2D392E;
+        margin-bottom: 24px;
+    }
+    .content_item_ellipsis{
+        display: -webkit-box;
+        max-width: 100%;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .product_description_collapsible-content{
+        margin-bottom: 24px;
+        max-height: 230px;
+        overflow: hidden;
+        transition: all .3s linear;
+    }
+    .product_description_collapsible-content_item{
+        margin-bottom: 20px;
+    }
+    .content_item-title{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        color: #2D392E;
+        font-family: 'Helvetica';
+    }
+    .content_item-info{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: #2D392E;
+        font-family: 'Helvetica';
+        margin: 0;
+    }
+    .product_description_collapsible-buttons{
+        max-width: 192px;
+        width: 100%;
+        padding: 5px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 2px solid #2D392E;
+        cursor: pointer;
+    }
+    .product_description_collapsible-buttons span{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+    }
+    .product_description_collapsible-buttons div{
+        display: flex;
+    }
+    .buttons_collapsible_hidden{
+        display: none;
+    }
+</style>
+
+<div class="product_description_collapsible">
+    <div class="product_description_collapsible_wrapper page_width">
+        <div class="product_description_collapsible-title">{{section.settings.title}}</div>
+        <div class="product_description_collapsible-content">
+            {% for block in section.blocks %}
+                <div class="product_description_collapsible-content_item">
+                    <div class="content_item-title">
+                        {{block.settings.title}}
+                    </div>
+                    <div class="content_item-info {% if forloop.index == 2 %}content_item_ellipsis{% endif %}">
+                        {{block.settings.content}}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="product_description_collapsible-buttons" onclick="toggleContent(this)">
+            <span class="buttons_more">{{section.settings.more_btn}}</span>
+            <span class="buttons_less buttons_collapsible_hidden">{{section.settings.less_btn}}</span>
+            <div>
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1.5L6 6.5L11 1.5" stroke="#2D392E" stroke-width="2" stroke-linecap="round"/>
+                </svg>                    
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function toggleContent(btn){
+        let collapseContent = btn.previousElementSibling
+        if (collapseContent.classList.contains('collapse_visible')){
+            collapseContent.style.maxHeight = '230px'
+            collapseContent.classList.remove('collapse_visible')
+            setTimeout(() => {
+                document.querySelectorAll('.content_item-info')[1].classList.add('content_item_ellipsis')
+            }, 300);
+        } else {
+            document.querySelector('.content_item_ellipsis').classList.remove('content_item_ellipsis')
+            collapseContent.classList.add('collapse_visible')
+            collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px'
+        }
+
+    }
+</script>
+
+{% schema %}
+{
+    "name": "Product Description",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "PRODUCTBESCHRIJVING"
+        },
+        {
+            "type": "text",
+            "id": "more_btn",
+            "label": "More button text",
+            "default": "MEER LEZEN"
+        },
+        {
+            "type": "text",
+            "id": "less_btn",
+            "label": "Less button text",
+            "default": "INSTORTEN"
+        },
+        {
+            "type": "color",
+            "id": "background",
+            "label": "Background",
+            "default": "#F9EFE0"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding top",
+            "unit": "px",
+            "min": 10,
+            "max": 200,
+            "step": 2,
+            "default": 68
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding bottom",
+            "unit": "px",
+            "min": 10,
+            "max": 200,
+            "step": 2,
+            "default": 76
+        }
+    ],
+    "blocks": [
+        {
+            "type": "content",
+            "name": "Content",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Title"
+                },
+                {
+                    "type": "richtext",
+                    "id": "content",
+                    "label": "Content",
+                    "default": "<p>Content</p>"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

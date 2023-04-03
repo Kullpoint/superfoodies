@@ -1,0 +1,14 @@
+<div class="blog__tags">
+  <div class="blog__tags-title">
+    Tags
+    {%- render 'icon', icon: 'arrow-bottom' -%}
+  </div>
+  <div class="blog__tags-list">
+    <a href="{{ blog.url }}" class="blog__tag{% if current_tags == blank %} is-selected{% endif %}">{{ 'blog.general.all_tag' | t }}</a>
+    {%- for tag in blog.all_tags -%}
+      <a href="/blogs/{{ blog.handle }}/tagged/{{ tag | handleize }}" class="blog__tag{% if current_tags contains tag %} is-selected{% endif %}">
+        {{ tag | replace: '-', ' ' }}
+      </a>
+    {%- endfor -%}
+  </div>
+</div>

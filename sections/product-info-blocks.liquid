@@ -1,0 +1,137 @@
+
+<style>
+    .product_info_blocks_item > div{
+        flex: 1;
+    }
+    .product_info_blocks_item_wrapper{
+        padding: 30px 117px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .product_info_blocks_item{
+        display: flex;
+    }
+    .product_info_blocks_item-right{
+        flex-direction: row-reverse;
+    }
+    .product_info_blocks_item_content-title{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 47px;
+        color: #2D392E;
+        margin-bottom: 24px;
+    }
+    .product_info_blocks_item_content-text p, .product_info_blocks_item_content-text li{
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: #2D392E;
+    }
+    .product_info_blocks_item_content-text h4{
+        margin: 0;
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        color: #2D392E;
+    }
+    .product_info_blocks_item_content-text ul, .product_info_blocks_item_content-text ol{
+        list-style-position: outside;
+        margin-left: 17px;
+    }
+    .product_info_blocks_item_content-text li::marker{
+        margin-left: -15px;
+    }
+    .product_info_blocks_item_image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<div class="product_info_blocks">
+    <div class="product_info_blocks_wrapper">
+        {% for block in section.blocks %}
+            <div class="product_info_blocks_item product_info_blocks_item-{{block.settings.position}} product_info_blocks_item-{{forloop.index}}">
+                {% style %}
+                    .product_info_blocks_item-{{forloop.index}}{
+                        background-color: {{block.settings.background}};
+                    }
+                {% endstyle %}
+                <div class="product_info_blocks_item_content">
+                    <div class="product_info_blocks_item_wrapper">
+                        <div class="product_info_blocks_item_content-title">
+                            {{block.settings.title}}
+                        </div>
+                        <div class="product_info_blocks_item_content-text">
+                            {{block.settings.content}}
+                        </div>
+                    </div>
+                </div>
+                <div class="product_info_blocks_item_image">
+                    <img src="{{block.settings.image | img_url: 'master' }}" alt="{{block.settings.image.alt}}">
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Product info blocks",
+    "blocks": [
+        {
+            "type": "block",
+            "name": "Info block",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Title"
+                },
+                {
+                    "type": "richtext",
+                    "id": "content",
+                    "label": "Content"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "color",
+                    "id": "background",
+                    "label": "Background",
+                    "default": "#EEECCA"
+                },
+                {
+                    "type": "select",
+                    "id": "position",
+                    "label": "Text position",
+                    "options": [
+                        {
+                            "value": "left",
+                            "label": "Left"
+                        },
+                        {
+                            "value": "right",
+                            "label": "Right"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

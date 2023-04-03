@@ -1,0 +1,122 @@
+<section class="promo">
+  <div class="promo__slider d-lg-none">
+    {% for block in section.blocks %}
+    {%- comment -%}
+      New set-up of loading images on the home page. Do not remove this as this is enhancing page speed. Forloop.index 1 is displayed immediately(no lazyload), forloop 2 uses lazyload
+    {%- endcomment -%}
+      {% if forloop.index == 1 %}
+        <a href="{{ block.settings.link }}" class="promo__slide promo__slide--{{ forloop.index }}">
+          <img loading="eager" src="{{ block.settings.bg | img_url: '800x' }}" alt="" width="{{ block.settings.bg.width}}">
+          <div class="promo__title">
+            {{ block.settings.title }}
+          </div>
+          <span class="promo__subtitle">
+            {{ block.settings.subtitle }}
+          </span>
+        </a>
+      {% endif %}
+      {%- comment -%}
+        New set-up of loading images on the home page. Do not remove this as this is enhancing page speed
+      {%- endcomment -%}
+      {% if forloop.index >= 2 %}
+        <a href="{{ block.settings.link }}" class="lazyload promo__slide promo__slide--{{ forloop.index }}" style="background-image: url({{ block.settings.bg | img_url: '50x' }})" data-bgset="{{ block.settings.bg | img_url: '800x' }}">
+          <div class="promo__title">
+            {{ block.settings.title }}
+          </div>
+          <span class="promo__subtitle">
+            {{ block.settings.subtitle }}
+          </span>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="container">
+    <div class="promo__mosaic d-none d-lg-flex">
+      <div class="promo__mosaic-side promo__mosaic-side--left">
+        {% for block in section.blocks %}
+          {% if forloop.index < 3 %}
+            <a href="{{ block.settings.link }}" class="lazyload promo__slide promo__slide--{{ forloop.index }}" style="background-image: url({{ block.settings.bg | img_url: '50x' }})" data-bg="{{ block.settings.bg | img_url: '800x' }}">
+              <div class="promo__title">
+                {{ block.settings.title }}
+              </div>
+              <span class="promo__subtitle">
+            {{ block.settings.subtitle }}
+          </span>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="promo__mosaic-side promo__mosaic-center">
+        {% for block in section.blocks %}
+          {% if forloop.index == 3 %}
+            <a href="{{ block.settings.link }}" class="lazyload promo__slide promo__slide--{{ forloop.index }}" style="background-image: url({{ block.settings.bg | img_url: '50x' }})" data-bgset="{{ block.settings.bg | img_url: '800x' }}">
+              <div class="promo__title">
+                {{ block.settings.title }}
+              </div>
+              <span class="promo__subtitle">
+            {{ block.settings.subtitle }}
+          </span>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="promo__mosaic-side promo__mosaic-side--right">
+        {% for block in section.blocks %}
+          {% if forloop.index > 3 %}
+            <a href="{{ block.settings.link }}" class="lazyload promo__slide promo__slide--{{ forloop.index }}" style="background-image: url({{ block.settings.bg | img_url: '50x' }})" data-bgset="{{ block.settings.bg | img_url: '800x' }}">
+              <div class="promo__title">
+                {{ block.settings.title }}
+              </div>
+              <span class="promo__subtitle">
+            {{ block.settings.subtitle }}
+          </span>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Mosaic slider",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "bg",
+          "label": "Background"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mosaic slider",
+      "category": "Collections"
+    }
+  ]
+}
+{% endschema %}

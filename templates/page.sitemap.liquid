@@ -1,0 +1,48 @@
+<div class="container container--narrow">
+  <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb">
+    <ol class="breadcrumb__list">
+      <li class="breadcrumb__item">
+        <a class="breadcrumb__link link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a> {%- render 'icon', icon: 'arrow-right' -%}
+      </li>
+      <li class="breadcrumb__item">
+        <span class="breadcrumb__link" aria-current="page">{{ page.title }}</span>
+      </li>
+    </ol>
+  </nav>
+  <header class="page__header">
+    <h1 class="page__title heading h1">{{ page.title }}</h1>
+    <span class="page-date">{{ page.published_at | date: " %B %d , %Y" }}</span>
+  </header>
+  <div class="page__content rte">
+    {{ page.content }}
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Collecties</h2>
+        <ul>
+          {% for c in collections %}
+          <li>
+            <a href="{{ c.url }}">{{ c.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h2>Producten</h2>
+        <ul>
+          {% for product in collections.all.products %}
+          <li>
+            <a href="{{ product.url }}">{{ product.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>    
+    <!-- <div class="page__content--left">
+     
+    </div>
+    <div class="page__content--right">
+      {% section 'page-featured-products' %}
+    </div> -->
+    
+  </div>
+</div>

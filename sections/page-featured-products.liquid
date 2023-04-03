@@ -1,0 +1,90 @@
+
+
+{%- capture section_settings -%}
+{
+  "showShippingEstimator": false,
+  "showQuantitySelector": {{ section.settings.show_quantity_selector | json }},
+  "showPaymentButton": {{ section.settings.show_payment_button | json }},
+  "showInventoryQuantity": {{ section.settings.show_inventory_quantity | json }},
+  "lowInventoryThreshold": {{ section.settings.low_inventory_threshold | json }},
+  "galleryTransitionEffect": {{ section.settings.carousel_effect | json }},
+  "enableImageZoom": {{ section.settings.enable_image_zoom | json }},
+  "zoomEffect": {{ section.settings.zoom_effect | json }},
+  "productOptions": {{ product.options | json | escape }},
+  "enableHistoryState": false,
+  "infoOverflowScroll": false,
+  "isQuickView": false
+}
+{%- endcapture -%}
+
+{% assign empty_section = false %}
+{% for block in section.blocks %}
+  {% if forloop.first == true %}
+    {% if block.settings.product == blank %}
+      {% assign empty_section = true %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<section class="featured-section {% if empty_section %} empty {% endif %}" data-section-id="{{ section.id }}" data-section-type="product" data-section-settings='{{ section_settings }}'>
+    {%- if section.settings.title != blank -%}
+      <header class="section__header">
+        <h2 class="section__title heading h3">{{ section.settings.title | escape }}</h2>
+
+      </header>
+    {%- endif -%}
+
+
+  <div class="container container--flush">
+    <div class="page-featured-products">
+        {% for block in section.blocks %}
+       
+             {%- assign product = all_products[block.settings.product] -%}
+             <div class="page-featured-product">
+                <img class="page-featured-product__image" src="{{ product.featured_image | img_url: '200x' }}" data-src="{{ product.featured_image | img_url: '500x' }}" alt="" class="product-item__img lazyload">
+                <div class="page-featured-product__info">
+                  <a class="page-featured-product__title" href="{{ product.url }}" >{{ product.title }}</a>
+                  <div class="product-item__prices">
+                    <div class="product-item__price">
+                      {{ product.price_min | money }}
+                    </div>
+                    {% if product.compare_at_price_max > product.price_min %}
+                      <div class="product-item__compare-price">
+                        {{ product.compare_at_price_max | money }}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+             </div>
+        {% endfor %}
+    </div>
+  </div>
+
+
+{% schema %}
+{
+  "name": "Featured product",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section title",
+      "default": "Featured products"
+    }
+  ],
+  "blocks": [ 
+    {
+        "name": "Product",
+        "type": "product",
+        "settings": [
+            {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+            }  
+        ]
+    }
+  
+  ]
+}
+{% endschema %}

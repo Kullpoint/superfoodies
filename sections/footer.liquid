@@ -1,0 +1,206 @@
+<footer class="footer" data-section-id="{{ section.id }}" data-section-type="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__menu-wrapper">
+      <div class="footer__menu row align-items-start">
+        {% for link in linklists[section.settings.footer_menu].links %}
+          <div class="col-6 col-md-3 col-lg-2">
+            <div class="footer__menu-column">
+              <div class="footer__menu-title">
+                {{ link.title }}
+              </div>
+              <div class="footer__menu-sublist">
+                {% for sublink in link.links %}
+                  <a href="{{ sublink.url }}" class="footer__link">
+                    {{ sublink.title }}
+                  </a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+          <div class="col-6 col-md-3 col-lg-2">
+            <div class="footer__menu-column">
+              <div class="footer__menu-title">
+                {{ 'general.password.follow_us' | t }}
+              </div>
+              <div class="footer__menu-sublist footer__social">
+                {% render 'social-media', show_social_media_name: false %}
+              </div>
+
+              {% assign menu = section.settings.footer_nav_after_socials %}
+              {% if menu != blank %}
+                <div class="footer__menu-sublist mt-2">
+                    {% for sublink in linklists[menu].links %}
+                      <a href="{{ sublink.url }}" class="footer__link">
+                        {{ sublink.title }}
+                      </a>
+                    {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 footer__menu-column--contacts-mob">
+            <div class="footer__menu-column">
+              <div class="footer__menu-title">
+                {{ 'footer.contacts_title' | t }}
+              </div>
+              <ul class="footer__menu--contacts footer__menu-sublist ">
+                {% if section.settings.phone != blank %}
+                  <li class="footer-menu__item footer__link">
+                    {{ 'footer.phone' | t }}: <a href="tel:{{ section.settings.phone | remove: '+' | remove: '(' | remove: ')' | remove: ' '}}">{{ section.settings.phone }}</a>
+                  </li>
+                {% endif %}
+                <li class="footer-menu__item footer__link">
+                  {{ 'footer.whatsapp' | t }}: <a href="https://wa.me/{{ section.settings.phone2 | remove: '+' | remove: '(' | remove: ')' | remove: ' '}}">{{ section.settings.phone2 }}</a>
+                </li>
+                <li class="footer-menu__item footer__link">
+                  {{ 'footer.email' | t }}: <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a>
+                </li>
+              </ul>
+            </div>
+            </div>
+      </div>
+      
+      <div class="footer__menu-column footer__menu-column--contacts footer__menu-column--contacts-desk">
+        <div class="footer__menu-title">
+          {{ 'footer.contacts_title' | t }}
+        </div>
+        <ul class="footer__menu--contacts footer__menu-sublist ">
+          {% if section.settings.phone != blank %}
+            <li class="footer-menu__item footer__link">
+              {{ 'footer.phone' | t }}: <a href="tel:{{ section.settings.phone | remove: '+' | remove: '(' | remove: ')' | remove: ' '}}">{{ section.settings.phone }}</a>
+            </li>
+          {% endif %}
+          <li class="footer-menu__item footer__link">
+            {{ 'footer.whatsapp' | t }}: <a href="https://wa.me/{{ section.settings.phone2 | remove: '+' | remove: '(' | remove: ')' | remove: ' '}}">{{ section.settings.phone2 }}</a>
+          </li>
+          <li class="footer-menu__item footer__link">
+            {{ 'footer.email' | t }}: <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a>
+          </li>
+        </ul>
+        </div>
+    </div>
+    <div class="footer__bottom row align-items-center flex-row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-8">
+        <div class="row">
+          <div class="col-12 mb-3 mb-md-2 mb-lg-0 col-lg-4">
+            <div class="footer__copy text-md-left">
+              © {% if section.settings.copy_date_start != blank %}{{ section.settings.copy_date_start }} - {% endif %}{{ 'now' | date: "%Y" }} {{ section.settings.copy }}
+            </div>
+          </div>
+          <div class="col-12 mb-3 mb-md-0 mb-lg-0 col-lg-8">
+            {% assign menu = section.settings.footer_info_nav %}
+
+            {% if menu != blank %}
+              <ul class="nav__list footer__menu text-md-left text-lg-center">
+                {% for link in linklists[menu].links %}
+                  <li class="nav__item list--unstyled d-inline-block px-3 {% if forloop.first %}pl-md-0 pl-lg-3{% endif %}">
+                    <a href="{{ link.url }}" class="nav__link">{{ link.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 col-lg-4">
+        <div class="footer__payments">
+
+          {% if shop.permanent_domain == 'superfoodies-nl.myshopify.com' and customer.default_address and customer.default_address.country_code == 'BE' %}
+            {% assign payment_icons = 'mister_cash,paypal,master,visa,american_express,ideal,v_pay' | remove: ' ' | split: ',' %}
+          {% else %}
+            {% assign payment_icons = section.settings.payments | remove: ' ' | split: ',' %}
+          {% endif %}
+
+          {% for icon_alias in payment_icons %}
+            <img loading="lazy" class="payment-icon-svg icon icon-{{ icon_alias }}"
+                src="{{ 'payment-icon-' | append: icon_alias | append: '.svg' | asset_url }}"
+                alt="">
+          {% endfor %}
+
+          {% comment %}
+          {%- for type in payment_icons -%}
+            <div class="payments__icon icon--{{ type }}">
+              {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+            </div>
+          {%- endfor -%}
+          {% endcomment %}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_social_media",
+      "label": "Show social media",
+      "info": "Make sure to have properly configured your social media in the theme settings.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "Show payment icons",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer menu"
+    },
+    {
+      "type": "textarea",
+      "id": "payments",
+      "label": "Payment icons",
+      "default": "visa,master,american_express,paypal,apple_pay,organic-eu",
+      "info": "Available icons: visa,master,american_express,paypal,apple_pay,organic-eu,vegan_official,of_and_g,post_nl,klarna,mister_cash,sofort,v_pay"
+    },
+    {
+      "type": "text",
+      "id": "copy_date_start",
+      "label": "Copyright Date Start",
+      "default": "2001"
+    },
+    {
+      "type": "text",
+      "id": "copy",
+      "label": "Copyright label",
+      "default": "Superfoodies.nl"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_nav_after_socials",
+      "label": "Footer Nav. After Socials"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_info_nav",
+      "label": "Footer Info Nav"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone number",
+      "default": "+31 (0) 20 700 98 57"
+    },
+    {
+      "type": "text",
+      "id": "phone2",
+      "label": "Whatsapp number",
+      "default": "+31 (0) 6 2790 5385"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email",
+      "default": "info@superfoodies.nl"
+    }
+  ]
+}
+{% endschema %}

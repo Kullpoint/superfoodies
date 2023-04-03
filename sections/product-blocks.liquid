@@ -1,0 +1,119 @@
+{% comment %}
+<section class="p-blocks">
+  {% for block in section.blocks %}
+    <div class="p-blocks__block p-blocks__block--{{ block.settings.image_position }}" style="background-color: {{ block.settings.bg }}">
+      <div class="p-blocks__image-wrap p-blocks__image-wrap--{{ block.settings.image_size }} lazyload" data-bg="{{ block.settings.image | img_url: 'master' }}">
+      </div>
+      <div class="p-blocks__content">
+        <div class="p-blocks__title">
+          {{ block.settings.title }}
+        </div>
+        <div class="p-blocks__text">
+          {{ block.settings.content }}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+{% endcomment %}
+
+{% if product.metafields.info != blank %}
+  <section class="p-blocks">
+    {% for info in product.metafields.info.title %}
+
+      <div class="p-blocks__block p-blocks__block--{{ product.metafields.info.image_position[forloop.index0] }}" style="background-color: {{ product.metafields.info.background_color[forloop.index0] }}">
+        <div class="p-blocks__image-wrap p-blocks__image-wrap--{{ product.metafields.info.image_size[forloop.index0] }} lazyload" data-bg="{{ product.metafields.info.image[forloop.index0][0].original_src }}">
+        </div>
+        <div class="p-blocks__content">
+          <div class="p-blocks__title">
+            {{ product.metafields.info.title[forloop.index0] }}
+          </div>
+          <div class="p-blocks__text">
+            {{ product.metafields.info.content[forloop.index0] }}
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
+  </section>
+{% endif %}
+
+<style>
+  .p-blocks__text li {
+    padding-left: 26px;
+    list-style-type: none;
+    background-image: url({{ 'check-black.png' | asset_url }});
+    background-size: 14px 14px;
+    background-position: center left;
+    background-repeat: no-repeat;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Product blocks",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "image_size",
+          "label": "Image size",
+          "options": [
+            {
+              "value": "cover",
+              "label": "Cover"
+            },
+            {
+              "value": "contain",
+              "label": "Contain"
+            }
+          ],
+          "default": "cover"
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image position",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title",
+          "info": "Bold text for black color"
+        },
+        {
+          "type": "html",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "color",
+          "id": "bg",
+          "label": "Background color"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

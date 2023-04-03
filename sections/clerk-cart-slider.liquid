@@ -1,0 +1,6 @@
+<span class="clerk_m" data-template="@cart-slider-new" data-products="[{% for line_item in cart.items %}{% if forloop.index0> 0 %}, {% endif %}{{ line_item.product.id }}{% endfor %}]" ></span>
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+	Clerk('content', '.clerk_m');
+});
+</script>

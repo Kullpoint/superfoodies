@@ -1,0 +1,225 @@
+<script>
+  window.BOLD.upsell = window.BOLD.upsell || {};
+  window.BOLD.upsell.templates = window.BOLD.upsell.templates || {};
+  {% comment %} 
+  Change Upsell Title  
+  {% endcomment %} 
+  {% raw %}
+  window.BOLD.upsell.templates['upsellTitle'] =
+    `<div tabindex="1" class="bold-upsell__intro">
+        <h1 class="bold-upsell__intro-heading">
+          <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7" cy="8" r="7" fill="#160000"></circle>
+            <path d="M10 6L5.8231 10L4 8" stroke="white"></path>
+          </svg>
+          {{{offer_title}}}
+  		</h1>
+        <p class="bold-upsell__intro-heading">{{{offer_description}}}</p>
+    </div>`;
+  {% endraw %}
+  {% comment %} 
+  Change Upsell Modal Window
+  {% endcomment %} 
+  {% raw %}
+  window.BOLD.upsell.templates['upsellModalWindow'] =
+  `<div id="bold-modal" class="bold-modal bold-modal--animated">
+          <div id="bold-modal__window" class="bold-modal__window">
+              <div id="bold-modal-first__window" class="bold-modal__window_content">
+                  <a tabindex="2" title="{{language_settings.product_nothanks}}"  id="bold-modal__btn-close" class="bold-modal__btn bold-modal__btn-close">
+                      <svg width="15px" height="15px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <defs>
+                              <path d="M12,9.87867966 L5.06066017,2.93933983 C4.47487373,2.35355339 3.52512627,2.35355339 2.93933983,2.93933983 C2.35355339,3.52512627 2.35355339,4.47487373 2.93933983,5.06066017 L9.87867966,12 L2.93933983,18.9393398 C2.35355339,19.5251263 2.35355339,20.4748737 2.93933983,21.0606602 C3.52512627,21.6464466 4.47487373,21.6464466 5.06066017,21.0606602 L12,14.1213203 L18.9393398,21.0606602 C19.5251263,21.6464466 20.4748737,21.6464466 21.0606602,21.0606602 C21.6464466,20.4748737 21.6464466,19.5251263 21.0606602,18.9393398 L14.1213203,12 L21.0606602,5.06066017 C21.6464466,4.47487373 21.6464466,3.52512627 21.0606602,2.93933983 C20.4748737,2.35355339 19.5251263,2.35355339 18.9393398,2.93933983 L12,9.87867966 Z" id="path-1"></path>
+                          </defs>
+                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g id="Icons/Times/Mark" transform="translate(-2.000000, -2.000000)">
+                                  <mask id="mask-2" fill="white">
+                                      <use xlink:href="#path-1"></use>
+                                  </mask>
+                                  <use id="times" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                                  <g id="🌈/Gray/Neutral/_GN-500" mask="url(#mask-2)" fill="#808080" fill-rule="evenodd">
+                                      <rect id="Tile" x="0" y="0" width="24" height="24"></rect>
+                                  </g>
+                              </g>
+                          </g>
+                      </svg>          
+                  </a>
+                  <div class="bold-modal__top">
+                    <div id="bold-modal__title"> 
+                    {{#templates}}
+                    {{{title}}}
+                    {{/templates}}
+
+                      </div>
+                    {{#templates}}
+                    {{{footer}}}
+                    {{/templates}}
+                  </div>
+                  <div id="bold-modal__content" class="bold-modal__content bold-upsell">
+					 
+                          {{#templates}}
+                          {{{triggerProduct}}}
+                      {{/templates}}
+
+                      <div class="bold-modal__slider">
+						  {{#templates}}
+							{{{title}}}
+						  {{/templates}}
+                          <div id="product_list" class="bold-grid bold-upsell__products-list">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+          <div id="bold-modal-second__window" style="display:none"></div>
+      </div>`
+  {% endraw %}
+  {% comment %} 
+  Change Upsell Footer Links 
+  
+  {% endcomment %}
+  {% raw %}
+  window.BOLD.upsell.templates['upsellFooter'] =
+    `<div class="bold-modal__footer bold-upsell__actions">    
+        <a tabindex="101" title="{{language_settings.product_continue_text}}"  href="#" class="cart-button--secondary button button--secondary">{{language_settings.product_continue_text}}</a>
+		<a href="/cart" class="cart-button--primary button button--primary">{{language_settings.product_nothanks}}</a>
+    </div>`
+  {% endraw %}
+  {% comment %} 
+  Change Upsell Two Products
+  {% endcomment %} 
+  {% raw %}
+  window.BOLD.upsell.templates['upsellTwoProducts'] =
+	`<div class="bold-grid__column bold-grid__column--half">
+        <article id="prod_id_{{product.id}}_{{key}}" class="bold-product offer_id_{{product.upsell_offer_settings.offer_id}}">
+          <div class="bold-product__image-container">
+            <img tabindex="{{order.image}}" src="" alt="{{{product.title}}}" title="{{{product.title}}}" class="bold-product__image" />
+          </div>
+          
+          <div class="bold-product__details">
+            <div class="bold-product__info">
+                <div class="bold-product-review">
+                    <div class="yotpo bottomLine"  data-product-id="{{ product.id }}"></div>
+                </div>
+                <div class="bold-product__title">{{{product.title}}}</div>
+                <div class="bold-product__description">{{{product.description}}}</div>
+            </div>
+            
+            <div tabindex="{{order.price}}" class="bold-product__pricing">
+              <div class="bold-product__price"><del class="bold-product__price--deleted"></del></div>
+              <div class="bold-product__price current_price"></div>
+              <div class="bold-product__price additional_price"></div>
+              <div class="bold-product__message limit_disclaimer" style="display: none;">{{product.upsell_offer_settings.disclaimer_text}}</div>
+            </div>
+            
+            <div class="variant_info_container"></div>
+
+            <div class="qty_container">
+                <div class="bold-control-group__item bold-product__quantity qty_input_container" style="display:none;">
+                    <input type="number" title="{{language_settings.qty_text}}" class="bold-product__control bold-product__quantity-field qty_input" placeholder="{{language_settings.qty_text}}: 1" min="1" >
+                </div>
+            </div>
+          </div>
+          
+          <div class="bold-product__actions bold-product-options__actions" style="display: none;">
+            <a tabindex="{{order.buttons}}" href="#add-to-cart" title="{{{product.title}}} added to cart"  class="cart-button--primary button button--primary">{{language_settings.customize_options_text}}</a>
+          </div>
+
+          <div class="bold-product__actions bold-product-upsell__actions">
+            <a  tabindex="{{order.buttons}}" href="#add-to-cart" title="Add {{{product.title}}} to cart"  data-bold-component-id="" class="add-to-cart bold-product__control bold-product__button bold-product__button--primary standard_primary cart-button--primary button button--primary" added="false">{{language_settings.addtocart_button_text}}</a>
+          </div>
+    	</article>
+    </div>`
+ {% endraw %}
+  {% comment %} 
+  Change Upsell Three Or More Products
+  {% endcomment %} 
+  {% raw %}
+  window.BOLD.upsell.templates['upsellThreeOrMoreProducts'] =
+	`<div class="bold-grid__column bold-grid__column--third">
+		<article id="prod_id_{{product.id}}_{{key}}" class="bold-product offer_id_{{product.upsell_offer_settings.offer_id}}">
+          <div class="bold-product__image-container">
+            <img tabindex="{{order.image}}" src="" alt="{{{product.title}}}" title="{{{product.title}}}" class="bold-product__image" />
+          </div>
+          
+          <div class="bold-product__details">
+            <div class="bold-product__info">
+                <div class="bold-product-review">
+                    <div class="yotpo bottomLine"  data-product-id="{{ product.id }}"></div>
+                </div>
+                <div class="bold-product__title">{{{product.title}}}</div>
+                <div class="bold-product__description">{{{product.description}}}</div>
+            </div>
+            
+            <div tabindex="{{order.price}}" class="bold-product__pricing">
+              <div class="bold-product__price"><del class="bold-product__price--deleted"></del></div>
+              <div class="bold-product__price current_price"></div>
+              <div class="bold-product__price additional_price"></div>
+              <div class="bold-product__message limit_disclaimer" style="display: none;">{{product.upsell_offer_settings.disclaimer_text}}</div>
+            </div>
+            
+            <div class="variant_info_container"></div>
+
+            <div class="qty_container">
+                <div class="bold-control-group__item bold-product__quantity qty_input_container" style="display:none;">
+                    <input type="number" title="{{language_settings.qty_text}}" class="bold-product__control bold-product__quantity-field qty_input" placeholder="{{language_settings.qty_text}}: 1" min="1" >
+                </div>
+            </div>
+          </div>
+          
+          <div class="bold-product__actions bold-product-options__actions" style="display: none;">
+            <a tabindex="{{order.buttons}}" href="#add-to-cart" title="{{{product.title}}} added to cart"  class="cart-button--primary button button--primary">{{language_settings.customize_options_text}}</a>
+          </div>
+
+          <div class="bold-product__actions bold-product-upsell__actions">
+            <a  tabindex="{{order.buttons}}" href="#add-to-cart" title="Add {{{product.title}}} to cart"  data-bold-component-id="" class="add-to-cart bold-product__control bold-product__button bold-product__button--primary standard_primary cart-button--primary button button--primary" added="false">{{language_settings.addtocart_button_text}}</a>
+          </div>
+    	</article>
+    </div`
+{% endraw %}
+  
+  {% comment %} 
+  Change Upsell Single Product
+  {% endcomment %} 
+  {% raw %}
+  window.BOLD.upsell.templates['upsellSingleProduct'] =
+	`<article id="prod_id_{{product.id}}_{{key}}" class="bold-product offer_id_{{product.upsell_offer_settings.offer_id}}">
+          <div class="bold-product__image-container">
+            <img tabindex="{{order.image}}" src="" alt="{{{product.title}}}" title="{{{product.title}}}" class="bold-product__image" />
+          </div>
+          
+          <div class="bold-product__details">
+            <div class="bold-product__info">
+                <div class="bold-product-review">
+                    <div class="yotpo bottomLine"  data-product-id="{{ product.id }}"></div>
+                </div>
+                <div class="bold-product__title">{{{product.title}}}</div>
+                <div class="bold-product__description">{{{product.description}}}</div>
+            </div>
+            
+            <div tabindex="{{order.price}}" class="bold-product__pricing">
+              <div class="bold-product__price"><del class="bold-product__price--deleted"></del></div>
+              <div class="bold-product__price current_price"></div>
+              <div class="bold-product__price additional_price"></div>
+              <div class="bold-product__message limit_disclaimer" style="display: none;">{{product.upsell_offer_settings.disclaimer_text}}</div>
+            </div>
+            
+            <div class="variant_info_container"></div>
+
+            <div class="qty_container">
+                <div class="bold-control-group__item bold-product__quantity qty_input_container" style="display:none;">
+                    <input type="number" title="{{language_settings.qty_text}}" class="bold-product__control bold-product__quantity-field qty_input" placeholder="{{language_settings.qty_text}}: 1" min="1" >
+                </div>
+            </div>
+          </div>
+          
+          <div class="bold-product__actions bold-product-options__actions" style="display: none;">
+            <a tabindex="{{order.buttons}}" href="#add-to-cart" title="{{{product.title}}} added to cart"  class="cart-button--primary button button--primary">{{language_settings.customize_options_text}}</a>
+          </div>
+
+          <div class="bold-product__actions bold-product-upsell__actions">
+            <a  tabindex="{{order.buttons}}" href="#add-to-cart" title="Add {{{product.title}}} to cart"  data-bold-component-id="" class="add-to-cart bold-product__control bold-product__button bold-product__button--primary standard_primary cart-button--primary button button--primary" added="false">{{language_settings.addtocart_button_text}}</a>
+          </div>
+    	</article>`
+  {% endraw %}
+</script>

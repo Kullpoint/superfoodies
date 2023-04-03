@@ -1,0 +1,45 @@
+{%- if section.settings.show_cookie_bar -%}
+  <aside class="cookie" aria-hidden="true">
+    <div class="container">
+      <div class="cookie__inner">
+        <div class="cookie__text rte">
+          {{- section.settings.cookie_text -}}
+        </div>
+
+        {%- if section.settings.accept_button != blank -%}
+          <button type="button" class="cookie-bar__button" data-action="accept-terms">{{ section.settings.accept_button | escape }}</button>
+        {%- endif -%}
+      </div>
+    </div>
+  </aside>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Cookie bar",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Cookie bar"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cookie_bar",
+      "label": "Show cookie bar",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "cookie_text",
+      "label": "Text",
+      "default": "<p>Use this bar to show information about your cookie policy.</p>"
+    },
+    {
+      "type": "text",
+      "id": "accept_button",
+      "label": "Accept button",
+      "default": "Accept"
+    }
+  ]
+}
+{% endschema %}

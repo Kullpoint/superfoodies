@@ -1,0 +1,92 @@
+<section class="newsletter" data-section-id="{{ section.id }}" data-section-type="newsletter" {% if section.settings.bg != blank %}style="background:  center / cover no-repeat url({{ section.settings.bg | img_url: '2000x'}})" {% endif %}>
+  <div class="container">
+    <div class="newsletter__heading">
+      <div class="newsletter__title">
+        {{ section.settings.title }}
+      </div>
+      <div class="newsletter__subtitle">
+        {{ section.settings.content }}
+      </div>
+      <div class="newsletter__inner">        
+        {%- form 'customer', id: newsletter_id, class: 'form newsletter__form' -%}
+          {%- if form.posted_successfully? -%}
+            <p class="alert alert--success">{{ 'home_page.newsletter.success' | t }}</p>
+          {%- else -%}
+            {%- if form.errors -%}
+              <p class="alert alert--error">{{ form.errors.messages['email'] }}</p>
+            {%- endif -%}
+
+       		<p class="alert alert--already-subscribed" style="display:none;">{{ 'home_page.newsletter.already_subscribed' | t }}</p>
+        
+            <input type="hidden" name="contact[tags]" value="newsletter">
+
+            <div class="newsletter__input-wrap form__input-wrapper form__input-wrapper--labelled">
+              <input type="text" id="newsletter[contact][first_name]" name="contact[tags]" class="form__field form__field--text" required>
+              <label for="newsletter[contact][first_name]" class="form__floating-label">{{ 'home_page.newsletter.name' | t }}</label>
+            </div>
+            <div class="newsletter__input-wrap form__input-wrapper form__input-wrapper--labelled">
+              <input type="email" id="newsletter[contact][email]" name="contact[email]" class="form__field form__field--text" required>
+              <label for="newsletter[contact][email]" class="form__floating-label">{{ 'home_page.newsletter.input' | t }}</label>
+            </div>
+            <button type="submit" class="btn newsletter__submit">{{ 'home_page.newsletter.submit' | t }}</button>
+
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const queryString = window.location.search;
+    console.log(queryString,queryString.includes('?contact') && queryString.includes('tags'));
+    if(queryString.includes('?contact') && queryString.includes('tags'))
+    {
+      $('.newsletter__input-wrap, .newsletter__submit, .alert--error, .alert--success').hide();
+      $('.alert--already-subscribed').show();
+      	let elem = document.querySelector('section.newsletter'),
+          	parent = elem.parentNode;
+      	parent.scrollIntoView({block: "center", inline: "center", behavior: 'smooth'});
+    }
+    if(queryString.includes('?customer_posted'))
+    {
+    	let elem = document.querySelector('section.newsletter'),
+          	parent = elem.parentNode;
+      	parent.scrollIntoView({block: "center", inline: "center", behavior: 'smooth'});
+    }
+  });
+</script>
+{% schema %}
+{
+  "name": "Newsletter",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Customers who subscribe will have their email address added to the \"accepts marketing\" [customer list](/admin/customers?query=&accepts_marketing=1)."
+    },
+    {
+      "type": "image_picker",
+      "id": "bg",
+      "label": "Section background"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text",
+      "default": "<p>A short sentence describing what someone will receive by subscribing</p>"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Promotional",
+      "name": "Newsletter",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

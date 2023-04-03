@@ -1,0 +1,23 @@
+<div class="container">
+  <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb">
+    <ol class="breadcrumb__list">
+      <li class="breadcrumb__item">
+        <a class="breadcrumb__link link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a> {%- render 'icon', icon: 'arrow-right' -%}
+      </li>
+      <li class="breadcrumb__item">
+        <a class="breadcrumb__link link" href="{{ blog.url }}">{{ blog.title }}</a> {%- render 'icon', icon: 'arrow-right' -%}
+      </li>
+      <li class="breadcrumb__item">
+        <span class="breadcrumb__link" aria-current="page">{{ article.title }}</span>
+      </li>
+    </ol>
+  </nav>
+  
+  
+  <div class="blog-container">
+    {% section 'article-template' %}
+    {% section 'blog-sidebar' %}
+  </div>
+</div>
+
+{% section 'activecampaign-NL' %}

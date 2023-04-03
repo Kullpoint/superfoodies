@@ -1,0 +1,65 @@
+<section class="videos section" data-section-id="{{ section.id }}" data-section-type="videos">
+  <div class="container">
+    <div class="section-title-2 h-icons__title">
+      {{ section.settings.title }}
+    </div>
+    <div class="row videos__list">
+      {% for block in section.blocks %}
+        <div class="col-12 col-lg-4 videos__item-wrap">
+          <a href="{{ block.settings.link }}" class="videos__item">
+            <div class="videos__image-wrap lazyload" style="background-image: url({{ block.settings.image | img_url: '50x' }})" data-bgset="{{ block.settings.image | img_url: '800x' }}">
+              <div class="play-btn">
+                {% render 'icon-play' %}
+              </div>
+            </div>
+            <div class="videos__item-title">
+              {{ block.settings.title }}
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Videos",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Videos"
+    }
+  ]
+}
+{% endschema %}

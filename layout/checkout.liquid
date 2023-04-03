@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+  </head>
+  <body>
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+    
+  <script type="text/javascript">
+      var CodePickupPointPostalCode = '{{ checkout.shipping_address.zip }}';
+      var CodePickupPointCountry = '{{ checkout.shipping_address.country_code }}';
+      var CodeShopifyDomain = '{{ shop.permanent_domain }}';
+      var CodePickupAttributes = {{ checkout.attributes | json }};
+      var CodeOrderTags = {% if order %}{{ order.tags | split: ',' }}{% else %}[]{% endif %};
+    </script> 
+    <script src="//storage.googleapis.com/pick-up-points/code-pickup-points.min.js" crossorigin="anonymous"></script>
+    <link href="//storage.googleapis.com/pick-up-points/code-pickup-points.min.css" rel="stylesheet" type="text/css" media="all" />
+
+    <style>
+      .section--payment-method .content-box{
+        display: flex;
+        flex-flow: wrap;
+      }
+      [data-select-gateway="68195811382"], [data-subfields-for-gateway="68195811382"]{ order: 2;}
+      [data-select-gateway="68195713078"], [data-subfields-for-gateway="68195713078"]{ order: 3;}
+      [data-select-gateway="68195876918"], [data-subfields-for-gateway="68195876918"]{ order: 4;}
+      [data-select-gateway="39633748022"], [data-subfields-for-gateway="39633748022"]{ order: 5;}
+      [data-select-gateway="39620640822"], [data-subfields-for-gateway="39620640822"]{ order: 6;}
+      [data-select-gateway="67945201718"], [data-subfields-for-gateway="67945201718"]{ order: 1;}
+      
+      .content-box .content-box__row {
+        border-top: 1px solid #d9d9d9;
+      }
+    </style>
+    <script>
+      (function($) {
+        $(document).on("page:load page:change", function() {
+          if (Shopify.Checkout.step === "payment_method") {
+            // Add content
+            document.querySelector('[for="checkout_payment_gateway_67945201718"]').click();
+          }
+        });
+      })(Checkout.$);
+    </script>
+
+  </body>
+</html>

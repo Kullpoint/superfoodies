@@ -1,0 +1,77 @@
+<section class="section f-posts" data-section-id="{{ section.id }}">
+  <div class="container">
+    <header class="section__header">
+      <div class="section-title">{{ section.settings.title | escape }}</div>
+
+      <a href="{{ blogs[section.settings.blog].url}}" class="section__action-link link home-collections__link">{{ 'blog.general.view_all' | t }}</a>
+    </header>
+
+    <div class="f-posts__list row">
+      {% for block in section.blocks %}
+        <div class="col-12 col-md-4 f-posts__item-wrap">
+          <a href="{{ articles[block.settings.article].url }}" class="f-posts__item promo__slide lazyload" style="background-image: url({{ block.settings.image | img_url: '50x' }})" data-bg="{{ block.settings.image | img_url: '800x' }}">
+            <div class="f-posts__title promo__title">
+              {{ block.settings.title }}
+            </div>
+            <div class="f-posts__subtitle promo__subtitle">
+              {{ block.settings.subtitle }}
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Posts",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Our collections"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "article",
+      "name": "Article",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "article",
+          "id": "article",
+          "label": "Article"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Blog",
+      "name": "Featured posts"
+    }
+  ]
+}
+{% endschema %}

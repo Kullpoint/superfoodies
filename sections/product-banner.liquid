@@ -1,0 +1,90 @@
+{% style %}
+    {% if section.settings.use_gradient == true %}
+        .product_banner_title{
+            background: linear-gradient(0deg, rgba(78, 74, 51, 0.4), rgba(78, 74, 51, 0.4));
+            background-blend-mode: multiply, normal;
+        }
+    {% endif %}
+    .product_banner_title{
+        color: {{section.settings.title_color}};
+    }
+{% endstyle %}
+
+<style>
+    .product_banner_wrapper{
+        position: relative;
+    }
+    .product_banner_image{
+        position: relative;
+        width: 100%;
+        padding-bottom: 39%;
+    }
+    .product_banner_image img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .product_banner_title{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<div class="product_banner">
+    <div class="product_banner_wrapper">
+        <div class="product_banner_image">
+            {% if section.settings.image != blank %}
+                <img src="{{section.settings.image | img_url: 'master' }}" alt="{{section.settings.image.alt}}">
+            {% endif %}
+        </div>
+        <div class="product_banner_title page_width">
+            {{section.settings.title}}
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Product banner",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "LOREM IPSUM DOLOREM"
+        },
+        {
+            "type": "color",
+            "id": "title_color",
+            "label": "Title color",
+            "default": "#F5F2EA"
+        },
+        {
+            "type": "checkbox",
+            "id": "use_gradient",
+            "label": "Use gradient",
+            "default": true
+        }
+    ]
+}
+{% endschema %}

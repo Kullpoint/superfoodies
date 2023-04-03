@@ -1,0 +1,47 @@
+<section class="features section">
+  <div class="container">
+ 	 <div class="row">
+      {% for block in section.blocks %}
+        <div class="col-6 col-md-3 features__item">
+          <img class="lazyload features__item-icon" src="{{ block.settings.feature_icon | img_url: '10x' }}" data-src="{{ block.settings.feature_icon | img_url: '100x' }}" alt="{{ block.settings.feature_heading }}">
+          <div class="features__text">
+            {{ block.settings.feature_text }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Features",
+  "class": "features-section",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "feature_icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "feature_text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Features",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

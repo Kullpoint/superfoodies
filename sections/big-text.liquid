@@ -1,0 +1,39 @@
+<section class="big-text section" data-section-id="{{ section.id }}" data-section-type="big-text">
+  <div class="container">
+    {% if section.settings.link != blank %}
+      <a href="{{ section.settings.link }}" class="big-text__inner">
+    {% else %}
+      <div class="big-text__inner">
+    {% endif %}
+        {{ section.settings.text }}
+    {% if section.settings.link == blank %}
+      </div>
+    {% else %}
+      </a>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Big text",
+  "settings": [
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Big text"
+    }
+  ]
+}
+{% endschema %}

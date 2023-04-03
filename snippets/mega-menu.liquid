@@ -1,0 +1,175 @@
+{%- if section.settings.desktop_navigation_layout == 'condensed' -%}
+  {%- assign is_condensed = true -%}
+{%- else -%}
+  {%- assign is_condensed = false -%}
+{%- endif -%}
+
+{%- assign downcase_title = mega_menu.title | downcase | strip -%}
+{%- assign mega_menu_block = nil -%}
+
+{%- for block in section.blocks -%}
+  {%- assign downcase_block_menu_item = block.settings.menu_item | downcase | strip -%}
+
+  {%- if downcase_block_menu_item == downcase_title -%}
+    {%- assign mega_menu_block = block -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<div id="dropdown-{{ index }}" class="mega-menu {% if is_floating %}mega-menu--floating{% endif %}" data-type="menu" aria-hidden="true" {{ mega_menu_block.shopify_attributes }}>
+  {%- capture mega_menu_inner -%}
+    {%- assign should_center = false -%}
+
+    {%- unless is_floating -%}
+      {%- assign should_center = true -%}
+    {%- endunless -%}
+
+    {%- assign has_two_images = false -%}
+
+    {%- if mega_menu_block.settings.product_1 != blank and mega_menu_block.settings.product_2 != blank -%}
+      {%- assign has_two_images = true -%}
+    {%- endif -%}
+
+    {%- assign mega_menu_classes = '' -%}
+
+    {%- if should_center and mega_menu.links.size <= 4 -%}
+      {%- if has_two_images -%}
+        {%- assign mega_menu_classes = '' -%}
+      {%- else -%}
+        {%- assign mega_menu_classes = 'mega-menu__inner--large' -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    <div class="mega-menu__inner {{ mega_menu_classes }}">
+      <div class="mega-menu__columns">
+        {%- if mega_menu.links.size > 0 -%}
+          {%- capture mega_menu_columns -%}
+            {%- for link in mega_menu.links -%}
+              <div class="mega-menu__column">
+                <a href="{{ link.url }}" class="mega-menu__title heading">{{ link.title }}</a>
+
+                {%- if link.links.size > 0 -%}
+                  <ul class="mega-menu__linklist">
+                    {%- for sub_link in link.links -%}
+                      <li class="mega-menu__item">
+                        <a href="{{ sub_link.url }}" class="mega-menu__link link">{{ sub_link.title }}</a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          {%- endcapture -%}
+
+          {%- if is_floating -%}
+            {%- comment -%}
+              IMPLEMENTATION NOTE: 230 is the size in pixel of a given column (it's 170 + 60 of margin). In order to avoid setting it in JS or
+              having very complex HTML structure to achieve positioning, I used this trick.
+            {%- endcomment -%}
+            <div class="mega-menu__column-list" style="width: {{ 230 | times: mega_menu.links.size }}px">
+              {{- mega_menu_columns -}}
+            </div>
+          {%- else -%}
+            {{- mega_menu_columns -}}
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+
+      {% if mega_menu_block.settings.product_1 %}
+        <div class="mega-menu__products">
+          {%- if mega_menu_block.settings.product_1 != blank -%}
+            <div class="mega-menu__promo mega-menu__product">
+              {% assign product = all_products[mega_menu_block.settings.product_1] %}
+              <div class="product-item" data-section-type="product-item">
+                <a href="{{ product.url }}" class="product-item__img-wrap">
+                  <img src="{{ product.featured_image | img_url: '20x' }}" data-src="{{ product.featured_image | img_url: '500x' }}" alt="" class="product-item__img lazyload">
+                </a>
+                <div class="product-item__info">
+                  <a href="{{ product.url }}" class="product-item__title">
+                    {{ product.title }}
+                  </a>
+                  <div class="product-item__bottom">
+                    <div class="product-item__prices">
+                      <div class="product-item__price">
+                        {{ product.price_min | money }}
+                      </div>
+                      {% if product.compare_at_price_max > product.price_min %}
+                        <div class="product-item__compare-price">
+                          {{ product.compare_at_price_max | money }}
+                        </div>
+                      {% endif %}
+                    </div>
+                    {% if product.available %}
+                      {%- assign form_id = 'product_form_id_' | append: product.id | append: '_' | append: section.id -%}
+                      {%- form 'product', product, id: form_id, class: product_form_classes -%}
+                        <input type="hidden" name="quantity" value="1">
+                        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                        <button type="submit" class="product-item__add btn" data-action="add-to-cart">
+                          {{ 'collection.product.add_to_cart' | t }}
+                        </button>
+                      {% endform %}
+                    {% else %}
+                      <div class="product-item__add product-item__add--sold btn">
+                        {{ 'collection.product.sold_out' | t }}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+
+          {%- if mega_menu_block.settings.product_2 != blank -%}
+            <div class="mega-menu__promo mega-menu__product">
+              {% assign product = all_products[mega_menu_block.settings.product_2] %}
+              <div class="product-item" data-section-type="product-item">
+                <a href="{{ product.url }}" class="product-item__img-wrap">
+                  <img src="{{ product.featured_image | img_url: '20x' }}" data-src="{{ product.featured_image | img_url: '500x' }}" alt="" class="product-item__img lazyload">
+                </a>
+                <div class="product-item__info">
+                  <a href="{{ product.url }}" class="product-item__title">
+                    {{ product.title }}
+                  </a>
+                  <div class="product-item__bottom">
+                    <div class="product-item__prices">
+                      <div class="product-item__price">
+                        {{ product.price_min | money }}
+                      </div>
+                      {% if product.compare_at_price_max > product.price_min %}
+                        <div class="product-item__compare-price">
+                          {{ product.compare_at_price_max | money }}
+                        </div>
+                      {% endif %}
+                    </div>
+                    {% if product.available %}
+                      {%- assign form_id = 'product_form_id_' | append: product.id | append: '_' | append: section.id -%}
+                      {%- form 'product', product, id: form_id, class: product_form_classes -%}
+                        <input type="hidden" name="quantity" value="1">
+                        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                        <button type="submit" class="product-item__add btn" data-action="add-to-cart">
+                          {{ 'collection.product.add_to_cart' | t }}
+                        </button>
+                      {% endform %}
+                    {% else %}
+                      <div class="product-item__add product-item__add--sold btn">
+                        {{ 'collection.product.sold_out' | t }}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      {% endif %}
+    </div>
+  {%- endcapture -%}
+
+  {%- if is_condensed -%}
+    {{- mega_menu_inner -}}
+  {%- else -%}
+    <div class="container">
+      {{- mega_menu_inner -}}
+    </div>
+  {%- endif -%}
+</div>

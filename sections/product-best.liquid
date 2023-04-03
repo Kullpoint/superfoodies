@@ -1,0 +1,45 @@
+{% assign original_product = product %}
+
+<div class="p-recommendations p-best">
+  <div class="container">
+    <div class="section-title p-recommendations__title">
+      {{ section.settings.heading }}
+    </div>
+    <div class="p-recommendations__list row">
+      {% assign collection = collections[section.settings.collection] %}
+      {% assign product_count = 1 %}
+      {%- for product in collection.products -%}
+        {% if product.handle != original_product.handle %}
+          {% assign product_count = product_count | plus: 1 %}
+          <div class="col-6 col-md-4 col-lg-2">
+            {% include 'product-item' %}
+          </div>
+        {% endif %}
+        {% if product_count == 7 %}
+          {% break %}
+        {% endif %}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% assign product = original_product %}
+
+{% schema %}
+{
+  "name": "Best products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Others also bought"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ]
+}
+{% endschema %}

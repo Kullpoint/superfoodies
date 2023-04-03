@@ -1,0 +1,56 @@
+{% assign original_product = product %}
+
+<div class="p-recommendations">
+  <div class="container">
+    <div class="section-title p-recommendations__title">
+      {{ section.settings.heading }}
+    </div>
+    {% if recommendations.performed %}
+      {% if recommendations.products_count > 0 %}
+        <div class="p-recommendations__list row">
+          {%- for product in recommendations.products limit: 4 -%}
+            <div class="col-6 col-lg-3">
+              {% include 'product-item' %}
+            </div>
+          {%- endfor -%}
+        </div>
+      {% endif %}
+    {% else %}
+      <div class="p-recommendations__list row">
+        {% for collection in product.collections %}
+          {% unless collection.handle contains 'home' %}
+            {% assign product_count = 1 %}
+            {%- for product in collection.products -%}
+              {% if product.handle != original_product.handle %}
+                {% assign product_count = product_count | plus: 1 %}
+                <div class="col-6 col-lg-3">
+                  {% include 'product-item' %}
+                </div>
+              {% endif %}
+              {% if product_count == 5 %}
+                {% break %}
+              {% endif %}
+            {%- endfor -%}
+            {% break %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% assign product = original_product %}
+
+{% schema %}
+{
+  "name": "Product recommendations",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "You might also be interested in"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,58 @@
+{%- capture product_labels -%}
+  {%- for tag in product.tags -%}
+    {%- if tag contains '__label:' -%}
+      <div class="product-item__label product-item__label--1">{{ tag | split: '__label:' | last | replace: '-', ' ' }}</div>
+    {%- endif -%}
+
+    {%- if tag contains '__label1:' -%}
+      <div class="product-item__label product-item__label--2">{{ tag | split: '__label1:' | last | replace: '-', ' ' }}</div>
+    {%- endif -%}
+
+    {%- if tag contains '__label2:' -%}
+      <div class="product-item__label product-item__label--3">{{ tag | split: '__label2:' | last | replace: '-', ' ' }}</div>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+<div class="product-item" data-section-type="product-item">
+  <a href="{{ product.url }}" class="product-item__img-wrap">
+    <div class="product-item__labels">
+      {{ product_labels }}
+    </div>
+    <img src="{{ product.featured_image | img_url: '20x' }}" data-src="{{ product.featured_image | img_url: '500x' }}" alt="" class="product-item__img lazyload">
+  </a>
+  <div class="product-item__info">
+    <a href="{{ product.url }}" class="product-item__title">
+      {{ product.title }}
+    </a>
+    <div class="product-item__bottom">
+      <div class="product-item__container">
+        <div class="product-item__prices">
+          {% if product.compare_at_price_max > product.price_min %}
+            <div class="product-item__compare-price">
+              {{ product.compare_at_price_max | money }}
+            </div>
+          {% endif %}
+          <div class="product-item__price">
+            {{ product.price_min | money }}
+          </div>
+        </div>
+      </div>
+      {% if product.available %}
+        {%- assign form_id = 'product_form_id_' | append: product.id | append: '_' | append: section.id -%}
+        {%- form 'product', product, id: form_id, class: product_form_classes -%}
+          <input type="hidden" name="quantity" value="1">
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          <button type="submit" class="product-item__add btn" data-action="add-to-cart">
+            {{ 'collection.product.add_to_cart' | t }}
+          </button>
+        {% endform %}
+      {% else %}
+        <div class="product-item__add product-item__add--sold btn">
+          {{ 'collection.product.sold_out' | t }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+

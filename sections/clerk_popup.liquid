@@ -1,0 +1,85 @@
+<div class="popup__overlay" onclick="close_powerstep()"></div>
+<span class="clerk-powerstep-recommendations" 
+      data-template="@pop-up-superfoodies" 
+      data-products="[{{ product.id }}]">
+</span> 
+<script>
+$('.product-form__add-button').click(function() {
+    open_powerstep();
+});
+// OPEN POP-UP
+function open_powerstep() {
+  Clerk('content', '.clerk-powerstep-recommendations');
+}
+function close_powerstep() {
+  window.location.href = "{{ product.url }}";
+  window.opener.location.reload();
+}
+function add_cart(el) {
+  el.style.backgroundColor = "#28a745";
+  el.style.borderColor = "#28a745";
+  el.style.display = "flex";
+  el.style.justifyContent = "center";
+  if (screen.width < 600) {
+    el.innerHTML = '<i class = "fas fa-check" style="font-size: 18px;"></i>';
+  }
+  else  {
+    el.innerHTML = '<i class = "fas fa-check" style="font-size: 150%; margin-right: 10px"></i> TOEGEVOEGD';
+  }
+  if (window.theme.cartType === 'page') {
+    return; // When using a cart type of page, we just simply redirect to the cart page
+  }
+  el.setAttribute('disabled', 'disabled');
+  document.dispatchEvent(new CustomEvent('theme:loading:start')); // Then we add the product in Ajax
+  var formElement = el.closest('form[action*="/cart/add"]');
+  console.log(formElement)
+  fetch("".concat(window.routes.cartAddUrl, ".js"), {
+    body: JSON.stringify(Form.serialize(formElement)),
+    credentials: 'same-origin',
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Requested-With': 'XMLHttpRequest' // This is needed as currently there is a bug in Shopify that assumes this header
+    }
+  }).then(function (response) {
+    document.dispatchEvent(new CustomEvent('theme:loading:end'));
+    el.removeAttribute('disabled'); // We simply trigger an event so the mini-cart can re-render
+    el.dispatchEvent(new CustomEvent('product:added', {
+      bubbles: true,
+      detail: {
+        variant: el.dataset.id,
+        quantity: 1
+      }
+    })); // If we are in the context of quick view, we also force closing the modal
+  }
+)}
+const buttonAdd = document.querySelectorAll('.button__popup')
+function openOverlay() {
+  const popupOverlay = document.querySelector('.popup__overlay')
+  if(popupOverlay) popupOverlay.classList.add("is-active")
+}
+function closeOverlay() {
+  const popupOverlay = document.querySelector('.popup__overlay')
+  if(popupOverlay) popupOverlay.classList.remove("is-active")
+}
+buttonAdd.forEach(button => button.addEventListener('click', openOverlay))
+</script>
+<style>
+.popup__overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: 0 0;
+  z-index: 10;
+  pointer-events: none;
+  transition: background-color .4s .2s;
+}
+.is-active {
+  background: rgba(37,37,37,.5);
+  pointer-events: auto;
+}
+</style>

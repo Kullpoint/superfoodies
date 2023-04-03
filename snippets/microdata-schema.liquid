@@ -1,0 +1,413 @@
+{%- comment -%}
+This snippet structures the micro-data using JSON-LD specification. Please note that for Product especially,
+the schema often changes. We try to output as much info as possible, but Google may add new requirements over time,
+or change the format of some info
+{%- endcomment -%}
+
+{%- if request.page_type == 'product' -%}
+  {%- assign days_product_price_valid_until = 10 | times: 86400 -%}
+
+  {%- assign gtin_option = 'gtin' -%}
+  {%- if product.selected_or_first_available_variant.barcode != blank -%}
+    {%- assign is_barcode_available = true -%}
+    {%- assign gtin_string_length = product.selected_or_first_available_variant.barcode | size -%}
+
+    {%- if gtin_string_length == 8 or gtin_string_length == 12 or gtin_string_length == 13 or gtin_string_length == 14 -%}
+      {%- assign is_valid_gtin_length = true -%}
+      {%- assign gtin_option = gtin_option | append: gtin_string_length -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- capture main_entity_microdata -%}
+    "@type": "Product",
+    "offers": [
+      {%- for variant in product.variants -%}
+        {
+          "@type": "Offer",
+          "name": {{ variant.title | json }},
+          "availability": {%- if variant.available -%}"https://schema.org/InStock"{%- else -%}"https://schema.org/OutOfStock"{%- endif -%},
+          "price": {{ variant.price | divided_by: 100.0 | json }},
+          "priceCurrency": {{ cart.currency.iso_code | json }},
+          "priceValidUntil": "{{ 'now' | date: '%s' | plus: days_product_price_valid_until | date: '%Y-%m-%d'}}",
+          {%- if variant.sku != blank -%}
+            "sku": {{ variant.sku | json }},
+          {%- endif -%}
+          "url": "{{ shop.url }}{{ product.url }}"
+        }{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    ],
+    {%- if is_barcode_available and is_valid_gtin_length %}
+      "{{gtin_option}}": {{ product.selected_or_first_available_variant.barcode | json }},
+      "productId": {{ product.selected_or_first_available_variant.barcode | json }},
+    {%- elsif is_barcode_available %}
+      "mpn": {{ product.selected_or_first_available_variant.barcode | json }},
+      "productId": {{ product.selected_or_first_available_variant.barcode | json }},
+    {%- endif %}
+    "brand": {
+      "name": {{ product.vendor | json }}
+    },
+    "name": {{ product.title | json }},
+    "description": {{ product.description | strip_html | json }},
+    "category": {{ product.type | json }},
+    "url": "{{ shop.url }}{{ product.url }}",
+    "sku": {{ product.selected_or_first_available_variant.sku | json }},
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:{{ product.featured_media | img_url: '1024x' }}",
+      "image": "https:{{ product.featured_media | img_url: '1024x' }}",
+      "name": {{ product.featured_media.alt | json }},
+      "width": "1024",
+      "height": "1024"
+    }
+  {%- endcapture -%}
+{%- elsif request.page_type == 'article' -%}
+  {%- capture main_entity_microdata -%}
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "{{ article.url }}",
+    "articleSection": {{ blog.title | json }},
+    "keywords": "{{ article.tags | join: ', ' }}",
+    "headline": {{ article.title | json }},
+    "description": {{ article.excerpt_or_content | strip_html | truncatewords: 25 | json }},
+    "dateCreated": "{{ article.created_at | date: '%Y-%m-%dT%T' }}",
+    "datePublished": "{{ article.published_at | date: '%Y-%m-%dT%T' }}",
+    "dateModified": "{{ article.published_at | date: '%Y-%m-%dT%T' }}",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:{{ article.image | img_url: '1024x' }}",
+      "image": "https:{{ article.image | img_url: '1024x' }}",
+      "name": {{ article.image.alt | json }},
+      "width": "1024",
+      "height": "1024"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "{{ article.user.first_name | escape }} {{ article.user.last_name | escape }}",
+      "givenName": {{ article.user.first_name | json }},
+      "familyName": {{ article.user.last_name | json }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ shop.name | json }}
+    },
+    "commentCount": {{ article.comments_count }},
+    "comment": [
+      {%- for comment in article.comments limit: 5 -%}
+        {
+          "@type": "Comment",
+          "author": {{ comment.author | json }},
+          "datePublished": "{{ comment.created_at | date: '%Y-%m-%dT%T' }}",
+          "text": {{ comment.content | json }}
+        }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    ]
+  {%- endcapture -%}
+{%- endif -%}
+
+{%- capture breadcrumb_entity_microdata -%}
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": {{ 'general.breadcrumb.home' | t | json }},
+      "item": "{{ shop.url }}"
+    }
+
+    {%- if request.page_type == 'product' -%}
+      {%- if collection -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ collection.title | json }},
+          "item": "{{ shop.url }}{{ collection.url }}"
+        }, {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ product.title | json }},
+          "item": "{{ shop.url }}{{ product.url | within: collection }}"
+        }
+      {%- else -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ product.title | json }},
+          "item": "{{ shop.url }}{{ product.url }}"
+        }
+      {%- endif -%}
+    {%- elsif request.page_type == 'collection' -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ collection.title | json }},
+          "item": "{{ shop.url }}{{ collection.url }}"
+        }
+    {%- elsif request.page_type == 'blog' -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ blog.title | json }},
+          "item": "{{ shop.url }}{{ blog.url }}"
+        }
+    {%- elsif request.page_type == 'article' -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ blog.title | json }},
+          "item": "{{ shop.url }}{{ blog.url }}"
+        }, {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ blog.title | json }},
+          "item": "{{ shop.url }}{{ article.url }}"
+        }
+    {%- elsif request.page_type == 'page' -%}
+       ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ page.title | json }},
+          "item": "{{ shop.url }}{{ page.url }}"
+        }
+    {%- endif -%}
+  ]
+{%- endcapture -%}
+
+{% if main_entity_microdata != blank %}
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    {{ main_entity_microdata }}
+  }
+  </script>
+{% endif %}
+
+{% if breadcrumb_entity_microdata != blank %}
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    {{ breadcrumb_entity_microdata }}
+  }
+  </script>
+
+{%- endif -%}
+
+{%- if canonical_url == 'https://superfoodies.nl/collections/mct-olie' -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Wat is mct olie?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MCT is een afkorting voor Medium Chain Triglycerides, ofwel middellange keten triglyceriden. Vetzuren kunnen worden onderverdeeld in korte, middellange en lange keten vetzuren. MCT vetten bestaan uit middellange ketens van vetzuren, namelijk 6 tot 12 koolstofatomen.Middellange keten vetzuren (MCT), hoeven niet gesplitst te worden en komen direct in het bloed terecht. Ze worden sneller opgenomen en omgezet naar energie dan vetten met een langere keten."
+    }
+  },{
+    "@type": "Question",
+    "name": "Hoe gebruik je mct olie?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MCT olie heeft een neutrale smaak en kan zowel koud als warm gebruikt worden, ter vervanging van andere oliën en vetten. MCT olie kan gemakkelijk aan voeding, maar ook aan dranken zoals koffie, thee en shakes worden toegevoegd. Ook kan MCT olie worden toegevoegd aan baksels als vervanger van kokosolie. Het is aan te raden om te beginnen met een lage dosering MCT om te kijken hoe het lichaam hierop reageert. Vervolgens kan de dosering langzaam worden opgebouwd."
+    }
+  },{
+    "@type": "Question",
+    "name": "Wat is de beste mct olie?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "C8 is het meest zuivere ketogene vetzuur in kokosnoten, gezuiverd en gedestilleerd in een veelzijdige olie.
+MCT olie is een mengsel van C8- en C10-MCT-oliën. Om energie, hersenkracht en vetverbranding te ondersteunen: ga dan voor een C8 olie. Het is pure olie die meer ketonen produceert dan normale MCT-olie.
+Voor pure, budgetvriendelijke MCT-olie: ga met normale MCT-olie - je krijgt niet zo'n grote ketogene boost, maar je verbrandt nog steeds vet, stimuleert energie en beteugelt je trek."
+    }
+  }]
+}
+</script>
+
+{%- elsif canonical_url == 'https://superfoodies.nl/collections/algen-spirulina-chlorella' -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Wat is spirulina poeder en wat zit er in?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Spirulina is een eencellige blauw-groene zoutwateralg met een waanzinnig voedingsprofiel. Spirulina is bekend in twee vormen: poeder en tabletten. De poedervariant is eenvoudig te consumeren door te mengen in smoothies, dranken of allerlei gerechten. Doordat het poeder is mengt het zich makkelijk met vloeistoffen, bijvoorbeeld in een smoothie."
+    }
+  },{
+    "@type": "Question",
+    "name": "Waar is spirulina goed voor?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Groene spirulina bevat chlorofyl, wat bekend staat om zijn zuiverende werking op de darmen, het lichaam en vormt het een uitstekende voedingsbodem voor de darmflora. Spirulina is een ware vitaminebooster en bevat 11 vitamines, 10 mineralen en 18 aminozuren. Het is rijk aan vitamine A, C, E, K en de vitamines B1, B2, B3, B6 en B11. Daarnaast bevat spirulina hoogwaardige en makkelijk opneembare en verteerbare eiwitten. Hierdoor is het een goed supplement voor vegetariërs en veganisten. Spirulina is heel mineraalrijk door het zoute water. Zo bevat het fosfor, magnesium, ijzer, kalium, zink, chroom, koper, selenium en calcium."
+    }
+  },{
+    "@type": "Question",
+    "name": "Hoe dien je spirulina poeder te gebruiken?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Spirulina poeder is makkelijk oplosbaar en daardoor eenvoudig te mengen door allerlei soorten dranken, vloeibare gerechten en rauwe snacks.
+Roer een of twee keer per dag een theelepel spirulina (5 gram) door je favoriete smoothie, sap, shake, vloeibare gerecht of rauwe snack."
+    }
+  }]
+}
+</script>
+
+{%- elsif canonical_url == 'https://superfoodies.nl/collections/green-juice' -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Welke green juice is de beste?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Wij bieden twee formules Green juice aan. De klassieke formule (in de witte pot) en de vernieuwde formule in kartonnen blik. Je kiest voor de klassieke formule als je de oorspronkelijke formule lekker vond en graag drinkt. En als je geen enkele smaakstof wilt (ook geen 100%
+natuurlijk stevia extract, minder dan 0,5%). De vernieuwe formule kies je als je een lekkere Green Juice wilt, gewoon goed te drinken met water."
+    }
+  },{
+    "@type": "Question",
+    "name": "Waar kan ik green juice kopen?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Green juice kan je kopen via superfoodies.nl en via supergreens.nl Daarnaast hebben wij ook een verschillende abonnementsvormen op de green juice. Deze vind je onder https://supergreens.nl/superfoodies-club"
+    }
+  },{
+    "@type": "Question",
+    "name": "Waar is green juice goed voor?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Green juice is ontwikkeld ter ondersteuning van je energieniveau en immuunsysteem, het ondersteunen van je detoxificatie en voor de aanvoer van enzymen en probiotica voor je darmen. Zie Green Juice als een soort multivitamine, aangevuld met probiotica en spijsverteringsenzymen."
+    }
+  }]
+}
+</script>
+
+{%- elsif canonical_url == 'https://superfoodies.nl/collections/luminous-beauty-shake' -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Waarom proteine shake nemen?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Eiwitpoeders ondersteunen de spiergroei, maar ze doen nog veel meer goede dingen in het lichaam. Ze kunnen namelijk ook ondersteuning bieden als je gewicht wil verliezen, want eiwitpoeders geven een verzadigend gevoel, houden de bloedsuikerspiegel stabiel en geven langdurig energie zodat de neiging om ongezond te eten en snacken wordt onderdrukt."
+    }
+  },{
+    "@type": "Question",
+    "name": "Wanneer proteine shake drinken?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Voeg 20 gram of een schep toe aan 250 ml water, sap, amandelmelk of rijstmelk en roer het daarna goed door tot het drankje geheel glad is. Daarna direct opdrinken. Dit kan ingenomen worden na het sporten, maar ook op een ander gewenst moment van de dag."
+    }
+  },{
+    "@type": "Question",
+    "name": "Welke proteine shake moet ik nemen?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Steeds meer mensen kiezen tegenwoordig voor zuiver plantaardige eiwitpoeders, omdat hier absoluut geen dierlijke producten (inclusief wei) in verwerkt zijn. Vooral eiwitpoeders gemaakt van bruine rijst zijn een zeer gezonde keuze, omdat rijst beschouwd wordt als de meest hypoallergene proteïnebron, wat vooral voor mensen met voedselallergieën erg belangrijk is."
+    }
+  }]
+}
+</script>
+
+{%- elsif canonical_url == 'https://superfoodies.nl/collections/collageen' -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Wat is collageen hydrolysaat eiwit?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Collageen hydrolysaat ontstaat door verdere verwerking van gelatine waarbij de eiwitten verder zijn afgebroken doormiddel van enzymen. Door dit verwerkingsproces wordt collageen hydrolysaat makkelijker door het lichaam opgenomen. Wanneer je collageen hydrolysaat vermengt met water, blijft het vloeibaar, in tegenstelling tot gelatine die een gelei vormt wanneer het met water wordt gemengd."
+    }
+  },{
+    "@type": "Question",
+    "name": "Welke collageen poeder is het beste?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Afhankelijk van het doel waarvoor je collageenpoeder wilt inzetten. Met betrekking tot de gewrichten is collageen type I belangrijk voor pezen, ligamenten, gewrichtskapsel, synoviale membraan, meniscus, spieren, bloedvaten en botweefsel, en collageen type II voor het kraakbeen."
+    }
+  },{
+    "@type": "Question",
+    "name": "Waar zit collageen in?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Collageen rijke voedingsmiddelen zijn o.a. getrokken bouillon van vis of botten. Gelatine verkregen uit botten, pezen, kraakbeen en de huid van verschillende dieren. Fruit en groente rijk aan vitamine C: citrusvruchten, bosbessen, aardbeien enz."
+    }
+  }]
+}
+</script>
+
+{%- elsif canonical_url == 'https://superfoodies.nl/collections/magnesium' -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Waar is magnesium goed voor?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Magnesium is een mineraal dat de spieren, botten en hersenfunctie ondersteunt."
+    }
+  },{
+    "@type": "Question",
+    "name": "Waarom magnesium slikken?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Naast een lage magnesiuminname, door verminderde gehalte in onze dagelijkse voeding zijn er ook andere oorzaken die een magnesiumtekort kunnen veroorzaken. Dit zijn onder andere een overmatige alcoholinname, het gebruik van diuretica en verschillende chronische aandoeningen zoals diabetes type 2 en nierziekten."
+    }
+  },{
+    "@type": "Question",
+    "name": "Wat doet magnesium voor je lichaam?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Magnesium is goed voor de spieren en spierwerking. Het helpt bij het opbouwen van (lichaams-)eiwit. Draagt bij aan fitheid, extra energie bij vermoeidheid en tot een goede elektrolytenbalans."
+    }
+  }]
+}
+</script>
+
+{%- elsif canonical_url == 'https://superfoodies.nl/collections/protein-shakes' -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Waarom proteine shake nemen?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Eiwitpoeders ondersteunen de spiergroei, maar ze doen nog veel meer goede dingen in het lichaam. Ze kunnen namelijk ook ondersteuning bieden als je gewicht wil verliezen, want eiwitpoeders geven een verzadigend gevoel, houden de bloedsuikerspiegel stabiel en geven langdurig energie zodat de neiging om ongezond te eten en snacken wordt onderdrukt."
+    }
+  },{
+    "@type": "Question",
+    "name": "Wanneer proteine shake drinken?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Voeg 20 gram of een schep toe aan 250 ml water, sap, amandelmelk of rijstmelk en roer het daarna goed door tot het drankje geheel glad is. Daarna direct opdrinken. Dit kan ingenomen worden na het sporten, maar ook op een ander gewenst moment van de dag."
+    }
+  },{
+    "@type": "Question",
+    "name": "Welke proteine shaken moet ik nemen?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Steeds meer mensen kiezen tegenwoordig voor zuiver plantaardige eiwitpoeders, omdat hier absoluut geen dierlijke producten (inclusief wei) in verwerkt zijn. Vooral eiwitpoeders gemaakt van bruine rijst zijn een zeer gezonde keuze, omdat rijst beschouwd wordt als de meest hypoallergene proteïnebron, wat vooral voor mensen met voedselallergieën erg belangrijk is."
+    }
+  }]
+}
+</script>
+
+{%- endif -%}

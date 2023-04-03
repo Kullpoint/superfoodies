@@ -1,0 +1,54 @@
+<div class="b-products">
+  <div class="b-products__title">
+    {{ section.settings.title }}
+  </div>
+  <div class="b-products__list">
+    {% for block in section.blocks %}
+      <div class="b-products__item">
+        {% assign product = all_products[block.settings.product] %}
+        <div class="b-products__item-img">
+          <img src="{{ product.featured_image | img_url: '200x' }}" alt="">
+        </div>
+        <div class="b-products__item-info">
+          <div class="b-products__item-title">
+            {{ product.title }}
+          </div>
+          <div class="b-products__item-prices">
+            <div class="b-products__item-price">
+              {{ product.price | money }}
+            </div>
+            <div class="b-products__item-price-compare">
+              {{ product.compare_at_price | money }}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product blocks",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
