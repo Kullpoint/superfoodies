@@ -1,195 +1,195 @@
-<!doctype html>
+    <!doctype html>
 
-<html class="no-js" lang="{{ request.locale.iso_code }}">
-  {% render 'spurit_uac_meta_snippet' %}
-<head>
-  
-  <!-- Hyros Tracking Script - keep this here -->  
-<script>var head = document.head;var script = document.createElement('script');script.type = 'text/javascript';script.src = "https://181858.tracking.hyros.com/v1/lst/universal-script?ph=c79b499e2ed72ca7e30161208c4d0e4084818bcb98186fc41dea86aa48b81426&tag=!tracking";head.appendChild(script);</script>
-  <!-- End Hyros Tracking Script -->
-
-<meta name="google-site-verification" content="VIMuQnG84l-q3aQ0p5pBm28Bav0PlNHvan-fTL88-nY" />
-
-  
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TXQ5');</script>
-  <!-- End Google Tag Manager -->
-
-{% render 'spurit_uac_open_graph_snippet' %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="theme-color" content="{{ settings.accent_color }}">
-
-    {%- capture seo_page_title -%}
-      {%- if request.page_type == 'search' and search.terms != blank -%}
-        {{ search.terms | replace: '*', '' | split: ' AND ' | last }} - {{ shop.name }}
-      {%- else -%}
-        {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}
-      {%- endif -%}
-    {%- endcapture -%}
-
-    <title>{{- seo_page_title -}}</title>
-
-    {%- if page_description -%}
-      <meta name="description" content="{{ page_description | escape }}">
-    {%- endif -%}
-
-    <link rel="canonical" href="{{ canonical_url }}">
-
-    {%- if settings.favicon -%}
-      <link rel="shortcut icon" href="{{ settings.favicon | img_url: '96x96' }}" type="image/png">
-    {%- endif -%}
-
-    {%- comment -%}Few prefech to increase performance on commonly used third-parties{%- endcomment -%}
-    <link rel="preload" as="style" href="{{ 'theme.css' | asset_url }}">
-    <link rel="preload" as="style" href="{{ 'mbc-style.css' | asset_url }}">
-    <link rel="preconnect" href="https://cdn.shopify.com">
-    <link rel="preconnect" href="https://fonts.shopifycdn.com">
-    <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com">
-    <link rel="dns-prefetch" href="https://ajax.googleapis.com">
-    <link rel="dns-prefetch" href="https://maps.googleapis.com">
-    <link rel="dns-prefetch" href="https://maps.gstatic.com">
-
-    {% render 'social-meta-tags' %}
-    {% render 'css-variables' %}
-
-    {{ content_for_header }}
-{%- render 'bold-common' -%}
-{% render 'bold-change-templates' %}
-{% render 'usf' %}
-
-
-    <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
-    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ 'mbc-style.css' | asset_url }}">
-
-    {% render 'microdata-schema' %}
-
-    <script defer>
-      // This allows to expose several variables to the global scope, to be used in scripts
-      window.theme = {
-        pageType: {{ request.page_type | json }},
-        cartCount: {{ cart.item_count | json }},
-        moneyFormat: {{ shop.money_format | json }},
-        moneyWithCurrencyFormat: {{ shop.money_with_currency_format | json }},
-        showDiscount: {% if settings.show_discount %}true{% else %}false{% endif %},
-        discountMode: {{ settings.discount_mode | json }},
-        searchMode: {{ settings.search_mode | json }},
-        cartType: {{ settings.cart_type | json }}
-      };
-
-      window.routes = {
-        rootUrl: {{ routes.root_url | json }},
-        cartUrl: {{ routes.cart_url | json }},
-        cartAddUrl: {{ routes.cart_add_url | json }},
-        cartChangeUrl: {{ routes.cart_change_url | json }},
-        searchUrl: {{ routes.search_url | json }},
-        productRecommendationsUrl: {{ routes.product_recommendations_url | json }}
-      };
-
-      window.languages = {
-        collectionOnSaleLabel: {{ 'collection.product.discount_html' | t | json }},
-        productFormUnavailable: {{ 'product.form.unavailable' | t | json }},
-        productFormAddToCart: {% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t | json }}{% else %}{{ 'product.form.add_to_cart' | t | json }}{% endif %},
-        productFormSoldOut: {{ 'product.form.sold_out' | t | json }},
-        shippingEstimatorNoResults: {{ 'cart.shipping_estimator.no_results_title' | t | json }},
-        shippingEstimatorOneResult: {{ 'cart.shipping_estimator.one_result_title' | t | json }},
-        shippingEstimatorMultipleResults: {{ 'cart.shipping_estimator.multiple_results_title' | t | json }},
-        shippingEstimatorErrors: {{ 'cart.shipping_estimator.errors' | t | json }}
-      };
-
-      window.lazySizesConfig = {
-        loadHidden: false,
-        hFac: 0.8,
-        expFactor: 3,
-        customMedia: {
-          '--phone': '(max-width: 640px)',
-          '--tablet': '(min-width: 641px) and (max-width: 1023px)',
-          '--lap': '(min-width: 1024px)'
-        }
-      };
-
-      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-    </script>
-    <script src="{{ 'all.min.js' | asset_url }}" defer></script>
-    <!-- Start of supergreens Zendesk Widget script -->
-    <!-- <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=b93305a5-e82a-494f-a279-e0b08a466c03"> </script> -->
-    <!-- End of supergreens Zendesk Widget script -->
-    {%- if request.page_type == 'customers/addresses' -%}
-      <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
-      <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer></script>
-      <script src="{{ 'firmhouse.js' | shopify_asset_url }}" defer></script>
-    {%- endif -%}
-
-    <script src="//cdn.polyfill.io/v3/polyfill.min.js?unknown=polyfill&features=fetch,Element.prototype.closest,Element.prototype.matches,Element.prototype.remove,Element.prototype.classList,Array.prototype.includes,Array.prototype.fill,String.prototype.includes,String.prototype.padStart,Object.assign,CustomEvent,Intl,URL,DOMTokenList,IntersectionObserver,IntersectionObserverEntry" defer></script>
-      <!-- <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
-      <script src="{{ 'slick.min.js' | asset_url }}" defer></script>
-      <script src="{{ 'jquery.magnific-popup.min.js' | asset_url }}" defer></script> -->
-      <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" defer></script>
-      <script src="{{ 'theme.mini.js' | asset_url }}" defer></script>
-      <script src="{{ 'custom.js' | asset_url }}" defer></script>
-
-    <script src="{{ 'mbc-script.js' | asset_url }}" defer></script>
+    <html class="no-js" lang="{{ request.locale.iso_code }}">
+    {% render 'spurit_uac_meta_snippet' %}
+    <head>
     
+    <!-- Hyros Tracking Script - keep this here -->  
+    <script>var head = document.head;var script = document.createElement('script');script.type = 'text/javascript';script.src = "https://181858.tracking.hyros.com/v1/lst/universal-script?ph=c79b499e2ed72ca7e30161208c4d0e4084818bcb98186fc41dea86aa48b81426&tag=!tracking";head.appendChild(script);</script>
+    <!-- End Hyros Tracking Script -->
 
-    <script defer>
-      (function () {
-        window.onpageshow = function() {
-          // We force re-freshing the cart content onpageshow, as most browsers will serve a cache copy when hitting the
-          // back button, which cause staled data
-          document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
-            bubbles: true,
-            detail: {scrollToTop: false}
-          }));
+    <meta name="google-site-verification" content="VIMuQnG84l-q3aQ0p5pBm28Bav0PlNHvan-fTL88-nY" />
+
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TXQ5');</script>
+    <!-- End Google Tag Manager -->
+
+    {% render 'spurit_uac_open_graph_snippet' %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="theme-color" content="{{ settings.accent_color }}">
+
+        {%- capture seo_page_title -%}
+        {%- if request.page_type == 'search' and search.terms != blank -%}
+            {{ search.terms | replace: '*', '' | split: ' AND ' | last }} - {{ shop.name }}
+        {%- else -%}
+            {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}
+        {%- endif -%}
+        {%- endcapture -%}
+
+        <title>{{- seo_page_title -}}</title>
+
+        {%- if page_description -%}
+        <meta name="description" content="{{ page_description | escape }}">
+        {%- endif -%}
+
+        <link rel="canonical" href="{{ canonical_url }}">
+
+        {%- if settings.favicon -%}
+        <link rel="shortcut icon" href="{{ settings.favicon | img_url: '96x96' }}" type="image/png">
+        {%- endif -%}
+
+        {%- comment -%}Few prefech to increase performance on commonly used third-parties{%- endcomment -%}
+        {% comment %} <link rel="preload" as="style" href="{{ 'theme.css' | asset_url }}"> {% endcomment %}
+        {% comment %} <link rel="preload" as="style" href="{{ 'mbc-style.css' | asset_url }}"> {% endcomment %}
+        <link rel="preconnect" href="https://cdn.shopify.com">
+        <link rel="preconnect" href="https://fonts.shopifycdn.com">
+        <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com">
+        <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+        <link rel="dns-prefetch" href="https://maps.googleapis.com">
+        <link rel="dns-prefetch" href="https://maps.gstatic.com">
+
+        {% render 'social-meta-tags' %}
+        {% render 'css-variables' %}
+
+        {{ content_for_header }}
+    {%- render 'bold-common' -%}
+    {% render 'bold-change-templates' %}
+    {% render 'usf' %}
+
+
+        {% comment %} <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}"> {% endcomment %}
+        <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+        {% comment %} <link rel="stylesheet" href="{{ 'mbc-style.css' | asset_url }}"> {% endcomment %}
+
+        {% render 'microdata-schema' %}
+
+        <script defer>
+        // This allows to expose several variables to the global scope, to be used in scripts
+        window.theme = {
+            pageType: {{ request.page_type | json }},
+            cartCount: {{ cart.item_count | json }},
+            moneyFormat: {{ shop.money_format | json }},
+            moneyWithCurrencyFormat: {{ shop.money_with_currency_format | json }},
+            showDiscount: {% if settings.show_discount %}true{% else %}false{% endif %},
+            discountMode: {{ settings.discount_mode | json }},
+            searchMode: {{ settings.search_mode | json }},
+            cartType: {{ settings.cart_type | json }}
         };
-      })();
+        window.routes = {
+            rootUrl: {{ routes.root_url | json }},
+            cartUrl: {{ routes.cart_url | json }},
+            cartAddUrl: {{ routes.cart_add_url | json }},
+            cartChangeUrl: {{ routes.cart_change_url | json }},
+            searchUrl: {{ routes.search_url | json }},
+            productRecommendationsUrl: {{ routes.product_recommendations_url | json }}
+        };
+        window.languages = {
+            collectionOnSaleLabel: {{ 'collection.product.discount_html' | t | json }},
+            productFormUnavailable: {{ 'product.form.unavailable' | t | json }},
+            productFormAddToCart: {% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t | json }}{% else %}{{ 'product.form.add_to_cart' | t | json }}{% endif %},
+            productFormSoldOut: {{ 'product.form.sold_out' | t | json }},
+            shippingEstimatorNoResults: {{ 'cart.shipping_estimator.no_results_title' | t | json }},
+            shippingEstimatorOneResult: {{ 'cart.shipping_estimator.one_result_title' | t | json }},
+            shippingEstimatorMultipleResults: {{ 'cart.shipping_estimator.multiple_results_title' | t | json }},
+            shippingEstimatorErrors: {{ 'cart.shipping_estimator.errors' | t | json }}
+        };
+        window.lazySizesConfig = {
+            loadHidden: false,
+            hFac: 0.8,
+            expFactor: 3,
+            customMedia: {
+            '--phone': '(max-width: 640px)',
+            '--tablet': '(min-width: 641px) and (max-width: 1023px)',
+            '--lap': '(min-width: 1024px)'
+            }
+        };
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+        </script>
+        <script src="{{ 'all.min.js' | asset_url }}" defer></script>
+        <!-- Start of supergreens Zendesk Widget script -->
+        <!-- <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=b93305a5-e82a-494f-a279-e0b08a466c03"> </script> -->
+        <!-- End of supergreens Zendesk Widget script -->
+        {%- if request.page_type == 'customers/addresses' -%}
+        <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
+        <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer></script>
+        <script src="{{ 'firmhouse.js' | shopify_asset_url }}" defer></script>
+        {%- endif -%}
+
+        <script src="//cdn.polyfill.io/v3/polyfill.min.js?unknown=polyfill&features=fetch,Element.prototype.closest,Element.prototype.matches,Element.prototype.remove,Element.prototype.classList,Array.prototype.includes,Array.prototype.fill,String.prototype.includes,String.prototype.padStart,Object.assign,CustomEvent,Intl,URL,DOMTokenList,IntersectionObserver,IntersectionObserverEntry" defer></script>
+        <!-- <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
+        <script src="{{ 'slick.min.js' | asset_url }}" defer></script>
+        <script src="{{ 'jquery.magnific-popup.min.js' | asset_url }}" defer></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" defer></script>
+        <script src="{{ 'theme.mini.js' | asset_url }}" defer></script>
+        <script src="{{ 'custom.js' | asset_url }}" defer></script>
+
+        <script src="{{ 'mbc-script.js' | asset_url }}" defer></script>
+        
+
+        <script defer>
+        (function () {
+            window.onpageshow = function() {
+            // We force re-freshing the cart content onpageshow, as most browsers will serve a cache copy when hitting the
+            // back button, which cause staled data
+            document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
+                bubbles: true,
+                detail: {scrollToTop: false}
+            }));
+            };
+        })();
+        </script>
+
+        {% if settings.app_wk_enabled %}
+        {% include 'appmate-wishlist-king' %}
+        {% endif %}
+        
+        <!--StartCartCartCustomCode-->
+                        
+                        <!-- Abandoned Cart Information -->
+                        <div id="care-cart-customer-information" style="display:none">
+                            {"id":"{{customer.id}}", "email":"{{ customer.email }}","default_address":{{ customer.default_address | json }},"first_name":"{{ customer.first_name }}","last_name":"{{ customer.last_name }}","name":"{{ customer.name }}" }
+                        </div>
+                        <!-- Abandoned Cart Information -->
+                        
+                        <!--  ShopInformation -->
+                        <div id="care-cart-shop-information" style="display:none">
+                            {"domain":"{{shop.permanent_domain}}" }
+                        </div>
+                        <!--  ShopInformation -->
+                        
+                        <!--EndCareCartCustomCode-->
+        
+        <script src="https://www.dwin1.com/12993.js" type="text/javascript" defer="defer"></script>
+    {% comment %}{% include 'sca-quick-view-init' %} {% endcomment %}
+    <!-- Start of Clerk.io E-commerce Personalisation tool - www.clerk.io -->
+    <script type="text/javascript">
+        (function(w,d){
+        var e=d.createElement('script');e.type='text/javascript';e.async=true;
+        e.src=(d.location.protocol=='https:'?'https':'http')+'://cdn.clerk.io/clerk.js';
+        var s=d.getElementsByTagName('script')[0];s.parentNode.insertBefore(e,s);
+        w.__clerk_q=w.__clerk_q||[];w.Clerk=w.Clerk||function(){w.__clerk_q.push(arguments)};
+        })(window,document);
+        Clerk('config', {
+        key: 'uy2y57rwCkAYQ7WeEa3IEzLIHhGmUJZb'
+        });
     </script>
-
-    {% if settings.app_wk_enabled %}
-      {% include 'appmate-wishlist-king' %}
-    {% endif %}
+    <!-- End of Clerk.io E-commerce Personalisation tool - www.clerk.io -->
     
-    <!--StartCartCartCustomCode-->
-                      
-                      <!-- Abandoned Cart Information -->
-                      <div id="care-cart-customer-information" style="display:none">
-                        {"id":"{{customer.id}}", "email":"{{ customer.email }}","default_address":{{ customer.default_address | json }},"first_name":"{{ customer.first_name }}","last_name":"{{ customer.last_name }}","name":"{{ customer.name }}" }
-                      </div>
-                      <!-- Abandoned Cart Information -->
-                      
-                      <!--  ShopInformation -->
-                      <div id="care-cart-shop-information" style="display:none">
-                        {"domain":"{{shop.permanent_domain}}" }
-                      </div>
-                      <!--  ShopInformation -->
-                      
-                      <!--EndCareCartCustomCode-->
-    
-    <script src="https://www.dwin1.com/12993.js" type="text/javascript" defer="defer"></script>
-  {% comment %}{% include 'sca-quick-view-init' %} {% endcomment %}
-  <!-- Start of Clerk.io E-commerce Personalisation tool - www.clerk.io -->
-  <script type="text/javascript">
-    (function(w,d){
-      var e=d.createElement('script');e.type='text/javascript';e.async=true;
-      e.src=(d.location.protocol=='https:'?'https':'http')+'://cdn.clerk.io/clerk.js';
-      var s=d.getElementsByTagName('script')[0];s.parentNode.insertBefore(e,s);
-      w.__clerk_q=w.__clerk_q||[];w.Clerk=w.Clerk||function(){w.__clerk_q.push(arguments)};
-    })(window,document);
+    {% include 'globo.formbuilder.scripts' %}
 
-    Clerk('config', {
-      key: 'uy2y57rwCkAYQ7WeEa3IEzLIHhGmUJZb'
-    });
-  </script>
-  <!-- End of Clerk.io E-commerce Personalisation tool - www.clerk.io -->
- 
-{% include 'globo.formbuilder.scripts' %}
+    <!-- NEW LINKS AND NEW STRUCTURE -->
+    <link rel="stylesheet" href="{{ "application.css" | asset_url }}">
+    <!-- =========================== -->
 </head>
+    
 
-  <body class="warehouse--v1 {% if settings.animation_image_zoom %}features--animate-zoom{% endif%} template-{{ request.page_type | handle }} {% if request.page_type contains '/' %}template-{{ request.page_type | split: '/' | last | handle }}{% endif %}" data-instant-intensity="viewport">
+<body class="warehouse--v1 {% if settings.animation_image_zoom %}features--animate-zoom{% endif%} template-{{ request.page_type | handle }} {% if request.page_type contains '/' %}template-{{ request.page_type | split: '/' | last | handle }}{% endif %}" data-instant-intensity="viewport">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQ5"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -197,39 +197,43 @@
     
     <span class="loading-bar"></span>
 
-    {% section 'cookie-bar' %}
+    {% comment %} {% section 'cookie-bar' %} {% endcomment %}
 
-    {% section 'announcement-bar' %}
+    {% comment %} {% section 'announcement-bar' %} {% endcomment %}
 
     {%- unless request.page_type == 'cart' -%}
-      {%- comment -%}As required by Shopify rules, popup must be removed on cart page to remove distraction{%- endcomment -%}
-      {% section 'popups' %}
+    {%- comment -%}As required by Shopify rules, popup must be removed on cart page to remove distraction{%- endcomment -%}
+    {% section 'popups' %}
     {%- endunless -%}
 
-    {% section 'header' %}
+    {% comment %} {% section 'header' %} {% endcomment %}
+
+    <!-- NEW SECTIONS AND NEW STRUCTURE -->
+    {% section 'newHeader' %}
+    <!-- ============================== -->
 
     <main id="main" role="main">
-      {{ content_for_layout }}
+    {{ content_for_layout }}
     </main>
-    <button onClick="Firmhouse.addToCart({productId: '104824'})">Add to subscription</button>
-    {% section 'footer' %}
+    {% comment %} <button onClick="Firmhouse.addToCart({productId: '104824'})">Add to subscription</button> {% endcomment %}
+    {% comment %} {% section 'footer' %} {% endcomment %}
 
 
-  {% if template contains 'search' %}
-    {{ 'search-results-filter.js' | asset_url | script_tag }}
-    <script>
-      $(document).ready(function() {
-        console.log( $('#search-sort'))
-        var options = {
-          container: '.product-list--collection',   // replace this with the search results container class
-          grid_container: '.product-item',   // replace with the grid class
-          title_wrapper: '.product-item__title',   // replace with the title class
-          price_wrapper: '.product-item__price'  // replace with the price class
-        };
-        $('#search-sort').search_sort(options);
-    });
-  </script>
-{%endif%}
+    {% if template contains 'search' %}
+        {{ 'search-results-filter.js' | asset_url | script_tag }}
+        <script>
+            $(document).ready(function() {
+                console.log( $('#search-sort'))
+                var options = {
+                container: '.product-list--collection',   // replace this with the search results container class
+                grid_container: '.product-item',   // replace with the grid class
+                title_wrapper: '.product-item__title',   // replace with the title class
+                price_wrapper: '.product-item__price'  // replace with the price class
+                };
+                $('#search-sort').search_sort(options);
+            });
+        </script>
+    {%endif%}
 
     <style>
       @media all and (min-width: 1200px) {

@@ -1,0 +1,74 @@
+{% render 'Section-styles', name: 'section-example' %}
+
+<header class="header">
+    <div class="header__announcebar">
+        {% for block in section.blocks %}
+            <h3 class="announcement">Gratis verzending vanaf €59</h3>
+        {% endfor %}
+    </div>
+    <div class="header__main">
+        <a href="/" class="header__logo">{% render 'Logo' %}</a>
+        <nav class="header__menu">
+            {% for link in linklists["new-mega-menu"].links %}
+                {% if link.links %}
+                    <div class="link">
+                        {{ link.title }}
+                        {% render 'Chevron-down' %}
+                    </div>
+                {% else %}
+                    <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+                {% endif %}
+            {% endfor %}
+        </nav>
+        <nav class="header__navigation">
+            <form action="{{ routes.search_url }}" class="header__search">
+                <button type="submit" class="search__button">{% render 'Icon-search' %}</button>
+                <input type="text" name="q" class="search__field" placeholder="Search">
+                <input type="hidden" name="type" value="product">
+                <input type="hidden" name="options[unavailable_products]" value="hide">
+                <input type="hidden" name="options[prefix]" value="last">
+            </form>
+            <div class="header__favourites">
+                {% render 'Icon-favourites' %}
+            </div>
+            <div class="header__user">
+                {% render 'Icon-user' %}
+            </div>
+            <div class="header__cart">
+                {% render 'Icon-cart' %}
+            </div>
+        </nav>
+    </div>
+</header>
+
+{% schema %}
+    {
+        "name": "Header",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "textarea",
+                "id": "description",
+                "label": "Description",
+                "info": "Use <br> to break a line"
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Item",
+                "type": "block",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

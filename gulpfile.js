@@ -7,7 +7,7 @@ const sassFiles = [
     //application
     "src/styles/application.scss",
     //sections
-    // "src/styles/sections/section-hero.scss",
+    "src/styles/sections/section-hero.scss",
 ];
 
 gulp.task("dev", () => {
