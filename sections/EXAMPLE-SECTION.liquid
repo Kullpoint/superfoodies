@@ -1,0 +1,35 @@
+{% render 'Section-styles', name: 'section-example' %}
+
+<section class="section-example">
+    <div class="section-example__wrapper">
+        <h2 class="section-example__title">{{ section.settings.title }}</h2>
+        <div class="section-example__description">{{ section.settings.description }}</div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Example section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "textarea",
+                "id": "description",
+                "label": "Description",
+                "info": "Use <br> to break a line"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Example section",
+                "settings": {
+
+                }
+            }
+        ]
+    }
+{% endschema %}
