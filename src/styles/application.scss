@@ -32,3 +32,29 @@ ul {
         background-color: $secondary-color;
     }
 }
+
+/* =================================================== PRELOADER =================================================== */
+.preloader {
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: $secondary-color;
+    transition: opacity .5s ease, visibility .5s ease;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader.dn {
+    display: none;
+}
+
+/* ================================================== BACKGROUNDS ================================================== */
+.rays-bg {
+    position: absolute;
+    top: -100%;
+    left: 0;
+}

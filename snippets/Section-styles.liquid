@@ -2,7 +2,7 @@
     {% assign sectionName = name %}
     {% assign sectionStylesheet = sectionName | append: '.css' %}
     if (!document.querySelector(`[data-section-styles="{{ sectionName }}"]`)) {
-        const styleTag = `<link rel="stylesheet" href="{{ sectionStylesheet | asset_url }}" data-section-styles='{{ sectionName }}'>`
+        const styleTag = `<link rel="stylesheet" href="{{ sectionStylesheet | asset_url }}" data-section-styles="{{ sectionName }}">`;
         document.head.innerHTML += styleTag;
     }
 </script>

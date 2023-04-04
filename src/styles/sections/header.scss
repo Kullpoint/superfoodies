@@ -22,11 +22,14 @@
     &__announcebar {
         justify-content: center;
         height: 40px;
-        font-family: 'Helvetica';
-        font-size: 18px;
-        font-weight: 400;
         background-color: $primary-color;
-        color: $lighten_secondary-color;
+
+        .announcement {
+            font-family: 'Helvetica';
+            font-size: 18px;
+            font-weight: 400;
+            color: $lighten_secondary-color;
+        }
     }
 
     &__main {

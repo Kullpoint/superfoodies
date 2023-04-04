@@ -1,4 +1,7 @@
-{% render 'Section-styles', name: 'section-example' %}
+{% liquid
+    render 'Section-styles', name: 'section-example'
+    render 'Section-scripts', name: 'section-example'
+%}
 
 <section class="section-example">
     <div class="section-example__wrapper">

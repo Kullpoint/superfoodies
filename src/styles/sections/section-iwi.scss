@@ -1,0 +1,78 @@
+@import '../variables.scss';
+
+.section-iwi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 45px 0;
+    background-color: $secondary-color;
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        width: 100%;
+        max-width: $second-wrapper;
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 665px;
+        object-fit: cover;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    &__suptitle,
+    &__title {
+        color: $silver-color;
+    }
+
+    &__suptitle {
+        font-family: 'Helvetica';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.44;
+    }
+
+    &__title {
+        font-size: 46px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 225px;
+        height: 50px;
+        font-size: 16px;
+        border: 1px solid $primary-color;
+        background-color: $primary-color;
+        color: $white-color;
+        transition: background-color .2s ease, color .2s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $white-color;
+            color: $primary-color;
+        }
+    }
+
+    &__products {
+        display: flex;
+
+        .product-card {
+            &:nth-child(2n + 2) {
+                background-color: $secondary-color  ;
+            }
+        }
+    }
+}

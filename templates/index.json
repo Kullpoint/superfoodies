@@ -1,12 +1,97 @@
 {
-    "sections": {
-        "section-hero": {
-            "type": "Section-hero",
-            "settings": {
-            }
+  "sections": {
+    "section-hero": {
+      "type": "Section-hero",
+      "blocks": {
+        "bf193772-18bb-4e72-a3eb-67cb3c6be242": {
+          "type": "block",
+          "settings": {
+            "product": "bamboe-spatel-superfoodies"
+          }
+        },
+        "0c9ffbac-eac6-47ee-8576-41b6ff6423f9": {
+          "type": "block",
+          "settings": {
+            "product": "appelcider-azijn-bio-bragg"
+          }
+        },
+        "90444ef5-3acb-4c94-b2a7-7fe57747d213": {
+          "type": "block",
+          "settings": {
+            "product": "amazing-adrenals-superfoodies"
+          }
+        },
+        "72ba08e7-399a-4099-8b36-ab14d60ea41b": {
+          "type": "block",
+          "settings": {
+            "product": "100-puur-opvoeden-dayenne-bos"
+          }
         }
+      },
+      "block_order": [
+        "bf193772-18bb-4e72-a3eb-67cb3c6be242",
+        "0c9ffbac-eac6-47ee-8576-41b6ff6423f9",
+        "90444ef5-3acb-4c94-b2a7-7fe57747d213",
+        "72ba08e7-399a-4099-8b36-ab14d60ea41b"
+      ],
+      "settings": {
+        "bg-image": "shopify:\/\/shop_images\/chocolate-ganache-tart-5_1.jpg",
+        "suptitle": "Voedsel Zoals De Natuur Het Voor Ons Heeft Geschap",
+        "title": "YOU ARE SO MUCH MORE"
+      }
     },
-    "order": [
-        "section-hero"
-    ]
+    "section-pwi": {
+      "type": "Section-PWI",
+      "blocks": {
+        "066ea214-1156-47be-82ce-d9f5c9c3c099": {
+          "type": "block",
+          "settings": {
+            "product": "chaga-instant-kruidendrankje-four-sigmatic"
+          }
+        },
+        "928cf356-880f-4717-b4c2-745b389ecbdd": {
+          "type": "block",
+          "settings": {
+            "product": "kopie-van-bruine-rijst-eiwit-poeder-chocolade-superfoodies-500-gram"
+          }
+        },
+        "af610788-36a8-42d1-a1b8-967805fec876": {
+          "type": "block",
+          "settings": {
+            "product": "chocolade-raw-amandel-vijg-bio-lovechock"
+          }
+        }
+      },
+      "block_order": [
+        "066ea214-1156-47be-82ce-d9f5c9c3c099",
+        "928cf356-880f-4717-b4c2-745b389ecbdd",
+        "af610788-36a8-42d1-a1b8-967805fec876"
+      ],
+      "settings": {
+        "title": "Onze bestsellers",
+        "link-title": "NU WINKELEN",
+        "link-url": "shopify:\/\/collections",
+        "padding-top": 45,
+        "padding-bottom": 45,
+        "background": "rays"
+      }
+    },
+    "section-iwi": {
+      "type": "Section-IWI",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/green-juice-smoothie-8_1_klein.jpg",
+        "suptitle": "From the blog",
+        "title": "THE SIMPLE GRATITUDE PRACTICE THAT CHANGED MY LIFE",
+        "link-title": "VOEG TOE",
+        "link-url": "shopify:\/\/collections\/all",
+        "padding-top": 0,
+        "padding-bottom": 60
+      }
+    }
+  },
+  "order": [
+    "section-hero",
+    "section-pwi",
+    "section-iwi",
+  ]
 }

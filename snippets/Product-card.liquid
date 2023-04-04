@@ -1,6 +1,6 @@
-<div class="product-card">
+<div class="product-card {{ doppleClass }}">
     <img src="{{ product.featured_image | image_url }}" alt="{{ product.alt }}" width="auto" height="auto" loading="lazy" class="product-card__image">
     <h3 class="product-card__title">{{ product.title }}</h3>
     <div class="product-card__collection">{{ product.collections[0].title }}</div>
-    <div class="product-card__button">Im button</div>
+    <div class="product-card__button">{{ settings.product-card-button }}</div>
 </div>
