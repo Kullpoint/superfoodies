@@ -7,9 +7,13 @@ const sassFiles = [
     //application
     "src/styles/application.scss",
     //sections
-    "src/styles/sections/section-hero.scss",
+    "src/styles/sections/mainPage/section-hero.scss",
     "src/styles/sections/section-pwi.scss",
     "src/styles/sections/section-iwi.scss",
+    "src/styles/sections/section-articles.scss",
+    "src/styles/sections/section-ambassadors.scss",
+    "src/styles/sections/section-categories.scss",
+    "src/styles/sections/section-video.scss",
 ];
 
 gulp.task("dev", () => {

@@ -1,53 +1,45 @@
 {% liquid
-    render 'Section-styles', name: 'section-pwi'
+    render 'Section-styles', name: 'section-categories'
 %}
-{% comment %} render 'Section-scripts', name: 'section-pwi' {% endcomment %}
+
+{% comment %} render 'Section-scripts', name: 'section-categories' {% endcomment %}
 
 <style>
-    .section-pwi {
+    .section-categories {
         padding-top: {{ section.settings.padding-top }};
         padding-bottom: {{ section.settings.padding-bottom }};
     }
 </style>
 
-<section class="section-pwi">
+<section class="section-categories">
     {% if section.settings.background != 'none' %}
         {% render 'Section-backgrounds', background: section.settings.background %}
     {% endif %}
-    <div class="section-pwi__wrapper">
-        <div class="section-pwi__info">
-            <h2 class="section-pwi__title">{{ section.settings.title }}</h2>
-            {% if section.settings.link-url != blank %}
-                <a href="{{ section.settings.link-url }}" class="section-pwi__link">{{ section.settings.link-title }}</a>
-            {% endif %}
-        </div>
-        <div class="section-pwi__products">
+    <div class="section-categories__wrapper">
+        <h2 class="section-categories__title">{{ section.settings.title }}</h2>
+        <div class="section-categories__container">
             {% for block in section.blocks %}
-                {% render 'Product-card', product: block.settings.product %}
+                {% assign category = block.settings.category %}
+                <a href="{{ category.url }}" class="category">
+                    <img src="{{ category.image | image_url }}" alt="{{ category.alt }}" width="auto" height="auto" loading="lazy" class="category__image">
+                    <div class="category__title">{{ category.title }}</div>
+                </a>
             {% endfor %}
         </div>
+        {% if section.settings.link-url != blank %}
+            <a href="{{ section.settings.link-url }}" class="section-categories__all">{{ section.settings.link-title }}</a>
+        {% endif %}
     </div>
 </section>
 
 {% schema %}
     {
-        "name": "Products with info",
+        "name": "Categories section",
         "settings": [
             {
                 "type": "textarea",
                 "id": "title",
-                "label": "Info",
-                "default": "Onze bestsellers"
-            },
-            {
-                "type": "text",
-                "id": "link-title",
-                "label": "Link title"
-            },
-            {
-                "type": "url",
-                "id": "link-url",
-                "label": "Link url"
+                "label": "Title"
             },
             {
                 "type": "range",
@@ -57,17 +49,17 @@
                 "step": 5,
                 "unit": "px",
                 "label": "Padding top",
-                "default": 40
+                "default": 45
             },
             {
                 "type": "range",
                 "id": "padding-bottom",
                 "min": 0,
                 "max": 200,
-                "step": 5,
+                "step": 5,  
                 "unit": "px",
                 "label": "Padding bottom",
-                "default": 25
+                "default": 45
             },
             {
                 "type": "select",
@@ -79,30 +71,40 @@
                         "label": "None"
                     },
                     {
-                        "value": "rays",
-                        "label": "Rays"
+                        "value": "vegetables",
+                        "label": "Vegetables"
                     }
                 ],
                 "default": "none"
+            },
+            {
+                "type": "text",
+                "id": "link-title",
+                "label": "Link title"
+            },
+            {
+                "type": "url",
+                "id": "link-url",
+                "label": "Link url"
             }
         ],
         "blocks": [
             {
-                "name": "Product",
+                "name": "Category",
                 "type": "block",
-                "limit": 3,
+                "limit": 6,
                 "settings": [
                     {
-                        "type": "product",
-                        "id": "product",
-                        "label": "Product"
+                        "type": "collection",
+                        "id": "category",
+                        "label": "Category"
                     }
                 ]
             }
         ],
         "presets": [
             {
-                "name": "Products with info",
+                "name": "Categories section",
                 "settings": {
 
                 }

@@ -2,7 +2,7 @@
     "name": "superfoodies",
     "scripts": {
         "build": "gulp dev",
-        "dev": "concurrently \"gulp watch\" \"shopify theme dev -s superfoodies-nl.myshopify.com/\""
+        "dev": "concurrently \"gulp watch\" \"shopify theme dev -s superfoodies-nl.myshopify.com\""
     },
     "license": "ISC",
     "devDependencies": {

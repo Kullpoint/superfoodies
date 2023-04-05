@@ -1,0 +1,87 @@
+@import '../variables.scss';
+
+.section-categories {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .vegetales-bg {
+        position: absolute;
+        top: -150px;
+        right: 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: $main-wrapper;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        font-size: 60px;
+        font-feature-settings: 'pnum' on, 'lnum' on, 'swsh' on;
+        text-align: center;
+        color: $silver-color;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px 20px;
+        width: 100%;
+        margin-bottom: 25px;
+
+        .category {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            &__image {
+                width: 100%;
+                height: 285px;
+                object-fit: cover;
+            }
+
+            &__title {
+                font-size: 20px;
+                line-height: 1.2;
+                text-align: center;
+                color: $silver-color;
+                transition: color .2s ease;
+            }
+
+            &:hover {
+                .category {
+                    &__title {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &__all {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 225px;
+        height: 50px;
+        font-size: 16px;
+        border: 1px solid $primary-color;
+        background-color: $primary-color;
+        color: $white-color;
+        transition: background-color .2s ease, color .2s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $white-color;
+            color: $primary-color;
+        }
+    }
+}

@@ -1,6 +1,6 @@
-@import '../variables.scss';
-@import '../modules/swiper.scss';
-@import '../components/product-card.scss';
+@import '../../variables.scss';
+@import '../../modules/swiper.scss';
+@import '../../components/product-card.scss';
 
 .section-hero {
     position: relative;
@@ -10,6 +10,7 @@
     align-items: center;
     width: 100%;
     height: calc(100vh - 120px);
+    margin-top: 120px;
 
     &__bg-image,
     &__bg-gradient {

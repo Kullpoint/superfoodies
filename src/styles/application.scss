@@ -13,6 +13,7 @@ body {
     font-weight: 600;
     line-height: 1;
     // -webkit-font-smoothing: antialiased;
+    background-color: $secondary-color;
 }
 
 body,
@@ -36,7 +37,14 @@ ul {
 /* =================================================== PRELOADER =================================================== */
 .preloader {
     position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
     background-color: $secondary-color;

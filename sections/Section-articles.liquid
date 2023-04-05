@@ -1,0 +1,75 @@
+{% liquid
+    render 'Section-styles', name: 'section-articles'
+%}
+
+{% comment %} render 'Section-scripts', name: 'section-articles' {% endcomment %}
+
+<style>
+    .section-articles {
+        padding-top: {{ section.settings.padding-top }};
+        padding-bottom: {{ section.settings.padding-bottom }};
+    }
+</style>
+
+<section class="section-articles">
+    <div class="section-articles__wrapper">
+        {% for block in section.blocks %}
+            {% assign article = block.settings.article %}
+            <div class="article">
+                <img src="{{ article.image | image_url }}" alt="{{ article.alt }}" width="auto" height="auto" loading="lazy" class="article__image">
+                <h3 class="article__title">{{ article.title }}</h3>
+                <div class="article__author">{{ article.author }}</div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Articles section",
+        "settings": [
+            {
+                "type": "range",
+                "id": "padding-top",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Padding top",
+                "default": 30
+            },
+            {
+                "type": "range",
+                "id": "padding-bottom",
+                "min": 0,
+                "max": 200,
+                "step": 5,  
+                "unit": "px",
+                "label": "Padding bottom",
+                "default": 40
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Article",
+                "type": "block",
+                "limit": 3,
+                "settings": [
+                    {
+                        "type": "article",
+                        "id": "article",
+                        "label": "Article"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Articles section",
+                "settings": {
+
+                }
+            }
+        ]
+    }
+{% endschema %}

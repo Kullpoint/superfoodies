@@ -87,11 +87,161 @@
         "padding-top": 0,
         "padding-bottom": 60
       }
+    },
+    "section-articles": {
+      "type": "Section-articles",
+      "blocks": {
+        "d9ef6b8d-e798-4cac-a93e-56481aadf8f5": {
+          "type": "block",
+          "settings": {
+            "article": "recepten\/golden-milk-pumpkin-oats"
+          }
+        },
+        "090ca45b-d005-42eb-9796-c7de9ede37c7": {
+          "type": "block",
+          "settings": {
+            "article": "news\/de-grootste-fout-bij-het-maken-van-een-smoothie"
+          }
+        },
+        "931f10d5-e6c7-4189-b869-201eb7431406": {
+          "type": "block",
+          "settings": {
+            "article": "recepten\/cacao-nib-brownies-met-cashew-glazuur"
+          }
+        }
+      },
+      "block_order": [
+        "d9ef6b8d-e798-4cac-a93e-56481aadf8f5",
+        "090ca45b-d005-42eb-9796-c7de9ede37c7",
+        "931f10d5-e6c7-4189-b869-201eb7431406"
+      ],
+      "settings": {
+        "padding-top": 0,
+        "padding-bottom": 75
+      }
+    },
+    "section-ambassadors": {
+      "type": "Section-ambassadors",
+      "blocks": {
+        "e49d0034-5a41-4797-92e6-82b8e8a6a768": {
+          "type": "block",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/ambassador_1.png",
+            "link-title": "MEET JACKYE",
+            "link-url": "shopify:\/\/collections"
+          }
+        },
+        "b5b94450-4255-4a0a-b2d0-ad24760befa8": {
+          "type": "block",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/ambassador_2.png",
+            "link-title": "MEET NIKKIE",
+            "link-url": "shopify:\/\/collections"
+          }
+        },
+        "0409a009-cf07-4c37-ab64-921d0f6e59d8": {
+          "type": "block",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/ambassador_3.png",
+            "link-title": "MEET VALL",
+            "link-url": "shopify:\/\/collections"
+          }
+        },
+        "9cd98c06-a032-459d-bdcc-3e2d52a4e7d6": {
+          "type": "block",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/ambassador_4.png",
+            "link-title": "MEET KRISTINE",
+            "link-url": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "e49d0034-5a41-4797-92e6-82b8e8a6a768",
+        "b5b94450-4255-4a0a-b2d0-ad24760befa8",
+        "0409a009-cf07-4c37-ab64-921d0f6e59d8",
+        "9cd98c06-a032-459d-bdcc-3e2d52a4e7d6"
+      ],
+      "settings": {
+        "title": "Onze ambassadeurs",
+        "padding-top": 35,
+        "padding-bottom": 45
+      }
+    },
+    "section-categories": {
+      "type": "Section-categories",
+      "blocks": {
+        "71d423e0-b7a3-4642-8417-dcbe874479ab": {
+          "type": "block",
+          "settings": {
+            "category": "beauty"
+          }
+        },
+        "018d0b68-aad5-4369-8f5e-686b71200192": {
+          "type": "block",
+          "settings": {
+            "category": "aminozuren"
+          }
+        },
+        "5cf791ee-3eb8-49f9-8133-122da973a111": {
+          "type": "block",
+          "settings": {
+            "category": "adaptogene-kruiden"
+          }
+        },
+        "543239aa-a94c-4f35-9962-957004f037e7": {
+          "type": "block",
+          "settings": {
+            "category": "antioxidanten"
+          }
+        },
+        "0a8fbe34-0245-47df-b49d-50fbdbb73aec": {
+          "type": "block",
+          "settings": {
+            "category": "chocolade"
+          }
+        },
+        "859826d0-5cb4-413a-88cc-41ceff3e9e10": {
+          "type": "block",
+          "settings": {
+            "category": "food"
+          }
+        }
+      },
+      "block_order": [
+        "71d423e0-b7a3-4642-8417-dcbe874479ab",
+        "018d0b68-aad5-4369-8f5e-686b71200192",
+        "5cf791ee-3eb8-49f9-8133-122da973a111",
+        "543239aa-a94c-4f35-9962-957004f037e7",
+        "0a8fbe34-0245-47df-b49d-50fbdbb73aec",
+        "859826d0-5cb4-413a-88cc-41ceff3e9e10"
+      ],
+      "settings": {
+        "title": "Ontdek onze categorieën",
+        "padding-top": 45,
+        "padding-bottom": 45,
+        "background": "vegetables",
+        "link-title": "BEKIJK ALLES",
+        "link-url": "shopify:\/\/collections"
+      }
+    },
+    "section-video": {
+      "type": "Section-video",
+      "settings": {
+        "title": "Onze Missie",
+        "padding-top": 45,
+        "padding-bottom": 45,
+        "video": "shopify:\/\/files\/videos\/cappugreeno.mp4.mp4"
+      }
     }
   },
   "order": [
     "section-hero",
     "section-pwi",
     "section-iwi",
+    "section-articles",
+    "section-ambassadors",
+    "section-categories",
+    "section-video"
   ]
 }

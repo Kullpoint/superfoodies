@@ -1,0 +1,77 @@
+@import '../variables.scss';
+
+.section-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: $main-wrapper;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        font-size: 60px;
+        font-feature-settings: 'swsh' on;
+        text-align: center;
+        color: $silver-color;
+    }
+
+    &__container {
+        position: relative;
+        width: 100%;
+
+        &:hover {
+            .video {
+                &__button.hidden {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        .video {
+            &__playzone {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(78, 74, 51, 0.5), rgba(78, 74, 51, 0.5));
+            }
+    
+            &__button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+                transition: opacity .3s ease, visibility .3s ease;
+                cursor: pointer;
+            }
+            
+            &__playzone.dn,
+            &__button.dn {
+                display: none;
+            }
+
+            &__button.hidden {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+
+    &__video {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+}
