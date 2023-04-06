@@ -11,5 +11,8 @@
         "gulp-clean-css": "^4.3.0",
         "gulp-sass": "^5.1.0",
         "sass": "^1.60.0"
+    },
+    "dependencies": {
+        "gsap": "^3.11.5"
     }
 }

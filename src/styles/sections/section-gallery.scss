@@ -1,0 +1,100 @@
+@import '../variables.scss';
+
+.section-gallery {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+    background-color: $silver-color;
+    overflow: hidden;
+
+    .rays-bg {
+        position: absolute;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: $second-wrapper;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        max-width: 355px;
+
+        .title,
+        .fingerprint {
+            color: $lighten_secondary-color;
+        }
+
+        .title {
+            font-size: 46px;
+        }
+
+        .fingerprint {
+            font-family: 'Helvetica';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.44;
+        }
+        
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            height: 50px;
+            padding: 0 50px;
+            font-size: 16px;
+            border: 1px solid $primary-color;
+            background-color: $primary-color;
+            color: $white-color;
+            transition: background-color .2s ease, color .2s ease;
+            cursor: pointer;
+    
+            &:hover {
+                background-color: $white-color;
+                color: $primary-color;
+            }
+        }
+    }
+
+    &__gallery {
+        position: absolute;
+        right: 0;
+        transform: rotate(7deg);
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        width: fit-content;
+        height: fit-content;
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .wrapper {
+            display: flex;
+            width: 205px;
+            height: 250px;
+        }
+
+        .picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

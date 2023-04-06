@@ -1,0 +1,90 @@
+{% liquid
+    render 'Section-styles', name: 'section-collections'
+%}
+
+{% comment %} render 'Section-scripts', name: 'section-collections' {% endcomment %}
+
+<style>
+    .section-collections {
+        margin-top: {{ section.settings.margin-top }}px;
+        margin-bottom: {{ section.settings.margin-bottom }}px;
+    }
+</style>
+
+<section class="section-collections">
+    <div class="section-collections__wrapper">
+        <h2 class="section-collections__title">{{ section.settings.title }}</h2>
+        <div class="section-collections__container">
+            {% for block in section.blocks %}
+                {% assign linkItem = block.settings %}
+                {% assign linkItemCollection = block.settings.collection %}
+                <a href="{{ linkItemCollection.url }}" class="item">
+                    <div class="item__icon">{{ linkItem.icon }}</div>
+                    <div class="item__title">{{ linkItemCollection.title }}</div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Collections section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "Waar heb je hulp bij nodig?"
+            },
+            {
+                "type": "range",
+                "id": "margin-top",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Margin top",
+                "default": 45
+            },
+            {
+                "type": "range",
+                "id": "margin-bottom",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Margin bottom",
+                "default": 40
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Collection",
+                "type": "block",
+                "limit": 10,
+                "settings": [
+                    {
+                        "type": "textarea",
+                        "id": "icon",
+                        "label": "Icon",
+                        "info": "Put an svg icon code here"
+                    },
+                    {
+                        "type": "collection",
+                        "id": "collection",
+                        "label": "Collection"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Collections section",
+                "settings": {
+
+                }
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,99 @@
+@import '../variables.scss';
+
+.section-recipes {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+
+    .vegetales-bg {
+        position: absolute;
+        top: -200px;
+        right: 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: $second-wrapper;
+    }
+
+    &__title {
+        max-width: 510px;
+        margin-bottom: 25px;
+        font-size: 60px;
+        font-feature-settings: 'swsh' on;
+        color: $silver-color;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        width: 100%;
+        margin-bottom: 40px;
+
+        .recipe {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            &__image {
+                width: 100%;
+                height: 285px;
+                border: 1px solid transparent;
+                transition: border-color .2s ease;
+
+                .img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &__title {
+                font-size: 20px;
+                line-height: 1.2;
+                color: $silver-color;
+                transition: color .2s ease;
+            }
+
+            &:hover {
+                .recipe {
+                    &__image {
+                        border-color: $light_brown-color;
+                    }
+
+                    &__title {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &__all {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        height: 50px;
+        margin: 0 auto;
+        padding: 0 50px;
+        font-size: 16px;
+        border: 1px solid $primary-color;
+        background-color: $primary-color;
+        color: $white-color;
+        transition: background-color .2s ease, color .2s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $white-color;
+            color: $primary-color;
+        }
+    }
+}

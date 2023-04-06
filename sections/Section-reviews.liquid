@@ -1,0 +1,82 @@
+{% liquid
+    render 'Section-styles', name: 'section-reviews'
+    render 'Section-scripts', name: 'section-reviews'
+%}
+
+<style>
+    .section-reviews {
+        margin-top: {{ section.settings.margin-top }}px;
+        margin-bottom: {{ section.settings.margin-bottom }}px;
+    }
+</style>
+
+<section class="section-reviews">
+    <div class="section-reviews__wrapper">
+        <h2 class="section-reviews__title">{{ section.settings.title }}</h2>
+        <div id="reviews-slider" class="swiper-container">
+            <div class="swiper-wrapper">
+                {% for block in (1..9) %}
+                    <div class="swiper-slide">
+                        <div class="text-wrapper">
+                            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                        <div class="author">JOYCE</div>
+                        <div class="rating">
+                            {% for item in (1..5) %}
+                                {% render 'Icon-star' %}
+                            {% endfor %}
+                            <div class="score">10/10</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Navigation buttons -->
+        <div class="section-reviews__buttons">
+            <div class="swiper-button-prev" data-wiper-button-prev="reviews-slider"></div>
+            <div class="swiper-button-next" data-wiper-button-next="reviews-slider"></div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Reviews section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "Wat zeggen onze klanten"
+            },
+            {
+                "type": "range",
+                "id": "margin-top",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Margin top",
+                "default": 40
+            },
+            {
+                "type": "range",
+                "id": "margin-bottom",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Margin bottom",
+                "default": 0
+            }
+        ],
+        "presets": [
+            {
+                "name": "Reviews section",
+                "settings": {
+
+                }
+            }
+        ]
+    }
+{% endschema %}

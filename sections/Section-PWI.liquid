@@ -5,8 +5,8 @@
 
 <style>
     .section-pwi {
-        padding-top: {{ section.settings.padding-top }};
-        padding-bottom: {{ section.settings.padding-bottom }};
+        padding-top: {{ section.settings.padding-top }}px;
+        padding-bottom: {{ section.settings.padding-bottom }}px;
     }
 </style>
 
@@ -81,9 +81,19 @@
                     {
                         "value": "rays",
                         "label": "Rays"
+                    },
+                    {
+                        "value": "corn",
+                        "label": "Corn"
                     }
                 ],
                 "default": "none"
+            },
+            {
+                "type": "text",
+                "id": "product-card-button",
+                "label": "Product cart buttons title",
+                "info": "Change product cart buttons title special for this section"
             }
         ],
         "blocks": [

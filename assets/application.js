@@ -7,7 +7,7 @@ const removePreloader = () => {
         setTimeout(() => {
             preloader.classList.add('dn');
         }, 500);
-    }, 600);
+    }, 200);
 }
 
 const videoLogic = () => {

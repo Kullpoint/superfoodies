@@ -5,7 +5,7 @@
         const scriptTag = document.createElement('script');
         scriptTag.setAttribute('type', 'module');
         scriptTag.setAttribute('src', '{{ sectionScript | asset_url }}');
-        scriptTag.setAttribute('data-section-script', '{{ sectionName }}')
+        scriptTag.setAttribute('data-section-script', '{{ sectionName }}');
         document.body.append(scriptTag);
     }
 </script>

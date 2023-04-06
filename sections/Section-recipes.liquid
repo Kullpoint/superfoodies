@@ -1,0 +1,119 @@
+{% liquid
+    render 'Section-styles', name: 'section-recipes'
+%}
+
+{% comment %} render 'Section-scripts', name: 'section-recipes' {% endcomment %}
+
+<style>
+    .section-recipes {
+        padding-top: {{ section.settings.padding-top }}px;
+        padding-bottom: {{ section.settings.padding-bottom }}px;
+    }
+</style>
+
+<section class="section-recipes">
+    {% if section.settings.background != 'none' %}
+        {% render 'Section-backgrounds', background: section.settings.background %}
+    {% endif %}
+    <div class="section-recipes__wrapper">
+        <h2 class="section-recipes__title">{{ section.settings.title }}</h2>    
+        <div class="section-recipes__container">
+            {% for block in section.blocks %}
+                {% assign recipe = block.settings.recipe %}
+                <a href="{{ recipe.url }}" class="recipe">
+                    <div class="recipe__image">
+                        <img src="{{ recipe.image | image_url }}" alt="{{ recipe.alt }}" width="auto" height="auto" loading="lazy" class="img">
+                    </div>
+                    <div class="recipe__title">{{ recipe.title }}</div>
+                </a>
+            {% endfor %}
+        </div>
+        {% if section.settings.link-url != blank %}
+            <a href="{{ section.settings.link-url }}" class="section-recipes__all">{{ section.settings.link-title }}</a>
+        {% endif %}
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Recipes section",
+        "settings": [
+            {
+                "type": "textarea",
+                "id": "title",
+                "label": "Title",
+                "default": "Recepten waar superfoodies van houden"
+            },
+            {
+                "type": "range",
+                "id": "padding-top",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Padding top",
+                "default": 60
+            },
+            {
+                "type": "range",
+                "id": "padding-bottom",
+                "min": 0,
+                "max": 200,
+                "step": 5,  
+                "unit": "px",
+                "label": "Padding bottom",
+                "default": 85
+            },
+            {
+                "type": "select",
+                "id": "background",
+                "label": "Background",
+                "options": [
+                    {
+                        "value": "none",
+                        "label": "None"
+                    },
+                    {
+                        "value": "vegetables-2",
+                        "label": "Vegetables"
+                    }
+                ],
+                "default": "none"
+            },
+            {
+                "type": "text",
+                "id": "link-title",
+                "label": "Link title",
+                "default": "BEKIJK ALLES"
+            },
+            {
+                "type": "url",
+                "id": "link-url",
+                "label": "Link url",
+                "default": "/"
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Recipe",
+                "type": "block",
+                "limit": 4,
+                "settings": [
+                    {
+                        "type": "article",
+                        "id": "recipe",
+                        "label": "Recipe"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Recipes section",
+                "settings": {
+
+                }
+            }
+        ]
+    }
+{% endschema %}

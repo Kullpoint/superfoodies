@@ -2,5 +2,11 @@
     <img src="{{ product.featured_image | image_url }}" alt="{{ product.alt }}" width="auto" height="auto" loading="lazy" class="product-card__image">
     <h3 class="product-card__title">{{ product.title }}</h3>
     <div class="product-card__collection">{{ product.collections[0].title }}</div>
-    <div class="product-card__button">{{ settings.product-card-button }}</div>
+    <div class="product-card__button">
+        {% if section.settings.product-card-button != blank %}
+            {{ section.settings.product-card-button }}
+        {% else %}
+            {{ settings.product-card-button }}
+        {% endif %}
+    </div>
 </div>

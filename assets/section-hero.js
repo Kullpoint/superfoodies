@@ -1,6 +1,8 @@
 import Swiper from './swiper-bundle.js';
 
 const slider = () => {
+    const container = document.getElementById("heroSliderContainer");
+
     new Swiper('#hero-slider', {
         speed: 1200,
         loop: true,
@@ -9,13 +11,19 @@ const slider = () => {
         delay: 5000,
         lidesPerView: 1,
         effect: 'cube',
-        cubeEffect: {   
+        runCallbacksOnInit: true,
+        cubeEffect: {       
             slideShadows: false,
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        }
+            prevEl: '[data-wiper-button-prev="hero-slider"]',
+            nextEl: '[data-wiper-button-next="hero-slider"]'
+        },
+        on: {
+            init: () => {
+                container.classList.remove('overflow-hidden');
+            }
+        },
     });
 }
 

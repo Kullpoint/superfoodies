@@ -87,6 +87,10 @@
         }
     }
 
+    &__slider.overflow-hidden {
+        overflow: hidden;
+    }
+
     #hero-slider {
         width: 100%;
     

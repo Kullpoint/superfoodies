@@ -1,0 +1,54 @@
+@import '../variables.scss';
+
+.section-contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 90px 0 110px;
+
+    &__background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: $second-wrapper;
+    }
+
+    &__slogan {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__title,
+    &__description {
+        max-width: 640px;
+        color: $silver-color;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        font-size: 46px;
+    }
+
+    &__description {
+        margin-bottom: 35px;
+        font-family: 'Helvetica';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.44;
+    }
+}

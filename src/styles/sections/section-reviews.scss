@@ -1,0 +1,116 @@
+@import '../variables.scss';
+
+.section-reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 80px 0 65px;
+    background-color: $lighten_silver-color;
+    overflow: hidden;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: $second-wrapper;
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: unset;
+            top: unset;
+            width: 40px;
+            height: 40px;
+            margin: 0;
+            border: 2px solid $light_brown-color;
+            border-radius: 50%;
+            
+
+            &::after {
+                font-size: 17px;
+                font-weight: 900;
+                color: $light_brown-color;
+            }
+        }
+
+        .swiper-button-prev {
+            left: 0;
+        }
+
+        .swiper-button-next {
+            right: 0;
+        }
+    }
+
+    &__buttons {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    &__title {
+        max-width: 800px;
+        margin-bottom: 35px;
+        font-size: 60px;
+        font-feature-settings: 'swsh' on;
+        color: $silver-color;
+    }
+
+    #reviews-slider {
+        width: 100%;
+    
+        .swiper-wrapper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 35px;
+            height: auto;
+            padding: 30px;
+            border: 1px solid $light_brown-color;
+            background-color: $secondary-color;
+
+            .text-wrapper {
+                overflow: hidden;
+                width: 100%;
+                height: 130px;
+            }
+
+            .text,
+            .author {
+                color: $silver-color;
+            }
+
+            .text,
+            .score {
+                font-family: 'Helvetica';
+                font-weight: 400;
+                font-size: 18px;
+            }
+
+            .text {
+                line-height: 1.44;
+            }
+
+            .author {
+                font-size: 20px;
+            }
+
+            .rating {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .score {
+                color: $light_brown-color;
+            }
+        }
+    }
+}

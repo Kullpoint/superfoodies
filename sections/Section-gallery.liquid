@@ -1,0 +1,146 @@
+{% liquid
+    render 'Section-styles', name: 'section-gallery'
+%}
+
+{% comment %} render 'Section-scripts', name: 'section-gallery' {% endcomment %}
+
+<style>
+    .section-gallery {
+        margin-top: {{ section.settings.margin-top }}px;
+        margin-bottom: {{ section.settings.margin-bottom }}px;
+    }
+</style>
+
+<section class="section-gallery">
+    {% if section.settings.background != 'none' %}
+        {% render 'Section-backgrounds', background: section.settings.background %}
+    {% endif %}
+    <div class="section-gallery__wrapper">
+        <div class="section-gallery__info">
+            <h2 class="title">{{ section.settings.title }}</h2>
+            <div class="fingerprint">{{ section.settings.fingerprint }}</div>
+            {% if section.settings.link-url != blank %}
+                <a href="{{ section.settings.link-url }}" class="link">{{ section.settings.link-title }}</a>
+            {% endif %}
+        </div>
+        <div class="section-gallery__gallery">
+            <div class="column" data-gallery-column>
+                {% for block in section.blocks %}
+                    {% if forloop.index < 5 %}
+                        <div class="wrapper">
+                            <img src="{{ block.settings.picture | image_url }}" alt="gallery picture" width="auto" height="auto" loading="lazy" class="picture">  
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="column" data-gallery-column>
+                {% for block in section.blocks %}
+                    {% if forloop.index > 4 and forloop.index < 9 %}
+                        <div class="wrapper">
+                            <img src="{{ block.settings.picture | image_url }}" alt="gallery picture" width="auto" height="auto" loading="lazy" class="picture">  
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="column" data-gallery-column>
+                {% for block in section.blocks %}
+                    {% if forloop.index > 8 %}
+                        <div class="wrapper">
+                            <img src="{{ block.settings.picture | image_url }}" alt="gallery picture" width="auto" height="auto" loading="lazy" class="picture">  
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Gallery section",
+        "settings": [
+            {
+                "type": "textarea",
+                "id": "title",
+                "label": "Title",
+                "default": "LOREM IPSUM DOLOR SIR AMET CONSECTE"
+            },
+            {
+                "type": "text",
+                "id": "fingerprint",
+                "label": "Fingerprint",
+                "default": "@SUPERFOODIESEU"
+            },
+            {
+                "type": "text",
+                "id": "link-title",
+                "label": "Link title",
+                "default": "JOIN"
+            },
+            {
+                "type": "url",
+                "id": "link-url",
+                "label": "Link url",
+                "default": "/"
+            },
+            {
+                "type": "range",
+                "id": "margin-top",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Margin top",
+                "default": 25
+            },
+            {
+                "type": "range",
+                "id": "margin-bottom",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Margin bottom",
+                "default": 45
+            },
+            {
+                "type": "select",
+                "id": "background",
+                "label": "Background",
+                "options": [
+                    {
+                        "value": "none",
+                        "label": "None"
+                    },
+                    {
+                        "value": "rays-2",
+                        "label": "Rays"
+                    }
+                ],
+                "default": "none"
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Picture",
+                "type": "block",
+                "limit": 12,
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "picture",
+                        "label": "Picture"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Gallery section",
+                "settings": {
+
+                }
+            }
+        ]
+    }
+{% endschema %}

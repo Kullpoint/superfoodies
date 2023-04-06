@@ -7,6 +7,20 @@
     align-items: center;
     width: 100%;
 
+    .rays-bg,
+    .corn-bg {
+        position: absolute;
+        left: 0;
+    }
+
+    .rays-bg {
+        top: -100%;
+    }
+    
+    .corn-bg {
+        top: -45%;
+    }
+
     &__wrapper {
         position: relative;
         display: flex;

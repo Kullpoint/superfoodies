@@ -15,7 +15,7 @@
             <div class="section-hero__suptitle">{{ section.settings.suptitle }}</div>
             <h1 class="section-hero__title">{{ section.settings.title }}</h1>
         </div>
-        <div class="section-hero__slider">
+        <div id="heroSliderContainer" class="section-hero__slider overflow-hidden">
             <div id="hero-slider" class="swiper-container">
                 <div class="swiper-wrapper">
                     {% for block in section.blocks %}
@@ -24,8 +24,8 @@
                 </div>
             </div>
             <!-- Navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev" data-wiper-button-prev="hero-slider"></div>
+            <div class="swiper-button-next" data-wiper-button-next="hero-slider"></div>
         </div>
         {% comment %} <div class="section-hero__slider">
             {% render 'Product-card', product: section.settings.product %}

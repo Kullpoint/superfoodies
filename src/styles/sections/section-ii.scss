@@ -1,0 +1,37 @@
+@import '../variables.scss';
+
+.section-ii {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &__wrapper {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        width: 100%;
+        max-width: $second-wrapper;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .icon {
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-family: 'Helvetica';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.44;
+            text-align: center;
+            color: $silver-color;
+        }
+    }
+}

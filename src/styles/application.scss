@@ -14,6 +14,7 @@ body {
     line-height: 1;
     // -webkit-font-smoothing: antialiased;
     background-color: $secondary-color;
+    width: 100%;
 }
 
 body,
@@ -58,11 +59,4 @@ ul {
 
 .preloader.dn {
     display: none;
-}
-
-/* ================================================== BACKGROUNDS ================================================== */
-.rays-bg {
-    position: absolute;
-    top: -100%;
-    left: 0;
 }
