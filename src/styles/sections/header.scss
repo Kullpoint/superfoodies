@@ -79,11 +79,14 @@
             align-items: center;
             gap: 5px;
             font-size: 14px;
+            text-transform: uppercase;
             color: $silver-color;
             transition: color .2s ease;
             cursor: pointer;
 
             .icon {
+                transition: transform .3s ease;
+
                 path {
                     transition: stroke .2s ease;
                 }
@@ -93,11 +96,116 @@
                 color: $primary-color;
 
                 .icon {
+                    transform: rotate(-180deg);
+
                     path {
                         stroke: $primary-color;
                     }
                 }
             }
+        }
+
+        .megamenu {
+            position: absolute;
+            top: 121px;
+            right: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 40px 0;
+            background-color: $secondary-color;
+            transition: opacity .3s ease, visibility .3s ease;
+            opacity: 0;
+            visibility: hidden;
+
+            &__wrapper {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                width: 100%;
+                max-width: $second-wrapper;
+            }
+
+            &__column {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                .title,
+                .links__link {
+                    color: $silver-color;
+                    transition: color .2s ease;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+
+                .title {
+                    font-family: 'Teko';
+                    font-weight: 600;
+                    font-size: 22px;
+                    text-transform: uppercase;
+                }
+
+                .links {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    &__link {
+                        font-family: 'Helvetica';
+                        font-weight: 300;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            &__imwrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+
+                &:hover {
+                    .title {
+                        color: $primary-color;
+                    }
+
+                    .img {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+
+            &__image {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .img {
+                    position: relative;
+                    z-index: 1;
+                    margin-bottom: 15px;
+                    transition: transform .2s ease;
+                }
+
+                .background {
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+
+        .megamenu.dn {
+            display: none;
+        }
+
+        .megamenu.active {
+            opacity: 1;
+            visibility: visible;
         }
     }
 
@@ -172,6 +280,27 @@
                     fill: $primary-color;
                 }
             }
+        }
+    }
+
+    &__cart {
+        position: relative;
+
+        .count {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            font-family: 'Helvetica';
+            font-weight: 400;
+            font-size: 12px;
+            border-radius: 50%;
+            background-color: $primary-color;
+            color: $white-color;
         }
     }
 }

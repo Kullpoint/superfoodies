@@ -1,0 +1,136 @@
+<footer class="footer">
+    <div class="footer__top">
+        <div class="left">
+            <a href="/" class="footer__logo">{% render 'Logo', variant: 'footer' %}</a>
+            <div class="minititle">VOLG ONS</div>
+            <div class="socials">
+                {% if section.settings.facebook-url != blank %}
+                    <a href="{{ section.settings.facebook-url }}" class="socials__item">
+                        {% render 'Socials', social: 'facebook' %}
+                    </a>
+                {% endif %}
+                {% if section.settings.instagram-url != blank %}
+                    <a href="{{ section.settings.instagram-url }}" class="socials__item">
+                        {% render 'Socials', social: 'instagram' %}
+                    </a>
+                {% endif %}
+                {% if section.settings.youtube-url != blank %}
+                    <a href="{{ section.settings.youtube-url }}" class="socials__item">
+                        {% render 'Socials', social: 'youtube' %}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="right">
+            {% for link in linklists[section.settings.footer-menu].links %}
+                <div class="menu">
+                    <div class="minititle">{{ link.title }}</div>
+                    <div class="menu__list">
+                        {% for sublink in link.links %}
+                            <a href="{{ sublink.url }}" class="menu__link">{{ sublink.title }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+                <div class="menu">
+                    <div class="minititle">DIRECT CONTACT</div>
+                    <div class="menu__list">
+                        <a href="tel: {{ section.settings.contact-phone }}" class="menu__link">Bellen: {{ section.settings.contact-phone }}</a>
+                        <a class="menu__link">Whatsapp: {{ section.settings.contact-whatsapp }}</a>
+                        <a href="mailto: {{ section.settings.contact-phone }}" class="menu__link">Email: {{ section.settings.contact-email }}</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="footer__line"></div>
+    <div class="footer__bottom">
+        <div class="watermark">© 2012 - <span id="current-year"></span> Superfoods BV</div>
+        <div class="menu">
+            {% for link in linklists.footer-nav-menu.links %}
+                <a href="{{ link.url }}" class="menu__link">{{ link.title }}</a>
+            {% endfor %}
+        </div>
+        <div class="payments">
+            {% for block in section.blocks %}
+                {% assign payment = block.settings %}
+                <div class="payments__item">{{ payment.icon }}</div>
+            {% endfor %}
+        </div>
+    </div>
+</footer>
+
+{% schema %}
+    {
+        "name": "Footer",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Socials"
+            },
+            {
+                "type": "url",
+                "id": "facebook-url",
+                "label": "Facebook",
+                "default": "/"
+            },
+            {
+                "type": "url",
+                "id": "instagram-url",
+                "label": "Instagram",
+                "default": "/"
+            },
+            {
+                "type": "url",
+                "id": "youtube-url",
+                "label": "Youtube",
+                "default": "/"
+            },
+            {
+                "type": "header",
+                "content": "Footer menu"
+            },
+            {
+                "type": "link_list",
+                "id": "footer-menu",
+                "label": "Menu"
+            },
+            {
+                "type": "header",
+                "content": "Footer contacts"
+            },
+            {
+                "type": "text",
+                "id": "contact-phone",
+                "label": "Phone number",
+                "default": "+31 (0) 20 700 98 57"
+            },
+            {
+                "type": "text",
+                "id": "contact-whatsapp",
+                "label": "Whatsapp",
+                "default": "+31 (0) 6 2790 5385"
+            },
+            {
+                "type": "text",
+                "id": "contact-email",
+                "label": "Email",
+                "default": "info@superfoodies.nl"
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Payment",
+                "type": "block",
+                "limit": 5,
+                "settings": [
+                    {
+                        "type": "textarea",
+                        "id": "icon",
+                        "label": "Icon",
+                        "info": "Put an svg icon code here"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

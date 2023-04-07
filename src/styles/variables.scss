@@ -11,6 +11,7 @@ $desktop:                                        1400px;
 // $desktopXXL:                                     1600px;
 /* ==================================================== LAYOUTS ==================================================== */
 $second-wrapper:                                 1200px;
+$big_second-wrapper:                             1260px;
 $main-wrapper:                                   1600px;
 /* ===================================================== COLORS ==================================================== */
 //main
@@ -21,11 +22,15 @@ $lighten_secondary-color:                     #F5F2EA;
 $black-color:                                 #000000;
 //white
 $white-color:                                 #FFFFFF;
+$dark_white-color:                            #BBBBBB;
 //silver
 $lighten_silver-color:                        #E1D8C7;
+$light_silver-color:                          #7D7A66;
 $silver-color:                                #4E4A33;
 //brown
 $lighten_brown-color:                         #F3E8D2;
 $light_brown-color:                           #A39F8A;
 //gray
 $light_gray-color:                            #CFD3B8;
+/* ===================================================== RGBA ====================================================== */
+$RGBA-light_silver-color:    rgba(245, 242, 234, 0.5);

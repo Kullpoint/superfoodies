@@ -51,4 +51,44 @@
         font-size: 18px;
         line-height: 1.44;
     }
+
+    #contact_form {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .input {
+            width: 100%;
+            max-width: 335px;
+            height: 50px;
+            padding: 0 20px;
+            border: 1px solid $silver-color;
+            font-family: 'Helvetica';
+            font-weight: 400;
+            font-size: 16px;
+            background-color: $RGBA-light_silver-color;
+            color: $silver-color;
+
+            &::placeholder {
+                color: $light_silver-color;
+            }
+        }
+
+        .submit {
+            height: 50px;
+            padding: 0 50px;
+            border: none;
+            border: 1px solid $primary-color;
+            font-size: 16px;
+            background-color: $primary-color;
+            color: $white-color;
+            transition: background-color .2s ease, color .2s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $white-color;
+                color: $primary-color;
+            }
+        }
+    }
 }

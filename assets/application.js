@@ -7,7 +7,54 @@ const removePreloader = () => {
         setTimeout(() => {
             preloader.classList.add('dn');
         }, 500);
-    }, 200);
+    }, 300);
+}
+
+const megaMenuLogic = () => {
+    const links = document.querySelectorAll('[data-mega-menu-link]');
+    const menus = document.querySelectorAll('[data-mega-menu]');
+
+    for (const link of links) {
+        for (const menu of menus) {
+            if (link.getAttribute('data-mega-menu-link') == menu.getAttribute('data-mega-menu')) {
+                const openMenu = () => {
+                    menu.classList.remove('dn');
+                    setTimeout(() => {
+                        menu.classList.add('active');
+                    }, 1);
+                }
+
+                const closeMenu = () => {
+                    menu.classList.remove('active');
+                    setTimeout(() => {
+                        menu.classList.add('dn');
+                    }, 300);
+                }
+
+                link.addEventListener('mouseover', () => {
+                    openMenu();
+                });
+
+                link.addEventListener('mouseleave', (e) => {
+                    if (e.toElement == menu) {
+                        return;
+                    }
+
+                    closeMenu();
+                });
+
+                menu.addEventListener('mouseleave', (e) => {
+                    if (e.toElement == link) {
+                        return;
+                    }
+
+                    closeMenu();
+                });
+
+                break;
+            }
+        }
+    }
 }
 
 const videoLogic = () => {
@@ -53,7 +100,16 @@ const videoLogic = () => {
     }
 }
 
+const yearChanger = () => {
+    const yearBlock = document.getElementById('current-year');
+    const currentYear = new Date().getFullYear();
+
+    yearBlock.innerHTML = currentYear;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     removePreloader();
+    megaMenuLogic();
     videoLogic();
+    yearChanger();
 });

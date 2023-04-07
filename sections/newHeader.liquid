@@ -1,18 +1,58 @@
 <header class="header">
     <div class="header__announcebar">
-        {% for block in section.blocks %}
-            <h3 class="announcement">Gratis verzending vanaf €59</h3>
-        {% endfor %}
+        <h3 class="announcement">{{ section.settings.announcement }}</h3>
     </div>
     <div class="header__main">
-        <a href="/" class="header__logo">{% render 'Logo' %}</a>
+        <a href="/" class="header__logo">{% render 'Logo', variant: 'header' %}</a>
         <nav class="header__menu">
-            {% for link in linklists["new-mega-menu"].links %}
-                {% if link.links %}
-                    <div class="link">
+            {% for link in linklists['new-main-menu'].links %}
+                {% if link.links.size > 0 %}
+                    <div class="link" data-mega-menu-link="{{ link.title | upcase }}">
                         {{ link.title }}
                         {% render 'Chevron-down' %}
                     </div>
+
+                    {% for block in section.blocks %}
+                        {% assign megaMenu = block.settings %}
+                        {% assign linkTitle = link.title | upcase %}
+
+                        {% if megaMenu.title == linkTitle %}
+                            <div class="megamenu dn" data-mega-menu="{{ megaMenu.title }}">
+                                <div class="megamenu__wrapper">
+                                    {% for subLink in link.links %}
+                                        {% assign linkImage = 'image-' | append: forloop.index %}
+
+                                        <div class="megamenu__column">
+                                            {% if megaMenu[linkImage] != blank %}
+                                                <a href="{{ subLink.url }}" class="megamenu__imwrapper">
+                                                    <div class="megamenu__image">
+                                                        <img src="{{ megaMenu[linkImage] | image_url }}" width="auto" height="auto" loading="lazy" class="img">
+                                                        {% render 'Megamenu-image-background' %}
+                                                    </div>
+                                                    <div class="title">{{ subLink.title }}</div>
+                                                </a>
+                                            {% endif %}
+
+                                            {% if megaMenu[linkImage] == blank %}
+                                                <a href="{{ subLink.url }}" class="title">{{ subLink.title }}</a>
+                                                <div class="links">
+                                                    {% for subSubLink in subLink.links %}
+                                                        <a href="{{ subSubLink.url }}" class="links__link">{{ subSubLink.title }}</a>
+                                                    {% endfor %}
+                                                </div>
+                                            {% endif %}
+                                        </div>
+
+                                        {% if forloop.index == 4 %}
+                                            {% break %}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>    
+
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
                 {% else %}
                     <a href="{{ link.url }}" class="link">{{ link.title }}</a>
                 {% endif %}
@@ -34,6 +74,7 @@
             </div>
             <div class="header__cart">
                 {% render 'Icon-cart' %}
+                <div class="count">0</div>
             </div>
         </nav>
     </div>
@@ -45,25 +86,61 @@
         "settings": [
             {
                 "type": "text",
-                "id": "title",
-                "label": "Title"
-            },
-            {
-                "type": "textarea",
-                "id": "description",
-                "label": "Description",
-                "info": "Use <br> to break a line"
+                "id": "announcement",
+                "label": "Announcement title",
+                "default": "Gratis verzending vanaf €59"
             }
         ],
         "blocks": [
             {
-                "name": "Item",
+                "name": "Mega Menu",
                 "type": "block",
                 "settings": [
                     {
                         "type": "text",
                         "id": "title",
-                        "label": "Title"
+                        "label": "Title",
+                        "info": "Set title name the same as link that you want to add mega menu"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Mega menu column 1"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image-1",
+                        "label": "Image",
+                        "info": "If image is set then links will be replaced"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Mega menu column 2"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image-2",
+                        "label": "Image",
+                        "info": "If image is set then links will be replaced"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Mega menu column 3"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image-3",
+                        "label": "Image",
+                        "info": "If image is set then links will be replaced"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Mega menu column 4"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image-4",
+                        "label": "Image",
+                        "info": "If image is set then links will be replaced"
                     }
                 ]
             }

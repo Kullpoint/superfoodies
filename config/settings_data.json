@@ -1,1916 +1,2019 @@
 {
-    "current": {
-      "heading_color": "#160000",
-      "text_color": "#160000",
-      "accent_color": "#ec6608",
-      "link_color": "#ff6128",
-      "border_color": "#e7e2de",
-      "background": "#fff7ee",
-      "secondary_background": "#d6ebf0",
-      "secondary_text_color": "#2bb8c9",
-      "error_color": "#f71b1b",
-      "success_color": "#48b448",
-      "primary_button_background": "#ec6608",
-      "primary_button_text_color": "#ffffff",
-      "secondary_button_background": "#ffffff",
-      "secondary_button_text_color": "#ff6128",
-      "header_background": "#ffffff",
-      "header_text_color": "#160000",
-      "header_light_text_color": "#160000",
-      "header_accent_color": "#ec6608",
-      "product_on_sale_accent": "#ee0000",
-      "product_in_stock_color": "#008a00",
-      "product_low_stock_color": "#ee0000",
-      "product_sold_out_color": "#d1d1d4",
-      "product_label_1_background": "#ff6128",
-      "product_label_2_background": "#a95ebe",
-      "product_star_color": "#ffb647",
-      "base_text_font_size": 15,
-      "heading_font": "trade_gothic_next_n4",
-      "text_font": "trade_gothic_next_n4",
-      "underline_links": false,
-      "animation_image_zoom": true,
-      "search_mode": "product,article,page",
-      "show_vendor": false,
-      "show_secondary_image": false,
-      "show_discount": true,
-      "discount_mode": "percentage",
-      "product_price_position": "after_title",
-      "product_image_size": "square",
-      "show_color_swatch": false,
-      "show_inventory_quantity": false,
-      "low_inventory_threshold": 1,
-      "show_reviews_badge": true,
-      "cart_type": "drawer",
-      "cart_empty_button_link": "shopify:\/\/collections\/all",
-      "cart_show_free_shipping_threshold": true,
-      "cart_free_shipping_threshold": "59",
-      "share_image": "",
-      "social_facebook": "https:\/\/www.facebook.com\/superfoodiesEU\/?ref=page_internal",
-      "social_twitter": "",
-      "social_pinterest": "",
-      "social_instagram": "https:\/\/www.instagram.com\/superfoodieseu",
-      "social_newsletter": "",
-      "social_vimeo": "",
-      "social_tumblr": "",
-      "social_youtube": "https:\/\/www.youtube.com\/user\/rawfoodsuperfood\/videos",
-      "social_linkedin": "",
-      "social_snapchat": "",
-      "social_fancy": "",
-      "favicon": "shopify:\/\/shop_images\/favicon-superfoodies.png",
-      "checkout_header_image": "",
-      "checkout_logo_image": "shopify:\/\/shop_images\/Superfoodies_Logo_1.png",
-      "checkout_logo_position": "left",
-      "checkout_logo_size": "large",
-      "checkout_body_background_image": "",
-      "checkout_body_background_color": "#fff",
-      "checkout_input_background_color_mode": "white",
-      "checkout_sidebar_background_image": "",
-      "checkout_sidebar_background_color": "#f7f4f2",
-      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
-      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
-      "checkout_accent_color": "#ff6128",
-      "checkout_button_color": "#ff6128",
-      "checkout_error_color": "#f71b1b",
-      "app_wk_enabled": true,
-      "app_wk_login_required": false,
-      "app_wk_icon": "heart",
-      "app_wk_col_bg_shape": "square",
-      "app_wk_share_position": "top",
-      "app_wk_products_per_row": "4",
-      "sections": {
-        "header": {
-          "type": "header",
-          "blocks": {
-            "1590674541988": {
-              "type": "mega_menu",
-              "settings": {
-                "menu_item": "Food",
-                "product_1": "",
-                "image_1_heading": "Your image",
-                "image_1_text": "Tell your story",
-                "image_1_link": "",
-                "product_2": "",
-                "image_2_heading": "Your image",
-                "image_2_text": "Tell your story",
-                "image_2_link": ""
-              }
-            },
-            "1597754083411": {
-              "type": "mega_menu",
-              "settings": {
-                "menu_item": "Drinks",
-                "product_1": "",
-                "image_1_heading": "Your image",
-                "image_1_text": "Tell your story",
-                "image_1_link": "",
-                "product_2": "",
-                "image_2_heading": "Your image",
-                "image_2_text": "Tell your story",
-                "image_2_link": ""
-              }
-            },
-            "1597754093425": {
-              "type": "mega_menu",
-              "settings": {
-                "menu_item": "Superfood",
-                "product_1": "",
-                "image_1_heading": "Your image",
-                "image_1_text": "Tell your story",
-                "image_1_link": "",
-                "product_2": "",
-                "image_2_heading": "Your image",
-                "image_2_text": "Tell your story",
-                "image_2_link": ""
-              }
-            },
-            "1597754116030": {
-              "type": "mega_menu",
-              "settings": {
-                "menu_item": "Eiwitten",
-                "product_1": "",
-                "image_1_heading": "Your image",
-                "image_1_text": "Tell your story",
-                "image_1_link": "",
-                "product_2": "",
-                "image_2_heading": "Your image",
-                "image_2_text": "Tell your story",
-                "image_2_link": ""
-              }
-            },
-            "1597754136477": {
-              "type": "mega_menu",
-              "settings": {
-                "menu_item": "Supplementen",
-                "product_1": "",
-                "image_1_heading": "Your image",
-                "image_1_text": "Tell your story",
-                "image_1_link": "",
-                "product_2": "",
-                "image_2_heading": "Your image",
-                "image_2_text": "Tell your story",
-                "image_2_link": ""
-              }
-            },
-            "1597754147454": {
-              "type": "mega_menu",
-              "settings": {
-                "menu_item": "paddenstoelen",
-                "product_1": "",
-                "image_1_heading": "Your image",
-                "image_1_text": "Tell your story",
-                "image_1_link": "",
-                "product_2": "",
-                "image_2_heading": "Your image",
-                "image_2_text": "Tell your story",
-                "image_2_link": ""
-              }
-            },
-            "1597754159023": {
-              "type": "mega_menu",
-              "settings": {
-                "menu_item": "Beauty",
-                "product_1": "",
-                "image_1_heading": "Your image",
-                "image_1_text": "Tell your story",
-                "image_1_link": "",
-                "product_2": "",
-                "image_2_heading": "Your image",
-                "image_2_text": "Tell your story",
-                "image_2_link": ""
-              }
-            },
-            "1597754167137": {
-              "type": "mega_menu",
-              "settings": {
-                "menu_item": "accessoires",
-                "product_1": "",
-                "image_1_heading": "Your image",
-                "image_1_text": "Tell your story",
-                "image_1_link": "",
-                "product_2": "",
-                "image_2_heading": "Your image",
-                "image_2_text": "Tell your story",
-                "image_2_link": ""
-              }
-            },
-            "1597754176209": {
-              "type": "mega_menu",
-              "settings": {
-                "menu_item": "",
-                "product_1": "",
-                "image_1_heading": "Your image",
-                "image_1_text": "Tell your story",
-                "image_1_link": "",
-                "product_2": "",
-                "image_2_heading": "Your image",
-                "image_2_text": "Tell your story",
-                "image_2_link": ""
-              }
+  "current": {
+    "heading_color": "#160000",
+    "text_color": "#160000",
+    "accent_color": "#ec6608",
+    "link_color": "#ff6128",
+    "border_color": "#e7e2de",
+    "background": "#fff7ee",
+    "secondary_background": "#d6ebf0",
+    "secondary_text_color": "#2bb8c9",
+    "error_color": "#f71b1b",
+    "success_color": "#48b448",
+    "primary_button_background": "#ec6608",
+    "primary_button_text_color": "#ffffff",
+    "secondary_button_background": "#ffffff",
+    "secondary_button_text_color": "#ff6128",
+    "header_background": "#ffffff",
+    "header_text_color": "#160000",
+    "header_light_text_color": "#160000",
+    "header_accent_color": "#ec6608",
+    "product_on_sale_accent": "#ee0000",
+    "product_in_stock_color": "#008a00",
+    "product_low_stock_color": "#ee0000",
+    "product_sold_out_color": "#d1d1d4",
+    "product_label_1_background": "#ff6128",
+    "product_label_2_background": "#a95ebe",
+    "product_star_color": "#ffb647",
+    "base_text_font_size": 15,
+    "heading_font": "trade_gothic_next_n4",
+    "text_font": "trade_gothic_next_n4",
+    "underline_links": false,
+    "animation_image_zoom": true,
+    "search_mode": "product,article,page",
+    "show_vendor": false,
+    "show_secondary_image": false,
+    "show_discount": true,
+    "discount_mode": "percentage",
+    "product_price_position": "after_title",
+    "product_image_size": "square",
+    "show_color_swatch": false,
+    "show_inventory_quantity": false,
+    "low_inventory_threshold": 1,
+    "show_reviews_badge": true,
+    "cart_type": "drawer",
+    "cart_empty_button_link": "shopify:\/\/collections\/all",
+    "cart_show_free_shipping_threshold": true,
+    "cart_free_shipping_threshold": "59",
+    "share_image": "",
+    "social_facebook": "https:\/\/www.facebook.com\/superfoodiesEU\/?ref=page_internal",
+    "social_twitter": "",
+    "social_pinterest": "",
+    "social_instagram": "https:\/\/www.instagram.com\/superfoodieseu",
+    "social_newsletter": "",
+    "social_vimeo": "",
+    "social_tumblr": "",
+    "social_youtube": "https:\/\/www.youtube.com\/user\/rawfoodsuperfood\/videos",
+    "social_linkedin": "",
+    "social_snapchat": "",
+    "social_fancy": "",
+    "favicon": "shopify:\/\/shop_images\/favicon-superfoodies.png",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Superfoodies_Logo_1.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "large",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#f7f4f2",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#ff6128",
+    "checkout_button_color": "#ff6128",
+    "checkout_error_color": "#f71b1b",
+    "app_wk_enabled": true,
+    "app_wk_login_required": false,
+    "app_wk_icon": "heart",
+    "app_wk_col_bg_shape": "square",
+    "app_wk_share_position": "top",
+    "app_wk_products_per_row": "4",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "1590674541988": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Food",
+              "product_1": "",
+              "image_1_heading": "Your image",
+              "image_1_text": "Tell your story",
+              "image_1_link": "",
+              "product_2": "",
+              "image_2_heading": "Your image",
+              "image_2_text": "Tell your story",
+              "image_2_link": ""
             }
           },
-          "block_order": [
-            "1590674541988",
-            "1597754083411",
-            "1597754093425",
-            "1597754116030",
-            "1597754136477",
-            "1597754147454",
-            "1597754159023",
-            "1597754167137",
-            "1597754176209"
-          ],
-          "settings": {
-            "enable_sticky_header": true,
-            "logo": "shopify:\/\/shop_images\/Superfoodies_Logo_1.png",
-            "logo_max_width": 140,
-            "mobile_logo_max_width": 100,
-            "show_locale_selector": false,
-            "show_currency_selector": false,
-            "navigation_menu": "new-main-menu",
-            "desktop_navigation_layout": "inline",
-            "desktop_navigation_open_trigger": "hover",
-            "show_navigation_social_media": false,
-            "navigation_phone_number": "",
-            "navigation_email": "",
-            "show_condensed_search": true,
-            "show_search_filter": false,
-            "search_menu": "",
-            "show_search_menu_title": true
-          }
-        },
-        "footer": {
-          "type": "footer",
-          "settings": {
-            "show_social_media": true,
-            "show_payment_icons": true,
-            "footer_menu": "footer-new-menu",
-            "payments": "ideal,paypal,master,visa,american_express,post_nl,organic-eu,vegan_official,of_and_g",
-            "copy_date_start": "2012",
-            "copy": "Superfoods BV",
-            "footer_nav_after_socials": "footer-menu-after-social",
-            "footer_info_nav": "footer-nav-menu",
-            "phone": "+31 (0) 20 700 98 57",
-            "phone2": "+31 (0) 6 2790 5385",
-            "email": "info@superfoodies.nl"
-          }
-        },
-        "collection-list": {
-          "type": "collection-list",
-          "blocks": {
-            "collection-0": {
-              "type": "collection",
-              "settings": {
-                "collection": "food",
-                "image": "shopify:\/\/shop_images\/new-image-food.jpg",
-                "title": "Food"
-              }
-            },
-            "collection-2": {
-              "type": "collection",
-              "settings": {
-                "collection": "drinks",
-                "image": "shopify:\/\/shop_images\/skinny-frappugreeno-7.jpg",
-                "title": "Drinks"
-              }
-            },
-            "collection-1": {
-              "type": "collection",
-              "settings": {
-                "collection": "superfood",
-                "image": "shopify:\/\/shop_images\/Background3.jpg",
-                "title": "superFood"
-              }
-            },
-            "collection-5": {
-              "type": "collection",
-              "settings": {
-                "collection": "eiwitten",
-                "image": "shopify:\/\/shop_images\/new-image-protein_1.jpg",
-                "title": "Eiwitten"
-              }
-            },
-            "collection-4": {
-              "type": "collection",
-              "settings": {
-                "collection": "supplementen",
-                "image": "shopify:\/\/shop_images\/Schermafbeelding_2020-08-26_om_18.25.08.png",
-                "title": "Supplementen"
-              }
-            },
-            "collection-3": {
-              "type": "collection",
-              "settings": {
-                "collection": "paddenstoelen",
-                "image": "shopify:\/\/shop_images\/new-image-mushrooms.jpg",
-                "title": "Paddenstoelen"
-              }
-            },
-            "1590566351739": {
-              "type": "collection",
-              "settings": {
-                "collection": "beauty",
-                "image": "shopify:\/\/shop_images\/new-image-beauty.jpg",
-                "title": "Beauty"
-              }
-            },
-            "1590566365938": {
-              "type": "collection",
-              "settings": {
-                "collection": "accessoires",
-                "image": "shopify:\/\/shop_images\/chocolate-ganache-tart-5_1.jpg",
-                "title": "Accessoires"
-              }
+          "1597754083411": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Drinks",
+              "product_1": "",
+              "image_1_heading": "Your image",
+              "image_1_text": "Tell your story",
+              "image_1_link": "",
+              "product_2": "",
+              "image_2_heading": "Your image",
+              "image_2_text": "Tell your story",
+              "image_2_link": ""
             }
           },
-          "block_order": [
-            "collection-0",
-            "collection-2",
-            "collection-1",
-            "collection-5",
-            "collection-4",
-            "collection-3",
-            "1590566351739",
-            "1590566365938"
-          ],
-          "settings": {
-            "title": "Categorieën",
-            "link_title": "bekijk alles",
-            "link": "shopify:\/\/collections",
-            "bg": "shopify:\/\/shop_images\/Food_Superfoods_Drinks_Mushrooms_Protein_Supplements_Beauty_Accessories.png"
-          }
-        },
-        "collection-template": {
-          "type": "collection-template",
-          "settings": {
-            "show_collection_image": true,
-            "collapse_collection_description": false,
-            "collection_image_size": "large",
-            "products_per_row": "3",
-            "default_products_per_page": 24,
-            "default_view_layout": "grid",
-            "show_quick_buy": "list",
-            "show_quick_view": "list",
-            "quick_links": "new-main-menu",
-            "quick_links_show_products_count": true,
-            "show_filters": true,
-            "show_filter_color_swatch": true,
-            "filter_type": "group",
-            "open_group_filters_mode": "all_open",
-            "filter_group_order": ""
-          }
-        },
-        "recently-viewed-products": {
-          "type": "recently-viewed-products",
-          "settings": {
-            "title": "Recently viewed",
-            "show_quick_buy": false
-          }
-        },
-        "product-template": {
-          "type": "product-template",
-          "blocks": {
-            "1591275793967": {
-              "type": "feature",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/fb0654d52062423a51ac2a7423fb481d_b99fe892-9b12-45d5-9852-e064a019d1d4.png",
-                "title": "VÓÓR 21:00 BESTELD (ZO-VR), MORGEN IN HUIS* (BELGIË 14:30)"
-              }
-            },
-            "1591275804519": {
-              "type": "feature",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/d2e33084f987d7ee89749508d25c55c9_4245fb50-7bad-4bb7-9b68-b27173a17881.png",
-                "title": "GRATIS VERZENDING VANAF €59,-. ANDERS €4,90"
-              }
-            },
-            "1591275821471": {
-              "type": "feature",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/55d1b9ce3cd54b127fe8c57704687b6f_1_5669aa44-5252-4cad-8119-486c6e888f05.png",
-                "title": "HOOGSTE KWALITEIT PRODUCTEN, BEZORGD IN HEEL EUROPA"
-              }
-            },
-            "1591275829417": {
-              "type": "feature",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/ddcbd625e2d89bd5590297586f00a862_ac67d786-5d52-4773-8192-503777b5a966.png",
-                "title": "BESTE KLANTEN-SERVICE & RETOURNEREN MOGELIJK"
-              }
+          "1597754093425": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Superfood",
+              "product_1": "",
+              "image_1_heading": "Your image",
+              "image_1_text": "Tell your story",
+              "image_1_link": "",
+              "product_2": "",
+              "image_2_heading": "Your image",
+              "image_2_text": "Tell your story",
+              "image_2_link": ""
             }
           },
-          "block_order": [
-            "1591275793967",
-            "1591275804519",
-            "1591275821471",
-            "1591275829417"
-          ],
-          "settings": {
-            "show_vendor": true,
-            "show_sku": false,
-            "show_share_buttons": true,
-            "show_taxes_included": false,
-            "selector_mode": "block",
-            "color_mode": "block",
-            "show_quantity_selector": true,
-            "show_payment_button": false,
-            "image_size": "small",
-            "enable_image_zoom": true,
-            "enable_video_looping": false,
-            "zoom_effect": "outside",
-            "carousel_effect": "fade",
-            "show_inventory_quantity": false,
-            "low_inventory_threshold": 0,
-            "content_display_mode": "show_all_and_expand_description",
-            "tab_page_1_handle": "",
-            "tab_page_2_handle": "",
-            "tab_page_3_handle": "",
-            "enable_reviews": false,
-            "show_reviews_badge": false,
-            "trust_title": "Payment & Security",
-            "show_payment_icons": true,
-            "show_shipping_estimator": false,
-            "shipping_estimator_default_country": "United States",
-            "show_refunds_policy": true
-          }
-        },
-        "product-recommendations": {
-          "type": "product-recommendations",
-          "settings": {
-            "heading": "wellicht heb je ook interesse in"
-          }
-        },
-        "announcement-bar": {
-          "type": "announcement-bar",
-          "settings": {
-            "show_announcement": true,
-            "background": "#d6ebf0",
-            "text_color": "#2bb8c9",
-            "text": "<p>GRATIS VERZENDING VANAF €59<\/p>",
-            "link": "",
-            "show_newsletter": false,
-            "newsletter_button": "Subscribe & Save",
-            "newsletter_title": "Newsletter",
-            "newsletter_content": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
-          }
-        },
-        "popups": {
-          "type": "popups",
-          "settings": {
-          }
-        },
-        "text-with-icons": {
-          "type": "text-with-icons",
-          "blocks": {
-            "text-with-icons-0": {
-              "type": "item",
-              "settings": {
-                "icon": "bi-delivery",
-                "custom_icon": "",
-                "title": "Free delivery worldwide",
-                "content": "<p>Short content about your store<\/p>"
-              }
-            },
-            "text-with-icons-1": {
-              "type": "item",
-              "settings": {
-                "icon": "bi-returns",
-                "custom_icon": "",
-                "title": "Satisfied or refunded",
-                "content": "<p>Short content about your store<\/p>"
-              }
-            },
-            "text-with-icons-2": {
-              "type": "item",
-              "settings": {
-                "icon": "bi-customer-support",
-                "custom_icon": "",
-                "title": "Top-notch support",
-                "content": "<p>Short content about your store<\/p>"
-              }
-            },
-            "text-with-icons-3": {
-              "type": "item",
-              "settings": {
-                "icon": "bi-secure-payment",
-                "custom_icon": "",
-                "title": "Secure payments",
-                "content": "<p>Short content about your store<\/p>"
-              }
+          "1597754116030": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Eiwitten",
+              "product_1": "",
+              "image_1_heading": "Your image",
+              "image_1_text": "Tell your story",
+              "image_1_link": "",
+              "product_2": "",
+              "image_2_heading": "Your image",
+              "image_2_text": "Tell your story",
+              "image_2_link": ""
             }
           },
-          "block_order": [
-            "text-with-icons-0",
-            "text-with-icons-1",
-            "text-with-icons-2",
-            "text-with-icons-3"
-          ],
-          "settings": {
-            "show_section": true,
-            "stack_mobile": false
-          }
-        },
-        "cookie-bar": {
-          "type": "cookie-bar",
-          "settings": {
-            "show_cookie_bar": true,
-            "cookie_text": "<p>We gebruiken cookies en soortgelijke technieken op onze website o.a. om inhoud en advertenties persoonlijk te maken. Indien u gebruik blijft maken van onze website, gaat u daarmee akkoord. Zie ons <a href=\"\/pages\/cookie-verklaring\" title=\"Cookie verklaring\">cookiebeleid<\/a>.<\/p>",
-            "accept_button": "×"
-          }
-        },
-        "1590480766957": {
-          "type": "features",
-          "blocks": {
-            "1590480772552": {
-              "type": "feature",
-              "settings": {
-                "feature_icon": "shopify:\/\/shop_images\/fb0654d52062423a51ac2a7423fb481d.png",
-                "feature_text": "gratis verzending vanaf €59"
-              }
-            },
-            "1590480804535": {
-              "type": "feature",
-              "settings": {
-                "feature_icon": "shopify:\/\/shop_images\/55d1b9ce3cd54b127fe8c57704687b6f_1.png",
-                "feature_text": "hoogste kwaliteit producten"
-              }
-            },
-            "1590480791914": {
-              "type": "feature",
-              "settings": {
-                "feature_icon": "shopify:\/\/shop_images\/d2e33084f987d7ee89749508d25c55c9.png",
-                "feature_text": "gratis retourneren"
-              }
-            },
-            "1590480817893": {
-              "type": "feature",
-              "settings": {
-                "feature_icon": "shopify:\/\/shop_images\/ddcbd625e2d89bd5590297586f00a862.png",
-                "feature_text": "beste klantenservice"
-              }
+          "1597754136477": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Supplementen",
+              "product_1": "",
+              "image_1_heading": "Your image",
+              "image_1_text": "Tell your story",
+              "image_1_link": "",
+              "product_2": "",
+              "image_2_heading": "Your image",
+              "image_2_text": "Tell your story",
+              "image_2_link": ""
             }
           },
-          "block_order": [
-            "1590480772552",
-            "1590480804535",
-            "1590480791914",
-            "1590480817893"
-          ],
-          "settings": {
-          }
-        },
-        "1590490910622": {
-          "type": "featured-collection",
-          "disabled": true,
-          "blocks": {
-            "1590490939892": {
-              "type": "product",
-              "settings": {
-                "product": "green-juice-nieuw-bio-superfoodies-500-gram"
-              }
-            },
-            "1590490961970": {
-              "type": "product",
-              "settings": {
-                "product": "luminous-beauty-shake-superfoodies-500-gram"
-              }
-            },
-            "1590490965913": {
-              "type": "product",
-              "settings": {
-                "product": "bruine-rijst-eiwitpoeder-chocolade-superfoodies-500-gram"
-              }
-            },
-            "1601394060369": {
-              "type": "product",
-              "settings": {
-                "product": "hennep-eiwitpoeder-bio-superfoodies"
-              }
+          "1597754147454": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "paddenstoelen",
+              "product_1": "",
+              "image_1_heading": "Your image",
+              "image_1_text": "Tell your story",
+              "image_1_link": "",
+              "product_2": "",
+              "image_2_heading": "Your image",
+              "image_2_text": "Tell your story",
+              "image_2_link": ""
             }
           },
-          "block_order": [
-            "1590490939892",
-            "1590490961970",
-            "1590490965913",
-            "1601394060369"
-          ],
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_2414.png",
-            "title": "Onze favorieten",
-            "subtitle": "Ontdek onze unieke producten, samengesteld op basis van wetenschappelijk onderzoek voor specifieke gezondheidsdoelen",
-            "collection": "onze-favorieten",
-            "button_text": "bekijk favorieten"
-          }
-        },
-        "1590491063956": {
-          "type": "featured-collection",
-          "disabled": true,
-          "blocks": {
-            "1590491106020": {
-              "type": "product",
-              "settings": {
-                "product": "magnesium-relax-release-superfoodies"
-              }
-            },
-            "1590491120754": {
-              "type": "product",
-              "settings": {
-                "product": "chaga-paddenstoel-extract-superfoodies"
-              }
-            },
-            "1590491115601": {
-              "type": "product",
-              "settings": {
-                "product": "vegan-omega-3-superfoodies"
-              }
-            },
-            "1601393774722": {
-              "type": "product",
-              "settings": {
-                "product": "zink-met-koper-bulletproof-60-v-caps"
-              }
+          "1597754159023": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "Beauty",
+              "product_1": "",
+              "image_1_heading": "Your image",
+              "image_1_text": "Tell your story",
+              "image_1_link": "",
+              "product_2": "",
+              "image_2_heading": "Your image",
+              "image_2_text": "Tell your story",
+              "image_2_link": ""
             }
           },
-          "block_order": [
-            "1590491106020",
-            "1590491120754",
-            "1590491115601",
-            "1601393774722"
-          ],
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_266.png",
-            "title": "nieuwe producten",
-            "subtitle": "Ontdek ons assortiment nieuwe food- en non-foodproducten die aan ons assortiment zijn toegevoegd, we voegen continue producten toe die onze klanten wensen",
-            "collection": "nieuwe-producten",
-            "button_text": "Bekijk nieuwe producten"
-          }
-        },
-        "1590574892380": {
-          "type": "featured-posts",
-          "blocks": {
-            "1590574896413": {
-              "type": "article",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/cappugreeno-4_1.jpg",
-                "article": "recepten\/cappugreeno-a-great-coffee-alternative",
-                "title": "De ideale koffie-vervanger",
-                "subtitle": "Dit is het perfecte recept om je kop koffie te vervangen door een cappugreeno"
-              }
-            },
-            "1590574991220": {
-              "type": "article",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/choc-cherry-slices-13.jpg",
-                "article": "recepten\/no-bake-kersen-en-chocolade-reep",
-                "title": "No-bake kersen & chocolade reep",
-                "subtitle": "Eet je huid mooi met deze heerlijke, makkelijke no-bake reep"
-              }
-            },
-            "1590575025847": {
-              "type": "article",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/afbeelding-3_1.jpg",
-                "article": "recepten\/mushroom-burgers-met-portobello-en-reishi",
-                "title": "Vegan & Glutenvrije Paddenstoelen Burger",
-                "subtitle": "Super sappige plantaardige burger met portobello & reishi"
-              }
+          "1597754167137": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "accessoires",
+              "product_1": "",
+              "image_1_heading": "Your image",
+              "image_1_text": "Tell your story",
+              "image_1_link": "",
+              "product_2": "",
+              "image_2_heading": "Your image",
+              "image_2_text": "Tell your story",
+              "image_2_link": ""
             }
           },
-          "block_order": [
-            "1590574896413",
-            "1590574991220",
-            "1590575025847"
-          ],
-          "settings": {
-            "title": "recepten waar superfoodies van houden",
-            "blog": "recepten"
-          }
-        },
-        "1590582677444": {
-          "type": "newsletter",
-          "disabled": true,
-          "settings": {
-            "bg": "shopify:\/\/shop_images\/Superfoodies-image-blog.jpg",
-            "title": "<p>Become a Superfoodie –<br\/>join our tribe <strong>Newsletter<\/strong><\/p>",
-            "content": "<p>Meld je aan voor GRATIS gezondheidstips, kortingscodes, meldingen over productlanceringen en speciale aanbiedingen<\/p>"
-          }
-        },
-        "1590605512705": {
-          "type": "home-icons",
-          "blocks": {
-            "1590605639792": {
-              "type": "item",
-              "settings": {
-                "icon": "shopify:\/\/shop_images\/SlimNormaal.png",
-                "title": "Afslanken",
-                "link": "shopify:\/\/collections\/afslanken"
-              }
-            },
-            "1590605568326": {
-              "type": "item",
-              "settings": {
-                "icon": "shopify:\/\/shop_images\/Anti-ageMini.png",
-                "title": "Anti-aging & Beauty",
-                "link": "shopify:\/\/collections\/anti-aging-beauty"
-              }
-            },
-            "1590605550937": {
-              "type": "item",
-              "settings": {
-                "icon": "shopify:\/\/shop_images\/Group_265.png",
-                "title": "Botten & Gewrichten",
-                "link": "shopify:\/\/collections\/botten-gewrichten"
-              }
-            },
-            "1593522117532": {
-              "type": "item",
-              "settings": {
-                "icon": "shopify:\/\/shop_images\/DetoxMini.png",
-                "title": "Detox & Ontgiften",
-                "link": "shopify:\/\/collections\/detox-en-ontgiften"
-              }
-            },
-            "1590605594395": {
-              "type": "item",
-              "settings": {
-                "icon": "shopify:\/\/shop_images\/Vector_Stdroke.png",
-                "title": "Gezond Gebit",
-                "link": "shopify:\/\/collections\/gezond-gebit"
-              }
-            },
-            "1590605698962": {
-              "type": "item",
-              "settings": {
-                "icon": "shopify:\/\/shop_images\/Vectd.png",
-                "title": "Immuunsysteem & Weerstand",
-                "link": "shopify:\/\/collections\/immuunsysteem-weerstand"
-              }
-            },
-            "1590605517775": {
-              "type": "item",
-              "settings": {
-                "icon": "shopify:\/\/shop_images\/Group_264_thumb_56ee0444-864c-4b4b-b7c8-b4deb79ab5f8.png",
-                "title": "Meer Energie & Vermoeidheid Verminderen",
-                "link": "shopify:\/\/collections\/meer-energie-vermoeidheid-verminderen"
-              }
-            },
-            "1590605620596": {
-              "type": "item",
-              "settings": {
-                "icon": "shopify:\/\/shop_images\/Vector_Stroke_1.png",
-                "title": "Spieropbouw",
-                "link": "shopify:\/\/collections\/spieropbouw"
-              }
-            },
-            "1593522122561": {
-              "type": "item",
-              "settings": {
-                "icon": "shopify:\/\/shop_images\/GutMini.png",
-                "title": "Spijsvertering & Stoelgang",
-                "link": "shopify:\/\/collections\/spijsvertering-stoelgang"
-              }
-            },
-            "1590605659020": {
-              "type": "item",
-              "settings": {
-                "icon": "shopify:\/\/shop_images\/Group_d267.png",
-                "title": "Stress & Hormoonbalans",
-                "link": "shopify:\/\/collections\/stress-en-hormoonbalans"
-              }
+          "1597754176209": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "",
+              "product_1": "",
+              "image_1_heading": "Your image",
+              "image_1_text": "Tell your story",
+              "image_1_link": "",
+              "product_2": "",
+              "image_2_heading": "Your image",
+              "image_2_text": "Tell your story",
+              "image_2_link": ""
             }
-          },
-          "block_order": [
-            "1590605639792",
-            "1590605568326",
-            "1590605550937",
-            "1593522117532",
-            "1590605594395",
-            "1590605698962",
-            "1590605517775",
-            "1590605620596",
-            "1593522122561",
-            "1590605659020"
-          ],
-          "settings": {
-            "title": "WAAR HEB JE HULP BIJ NODIG?"
           }
         },
-        "1590609201096": {
-          "type": "big-text",
-          "settings": {
-            "link": "",
-            "text": "Ritme van de Natuur"
-          }
-        },
-        "1590610074976": {
-          "type": "videos",
-          "blocks": {
-            "1590610084690": {
-              "type": "video",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/Layer_2_4.jpg",
-                "title": "Wat we dromen",
-                "link": "https:\/\/vimeo.com\/364240100"
-              }
-            },
-            "1590610104344": {
-              "type": "video",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/Layer_2_5.jpg",
-                "title": "vrij van ziekte",
-                "link": "https:\/\/vimeo.com\/364238519"
-              }
-            },
-            "1590610128087": {
-              "type": "video",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/Layer_2_6.jpg",
-                "title": "Superfoodies – duurzaam ondernemen",
-                "link": "https:\/\/vimeo.com\/364238390"
-              }
-            }
-          },
-          "block_order": [
-            "1590610084690",
-            "1590610104344",
-            "1590610128087"
-          ],
-          "settings": {
-            "title": "Onze droom, onze visie, ons doel"
-          }
-        },
-        "1590649518586": {
-          "type": "logos",
-          "blocks": {
-            "1590649577183": {
-              "type": "logo",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/image_27.jpg"
-              }
-            },
-            "1590649586551": {
-              "type": "logo",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/vegan-keurmerk_30173f56-f8a6-43c6-9cab-63e0c3482836.png"
-              }
-            },
-            "1590649596358": {
-              "type": "logo",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/Untitled-1_1.jpg"
-              }
-            }
-          },
-          "block_order": [
-            "1590649577183",
-            "1590649586551",
-            "1590649596358"
-          ],
-          "settings": {
-            "title": "Wij zijn superfoodies",
-            "subtitle": "Biologische certificaties waarop u kunt vertrouwen",
-            "bg": "shopify:\/\/shop_images\/Footer-LEAF_light-orange_LR.jpg"
-          }
-        },
-        "1590652490979": {
-          "type": "instafeed",
-          "settings": {
-            "heading_font": "trade_gothic_next_n4",
-            "heading_size": 30,
-            "feed_width": 100,
-            "html_area": "<div class=\"container instafeed-app\">\n<h2>Become a Superfoodie - join our tribe<\/h2>\n<a class=\"instafeed-link\" href=\"https:\/\/www.instagram.com\/superfoodieseu\/\" target=\"_blank\">@superfoodieseu<\/a>\n<div id=\"feed-5235\" class=\"instafeed-shopify\"><\/div>\n<\/div>"
-          }
-        },
-        "static-promotion-list": {
-          "type": "static-promotion-list",
-          "settings": {
-            "expand_items": false,
-            "section_size": "medium",
-            "stack_mobile": false
-          }
-        },
-        "static-recently-viewed-products": {
-          "type": "static-recently-viewed-products",
-          "settings": {
-            "show_section": true,
-            "title": "Recent bekeken",
-            "show_quick_buy": false
-          }
-        },
-        "newsletter": {
-          "type": "newsletter",
-          "settings": {
-            "bg": "shopify:\/\/shop_images\/Superfoodies-image-blog.jpg",
-            "title": "<p>Become a Superfoodie &ndash;<br>join our tribe&nbsp;<strong>NIEUWSBRIEF<\/strong><\/p>",
-            "content": "<p>Meld je aan voor GRATIS gezondheidstips, kortingscodes, meldingen over productlanceringen en speciale aanbiedingen<\/p>"
-          }
-        },
-        "product-blocks": {
-          "type": "product-blocks",
-          "blocks": {
-            "1591342016491": {
-              "type": "block",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/image_9.jpg",
-                "image_size": "cover",
-                "image_position": "right",
-                "title": "<p>Become a Superfoodie <strong>– <\/strong><br\/><strong>join our tribe<\/strong><\/p>",
-                "content": "Your nightly ritual is about to get an upgrade with our hot cacao mix of reishi, one of the world’s most studied mushrooms that’s been shown to help support sleep and occasional stress. Reishi is so esteemed that in ancient scroll paintings, it’s often depicted as the “bridge between Earth and Heaven”. Other nicknames for this regal fungi include “mushroom of immortality,” “mushroom of spiritual potency,” and “rule of herbs”.",
-                "bg": "#fafafa"
-              }
-            },
-            "1591342315138": {
-              "type": "block",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/11111.png",
-                "image_size": "contain",
-                "image_position": "left",
-                "title": "<p>Easy to use <br><strong>Brain Octane Oil<\/strong><\/p>",
-                "content": "Brain Octane oil is completely flavorless and easy to pour. No coconut flavor means it's a great substitute for other oils.\n<ul>\n<li>Blend it into Bulletproof Coffee or tea<\/li>\n<li>Add to smoothies and shakes<\/li>\n<li>Drizzle it over your favorite meals<\/li>\n<li>Use to make salad dressings, sauces, and marinades<\/li>\n<\/ul>",
-                "bg": "#fff7ee"
-              }
-            }
-          },
-          "block_order": [
-            "1591342016491",
-            "1591342315138"
-          ],
-          "settings": {
-          }
-        },
-        "featured-posts": {
-          "type": "featured-posts",
-          "blocks": {
-            "1591351436703": {
-              "type": "article",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/cappugreeno-4_1.jpg",
-                "article": "recepten\/cappugreeno-a-great-coffee-alternative",
-                "title": "De ideale koffie-vervanger",
-                "subtitle": "Dit is het perfecte recept om je kop koffie te vervangen door een cappugreeno"
-              }
-            },
-            "1591351469128": {
-              "type": "article",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/choc-cherry-slices-13.jpg",
-                "article": "recepten\/no-bake-kersen-en-chocolade-reep",
-                "title": "No-bake kersen & chocolade reep",
-                "subtitle": "Eet je huid mooi met deze heerlijke, makkelijke no-bake reep"
-              }
-            },
-            "1591351495315": {
-              "type": "article",
-              "settings": {
-                "image": "shopify:\/\/shop_images\/reishi-mushroom-millet-burgers-13.jpg",
-                "article": "recepten\/mushroom-burgers-met-portobello-en-reishi",
-                "title": "Vegan & Glutenvrije Paddenstoelen Burger",
-                "subtitle": "Super sappige plantaardige burger met portobello & reishi"
-              }
-            }
-          },
-          "block_order": [
-            "1591351436703",
-            "1591351469128",
-            "1591351495315"
-          ],
-          "settings": {
-            "title": "Recipes Superfoodies love",
-            "blog": "recepten"
-          }
-        },
-        "search-template": {
-          "type": "search-template",
-          "settings": {
-            "products_per_row": "3",
-            "default_view_layout": "grid",
-            "show_quick_view": "list",
-            "show_quick_buy": "list",
-            "quick_links": ""
-          }
-        },
-        "cart-template": {
-          "type": "cart-template",
-          "blocks": {
-            "1592384984531": {
-              "type": "trust",
-              "settings": {
-                "icon": "bi-customer-support",
-                "custom_icon": "shopify:\/\/shop_images\/fb0654d52062423a51ac2a7423fb481d_b99fe892-9b12-45d5-9852-e064a019d1d4.png",
-                "title": "Vóór 21:00 besteld, morgen in huis* (België 14:30)"
-              }
-            },
-            "1592385155698": {
-              "type": "trust",
-              "settings": {
-                "icon": "bi-customer-support",
-                "custom_icon": "shopify:\/\/shop_images\/d2e33084f987d7ee89749508d25c55c9_4245fb50-7bad-4bb7-9b68-b27173a17881.png",
-                "title": "Gratis verzending vanaf €59,-. anders €5,90"
-              }
-            },
-            "1592385216023": {
-              "type": "trust",
-              "settings": {
-                "icon": "bi-customer-support",
-                "custom_icon": "shopify:\/\/shop_images\/55d1b9ce3cd54b127fe8c57704687b6f_1_5669aa44-5252-4cad-8119-486c6e888f05.png",
-                "title": "Hoogste kwaliteit producten, bezorgd in heel Europa"
-              }
-            },
-            "1592385676059": {
-              "type": "trust",
-              "settings": {
-                "icon": "bi-customer-support",
-                "custom_icon": "shopify:\/\/shop_images\/ddcbd625e2d89bd5590297586f00a862_ac67d786-5d52-4773-8192-503777b5a966.png",
-                "title": "Beste klanten-service & retourneren mogelijk"
-              }
-            }
-          },
-          "block_order": [
-            "1592384984531",
-            "1592385155698",
-            "1592385216023",
-            "1592385676059"
-          ],
-          "settings": {
-            "enable_order_notes": false,
-            "show_payment_icons": false,
-            "gift_wrap_product": "",
-            "gift_wrap_text": "Do you want a gift wrap?",
-            "gift_wrap_button": "Add a gift wrap",
-            "show_shipping_estimator": false,
-            "shipping_estimator_default_country": "United States",
-            "trust_heading": "Our guarantees",
-            "upsell_heading": "Maak uw bestelling compleet",
-            "upsell_collection": "superfood",
-            "upsell_products_count": 4
-          }
-        },
-        "featured-collection": {
-          "type": "featured-collection",
-          "blocks": {
-            "1592497129789": {
-              "type": "product",
-              "settings": {
-                "product": ""
-              }
-            },
-            "1592497142711": {
-              "type": "product",
-              "settings": {
-                "product": ""
-              }
-            }
-          },
-          "block_order": [
-            "1592497129789",
-            "1592497142711"
-          ],
-          "settings": {
-            "image": "",
-            "title": "",
-            "subtitle": "",
-            "collection": "",
-            "button_text": ""
-          }
-        },
-        "page-featured-products": {
-          "type": "page-featured-products",
-          "blocks": {
-            "1592499013366": {
-              "type": "product",
-              "settings": {
-                "product": ""
-              }
-            },
-            "1592499021947": {
-              "type": "product",
-              "settings": {
-                "product": ""
-              }
-            }
-          },
-          "block_order": [
-            "1592499013366",
-            "1592499021947"
-          ],
-          "settings": {
-            "title": "Featured products"
-          }
-        },
-        "article-template": {
-          "type": "article-template",
-          "settings": {
-            "show_category": true,
-            "show_author": false,
-            "show_date": true,
-            "show_share_buttons": true,
-            "show_tags": true,
-            "show_gravatar": true
-          }
-        },
-        "blog-sidebar": {
-          "type": "blog-sidebar",
-          "settings": {
-            "show_on_mobile": false
-          }
-        },
-        "product-best": {
-          "type": "product-best",
-          "settings": {
-            "heading": "Klanten kochten ook",
-            "collection": "instant-drink-mixes"
-          }
-        },
-        "page-contact-template": {
-          "type": "page-contact-template",
-          "settings": {
-            "subtitle": "<p>Wil je met ons in contact komen?<\/p>\n<p>Dat kan door simpelweg dit formulier in te vullen<\/p>\n<p>of door middel van e-mail, telefoon of live chat.<\/p>\n<p>Superfoods BV is bereikbaar van maandag t\/m vrijdag 09:00 - 18:00<\/p>\n<p><em>(kerstdagen en nieuwjaarsdag uitgezonderd<\/em><\/p>\n<p><\/p>",
-            "form_heading": "Laat een bericht achter",
-            "show_store_info": true,
-            "store_heading": "",
-            "store_image": "",
-            "store_info": "<p><em>\"De Europese Commissie biedt een platform voor online geschillenbeslechting aan voor consumenten, die u kunt vinden op <a href=\"http:\/\/ec.europa.eu\/consumers\/odr\/\" title=\"http:\/\/ec.europa.eu\/consumers\/odr\/\">http:\/\/ec.europa.eu\/consumers\/odr\/<\/a>. Wij nemen niet deel aan een geschillenbeslechtingsprocedure.\"<\/em><\/p>",
-            "bg": "shopify:\/\/shop_images\/Superfoodies-image4_LR_1_1.png",
-            "phone_title": "Telefoonnummer",
-            "phone_content": "+31(0)20 700 98 57 <br> +31(0)6 2790 5385 (WhatsApp)",
-            "email_title": "Email",
-            "email_content": "info@superfoodies.nl",
-            "address_title": "Address",
-            "address": "<p>Distributiecentrum:<br>Superfoodies.nl<br>Antwoordnummer 10107<br>2700 VB Zoetermeer<br><br>[Voor informatie over retourneren, klik <a href=\"\/pages\/retourneren\" title=\"Retourneren\">Retourneren<\/a>]<br><br>Kantoor:<br>Superfoods BV<br>Kanaalweg 26<br>1121 DR<br>Landsmeer<br>The Netherlands<br><br>KvK: 54552958<br>BTW: NL.851348749.B01<\/p>",
-            "social_title": "Volg ons"
-          }
-        },
-        "list-collections-template": {
-          "type": "list-collections-template",
-          "settings": {
-            "collections_to_show": "all",
-            "show_collection_title": true,
-            "show_collection_overlay": true,
-            "collection_overlay_opacity": 20
-          }
-        },
-        "blog-tags": {
-          "type": "blog-tags",
-          "settings": {
-          }
-        },
-        "blog-template": {
-          "type": "blog-template",
-          "settings": {
-            "articles_per_page": 12,
-            "highlight_first_article": true,
-            "show_tags": true,
-            "show_category": true,
-            "show_author": false,
-            "show_date": true,
-            "show_excerpt": false
-          }
-        },
-        "blog-products": {
-          "type": "blog-products",
-          "blocks": {
-            "1593157118605": {
-              "type": "product",
-              "settings": {
-                "product": ""
-              }
-            },
-            "1593157127073": {
-              "type": "product",
-              "settings": {
-                "product": "amandelen-ongebrand-bio-superfoodies"
-              }
-            }
-          },
-          "block_order": [
-            "1593157118605",
-            "1593157127073"
-          ],
-          "settings": {
-            "title": "Featured products"
-          }
-        },
-        "1596030265087": {
-          "type": "mosaic-slider",
-          "blocks": {
-            "1596030271855": {
-              "type": "slide",
-              "settings": {
-                "bg": "shopify:\/\/shop_images\/Huid.jpg",
-                "title": "Huid",
-                "subtitle": "voeding voor de huid",
-                "link": "shopify:\/\/products\/luminous-beauty-shake-superfoodies-500-gram"
-              }
-            },
-            "1596030278784": {
-              "type": "slide",
-              "settings": {
-                "bg": "shopify:\/\/shop_images\/Energie.jpg",
-                "title": "Energie",
-                "subtitle": "haal het maximale uit jezelf",
-                "link": "shopify:\/\/collections\/meer-energie-vermoeidheid-verminderen"
-              }
-            },
-            "1596030284293": {
-              "type": "slide",
-              "settings": {
-                "bg": "shopify:\/\/shop_images\/Superfoodies-image-blog.jpg",
-                "title": "Ritme van de Natuur",
-                "subtitle": "laat je inspireren",
-                "link": "https:\/\/vimeo.com\/364240100"
-              }
-            },
-            "1596030290164": {
-              "type": "slide",
-              "settings": {
-                "bg": "shopify:\/\/shop_images\/new-image-protein.jpg",
-                "title": "SPORT - AFSLANKEN",
-                "subtitle": "PROTEIN SHAKES",
-                "link": "shopify:\/\/collections\/plantaardige-eiwitten"
-              }
-            },
-            "1596030475484": {
-              "type": "slide",
-              "settings": {
-                "bg": "shopify:\/\/shop_images\/orange-immunity-overnight-oats-7klein_-_kopie.jpg",
-                "title": "IMMUUNSYSTEEM",
-                "subtitle": "Ondersteun je afweer",
-                "link": "shopify:\/\/collections\/immunity-support"
-              }
-            }
-          },
-          "block_order": [
-            "1596030271855",
-            "1596030278784",
-            "1596030284293",
-            "1596030290164",
-            "1596030475484"
-          ],
-          "settings": {
-          }
-        },
-        "product-reviews": {
-          "type": "product-reviews",
-          "settings": {
-          }
-        },
-        "minimal-header": {
-          "type": "minimal-header",
-          "settings": {
-            "logo": "",
-            "logo_max_width": 140,
-            "mobile_logo_max_width": 100
-          }
-        },
-        "password-template": {
-          "type": "password-template",
-          "settings": {
-            "show_social_media": true,
-            "heading": "Opening Soon",
-            "text": "<p>A content describing what your store will sell.<\/p>",
-            "show_newsletter_signup": true,
-            "newsletter_text": "<p>A short sentence describing what someone will receive by subscribing.<\/p>"
-          }
-        },
-        "1602688565274": {
-          "type": "instafeed",
-          "settings": {
-            "heading_font": "helvetica_n4",
-            "heading_size": 20,
-            "feed_width": 100,
-            "html_area": "<!-- -->"
-          }
-        },
-        "16304054625596474f": {
-          "type": "activecampaign-NL",
-          "settings": {
-            "bg": "shopify:\/\/shop_images\/Superfoodies-image-blog.jpg",
-            "title": "<p>Become a Superfoodie –<br\/>join our tribe <strong>Newsletter<\/strong><\/p>",
-            "content": "<p>Meld je aan voor GRATIS gezondheidstips, kortingscodes, meldingen over productlanceringen en speciale aanbiedingen<\/p>"
-          }
-        },
-        "activecampaign-NL": {
-          "type": "activecampaign-NL",
-          "settings": {
-            "bg": "shopify:\/\/shop_images\/Superfoodies-image-blog.jpg",
-            "title": "<p>Become a Superfoodie –<br\/>join our tribe <strong>Newsletter<\/strong><\/p>",
-            "content": "<p>Meld je aan voor GRATIS gezondheidstips, kortingscodes, meldingen over productlanceringen en speciale aanbiedingen<\/p>"
-          }
-        },
-        "clerk_popup": {
-          "type": "clerk_popup",
-          "settings": {
-          }
-        },
-        "1632312758574c49d6": {
-          "type": "custom-html",
-          "settings": {
-            "title": "",
-            "html": "<span class=\"clerk\" id=\"clerk1\" data-template=\"@home-page-visitor-complementary\"><\/span>"
-          }
-        },
-        "1632312770b36fc457": {
-          "type": "custom-html",
-          "settings": {
-            "title": "",
-            "html": "<span class=\"clerk\" id=\"clerk2\" data-exclude-from=\"#clerk1\" data-template=\"@home-page-popular\"><\/span>"
-          }
-        },
-        "16323127720b04cf99": {
-          "type": "custom-html",
-          "settings": {
-            "title": "",
-            "html": "<span class=\"clerk\" id=\"clerk3\" data-exclude-from=\"#clerk1,#clerk2\" data-template=\"@home-page-trending\"><\/span>"
-          }
-        },
-        "app-optimization": {
-          "type": "app-optimization",
-          "blocks": {
-            "5c65bf35-5340-42f7-a02b-569ab8b5d957": {
-              "type": "app",
-              "settings": {
-                "title": "upsells",
-                "url": "upsells.boldapps.net\/v2_ui\/js\/UpsellTracker.js",
-                "block_index": false,
-                "block_product": false,
-                "block_collection": true,
-                "block_page": true,
-                "block_blog": false,
-                "block_article": false,
-                "block_cart": false,
-                "block_search": true,
-                "block_customers": true,
-                "block_gift_card": true,
-                "scroll_index": false,
-                "scroll_product": false,
-                "scroll_collection": false,
-                "scroll_page": false,
-                "scroll_blog": false,
-                "scroll_article": false,
-                "scroll_cart": false,
-                "scroll_search": false,
-                "scroll_customers": false,
-                "scroll_gift_card": false,
-                "interaction_index": false,
-                "interaction_product": false,
-                "interaction_collection": false,
-                "interaction_page": false,
-                "interaction_blog": false,
-                "interaction_article": false,
-                "interaction_cart": false,
-                "interaction_search": false,
-                "interaction_customers": false,
-                "interaction_gift_card": false,
-                "interaction_selectors_1": "",
-                "interaction_event_1": "click",
-                "interaction_selectors_2": "",
-                "interaction_event_2": "click"
-              }
-            },
-            "5722d5f5-4b42-4c38-a341-0b37d6129894": {
-              "type": "app",
-              "settings": {
-                "title": "freeshippingbar",
-                "url": "cdn.hextom.com\/js\/freeshippingbar.js",
-                "block_index": false,
-                "block_product": false,
-                "block_collection": false,
-                "block_page": false,
-                "block_blog": false,
-                "block_article": false,
-                "block_cart": false,
-                "block_search": false,
-                "block_customers": false,
-                "block_gift_card": false,
-                "scroll_index": false,
-                "scroll_product": false,
-                "scroll_collection": false,
-                "scroll_page": false,
-                "scroll_blog": false,
-                "scroll_article": false,
-                "scroll_cart": false,
-                "scroll_search": false,
-                "scroll_customers": false,
-                "scroll_gift_card": false,
-                "interaction_index": false,
-                "interaction_product": false,
-                "interaction_collection": false,
-                "interaction_page": false,
-                "interaction_blog": false,
-                "interaction_article": false,
-                "interaction_cart": false,
-                "interaction_search": false,
-                "interaction_customers": false,
-                "interaction_gift_card": false,
-                "interaction_selectors_1": "",
-                "interaction_event_1": "click",
-                "interaction_selectors_2": "",
-                "interaction_event_2": "click"
-              }
-            },
-            "1d8bfc31-e035-47d2-9669-1b3a554cfea3": {
-              "type": "app",
-              "settings": {
-                "title": "instafeed",
-                "url": "instafeed.nfcube.com\/cdn\/feea1fe0a9c905c7042026e42498259d.js",
-                "block_index": false,
-                "block_product": true,
-                "block_collection": true,
-                "block_page": true,
-                "block_blog": true,
-                "block_article": true,
-                "block_cart": true,
-                "block_search": true,
-                "block_customers": true,
-                "block_gift_card": true,
-                "scroll_index": true,
-                "scroll_product": false,
-                "scroll_collection": false,
-                "scroll_page": false,
-                "scroll_blog": false,
-                "scroll_article": false,
-                "scroll_cart": false,
-                "scroll_search": false,
-                "scroll_customers": false,
-                "scroll_gift_card": false,
-                "interaction_index": true,
-                "interaction_product": false,
-                "interaction_collection": false,
-                "interaction_page": false,
-                "interaction_blog": false,
-                "interaction_article": false,
-                "interaction_cart": false,
-                "interaction_search": false,
-                "interaction_customers": false,
-                "interaction_gift_card": false,
-                "interaction_selectors_1": "",
-                "interaction_event_1": "click",
-                "interaction_selectors_2": "",
-                "interaction_event_2": "click"
-              }
-            },
-            "61cdff51-11c5-4c02-ae76-b12c27063599": {
-              "type": "app",
-              "settings": {
-                "title": "clearcart",
-                "url": "amaicdn.com\/pricing-by-quantity\/js\/clear-cart.js",
-                "block_index": false,
-                "block_product": false,
-                "block_collection": false,
-                "block_page": false,
-                "block_blog": false,
-                "block_article": false,
-                "block_cart": false,
-                "block_search": false,
-                "block_customers": false,
-                "block_gift_card": false,
-                "scroll_index": false,
-                "scroll_product": false,
-                "scroll_collection": false,
-                "scroll_page": false,
-                "scroll_blog": false,
-                "scroll_article": false,
-                "scroll_cart": false,
-                "scroll_search": false,
-                "scroll_customers": false,
-                "scroll_gift_card": false,
-                "interaction_index": false,
-                "interaction_product": false,
-                "interaction_collection": false,
-                "interaction_page": false,
-                "interaction_blog": false,
-                "interaction_article": false,
-                "interaction_cart": false,
-                "interaction_search": false,
-                "interaction_customers": false,
-                "interaction_gift_card": false,
-                "interaction_selectors_1": "",
-                "interaction_event_1": "click",
-                "interaction_selectors_2": "",
-                "interaction_event_2": "click"
-              }
-            },
-            "53a280f0-0924-4d95-a3c5-0c06c3f6093e": {
-              "type": "app",
-              "settings": {
-                "title": "usf",
-                "url": "cdn.shopify.com\/s\/files\/1\/0257\/0108\/9360\/t\/85\/assets\/usf-license.js",
-                "block_index": false,
-                "block_product": false,
-                "block_collection": false,
-                "block_page": false,
-                "block_blog": false,
-                "block_article": false,
-                "block_cart": false,
-                "block_search": false,
-                "block_customers": false,
-                "block_gift_card": false,
-                "scroll_index": true,
-                "scroll_product": true,
-                "scroll_collection": true,
-                "scroll_page": true,
-                "scroll_blog": true,
-                "scroll_article": true,
-                "scroll_cart": true,
-                "scroll_search": true,
-                "scroll_customers": true,
-                "scroll_gift_card": true,
-                "interaction_index": false,
-                "interaction_product": false,
-                "interaction_collection": false,
-                "interaction_page": false,
-                "interaction_blog": false,
-                "interaction_article": false,
-                "interaction_cart": false,
-                "interaction_search": false,
-                "interaction_customers": false,
-                "interaction_gift_card": false,
-                "interaction_selectors_1": "",
-                "interaction_event_1": "click",
-                "interaction_selectors_2": "",
-                "interaction_event_2": "click"
-              }
-            },
-            "2b17f3cd-9655-4ff7-bb74-c0aa58cc99e7": {
-              "type": "app",
-              "settings": {
-                "title": "trusted",
-                "url": "cdn.shopify.com\/s\/files\/1\/1864\/5043\/t\/32\/assets\/trustedshops_shopify.js",
-                "block_index": false,
-                "block_product": false,
-                "block_collection": false,
-                "block_page": false,
-                "block_blog": false,
-                "block_article": false,
-                "block_cart": false,
-                "block_search": false,
-                "block_customers": false,
-                "block_gift_card": false,
-                "scroll_index": true,
-                "scroll_product": true,
-                "scroll_collection": true,
-                "scroll_page": true,
-                "scroll_blog": true,
-                "scroll_article": true,
-                "scroll_cart": true,
-                "scroll_search": true,
-                "scroll_customers": true,
-                "scroll_gift_card": true,
-                "interaction_index": true,
-                "interaction_product": true,
-                "interaction_collection": true,
-                "interaction_page": true,
-                "interaction_blog": true,
-                "interaction_article": true,
-                "interaction_cart": true,
-                "interaction_search": true,
-                "interaction_customers": true,
-                "interaction_gift_card": true,
-                "interaction_selectors_1": "",
-                "interaction_event_1": "click",
-                "interaction_selectors_2": "",
-                "interaction_event_2": "click"
-              }
-            },
-            "bcb3dce8-a14b-4a25-adf5-0510229a9610": {
-              "type": "app",
-              "settings": {
-                "title": "reviews",
-                "url": "thimatic-apps.com\/product_review\/theme_files\/wc-product-review.js",
-                "block_index": false,
-                "block_product": false,
-                "block_collection": false,
-                "block_page": false,
-                "block_blog": false,
-                "block_article": false,
-                "block_cart": false,
-                "block_search": false,
-                "block_customers": false,
-                "block_gift_card": false,
-                "scroll_index": true,
-                "scroll_product": true,
-                "scroll_collection": true,
-                "scroll_page": true,
-                "scroll_blog": true,
-                "scroll_article": true,
-                "scroll_cart": true,
-                "scroll_search": true,
-                "scroll_customers": true,
-                "scroll_gift_card": true,
-                "interaction_index": true,
-                "interaction_product": true,
-                "interaction_collection": true,
-                "interaction_page": true,
-                "interaction_blog": true,
-                "interaction_article": true,
-                "interaction_cart": true,
-                "interaction_search": true,
-                "interaction_customers": true,
-                "interaction_gift_card": true,
-                "interaction_selectors_1": "",
-                "interaction_event_1": "click",
-                "interaction_selectors_2": "",
-                "interaction_event_2": "click"
-              }
-            }
-          },
-          "block_order": [
-            "5c65bf35-5340-42f7-a02b-569ab8b5d957",
-            "5722d5f5-4b42-4c38-a341-0b37d6129894",
-            "1d8bfc31-e035-47d2-9669-1b3a554cfea3",
-            "61cdff51-11c5-4c02-ae76-b12c27063599",
-            "53a280f0-0924-4d95-a3c5-0c06c3f6093e",
-            "2b17f3cd-9655-4ff7-bb74-c0aa58cc99e7",
-            "bcb3dce8-a14b-4a25-adf5-0510229a9610"
-          ],
-          "settings": {
-            "enable": true,
-            "debug_enable": false
-          }
-        },
-        "clerk-cart-slider": {
-          "type": "clerk-cart-slider",
-          "settings": {
-          }
-        },
-        "product-template-new": {
-          "type": "product-template-new",
-          "blocks": {
-            "2ee65552-7122-4359-8958-361a39d1081e": {
-              "type": "customer_notice",
-              "settings": {
-                "notice": "<p>“Heerlijke Zaadjes Voor In De Havermout Of Over Een Smoothie.” <\/p>",
-                "customer": "— Lotte A., Gepelde hennep zaden klant",
-                "background": "#edc399"
-              }
-            },
-            "8f30c41f-00d7-48a2-9722-412c07644bf2": {
-              "type": "title",
-              "settings": {
-                "show_vendor": true,
-                "show_sku": false
-              }
-            },
-            "4da96bc6-2305-484a-afe5-a03cb1dcb841": {
-              "type": "review_badge",
-              "settings": {
-              }
-            },
-            "ab5ac516-46c4-4887-b7e9-ac943344804a": {
-              "type": "description",
-              "settings": {
-              }
-            },
-            "dbbdb5d1-5441-41d9-8426-6e4f3e695eb4": {
-              "type": "product_form",
-              "settings": {
-                "add_to_cart_text": "Abonneer",
-                "selector_mode": "block",
-                "color_mode": "color",
-                "payment_icons": "<svg width=\"56\" height=\"33\" viewbox=\"0 0 56 33\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" fill=\"#FBF0DF\"><\/rect>\n<path d=\"M20.5927 16.769C21.861 16.769 22.8892 15.7093 22.8892 14.4021C22.8892 13.095 21.861 12.0353 20.5927 12.0353C19.3244 12.0353 18.2962 13.095 18.2962 14.4021C18.2962 15.7093 19.3244 16.769 20.5927 16.769Z\" fill=\"#A39F8A\"><\/path>\n<path d=\"M18.7479 17.7778H22.4374V24.5291H18.7479V17.7778Z\" fill=\"#A39F8A\"><\/path>\n<path d=\"M32.226 14.635H32.2378L32.226 14.6738V14.635Z\" fill=\"#A39F8A\"><\/path>\n<path d=\"M32.2378 14.635L32.6025 13.4321H32.6401L32.9789 14.635H32.2378Z\" fill=\"#A39F8A\"><\/path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M36.2544 12.2293H35.2003V16.575H37.8356C37.7226 21.3087 35.4261 24.5292 28.6873 24.5292H24.2825V16.575H24.9602C26.1273 16.575 26.8426 15.7602 26.8426 14.4022C26.8426 13.0441 26.1273 12.2293 24.9225 12.2293H24.2825V8.23286H28.6873C32.8285 8.23286 37.3838 9.55208 37.7979 15.4886H36.2544V12.2293ZM30.1179 16.575V15.4886H28.5744V14.9066H29.9673V13.8202H28.5367V13.3157H30.0426V12.2293H27.4826V16.575H30.1179ZM31.8495 12.2293L30.5694 16.575H31.6989L31.9248 15.7602H33.3177L33.5436 16.575H34.6354L33.3553 12.2293H31.8495Z\" fill=\"#A39F8A\"><\/path>\n<path d=\"M24.2824 13.3158V15.4886H24.9225C25.3742 15.4886 25.7883 15.3722 25.7883 14.4022C25.7883 13.4322 25.3366 13.3158 24.9225 13.3158H24.2824Z\" fill=\"#A39F8A\"><\/path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M28.6871 5.40039H16V27.4004H28.6871C35.9907 27.4004 40.6213 23.7143 40.6213 16.381C40.6213 10.2505 37.3084 5.40039 28.6871 5.40039ZM17.2048 26.1588V6.71961H28.6872C35.3131 6.71961 39.3791 9.82367 39.3791 16.4198C39.3791 22.8219 35.6143 26.1588 28.6872 26.1588H17.2048Z\" fill=\"#A39F8A\"><\/path>\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" stroke=\"#A39F8A\"><\/rect>\n<\/svg>\n[]\n<svg width=\"56\" height=\"33\" viewbox=\"0 0 56 33\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" fill=\"#FBF0DF\"><\/rect>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M34.8661 10.3895C34.8582 9.3965 34.5717 8.62443 33.964 7.90818C33.0669 6.85225 31.4478 6.40039 29.376 6.40039H23.3612C22.938 6.40039 22.577 6.7184 22.5116 7.15132L20.0064 23.5646C19.957 23.8893 20.1993 24.1822 20.5161 24.1822H23.2185L22.9854 25.7101L22.9852 25.7114C22.8569 26.5602 23.491 27.4004 24.4196 27.4004H27.5495C28.4318 27.4004 29.1412 26.747 29.2786 25.9157L29.3101 25.7473L29.9 21.8781L29.9059 21.8452H30.1631C31.8086 21.8452 33.3943 21.5009 34.6822 20.5545C35.9878 19.5951 36.8628 18.1088 37.2459 16.0755C37.5597 14.4097 37.4497 12.7555 36.3983 11.5171L36.3972 11.5158C36.076 11.1389 35.6883 10.8391 35.259 10.6044L34.8661 10.3895ZM34.7404 11.7203C34.7548 11.6396 34.7679 11.5602 34.7796 11.4819C35.0392 11.6239 35.2697 11.7908 35.468 11.9846L35.4717 11.9882C35.5292 12.0446 35.584 12.1033 35.636 12.1644C35.6465 12.1767 35.6569 12.1892 35.6672 12.2017C36.407 13.1029 36.5489 14.3732 36.2632 15.8904C35.5694 19.5728 33.1954 20.8452 30.1631 20.8452H29.695C29.3245 20.8452 29.0089 21.1237 28.9512 21.5028L28.9133 21.7148L28.324 25.58L28.2933 25.7443C28.2349 26.1221 27.9201 26.4004 27.5495 26.4004H24.4196C24.1427 26.4004 23.9311 26.1448 23.974 25.8609L25.1334 18.2598L25.1343 18.2539C25.1984 17.8506 25.5166 17.548 25.9049 17.513C25.9296 17.5108 25.9546 17.5096 25.9799 17.5096H27.7445C28.0142 17.5096 28.2793 17.5008 28.5393 17.4826C31.4339 17.2799 33.6961 15.9103 34.5665 12.5284C34.6229 12.3095 34.6734 12.0821 34.7178 11.8462C34.7256 11.8038 34.7332 11.7619 34.7404 11.7203Z\" fill=\"#A39F8A\"><\/path>\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" stroke=\"#A39F8A\"><\/rect>\n<\/svg>\n[]\n<svg width=\"56\" height=\"33\" viewbox=\"0 0 56 33\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" fill=\"#FBF0DF\"><\/rect>\n<path d=\"M37.5336 9.97737C36.8626 9.70316 35.7982 9.40039 34.4821 9.40039C31.1222 9.40039 28.7562 11.2457 28.7417 13.884C28.7138 15.8305 30.4356 16.9116 31.7235 17.5607C33.0398 18.2239 33.4872 18.6568 33.4872 19.2479C33.4738 20.1558 32.4236 20.5743 31.444 20.5743C30.0857 20.5743 29.3579 20.3586 28.2518 19.8534L27.8038 19.6369L27.3277 22.6791C28.1256 23.0536 29.5958 23.3858 31.1222 23.4004C34.6921 23.4004 37.0162 21.5836 37.0438 18.7721C37.0574 17.2294 36.1481 16.0472 34.1879 15.0813C32.9979 14.4612 32.2692 14.043 32.2692 13.4086C32.2831 12.8318 32.8856 12.241 34.2288 12.241C35.3349 12.2121 36.1476 12.4859 36.7632 12.7599L37.0709 12.9038L37.5336 9.97737Z\" fill=\"#A39F8A\"><\/path>\n<path d=\"M25.2 23.1984H21.7977L23.9258 9.64606H27.3279L25.2 23.1984Z\" fill=\"#A39F8A\"><\/path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M46.2552 9.64606H43.6236C42.812 9.64606 42.1955 9.89095 41.8453 10.7705L36.7916 23.1982H40.3616C40.3616 23.1982 40.9493 21.5255 41.0756 21.1653H45.4439C45.5415 21.6411 45.8498 23.1982 45.8498 23.1982H49L46.2552 9.64606ZM42.0555 18.3973C42.3357 17.6187 43.4139 14.6055 43.4139 14.6055C43.4082 14.6171 43.4527 14.49 43.5189 14.3011L43.5193 14.2998C43.617 14.021 43.7615 13.6083 43.8615 13.308L44.0993 14.4757C44.0993 14.4757 44.7436 17.7197 44.8835 18.3973H42.0555Z\" fill=\"#A39F8A\"><\/path>\n<path d=\"M18.9559 9.64606L15.624 18.8875L15.2599 17.0132L15.2595 17.0121L14.0699 10.7853C13.874 9.9197 13.2719 9.67461 12.53 9.64606H7.056L7 9.91989C8.33508 10.2715 9.52918 10.7782 10.5755 11.4082L13.6079 23.1841H17.2058L22.5536 9.64606H18.9559Z\" fill=\"#A39F8A\"><\/path>\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" stroke=\"#A39F8A\"><\/rect>\n<\/svg>\n[]\n<svg width=\"56\" height=\"33\" viewbox=\"0 0 56 33\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" fill=\"#FBF0DF\"><\/rect>\n<path d=\"M27.9524 9.32812C27.8331 9.41895 27.7168 9.5127 27.6025 9.60938C25.6552 11.2598 24.4229 13.6885 24.4229 16.4004C24.4229 19.1113 25.6552 21.54 27.6025 23.1904C27.7168 23.2871 27.8331 23.3809 27.9524 23.4727C28.0707 23.3809 28.1881 23.2871 28.3024 23.1904C30.2486 21.54 31.482 19.1113 31.482 16.4004C31.482 13.6885 30.2486 11.2598 28.3024 9.60938C28.1881 9.5127 28.0707 9.41895 27.9524 9.32812ZM33.6628 7.40039C31.7717 7.40039 30.012 7.9541 28.548 8.9043C28.6222 8.96387 28.6984 9.02246 28.7706 9.08398C30.9485 10.9287 32.1969 13.5957 32.1969 16.4004C32.1969 19.2041 30.9485 21.8711 28.7716 23.7158C28.6984 23.7764 28.6222 23.8359 28.548 23.8955C30.012 24.8457 31.7717 25.4004 33.6628 25.4004C38.7666 25.4004 42.9038 21.3701 42.9038 16.4004C42.9038 11.4297 38.7666 7.40039 33.6628 7.40039ZM27.1332 23.7158C27.2054 23.7764 27.2816 23.8359 27.3568 23.8955C25.8918 24.8457 24.1331 25.4004 22.241 25.4004C17.1372 25.4004 13 21.3701 13 16.4004C13 11.4297 17.1372 7.40039 22.241 7.40039C24.1331 7.40039 25.8918 7.9541 27.3568 8.9043C27.2816 8.96387 27.2054 9.02246 27.1332 9.08398C24.9563 10.9287 23.7079 13.5957 23.7079 16.4004C23.7079 19.2051 24.9563 21.8711 27.1332 23.7158Z\" fill=\"#A39F8A\"><\/path>\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" stroke=\"#A39F8A\"><\/rect>\n<\/svg>\n[]\n<svg width=\"56\" height=\"33\" viewbox=\"0 0 56 33\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" fill=\"#FBF0DF\"><\/rect>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.1915 10.4004L5 22.2268H11.2149L11.9854 20.3412H13.7465L14.517 22.2268H21.3579V20.7877L21.9674 22.2268H25.5061L26.1156 20.7573V22.2268H40.3428L42.0728 20.3902L43.6926 22.2268L51 22.2421L45.7921 16.3466L51 10.4004H43.806L42.122 12.2031L40.5531 10.4004H25.0758L23.7467 13.4529L22.3865 10.4004H16.1846V11.7906L15.4947 10.4004H10.1915ZM11.3942 12.0798H14.4236L17.8671 20.0994V12.0798H21.1858L23.8455 17.8298L26.2967 12.0798H29.5988V20.566H27.5895L27.5731 13.9162L24.6439 20.566H22.8465L19.9009 13.9162V20.566H15.7674L14.9838 18.6635H10.7502L9.96821 20.5644H7.75357L11.3942 12.0798ZM39.6069 12.0798H31.437V20.561H39.4805L42.073 17.7502L44.5718 20.561H47.1839L43.3872 16.345L47.1839 12.0798H44.6851L42.1057 14.8583L39.6069 12.0798ZM12.8677 13.5156L11.4729 16.9048H14.2609L12.8677 13.5156ZM33.4543 15.386V13.8354H38.5521L40.7764 16.3129L38.4535 18.8039H33.4543V17.1127H37.9113V15.386H33.4543Z\" fill=\"#A39F8A\"><\/path>\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" stroke=\"#A39F8A\"><\/rect>\n<\/svg>",
-                "subscribe_block_title": "KIES FREQUENTIE:",
-                "content_title_1": "Abonneer & Bespaar",
-                "content_info": "Ontvang 15% korting met herhaalgemak",
-                "selector_default_option": "Bezorg elke",
-                "content_title_2": "Eenmalige aankoop"
-              }
-            },
-            "eb10c9cc-23e6-42f2-81af-625819478aa7": {
-              "type": "feature",
-              "settings": {
-                "image_svg": "<svg width=\"39\" height=\"40\" viewbox=\"0 0 39 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M26.8125 12.5879H33.3023C33.5452 12.5863 33.7828 12.6582 33.984 12.7942C34.1852 12.9301 34.3406 13.1238 34.4297 13.3496L36.5625 18.6817\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M2.4375 22.3379H26.8125\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M28.6406 33.3066C30.6599 33.3066 32.2969 31.6697 32.2969 29.6504C32.2969 27.6311 30.6599 25.9941 28.6406 25.9941C26.6213 25.9941 24.9844 27.6311 24.9844 29.6504C24.9844 31.6697 26.6213 33.3066 28.6406 33.3066Z\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-miterlimit=\"10\"><\/path>\n<path d=\"M10.3594 33.3066C12.3787 33.3066 14.0156 31.6697 14.0156 29.6504C14.0156 27.6311 12.3787 25.9941 10.3594 25.9941C8.34008 25.9941 6.70312 27.6311 6.70312 29.6504C6.70312 31.6697 8.34008 33.3066 10.3594 33.3066Z\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-miterlimit=\"10\"><\/path>\n<path d=\"M24.9844 29.6504H14.0156\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M6.70312 29.6504H3.65625C3.33302 29.6504 3.02302 29.522 2.79446 29.2934C2.5659 29.0649 2.4375 28.7549 2.4375 28.4316V11.3691C2.4375 11.0459 2.5659 10.7359 2.79446 10.5074C3.02302 10.2788 3.33302 10.1504 3.65625 10.1504H26.8125V26.4816\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M26.8125 18.6816H36.5625V28.4316C36.5625 28.7549 36.4341 29.0649 36.2055 29.2934C35.977 29.522 35.667 29.6504 35.3438 29.6504H32.2969\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
-                "title": "Vóór 21:00 besteld (ZO-VR), morgen in huis* *BELGIË 14:30"
-              }
-            },
-            "f3bee7dd-b69c-4136-967d-6d9ce65a595b": {
-              "type": "feature",
-              "settings": {
-                "image_svg": "<svg width=\"39\" height=\"40\" viewbox=\"0 0 39 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M6.09375 10.1504V29.6504C6.09375 30.2969 6.35056 30.9168 6.80768 31.374C7.2648 31.8311 7.88478 32.0879 8.53125 32.0879H32.9062C33.2295 32.0879 33.5395 31.9595 33.768 31.7309C33.9966 31.5024 34.125 31.1924 34.125 30.8691V13.8066C34.125 13.4834 33.9966 13.1734 33.768 12.9449C33.5395 12.7163 33.2295 12.5879 32.9062 12.5879H8.53125C7.88478 12.5879 7.2648 12.3311 6.80768 11.874C6.35056 11.4168 6.09375 10.7969 6.09375 10.1504ZM6.09375 10.1504C6.09375 9.50393 6.35056 8.88394 6.80768 8.42682C7.2648 7.9697 7.88478 7.71289 8.53125 7.71289H29.25\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M29.1875 22.3379C29.1875 23.313 28.397 24.1035 27.4219 24.1035C26.4467 24.1035 25.6562 23.313 25.6562 22.3379C25.6562 21.3628 26.4467 20.5723 27.4219 20.5723C28.397 20.5723 29.1875 21.3628 29.1875 22.3379Z\" fill=\"black\" stroke=\"#2D392E\" stroke-width=\"0.125\"><\/path>\n<\/svg>",
-                "title": "Gratis verzending vanaf €59, anders €4,90"
-              }
-            },
-            "f434067a-d8a7-44fd-9c0e-baabe38b48f2": {
-              "type": "feature",
-              "settings": {
-                "image_svg": "<svg width=\"39\" height=\"40\" viewbox=\"0 0 39 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M19.5 30.8692C21.9375 30.8692 25.9746 30.8387 30.6059 28.1575C35.2371 25.4762 36.7453 22.1399 37.2176 20.4184C37.2611 20.2634 37.273 20.1011 37.2527 19.9414C37.2323 19.7816 37.1801 19.6275 37.0991 19.4883C37.0181 19.3491 36.91 19.2275 36.7812 19.1309C36.6524 19.0342 36.5055 18.9643 36.3492 18.9255C35.2371 18.636 33.2871 18.377 30.7887 18.9712\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M8.2113 18.9557C5.71286 18.3768 3.76286 18.6357 2.65075 18.9252C2.49445 18.9641 2.34754 19.0339 2.21873 19.1306C2.08992 19.2273 1.98182 19.3488 1.90085 19.4881C1.81987 19.6273 1.76766 19.7813 1.74731 19.9411C1.72697 20.1009 1.73889 20.2631 1.78239 20.4182C2.25466 22.1397 3.76286 25.4912 8.39411 28.1572C13.0254 30.8232 17.0625 30.869 19.5 30.869\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M19.5 30.8697C19.5 30.8697 25.5938 27.5486 25.5938 18.6822C25.5938 11.7353 21.8461 8.20094 20.2313 6.98219C20.0193 6.82628 19.7631 6.74219 19.5 6.74219C19.2369 6.74219 18.9807 6.82628 18.7687 6.98219C17.1539 8.20094 13.4062 11.7353 13.4062 18.6822C13.4062 27.5486 19.5 30.8697 19.5 30.8697Z\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M19.5 30.8693C21.3281 30.4732 26.2488 27.7005 29.2043 22.5818C32.1598 17.463 31.4285 13.3954 30.8496 11.613C30.7611 11.3264 30.5674 11.0838 30.3074 10.934C30.0474 10.7843 29.7404 10.7384 29.448 10.8056C27.6989 11.1973 26.0626 11.9842 24.6645 13.106\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M14.3355 13.106C12.9374 11.9842 11.3011 11.1973 9.55189 10.8056C9.2595 10.7384 8.9525 10.7843 8.69253 10.934C8.43256 11.0838 8.23886 11.3264 8.15033 11.613C7.57142 13.3954 6.84017 17.4782 9.79564 22.5818C12.7511 27.6853 17.6718 30.4732 19.4999 30.8693\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
-                "title": "Hoogste kwaliteit producten, bezorgd in heel Europa"
-              }
-            },
-            "ec2510b0-f907-4103-af73-859168e227dc": {
-              "type": "feature",
-              "settings": {
-                "image_svg": "<svg width=\"39\" height=\"40\" viewbox=\"0 0 39 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M34.3535 19.8999H29.4785C28.8321 19.8999 28.2121 20.1567 27.7549 20.6139C27.2978 21.071 27.041 21.691 27.041 22.3374V28.4312C27.041 29.0776 27.2978 29.6976 27.7549 30.1547C28.2121 30.6119 28.8321 30.8687 29.4785 30.8687H31.916C32.5625 30.8687 33.1825 30.6119 33.6396 30.1547C34.0967 29.6976 34.3535 29.0776 34.3535 28.4312V19.8999ZM34.3535 19.8999C34.3536 17.969 33.9713 16.0573 33.2287 14.2749C32.4861 12.4925 31.3979 10.8748 30.027 9.51516C28.656 8.15549 27.0293 7.08078 25.2408 6.35301C23.4523 5.62524 21.5375 5.25883 19.6066 5.27492C17.6771 5.26085 15.7639 5.62875 13.9771 6.35743C12.1904 7.0861 10.5656 8.16114 9.1962 9.5206C7.82683 10.8801 6.74001 12.4971 5.99837 14.2784C5.25674 16.0598 4.87495 17.9703 4.875 19.8999M4.875 19.8999V28.4312C4.875 29.0776 5.13181 29.6976 5.58893 30.1547C6.04605 30.6119 6.66603 30.8687 7.3125 30.8687H9.75C10.3965 30.8687 11.0165 30.6119 11.4736 30.1547C11.9307 29.6976 12.1875 29.0776 12.1875 28.4312V22.3374C12.1875 21.691 11.9307 21.071 11.4736 20.6139C11.0165 20.1567 10.3965 19.8999 9.75 19.8999H4.875Z\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M34.3535 28.4316V32.0879C34.3535 33.3808 33.8399 34.6208 32.9257 35.535C32.0114 36.4493 30.7714 36.9629 29.4785 36.9629H20.7188\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
-                "title": "Beste klantenservice & retourneren mogelijk"
-              }
-            }
-          },
-          "block_order": [
-            "2ee65552-7122-4359-8958-361a39d1081e",
-            "8f30c41f-00d7-48a2-9722-412c07644bf2",
-            "4da96bc6-2305-484a-afe5-a03cb1dcb841",
-            "ab5ac516-46c4-4887-b7e9-ac943344804a",
-            "dbbdb5d1-5441-41d9-8426-6e4f3e695eb4",
-            "eb10c9cc-23e6-42f2-81af-625819478aa7",
-            "f3bee7dd-b69c-4136-967d-6d9ce65a595b",
-            "f434067a-d8a7-44fd-9c0e-baabe38b48f2",
-            "ec2510b0-f907-4103-af73-859168e227dc"
-          ],
-          "settings": {
-            "show_breadcrumbs": false,
-            "show_vendor": true,
-            "show_sku": false,
-            "show_share_buttons": true,
-            "show_taxes_included": false,
-            "show_quantity_selector": true,
-            "show_payment_button": false,
-            "show_inventory_quantity": false,
-            "low_inventory_threshold": 0,
-            "enable_reviews": false,
-            "show_reviews_badge": false,
-            "show_payment_icons": true,
-            "show_shipping_estimator": false,
-            "shipping_estimator_default_country": "United States",
-            "background": "#f5f2ea"
-          }
-        },
-        "product-videos": {
-          "type": "product-videos",
-          "blocks": {
-            "96ac9465-c4f7-4f8c-b329-9a4d79c385e1": {
-              "type": "block",
-              "settings": {
-                "title": "LOREM IPSUM DOLOREM",
-                "content": "<p>Rijk aan mineralen en antioxidanten<br\/>Bevat 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer. Bevat daarnaast vitamine A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen)<br\/><\/p>",
-                "video_position": "right",
-                "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/58979f112329486cbf30ee709641b3b7.mp4"
-              }
-            },
-            "0d4c8a5d-3196-4f86-8f10-6ad4d2a9b2f9": {
-              "type": "block",
-              "settings": {
-                "title": "LOREM IPSUM DOLOREM",
-                "content": "<p>Rijk aan mineralen en antioxidanten<br\/>Bevat 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer. Bevat daarnaast vitamine A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen)<br\/><\/p>",
-                "video_position": "left",
-                "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/58979f112329486cbf30ee709641b3b7.mp4"
-              }
-            }
-          },
-          "block_order": [
-            "96ac9465-c4f7-4f8c-b329-9a4d79c385e1",
-            "0d4c8a5d-3196-4f86-8f10-6ad4d2a9b2f9"
-          ],
-          "settings": {
-            "padding_top": 80,
-            "padding_bottom": 80,
-            "background_image": "shopify:\/\/shop_images\/Mask_group.png",
-            "background_color": "#f9efe0",
-            "play_icon": "<svg width=\"48\" height=\"56\" viewbox=\"0 0 48 56\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M45.3083 24.3118L6.54186 0.648124C5.89612 0.238915 5.15037 0.014967 4.38602 0.000724425C3.62167 -0.0135181 2.86809 0.182493 2.20755 0.56736C1.53725 0.935122 0.978459 1.47676 0.589981 2.13527C0.201504 2.79379 -0.0022976 3.54484 1.95403e-05 4.3094V51.6906C-0.0022976 52.4552 0.201504 53.2062 0.589981 53.8647C0.978459 54.5232 1.53725 55.0649 2.20755 55.4326C2.86809 55.8175 3.62167 56.0135 4.38602 55.9993C5.15037 55.985 5.89612 55.7611 6.54186 55.3519L45.3083 31.6882C45.9437 31.3049 46.4693 30.7639 46.8341 30.1177C47.199 29.4715 47.3907 28.7421 47.3907 28C47.3907 27.2579 47.199 26.5285 46.8341 25.8823C46.4693 25.2361 45.9437 24.6951 45.3083 24.3118Z\" fill=\"#CA9065\"><\/path>\n<\/svg>",
-            "gradient_overlay": true
-          }
-        },
-        "product-banner": {
-          "type": "product-banner",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_576.png",
-            "title": "LOREM IPSUM DOLOREM",
-            "title_color": "#f5f2ea",
-            "use_gradient": true
-          }
-        },
-        "product-description": {
-          "type": "product-description",
-          "blocks": {
-            "fcb02849-ba80-4831-a2b7-83861b834c5f": {
-              "type": "content",
-              "settings": {
-                "title": "Wat betekent sea moss nu eigenlijk?",
-                "content": "<p>Sea moss is de Engelse naam voor zeemos, ook wel Iris sea moss genoemd. Irish moss, ook wel bekend als carrageenmos, is afgeleid van het Ierse woord “carraigin” wat “kleine rots” betekent. Eigenlijk is Irish sea moss helemaal geen mos maar een zeewier dat voornamelijk langs de Europese en Amerikaanse kust van de Atlantische Oceaan groeit.<\/p>"
-              }
-            },
-            "a5c39fed-9c52-4ce9-89d7-9feb9e49c691": {
-              "type": "content",
-              "settings": {
-                "title": "De gezondheidsvoordelen van Iris Sea Moss",
-                "content": "<p>Zeemos is een heilzaam zeewier dat zeer rijk is aan vitamines, mineralen en antioxidanten. Zo bevat sea moss maar liefst 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer. Daarnaast levert dit mos ook vitamines als A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen). Daarmee is sea moss een van de meest voedzame superfoods die bestaat!<\/p>"
-              }
-            },
-            "0b87bd00-5629-45a7-82e7-d8897a72a74b": {
-              "type": "content",
-              "settings": {
-                "title": "Maar dit heilige zeewier doet meer…",
-                "content": "<p>Sea moss gaat daarnaast ook nog eens de veroudering van de huid tegen en werkt bovendien verzachtend, voedend en beschermend. Irish sea moss wordt om die reden vaak gebruikt in huidcrèmes, body lotions, shampoos en gels. Zo kan het huidproblemen helpen verlichten, zoals psoriasis, allergieën, uitslag, snijwonden, roos, eczeem en zelfs een verbrande huid.<\/p>"
-              }
-            },
-            "7312ed3e-025b-43ee-a661-99fde2d9725f": {
-              "type": "content",
-              "settings": {
-                "title": "Hoe herken en gebruik ik sea moss dan?",
-                "content": "<p>Verse Irish Sea Moss is een zeewier die groeit langs de rotsachtige delen van de oceaan. Het is groengeel tot rood met donkerpaarse of paarsbruine tinten en voelt zacht en wat kraakbeenachtig aan. Je kunt het zo eten of als bindmiddel gebruiken. Al met al is sea moss een gezonde toevoeging op je dagelijks dieet.<\/p>"
-              }
-            },
-            "48ea265d-2e3f-420d-a0ea-a8f775f4dc93": {
-              "type": "content",
-              "settings": {
-                "title": "Ook sea moss kopen? Ga voor puur en onbewerkt",
-                "content": "<p>Wil jij ook de bijzondere werking van dit heilige zeewier ervaren? Kies dan voor de meest pure en onbewerkte biologische kwaliteit omdat daar nog de meeste voedingsstoffen in zitten. Zeemos van Superfoodies is onbewerkt, niet verhit boven 42 graden (rawfood) en biologisch gecertificeerd. Zodat jij profiteert van de hoogste kwaliteit tegen de scherpste prijs.<\/p>"
-              }
-            }
-          },
-          "block_order": [
-            "fcb02849-ba80-4831-a2b7-83861b834c5f",
-            "a5c39fed-9c52-4ce9-89d7-9feb9e49c691",
-            "0b87bd00-5629-45a7-82e7-d8897a72a74b",
-            "7312ed3e-025b-43ee-a661-99fde2d9725f",
-            "48ea265d-2e3f-420d-a0ea-a8f775f4dc93"
-          ],
-          "settings": {
-            "title": "PRODUCTBESCHRIJVING",
-            "more_btn": "MEER LEZEN",
-            "less_btn": "INSTORTEN",
-            "background": "#f9efe0",
-            "padding_top": 68,
-            "padding_bottom": 76
-          }
-        },
-        "product-info-blocks": {
-          "type": "product-info-blocks",
-          "blocks": {
-            "d22480a6-9ba6-4c22-8500-9e396a218f90": {
-              "type": "block",
-              "settings": {
-                "title": "VOORDELEN VAN HET PRODUCT",
-                "content": "<ul><li>Rijk aan mineralen en antioxidanten<\/li><li>Bevat 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer<\/li><li>Bevat daarnaast vitamine A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen)<\/li><li>Irish moss gaat de veroudering van de huid tegen en werkt als een fantastische huidverzachter die de huid voedt en beschermt<\/li><li>Irish moss kan ook huidproblemen helpen verlichten, zoals psoriasis, allergieën, uitslag, snijwonden, roos, eczeem en zelfs door de zon verbrande huid<\/li><li>Irish moss is rijk aan taurine, een voedingsstof waar vooral veganisten vaak een tekort aan hebben<\/li><\/ul>",
-                "image": "shopify:\/\/shop_images\/Rectangle_577-1.png",
-                "background": "#eeecca",
-                "position": "left"
-              }
-            },
-            "fff0befa-f533-4185-ab7d-0d02bc94f691": {
-              "type": "block",
-              "settings": {
-                "title": "GEBRUIK EN DOSERING",
-                "content": "<p>Irish moss is een ideaal bindmiddel voor smoothies, lassies, shakes en soepen. Daarnaast kan het gebruikt worden als geleermiddel in rauwe taarten en gebak en als rauw ingrediënt voor salades.<br\/><br\/>Spoel Irish moss goed af met water en laat het vervolgens ongeveer 4-24 uur weken in lauwwarm water. Je kunt de Irish moss daarna eten of er een gel\/geleermiddel van maken. Maal het daartoe fijn met wat water in de blender zodat een smeuïge gel ontstaat en laat dit nogmaals 1 uur rusten.<br\/><br\/>Geweekte Irish moss kan maximaal 3 weken in de koelkast worden bewaard. Ook de gel van Irish moss kan 3 weken in de koelkast worden bewaard, mits het water dagelijks ververst wordt. In de verpakking is Irish moss ongeveer 1 jaar houdbaar.<br\/>Gebruik 1 eetlepel Irish moss gel als bindmiddel voor 4 smoothies. <\/p>",
-                "image": "shopify:\/\/shop_images\/Rectangle_577.png",
-                "background": "#f9efe0",
-                "position": "right"
-              }
-            },
-            "91c0922b-9898-4d58-a896-b706333fe978": {
-              "type": "block",
-              "settings": {
-                "title": "GOLDEN PUMKIN OATS – VERWENONTBIJT MET GOLDEN MILK",
-                "content": "<h4><strong>Ingrediënten<\/strong><\/h4><ul><li>125 gram amandelmeel<\/li><li>25 gram kokosrasp<\/li><li>120 gram zachte dadels, zonder pit<\/li><li>2 el gemalen lijnzaad<\/li><li>2 el lucumapoeder<\/li><li>3 el Irish moss gel<\/li><li>1 tl vanillepoeder<\/li><li>1 tl kaneel<\/li><li>4 el hennepzaad<\/li><\/ul><p><\/p><h4><strong>Instructies<\/strong><\/h4><ol><li>Doe alle ingrediënten, behalve het hennepzaad in een keukenmachine.<\/li><li>Mix tot een grof 'deeg' en rol daar balletjes van.<\/li><li>Rol de balletjes door het hennepzaad en laat even opstijven in de koelkast voor het serveren.<\/li><\/ol>",
-                "image": "shopify:\/\/shop_images\/Rectangle_577-2.png",
-                "background": "#eeecca",
-                "position": "left"
-              }
-            }
-          },
-          "block_order": [
-            "d22480a6-9ba6-4c22-8500-9e396a218f90",
-            "fff0befa-f533-4185-ab7d-0d02bc94f691",
-            "91c0922b-9898-4d58-a896-b706333fe978"
-          ],
-          "settings": {
-          }
-        },
-        "newHeader": {
-          "type": "newHeader",
-          "blocks": {
-            "6ce48cee-17c8-4341-942d-3d2748231194": {
-              "type": "block",
-              "settings": {
-                "title": "Gratis verzending vanaf €59"
-              }
-            }
-          },
-          "block_order": [
-            "6ce48cee-17c8-4341-942d-3d2748231194"
-          ],
-          "settings": {
-            "title": "",
-            "description": ""
-          }
+        "block_order": [
+          "1590674541988",
+          "1597754083411",
+          "1597754093425",
+          "1597754116030",
+          "1597754136477",
+          "1597754147454",
+          "1597754159023",
+          "1597754167137",
+          "1597754176209"
+        ],
+        "settings": {
+          "enable_sticky_header": true,
+          "logo": "shopify:\/\/shop_images\/Superfoodies_Logo_1.png",
+          "logo_max_width": 140,
+          "mobile_logo_max_width": 100,
+          "show_locale_selector": false,
+          "show_currency_selector": false,
+          "navigation_menu": "new-main-menu",
+          "desktop_navigation_layout": "inline",
+          "desktop_navigation_open_trigger": "hover",
+          "show_navigation_social_media": false,
+          "navigation_phone_number": "",
+          "navigation_email": "",
+          "show_condensed_search": true,
+          "show_search_filter": false,
+          "search_menu": "",
+          "show_search_menu_title": true
         }
       },
-      "content_for_index": [
-        "1596030265087",
-        "1632312758574c49d6",
-        "1590480766957",
-        "1590490910622",
-        "1590491063956",
-        "16323127720b04cf99",
-        "1590605512705",
-        "collection-list",
-        "1590574892380",
-        "1632312770b36fc457",
-        "1590582677444",
-        "16304054625596474f",
-        "1590610074976",
-        "1590609201096",
-        "1590652490979",
-        "1602688565274",
-        "1590649518586"
-      ]
-    }
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "show_social_media": true,
+          "show_payment_icons": true,
+          "footer_menu": "footer-new-menu",
+          "payments": "ideal,paypal,master,visa,american_express,post_nl,organic-eu,vegan_official,of_and_g",
+          "copy_date_start": "2012",
+          "copy": "Superfoods BV",
+          "footer_nav_after_socials": "footer-menu-after-social",
+          "footer_info_nav": "footer-nav-menu",
+          "phone": "+31 (0) 20 700 98 57",
+          "phone2": "+31 (0) 6 2790 5385",
+          "email": "info@superfoodies.nl"
+        }
+      },
+      "collection-list": {
+        "type": "collection-list",
+        "blocks": {
+          "collection-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "food",
+              "image": "shopify:\/\/shop_images\/new-image-food.jpg",
+              "title": "Food"
+            }
+          },
+          "collection-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "drinks",
+              "image": "shopify:\/\/shop_images\/skinny-frappugreeno-7.jpg",
+              "title": "Drinks"
+            }
+          },
+          "collection-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "superfood",
+              "image": "shopify:\/\/shop_images\/Background3.jpg",
+              "title": "superFood"
+            }
+          },
+          "collection-5": {
+            "type": "collection",
+            "settings": {
+              "collection": "eiwitten",
+              "image": "shopify:\/\/shop_images\/new-image-protein_1.jpg",
+              "title": "Eiwitten"
+            }
+          },
+          "collection-4": {
+            "type": "collection",
+            "settings": {
+              "collection": "supplementen",
+              "image": "shopify:\/\/shop_images\/Schermafbeelding_2020-08-26_om_18.25.08.png",
+              "title": "Supplementen"
+            }
+          },
+          "collection-3": {
+            "type": "collection",
+            "settings": {
+              "collection": "paddenstoelen",
+              "image": "shopify:\/\/shop_images\/new-image-mushrooms.jpg",
+              "title": "Paddenstoelen"
+            }
+          },
+          "1590566351739": {
+            "type": "collection",
+            "settings": {
+              "collection": "beauty",
+              "image": "shopify:\/\/shop_images\/new-image-beauty.jpg",
+              "title": "Beauty"
+            }
+          },
+          "1590566365938": {
+            "type": "collection",
+            "settings": {
+              "collection": "accessoires",
+              "image": "shopify:\/\/shop_images\/chocolate-ganache-tart-5_1.jpg",
+              "title": "Accessoires"
+            }
+          }
+        },
+        "block_order": [
+          "collection-0",
+          "collection-2",
+          "collection-1",
+          "collection-5",
+          "collection-4",
+          "collection-3",
+          "1590566351739",
+          "1590566365938"
+        ],
+        "settings": {
+          "title": "Categorieën",
+          "link_title": "bekijk alles",
+          "link": "shopify:\/\/collections",
+          "bg": "shopify:\/\/shop_images\/Food_Superfoods_Drinks_Mushrooms_Protein_Supplements_Beauty_Accessories.png"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "show_collection_image": true,
+          "collapse_collection_description": false,
+          "collection_image_size": "large",
+          "products_per_row": "3",
+          "default_products_per_page": 24,
+          "default_view_layout": "grid",
+          "show_quick_buy": "list",
+          "show_quick_view": "list",
+          "quick_links": "new-main-menu",
+          "quick_links_show_products_count": true,
+          "show_filters": true,
+          "show_filter_color_swatch": true,
+          "filter_type": "group",
+          "open_group_filters_mode": "all_open",
+          "filter_group_order": ""
+        }
+      },
+      "recently-viewed-products": {
+        "type": "recently-viewed-products",
+        "settings": {
+          "title": "Recently viewed",
+          "show_quick_buy": false
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "blocks": {
+          "1591275793967": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/fb0654d52062423a51ac2a7423fb481d_b99fe892-9b12-45d5-9852-e064a019d1d4.png",
+              "title": "VÓÓR 21:00 BESTELD (ZO-VR), MORGEN IN HUIS* (BELGIË 14:30)"
+            }
+          },
+          "1591275804519": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/d2e33084f987d7ee89749508d25c55c9_4245fb50-7bad-4bb7-9b68-b27173a17881.png",
+              "title": "GRATIS VERZENDING VANAF €59,-. ANDERS €4,90"
+            }
+          },
+          "1591275821471": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/55d1b9ce3cd54b127fe8c57704687b6f_1_5669aa44-5252-4cad-8119-486c6e888f05.png",
+              "title": "HOOGSTE KWALITEIT PRODUCTEN, BEZORGD IN HEEL EUROPA"
+            }
+          },
+          "1591275829417": {
+            "type": "feature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ddcbd625e2d89bd5590297586f00a862_ac67d786-5d52-4773-8192-503777b5a966.png",
+              "title": "BESTE KLANTEN-SERVICE & RETOURNEREN MOGELIJK"
+            }
+          }
+        },
+        "block_order": [
+          "1591275793967",
+          "1591275804519",
+          "1591275821471",
+          "1591275829417"
+        ],
+        "settings": {
+          "show_vendor": true,
+          "show_sku": false,
+          "show_share_buttons": true,
+          "show_taxes_included": false,
+          "selector_mode": "block",
+          "color_mode": "block",
+          "show_quantity_selector": true,
+          "show_payment_button": false,
+          "image_size": "small",
+          "enable_image_zoom": true,
+          "enable_video_looping": false,
+          "zoom_effect": "outside",
+          "carousel_effect": "fade",
+          "show_inventory_quantity": false,
+          "low_inventory_threshold": 0,
+          "content_display_mode": "show_all_and_expand_description",
+          "tab_page_1_handle": "",
+          "tab_page_2_handle": "",
+          "tab_page_3_handle": "",
+          "enable_reviews": false,
+          "show_reviews_badge": false,
+          "trust_title": "Payment & Security",
+          "show_payment_icons": true,
+          "show_shipping_estimator": false,
+          "shipping_estimator_default_country": "United States",
+          "show_refunds_policy": true
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "heading": "wellicht heb je ook interesse in"
+        }
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "show_announcement": true,
+          "background": "#d6ebf0",
+          "text_color": "#2bb8c9",
+          "text": "<p>GRATIS VERZENDING VANAF €59<\/p>",
+          "link": "",
+          "show_newsletter": false,
+          "newsletter_button": "Subscribe & Save",
+          "newsletter_title": "Newsletter",
+          "newsletter_content": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+        }
+      },
+      "popups": {
+        "type": "popups",
+        "settings": {
+        }
+      },
+      "text-with-icons": {
+        "type": "text-with-icons",
+        "blocks": {
+          "text-with-icons-0": {
+            "type": "item",
+            "settings": {
+              "icon": "bi-delivery",
+              "custom_icon": "",
+              "title": "Free delivery worldwide",
+              "content": "<p>Short content about your store<\/p>"
+            }
+          },
+          "text-with-icons-1": {
+            "type": "item",
+            "settings": {
+              "icon": "bi-returns",
+              "custom_icon": "",
+              "title": "Satisfied or refunded",
+              "content": "<p>Short content about your store<\/p>"
+            }
+          },
+          "text-with-icons-2": {
+            "type": "item",
+            "settings": {
+              "icon": "bi-customer-support",
+              "custom_icon": "",
+              "title": "Top-notch support",
+              "content": "<p>Short content about your store<\/p>"
+            }
+          },
+          "text-with-icons-3": {
+            "type": "item",
+            "settings": {
+              "icon": "bi-secure-payment",
+              "custom_icon": "",
+              "title": "Secure payments",
+              "content": "<p>Short content about your store<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "text-with-icons-0",
+          "text-with-icons-1",
+          "text-with-icons-2",
+          "text-with-icons-3"
+        ],
+        "settings": {
+          "show_section": true,
+          "stack_mobile": false
+        }
+      },
+      "cookie-bar": {
+        "type": "cookie-bar",
+        "settings": {
+          "show_cookie_bar": true,
+          "cookie_text": "<p>We gebruiken cookies en soortgelijke technieken op onze website o.a. om inhoud en advertenties persoonlijk te maken. Indien u gebruik blijft maken van onze website, gaat u daarmee akkoord. Zie ons <a href=\"\/pages\/cookie-verklaring\" title=\"Cookie verklaring\">cookiebeleid<\/a>.<\/p>",
+          "accept_button": "×"
+        }
+      },
+      "1590480766957": {
+        "type": "features",
+        "blocks": {
+          "1590480772552": {
+            "type": "feature",
+            "settings": {
+              "feature_icon": "shopify:\/\/shop_images\/fb0654d52062423a51ac2a7423fb481d.png",
+              "feature_text": "gratis verzending vanaf €59"
+            }
+          },
+          "1590480804535": {
+            "type": "feature",
+            "settings": {
+              "feature_icon": "shopify:\/\/shop_images\/55d1b9ce3cd54b127fe8c57704687b6f_1.png",
+              "feature_text": "hoogste kwaliteit producten"
+            }
+          },
+          "1590480791914": {
+            "type": "feature",
+            "settings": {
+              "feature_icon": "shopify:\/\/shop_images\/d2e33084f987d7ee89749508d25c55c9.png",
+              "feature_text": "gratis retourneren"
+            }
+          },
+          "1590480817893": {
+            "type": "feature",
+            "settings": {
+              "feature_icon": "shopify:\/\/shop_images\/ddcbd625e2d89bd5590297586f00a862.png",
+              "feature_text": "beste klantenservice"
+            }
+          }
+        },
+        "block_order": [
+          "1590480772552",
+          "1590480804535",
+          "1590480791914",
+          "1590480817893"
+        ],
+        "settings": {
+        }
+      },
+      "1590490910622": {
+        "type": "featured-collection",
+        "disabled": true,
+        "blocks": {
+          "1590490939892": {
+            "type": "product",
+            "settings": {
+              "product": "green-juice-nieuw-bio-superfoodies-500-gram"
+            }
+          },
+          "1590490961970": {
+            "type": "product",
+            "settings": {
+              "product": "luminous-beauty-shake-superfoodies-500-gram"
+            }
+          },
+          "1590490965913": {
+            "type": "product",
+            "settings": {
+              "product": "bruine-rijst-eiwitpoeder-chocolade-superfoodies-500-gram"
+            }
+          },
+          "1601394060369": {
+            "type": "product",
+            "settings": {
+              "product": "hennep-eiwitpoeder-bio-superfoodies"
+            }
+          }
+        },
+        "block_order": [
+          "1590490939892",
+          "1590490961970",
+          "1590490965913",
+          "1601394060369"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Frame_2414.png",
+          "title": "Onze favorieten",
+          "subtitle": "Ontdek onze unieke producten, samengesteld op basis van wetenschappelijk onderzoek voor specifieke gezondheidsdoelen",
+          "collection": "onze-favorieten",
+          "button_text": "bekijk favorieten"
+        }
+      },
+      "1590491063956": {
+        "type": "featured-collection",
+        "disabled": true,
+        "blocks": {
+          "1590491106020": {
+            "type": "product",
+            "settings": {
+              "product": "magnesium-relax-release-superfoodies"
+            }
+          },
+          "1590491120754": {
+            "type": "product",
+            "settings": {
+              "product": "chaga-paddenstoel-extract-superfoodies"
+            }
+          },
+          "1590491115601": {
+            "type": "product",
+            "settings": {
+              "product": "vegan-omega-3-superfoodies"
+            }
+          },
+          "1601393774722": {
+            "type": "product",
+            "settings": {
+              "product": "zink-met-koper-bulletproof-60-v-caps"
+            }
+          }
+        },
+        "block_order": [
+          "1590491106020",
+          "1590491120754",
+          "1590491115601",
+          "1601393774722"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Frame_266.png",
+          "title": "nieuwe producten",
+          "subtitle": "Ontdek ons assortiment nieuwe food- en non-foodproducten die aan ons assortiment zijn toegevoegd, we voegen continue producten toe die onze klanten wensen",
+          "collection": "nieuwe-producten",
+          "button_text": "Bekijk nieuwe producten"
+        }
+      },
+      "1590574892380": {
+        "type": "featured-posts",
+        "blocks": {
+          "1590574896413": {
+            "type": "article",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cappugreeno-4_1.jpg",
+              "article": "recepten\/cappugreeno-a-great-coffee-alternative",
+              "title": "De ideale koffie-vervanger",
+              "subtitle": "Dit is het perfecte recept om je kop koffie te vervangen door een cappugreeno"
+            }
+          },
+          "1590574991220": {
+            "type": "article",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/choc-cherry-slices-13.jpg",
+              "article": "recepten\/no-bake-kersen-en-chocolade-reep",
+              "title": "No-bake kersen & chocolade reep",
+              "subtitle": "Eet je huid mooi met deze heerlijke, makkelijke no-bake reep"
+            }
+          },
+          "1590575025847": {
+            "type": "article",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/afbeelding-3_1.jpg",
+              "article": "recepten\/mushroom-burgers-met-portobello-en-reishi",
+              "title": "Vegan & Glutenvrije Paddenstoelen Burger",
+              "subtitle": "Super sappige plantaardige burger met portobello & reishi"
+            }
+          }
+        },
+        "block_order": [
+          "1590574896413",
+          "1590574991220",
+          "1590575025847"
+        ],
+        "settings": {
+          "title": "recepten waar superfoodies van houden",
+          "blog": "recepten"
+        }
+      },
+      "1590582677444": {
+        "type": "newsletter",
+        "disabled": true,
+        "settings": {
+          "bg": "shopify:\/\/shop_images\/Superfoodies-image-blog.jpg",
+          "title": "<p>Become a Superfoodie –<br\/>join our tribe <strong>Newsletter<\/strong><\/p>",
+          "content": "<p>Meld je aan voor GRATIS gezondheidstips, kortingscodes, meldingen over productlanceringen en speciale aanbiedingen<\/p>"
+        }
+      },
+      "1590605512705": {
+        "type": "home-icons",
+        "blocks": {
+          "1590605639792": {
+            "type": "item",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/SlimNormaal.png",
+              "title": "Afslanken",
+              "link": "shopify:\/\/collections\/afslanken"
+            }
+          },
+          "1590605568326": {
+            "type": "item",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/Anti-ageMini.png",
+              "title": "Anti-aging & Beauty",
+              "link": "shopify:\/\/collections\/anti-aging-beauty"
+            }
+          },
+          "1590605550937": {
+            "type": "item",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/Group_265.png",
+              "title": "Botten & Gewrichten",
+              "link": "shopify:\/\/collections\/botten-gewrichten"
+            }
+          },
+          "1593522117532": {
+            "type": "item",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/DetoxMini.png",
+              "title": "Detox & Ontgiften",
+              "link": "shopify:\/\/collections\/detox-en-ontgiften"
+            }
+          },
+          "1590605594395": {
+            "type": "item",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/Vector_Stdroke.png",
+              "title": "Gezond Gebit",
+              "link": "shopify:\/\/collections\/gezond-gebit"
+            }
+          },
+          "1590605698962": {
+            "type": "item",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/Vectd.png",
+              "title": "Immuunsysteem & Weerstand",
+              "link": "shopify:\/\/collections\/immuunsysteem-weerstand"
+            }
+          },
+          "1590605517775": {
+            "type": "item",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/Group_264_thumb_56ee0444-864c-4b4b-b7c8-b4deb79ab5f8.png",
+              "title": "Meer Energie & Vermoeidheid Verminderen",
+              "link": "shopify:\/\/collections\/meer-energie-vermoeidheid-verminderen"
+            }
+          },
+          "1590605620596": {
+            "type": "item",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/Vector_Stroke_1.png",
+              "title": "Spieropbouw",
+              "link": "shopify:\/\/collections\/spieropbouw"
+            }
+          },
+          "1593522122561": {
+            "type": "item",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/GutMini.png",
+              "title": "Spijsvertering & Stoelgang",
+              "link": "shopify:\/\/collections\/spijsvertering-stoelgang"
+            }
+          },
+          "1590605659020": {
+            "type": "item",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/Group_d267.png",
+              "title": "Stress & Hormoonbalans",
+              "link": "shopify:\/\/collections\/stress-en-hormoonbalans"
+            }
+          }
+        },
+        "block_order": [
+          "1590605639792",
+          "1590605568326",
+          "1590605550937",
+          "1593522117532",
+          "1590605594395",
+          "1590605698962",
+          "1590605517775",
+          "1590605620596",
+          "1593522122561",
+          "1590605659020"
+        ],
+        "settings": {
+          "title": "WAAR HEB JE HULP BIJ NODIG?"
+        }
+      },
+      "1590609201096": {
+        "type": "big-text",
+        "settings": {
+          "link": "",
+          "text": "Ritme van de Natuur"
+        }
+      },
+      "1590610074976": {
+        "type": "videos",
+        "blocks": {
+          "1590610084690": {
+            "type": "video",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Layer_2_4.jpg",
+              "title": "Wat we dromen",
+              "link": "https:\/\/vimeo.com\/364240100"
+            }
+          },
+          "1590610104344": {
+            "type": "video",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Layer_2_5.jpg",
+              "title": "vrij van ziekte",
+              "link": "https:\/\/vimeo.com\/364238519"
+            }
+          },
+          "1590610128087": {
+            "type": "video",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Layer_2_6.jpg",
+              "title": "Superfoodies – duurzaam ondernemen",
+              "link": "https:\/\/vimeo.com\/364238390"
+            }
+          }
+        },
+        "block_order": [
+          "1590610084690",
+          "1590610104344",
+          "1590610128087"
+        ],
+        "settings": {
+          "title": "Onze droom, onze visie, ons doel"
+        }
+      },
+      "1590649518586": {
+        "type": "logos",
+        "blocks": {
+          "1590649577183": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/image_27.jpg"
+            }
+          },
+          "1590649586551": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/vegan-keurmerk_30173f56-f8a6-43c6-9cab-63e0c3482836.png"
+            }
+          },
+          "1590649596358": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled-1_1.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1590649577183",
+          "1590649586551",
+          "1590649596358"
+        ],
+        "settings": {
+          "title": "Wij zijn superfoodies",
+          "subtitle": "Biologische certificaties waarop u kunt vertrouwen",
+          "bg": "shopify:\/\/shop_images\/Footer-LEAF_light-orange_LR.jpg"
+        }
+      },
+      "1590652490979": {
+        "type": "instafeed",
+        "settings": {
+          "heading_font": "trade_gothic_next_n4",
+          "heading_size": 30,
+          "feed_width": 100,
+          "html_area": "<div class=\"container instafeed-app\">\n<h2>Become a Superfoodie - join our tribe<\/h2>\n<a class=\"instafeed-link\" href=\"https:\/\/www.instagram.com\/superfoodieseu\/\" target=\"_blank\">@superfoodieseu<\/a>\n<div id=\"feed-5235\" class=\"instafeed-shopify\"><\/div>\n<\/div>"
+        }
+      },
+      "static-promotion-list": {
+        "type": "static-promotion-list",
+        "settings": {
+          "expand_items": false,
+          "section_size": "medium",
+          "stack_mobile": false
+        }
+      },
+      "static-recently-viewed-products": {
+        "type": "static-recently-viewed-products",
+        "settings": {
+          "show_section": true,
+          "title": "Recent bekeken",
+          "show_quick_buy": false
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {
+          "bg": "shopify:\/\/shop_images\/Superfoodies-image-blog.jpg",
+          "title": "<p>Become a Superfoodie &ndash;<br>join our tribe&nbsp;<strong>NIEUWSBRIEF<\/strong><\/p>",
+          "content": "<p>Meld je aan voor GRATIS gezondheidstips, kortingscodes, meldingen over productlanceringen en speciale aanbiedingen<\/p>"
+        }
+      },
+      "product-blocks": {
+        "type": "product-blocks",
+        "blocks": {
+          "1591342016491": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/image_9.jpg",
+              "image_size": "cover",
+              "image_position": "right",
+              "title": "<p>Become a Superfoodie <strong>– <\/strong><br\/><strong>join our tribe<\/strong><\/p>",
+              "content": "Your nightly ritual is about to get an upgrade with our hot cacao mix of reishi, one of the world’s most studied mushrooms that’s been shown to help support sleep and occasional stress. Reishi is so esteemed that in ancient scroll paintings, it’s often depicted as the “bridge between Earth and Heaven”. Other nicknames for this regal fungi include “mushroom of immortality,” “mushroom of spiritual potency,” and “rule of herbs”.",
+              "bg": "#fafafa"
+            }
+          },
+          "1591342315138": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/11111.png",
+              "image_size": "contain",
+              "image_position": "left",
+              "title": "<p>Easy to use <br><strong>Brain Octane Oil<\/strong><\/p>",
+              "content": "Brain Octane oil is completely flavorless and easy to pour. No coconut flavor means it's a great substitute for other oils.\n<ul>\n<li>Blend it into Bulletproof Coffee or tea<\/li>\n<li>Add to smoothies and shakes<\/li>\n<li>Drizzle it over your favorite meals<\/li>\n<li>Use to make salad dressings, sauces, and marinades<\/li>\n<\/ul>",
+              "bg": "#fff7ee"
+            }
+          }
+        },
+        "block_order": [
+          "1591342016491",
+          "1591342315138"
+        ],
+        "settings": {
+        }
+      },
+      "featured-posts": {
+        "type": "featured-posts",
+        "blocks": {
+          "1591351436703": {
+            "type": "article",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cappugreeno-4_1.jpg",
+              "article": "recepten\/cappugreeno-a-great-coffee-alternative",
+              "title": "De ideale koffie-vervanger",
+              "subtitle": "Dit is het perfecte recept om je kop koffie te vervangen door een cappugreeno"
+            }
+          },
+          "1591351469128": {
+            "type": "article",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/choc-cherry-slices-13.jpg",
+              "article": "recepten\/no-bake-kersen-en-chocolade-reep",
+              "title": "No-bake kersen & chocolade reep",
+              "subtitle": "Eet je huid mooi met deze heerlijke, makkelijke no-bake reep"
+            }
+          },
+          "1591351495315": {
+            "type": "article",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/reishi-mushroom-millet-burgers-13.jpg",
+              "article": "recepten\/mushroom-burgers-met-portobello-en-reishi",
+              "title": "Vegan & Glutenvrije Paddenstoelen Burger",
+              "subtitle": "Super sappige plantaardige burger met portobello & reishi"
+            }
+          }
+        },
+        "block_order": [
+          "1591351436703",
+          "1591351469128",
+          "1591351495315"
+        ],
+        "settings": {
+          "title": "Recipes Superfoodies love",
+          "blog": "recepten"
+        }
+      },
+      "search-template": {
+        "type": "search-template",
+        "settings": {
+          "products_per_row": "3",
+          "default_view_layout": "grid",
+          "show_quick_view": "list",
+          "show_quick_buy": "list",
+          "quick_links": ""
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "blocks": {
+          "1592384984531": {
+            "type": "trust",
+            "settings": {
+              "icon": "bi-customer-support",
+              "custom_icon": "shopify:\/\/shop_images\/fb0654d52062423a51ac2a7423fb481d_b99fe892-9b12-45d5-9852-e064a019d1d4.png",
+              "title": "Vóór 21:00 besteld, morgen in huis* (België 14:30)"
+            }
+          },
+          "1592385155698": {
+            "type": "trust",
+            "settings": {
+              "icon": "bi-customer-support",
+              "custom_icon": "shopify:\/\/shop_images\/d2e33084f987d7ee89749508d25c55c9_4245fb50-7bad-4bb7-9b68-b27173a17881.png",
+              "title": "Gratis verzending vanaf €59,-. anders €5,90"
+            }
+          },
+          "1592385216023": {
+            "type": "trust",
+            "settings": {
+              "icon": "bi-customer-support",
+              "custom_icon": "shopify:\/\/shop_images\/55d1b9ce3cd54b127fe8c57704687b6f_1_5669aa44-5252-4cad-8119-486c6e888f05.png",
+              "title": "Hoogste kwaliteit producten, bezorgd in heel Europa"
+            }
+          },
+          "1592385676059": {
+            "type": "trust",
+            "settings": {
+              "icon": "bi-customer-support",
+              "custom_icon": "shopify:\/\/shop_images\/ddcbd625e2d89bd5590297586f00a862_ac67d786-5d52-4773-8192-503777b5a966.png",
+              "title": "Beste klanten-service & retourneren mogelijk"
+            }
+          }
+        },
+        "block_order": [
+          "1592384984531",
+          "1592385155698",
+          "1592385216023",
+          "1592385676059"
+        ],
+        "settings": {
+          "enable_order_notes": false,
+          "show_payment_icons": false,
+          "gift_wrap_product": "",
+          "gift_wrap_text": "Do you want a gift wrap?",
+          "gift_wrap_button": "Add a gift wrap",
+          "show_shipping_estimator": false,
+          "shipping_estimator_default_country": "United States",
+          "trust_heading": "Our guarantees",
+          "upsell_heading": "Maak uw bestelling compleet",
+          "upsell_collection": "superfood",
+          "upsell_products_count": 4
+        }
+      },
+      "featured-collection": {
+        "type": "featured-collection",
+        "blocks": {
+          "1592497129789": {
+            "type": "product",
+            "settings": {
+              "product": ""
+            }
+          },
+          "1592497142711": {
+            "type": "product",
+            "settings": {
+              "product": ""
+            }
+          }
+        },
+        "block_order": [
+          "1592497129789",
+          "1592497142711"
+        ],
+        "settings": {
+          "image": "",
+          "title": "",
+          "subtitle": "",
+          "collection": "",
+          "button_text": ""
+        }
+      },
+      "page-featured-products": {
+        "type": "page-featured-products",
+        "blocks": {
+          "1592499013366": {
+            "type": "product",
+            "settings": {
+              "product": ""
+            }
+          },
+          "1592499021947": {
+            "type": "product",
+            "settings": {
+              "product": ""
+            }
+          }
+        },
+        "block_order": [
+          "1592499013366",
+          "1592499021947"
+        ],
+        "settings": {
+          "title": "Featured products"
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "show_category": true,
+          "show_author": false,
+          "show_date": true,
+          "show_share_buttons": true,
+          "show_tags": true,
+          "show_gravatar": true
+        }
+      },
+      "blog-sidebar": {
+        "type": "blog-sidebar",
+        "settings": {
+          "show_on_mobile": false
+        }
+      },
+      "product-best": {
+        "type": "product-best",
+        "settings": {
+          "heading": "Klanten kochten ook",
+          "collection": "instant-drink-mixes"
+        }
+      },
+      "page-contact-template": {
+        "type": "page-contact-template",
+        "settings": {
+          "subtitle": "<p>Wil je met ons in contact komen?<\/p>\n<p>Dat kan door simpelweg dit formulier in te vullen<\/p>\n<p>of door middel van e-mail, telefoon of live chat.<\/p>\n<p>Superfoods BV is bereikbaar van maandag t\/m vrijdag 09:00 - 18:00<\/p>\n<p><em>(kerstdagen en nieuwjaarsdag uitgezonderd<\/em><\/p>\n<p><\/p>",
+          "form_heading": "Laat een bericht achter",
+          "show_store_info": true,
+          "store_heading": "",
+          "store_image": "",
+          "store_info": "<p><em>\"De Europese Commissie biedt een platform voor online geschillenbeslechting aan voor consumenten, die u kunt vinden op <a href=\"http:\/\/ec.europa.eu\/consumers\/odr\/\" title=\"http:\/\/ec.europa.eu\/consumers\/odr\/\">http:\/\/ec.europa.eu\/consumers\/odr\/<\/a>. Wij nemen niet deel aan een geschillenbeslechtingsprocedure.\"<\/em><\/p>",
+          "bg": "shopify:\/\/shop_images\/Superfoodies-image4_LR_1_1.png",
+          "phone_title": "Telefoonnummer",
+          "phone_content": "+31(0)20 700 98 57 <br> +31(0)6 2790 5385 (WhatsApp)",
+          "email_title": "Email",
+          "email_content": "info@superfoodies.nl",
+          "address_title": "Address",
+          "address": "<p>Distributiecentrum:<br>Superfoodies.nl<br>Antwoordnummer 10107<br>2700 VB Zoetermeer<br><br>[Voor informatie over retourneren, klik <a href=\"\/pages\/retourneren\" title=\"Retourneren\">Retourneren<\/a>]<br><br>Kantoor:<br>Superfoods BV<br>Kanaalweg 26<br>1121 DR<br>Landsmeer<br>The Netherlands<br><br>KvK: 54552958<br>BTW: NL.851348749.B01<\/p>",
+          "social_title": "Volg ons"
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "collections_to_show": "all",
+          "show_collection_title": true,
+          "show_collection_overlay": true,
+          "collection_overlay_opacity": 20
+        }
+      },
+      "blog-tags": {
+        "type": "blog-tags",
+        "settings": {
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "articles_per_page": 12,
+          "highlight_first_article": true,
+          "show_tags": true,
+          "show_category": true,
+          "show_author": false,
+          "show_date": true,
+          "show_excerpt": false
+        }
+      },
+      "blog-products": {
+        "type": "blog-products",
+        "blocks": {
+          "1593157118605": {
+            "type": "product",
+            "settings": {
+              "product": ""
+            }
+          },
+          "1593157127073": {
+            "type": "product",
+            "settings": {
+              "product": "amandelen-ongebrand-bio-superfoodies"
+            }
+          }
+        },
+        "block_order": [
+          "1593157118605",
+          "1593157127073"
+        ],
+        "settings": {
+          "title": "Featured products"
+        }
+      },
+      "1596030265087": {
+        "type": "mosaic-slider",
+        "blocks": {
+          "1596030271855": {
+            "type": "slide",
+            "settings": {
+              "bg": "shopify:\/\/shop_images\/Huid.jpg",
+              "title": "Huid",
+              "subtitle": "voeding voor de huid",
+              "link": "shopify:\/\/products\/luminous-beauty-shake-superfoodies-500-gram"
+            }
+          },
+          "1596030278784": {
+            "type": "slide",
+            "settings": {
+              "bg": "shopify:\/\/shop_images\/Energie.jpg",
+              "title": "Energie",
+              "subtitle": "haal het maximale uit jezelf",
+              "link": "shopify:\/\/collections\/meer-energie-vermoeidheid-verminderen"
+            }
+          },
+          "1596030284293": {
+            "type": "slide",
+            "settings": {
+              "bg": "shopify:\/\/shop_images\/Superfoodies-image-blog.jpg",
+              "title": "Ritme van de Natuur",
+              "subtitle": "laat je inspireren",
+              "link": "https:\/\/vimeo.com\/364240100"
+            }
+          },
+          "1596030290164": {
+            "type": "slide",
+            "settings": {
+              "bg": "shopify:\/\/shop_images\/new-image-protein.jpg",
+              "title": "SPORT - AFSLANKEN",
+              "subtitle": "PROTEIN SHAKES",
+              "link": "shopify:\/\/collections\/plantaardige-eiwitten"
+            }
+          },
+          "1596030475484": {
+            "type": "slide",
+            "settings": {
+              "bg": "shopify:\/\/shop_images\/orange-immunity-overnight-oats-7klein_-_kopie.jpg",
+              "title": "IMMUUNSYSTEEM",
+              "subtitle": "Ondersteun je afweer",
+              "link": "shopify:\/\/collections\/immunity-support"
+            }
+          }
+        },
+        "block_order": [
+          "1596030271855",
+          "1596030278784",
+          "1596030284293",
+          "1596030290164",
+          "1596030475484"
+        ],
+        "settings": {
+        }
+      },
+      "product-reviews": {
+        "type": "product-reviews",
+        "settings": {
+        }
+      },
+      "minimal-header": {
+        "type": "minimal-header",
+        "settings": {
+          "logo": "",
+          "logo_max_width": 140,
+          "mobile_logo_max_width": 100
+        }
+      },
+      "password-template": {
+        "type": "password-template",
+        "settings": {
+          "show_social_media": true,
+          "heading": "Opening Soon",
+          "text": "<p>A content describing what your store will sell.<\/p>",
+          "show_newsletter_signup": true,
+          "newsletter_text": "<p>A short sentence describing what someone will receive by subscribing.<\/p>"
+        }
+      },
+      "1602688565274": {
+        "type": "instafeed",
+        "settings": {
+          "heading_font": "helvetica_n4",
+          "heading_size": 20,
+          "feed_width": 100,
+          "html_area": "<!-- -->"
+        }
+      },
+      "16304054625596474f": {
+        "type": "activecampaign-NL",
+        "settings": {
+          "bg": "shopify:\/\/shop_images\/Superfoodies-image-blog.jpg",
+          "title": "<p>Become a Superfoodie –<br\/>join our tribe <strong>Newsletter<\/strong><\/p>",
+          "content": "<p>Meld je aan voor GRATIS gezondheidstips, kortingscodes, meldingen over productlanceringen en speciale aanbiedingen<\/p>"
+        }
+      },
+      "activecampaign-NL": {
+        "type": "activecampaign-NL",
+        "settings": {
+          "bg": "shopify:\/\/shop_images\/Superfoodies-image-blog.jpg",
+          "title": "<p>Become a Superfoodie –<br\/>join our tribe <strong>Newsletter<\/strong><\/p>",
+          "content": "<p>Meld je aan voor GRATIS gezondheidstips, kortingscodes, meldingen over productlanceringen en speciale aanbiedingen<\/p>"
+        }
+      },
+      "clerk_popup": {
+        "type": "clerk_popup",
+        "settings": {
+        }
+      },
+      "1632312758574c49d6": {
+        "type": "custom-html",
+        "settings": {
+          "title": "",
+          "html": "<span class=\"clerk\" id=\"clerk1\" data-template=\"@home-page-visitor-complementary\"><\/span>"
+        }
+      },
+      "1632312770b36fc457": {
+        "type": "custom-html",
+        "settings": {
+          "title": "",
+          "html": "<span class=\"clerk\" id=\"clerk2\" data-exclude-from=\"#clerk1\" data-template=\"@home-page-popular\"><\/span>"
+        }
+      },
+      "16323127720b04cf99": {
+        "type": "custom-html",
+        "settings": {
+          "title": "",
+          "html": "<span class=\"clerk\" id=\"clerk3\" data-exclude-from=\"#clerk1,#clerk2\" data-template=\"@home-page-trending\"><\/span>"
+        }
+      },
+      "app-optimization": {
+        "type": "app-optimization",
+        "blocks": {
+          "5c65bf35-5340-42f7-a02b-569ab8b5d957": {
+            "type": "app",
+            "settings": {
+              "title": "upsells",
+              "url": "upsells.boldapps.net\/v2_ui\/js\/UpsellTracker.js",
+              "block_index": false,
+              "block_product": false,
+              "block_collection": true,
+              "block_page": true,
+              "block_blog": false,
+              "block_article": false,
+              "block_cart": false,
+              "block_search": true,
+              "block_customers": true,
+              "block_gift_card": true,
+              "scroll_index": false,
+              "scroll_product": false,
+              "scroll_collection": false,
+              "scroll_page": false,
+              "scroll_blog": false,
+              "scroll_article": false,
+              "scroll_cart": false,
+              "scroll_search": false,
+              "scroll_customers": false,
+              "scroll_gift_card": false,
+              "interaction_index": false,
+              "interaction_product": false,
+              "interaction_collection": false,
+              "interaction_page": false,
+              "interaction_blog": false,
+              "interaction_article": false,
+              "interaction_cart": false,
+              "interaction_search": false,
+              "interaction_customers": false,
+              "interaction_gift_card": false,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          },
+          "5722d5f5-4b42-4c38-a341-0b37d6129894": {
+            "type": "app",
+            "settings": {
+              "title": "freeshippingbar",
+              "url": "cdn.hextom.com\/js\/freeshippingbar.js",
+              "block_index": false,
+              "block_product": false,
+              "block_collection": false,
+              "block_page": false,
+              "block_blog": false,
+              "block_article": false,
+              "block_cart": false,
+              "block_search": false,
+              "block_customers": false,
+              "block_gift_card": false,
+              "scroll_index": false,
+              "scroll_product": false,
+              "scroll_collection": false,
+              "scroll_page": false,
+              "scroll_blog": false,
+              "scroll_article": false,
+              "scroll_cart": false,
+              "scroll_search": false,
+              "scroll_customers": false,
+              "scroll_gift_card": false,
+              "interaction_index": false,
+              "interaction_product": false,
+              "interaction_collection": false,
+              "interaction_page": false,
+              "interaction_blog": false,
+              "interaction_article": false,
+              "interaction_cart": false,
+              "interaction_search": false,
+              "interaction_customers": false,
+              "interaction_gift_card": false,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          },
+          "1d8bfc31-e035-47d2-9669-1b3a554cfea3": {
+            "type": "app",
+            "settings": {
+              "title": "instafeed",
+              "url": "instafeed.nfcube.com\/cdn\/feea1fe0a9c905c7042026e42498259d.js",
+              "block_index": false,
+              "block_product": true,
+              "block_collection": true,
+              "block_page": true,
+              "block_blog": true,
+              "block_article": true,
+              "block_cart": true,
+              "block_search": true,
+              "block_customers": true,
+              "block_gift_card": true,
+              "scroll_index": true,
+              "scroll_product": false,
+              "scroll_collection": false,
+              "scroll_page": false,
+              "scroll_blog": false,
+              "scroll_article": false,
+              "scroll_cart": false,
+              "scroll_search": false,
+              "scroll_customers": false,
+              "scroll_gift_card": false,
+              "interaction_index": true,
+              "interaction_product": false,
+              "interaction_collection": false,
+              "interaction_page": false,
+              "interaction_blog": false,
+              "interaction_article": false,
+              "interaction_cart": false,
+              "interaction_search": false,
+              "interaction_customers": false,
+              "interaction_gift_card": false,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          },
+          "61cdff51-11c5-4c02-ae76-b12c27063599": {
+            "type": "app",
+            "settings": {
+              "title": "clearcart",
+              "url": "amaicdn.com\/pricing-by-quantity\/js\/clear-cart.js",
+              "block_index": false,
+              "block_product": false,
+              "block_collection": false,
+              "block_page": false,
+              "block_blog": false,
+              "block_article": false,
+              "block_cart": false,
+              "block_search": false,
+              "block_customers": false,
+              "block_gift_card": false,
+              "scroll_index": false,
+              "scroll_product": false,
+              "scroll_collection": false,
+              "scroll_page": false,
+              "scroll_blog": false,
+              "scroll_article": false,
+              "scroll_cart": false,
+              "scroll_search": false,
+              "scroll_customers": false,
+              "scroll_gift_card": false,
+              "interaction_index": false,
+              "interaction_product": false,
+              "interaction_collection": false,
+              "interaction_page": false,
+              "interaction_blog": false,
+              "interaction_article": false,
+              "interaction_cart": false,
+              "interaction_search": false,
+              "interaction_customers": false,
+              "interaction_gift_card": false,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          },
+          "53a280f0-0924-4d95-a3c5-0c06c3f6093e": {
+            "type": "app",
+            "settings": {
+              "title": "usf",
+              "url": "cdn.shopify.com\/s\/files\/1\/0257\/0108\/9360\/t\/85\/assets\/usf-license.js",
+              "block_index": false,
+              "block_product": false,
+              "block_collection": false,
+              "block_page": false,
+              "block_blog": false,
+              "block_article": false,
+              "block_cart": false,
+              "block_search": false,
+              "block_customers": false,
+              "block_gift_card": false,
+              "scroll_index": true,
+              "scroll_product": true,
+              "scroll_collection": true,
+              "scroll_page": true,
+              "scroll_blog": true,
+              "scroll_article": true,
+              "scroll_cart": true,
+              "scroll_search": true,
+              "scroll_customers": true,
+              "scroll_gift_card": true,
+              "interaction_index": false,
+              "interaction_product": false,
+              "interaction_collection": false,
+              "interaction_page": false,
+              "interaction_blog": false,
+              "interaction_article": false,
+              "interaction_cart": false,
+              "interaction_search": false,
+              "interaction_customers": false,
+              "interaction_gift_card": false,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          },
+          "2b17f3cd-9655-4ff7-bb74-c0aa58cc99e7": {
+            "type": "app",
+            "settings": {
+              "title": "trusted",
+              "url": "cdn.shopify.com\/s\/files\/1\/1864\/5043\/t\/32\/assets\/trustedshops_shopify.js",
+              "block_index": false,
+              "block_product": false,
+              "block_collection": false,
+              "block_page": false,
+              "block_blog": false,
+              "block_article": false,
+              "block_cart": false,
+              "block_search": false,
+              "block_customers": false,
+              "block_gift_card": false,
+              "scroll_index": true,
+              "scroll_product": true,
+              "scroll_collection": true,
+              "scroll_page": true,
+              "scroll_blog": true,
+              "scroll_article": true,
+              "scroll_cart": true,
+              "scroll_search": true,
+              "scroll_customers": true,
+              "scroll_gift_card": true,
+              "interaction_index": true,
+              "interaction_product": true,
+              "interaction_collection": true,
+              "interaction_page": true,
+              "interaction_blog": true,
+              "interaction_article": true,
+              "interaction_cart": true,
+              "interaction_search": true,
+              "interaction_customers": true,
+              "interaction_gift_card": true,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          },
+          "bcb3dce8-a14b-4a25-adf5-0510229a9610": {
+            "type": "app",
+            "settings": {
+              "title": "reviews",
+              "url": "thimatic-apps.com\/product_review\/theme_files\/wc-product-review.js",
+              "block_index": false,
+              "block_product": false,
+              "block_collection": false,
+              "block_page": false,
+              "block_blog": false,
+              "block_article": false,
+              "block_cart": false,
+              "block_search": false,
+              "block_customers": false,
+              "block_gift_card": false,
+              "scroll_index": true,
+              "scroll_product": true,
+              "scroll_collection": true,
+              "scroll_page": true,
+              "scroll_blog": true,
+              "scroll_article": true,
+              "scroll_cart": true,
+              "scroll_search": true,
+              "scroll_customers": true,
+              "scroll_gift_card": true,
+              "interaction_index": true,
+              "interaction_product": true,
+              "interaction_collection": true,
+              "interaction_page": true,
+              "interaction_blog": true,
+              "interaction_article": true,
+              "interaction_cart": true,
+              "interaction_search": true,
+              "interaction_customers": true,
+              "interaction_gift_card": true,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          }
+        },
+        "block_order": [
+          "5c65bf35-5340-42f7-a02b-569ab8b5d957",
+          "5722d5f5-4b42-4c38-a341-0b37d6129894",
+          "1d8bfc31-e035-47d2-9669-1b3a554cfea3",
+          "61cdff51-11c5-4c02-ae76-b12c27063599",
+          "53a280f0-0924-4d95-a3c5-0c06c3f6093e",
+          "2b17f3cd-9655-4ff7-bb74-c0aa58cc99e7",
+          "bcb3dce8-a14b-4a25-adf5-0510229a9610"
+        ],
+        "settings": {
+          "enable": true,
+          "debug_enable": false
+        }
+      },
+      "clerk-cart-slider": {
+        "type": "clerk-cart-slider",
+        "settings": {
+        }
+      },
+      "product-template-new": {
+        "type": "product-template-new",
+        "blocks": {
+          "2ee65552-7122-4359-8958-361a39d1081e": {
+            "type": "customer_notice",
+            "settings": {
+              "notice": "<p>“Heerlijke Zaadjes Voor In De Havermout Of Over Een Smoothie.” <\/p>",
+              "customer": "— Lotte A., Gepelde hennep zaden klant",
+              "background": "#edc399"
+            }
+          },
+          "8f30c41f-00d7-48a2-9722-412c07644bf2": {
+            "type": "title",
+            "settings": {
+              "show_vendor": true,
+              "show_sku": false
+            }
+          },
+          "4da96bc6-2305-484a-afe5-a03cb1dcb841": {
+            "type": "review_badge",
+            "settings": {
+            }
+          },
+          "ab5ac516-46c4-4887-b7e9-ac943344804a": {
+            "type": "description",
+            "settings": {
+            }
+          },
+          "dbbdb5d1-5441-41d9-8426-6e4f3e695eb4": {
+            "type": "product_form",
+            "settings": {
+              "add_to_cart_text": "Abonneer",
+              "selector_mode": "block",
+              "color_mode": "color",
+              "payment_icons": "<svg width=\"56\" height=\"33\" viewbox=\"0 0 56 33\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" fill=\"#FBF0DF\"><\/rect>\n<path d=\"M20.5927 16.769C21.861 16.769 22.8892 15.7093 22.8892 14.4021C22.8892 13.095 21.861 12.0353 20.5927 12.0353C19.3244 12.0353 18.2962 13.095 18.2962 14.4021C18.2962 15.7093 19.3244 16.769 20.5927 16.769Z\" fill=\"#A39F8A\"><\/path>\n<path d=\"M18.7479 17.7778H22.4374V24.5291H18.7479V17.7778Z\" fill=\"#A39F8A\"><\/path>\n<path d=\"M32.226 14.635H32.2378L32.226 14.6738V14.635Z\" fill=\"#A39F8A\"><\/path>\n<path d=\"M32.2378 14.635L32.6025 13.4321H32.6401L32.9789 14.635H32.2378Z\" fill=\"#A39F8A\"><\/path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M36.2544 12.2293H35.2003V16.575H37.8356C37.7226 21.3087 35.4261 24.5292 28.6873 24.5292H24.2825V16.575H24.9602C26.1273 16.575 26.8426 15.7602 26.8426 14.4022C26.8426 13.0441 26.1273 12.2293 24.9225 12.2293H24.2825V8.23286H28.6873C32.8285 8.23286 37.3838 9.55208 37.7979 15.4886H36.2544V12.2293ZM30.1179 16.575V15.4886H28.5744V14.9066H29.9673V13.8202H28.5367V13.3157H30.0426V12.2293H27.4826V16.575H30.1179ZM31.8495 12.2293L30.5694 16.575H31.6989L31.9248 15.7602H33.3177L33.5436 16.575H34.6354L33.3553 12.2293H31.8495Z\" fill=\"#A39F8A\"><\/path>\n<path d=\"M24.2824 13.3158V15.4886H24.9225C25.3742 15.4886 25.7883 15.3722 25.7883 14.4022C25.7883 13.4322 25.3366 13.3158 24.9225 13.3158H24.2824Z\" fill=\"#A39F8A\"><\/path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M28.6871 5.40039H16V27.4004H28.6871C35.9907 27.4004 40.6213 23.7143 40.6213 16.381C40.6213 10.2505 37.3084 5.40039 28.6871 5.40039ZM17.2048 26.1588V6.71961H28.6872C35.3131 6.71961 39.3791 9.82367 39.3791 16.4198C39.3791 22.8219 35.6143 26.1588 28.6872 26.1588H17.2048Z\" fill=\"#A39F8A\"><\/path>\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" stroke=\"#A39F8A\"><\/rect>\n<\/svg>\n[]\n<svg width=\"56\" height=\"33\" viewbox=\"0 0 56 33\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" fill=\"#FBF0DF\"><\/rect>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M34.8661 10.3895C34.8582 9.3965 34.5717 8.62443 33.964 7.90818C33.0669 6.85225 31.4478 6.40039 29.376 6.40039H23.3612C22.938 6.40039 22.577 6.7184 22.5116 7.15132L20.0064 23.5646C19.957 23.8893 20.1993 24.1822 20.5161 24.1822H23.2185L22.9854 25.7101L22.9852 25.7114C22.8569 26.5602 23.491 27.4004 24.4196 27.4004H27.5495C28.4318 27.4004 29.1412 26.747 29.2786 25.9157L29.3101 25.7473L29.9 21.8781L29.9059 21.8452H30.1631C31.8086 21.8452 33.3943 21.5009 34.6822 20.5545C35.9878 19.5951 36.8628 18.1088 37.2459 16.0755C37.5597 14.4097 37.4497 12.7555 36.3983 11.5171L36.3972 11.5158C36.076 11.1389 35.6883 10.8391 35.259 10.6044L34.8661 10.3895ZM34.7404 11.7203C34.7548 11.6396 34.7679 11.5602 34.7796 11.4819C35.0392 11.6239 35.2697 11.7908 35.468 11.9846L35.4717 11.9882C35.5292 12.0446 35.584 12.1033 35.636 12.1644C35.6465 12.1767 35.6569 12.1892 35.6672 12.2017C36.407 13.1029 36.5489 14.3732 36.2632 15.8904C35.5694 19.5728 33.1954 20.8452 30.1631 20.8452H29.695C29.3245 20.8452 29.0089 21.1237 28.9512 21.5028L28.9133 21.7148L28.324 25.58L28.2933 25.7443C28.2349 26.1221 27.9201 26.4004 27.5495 26.4004H24.4196C24.1427 26.4004 23.9311 26.1448 23.974 25.8609L25.1334 18.2598L25.1343 18.2539C25.1984 17.8506 25.5166 17.548 25.9049 17.513C25.9296 17.5108 25.9546 17.5096 25.9799 17.5096H27.7445C28.0142 17.5096 28.2793 17.5008 28.5393 17.4826C31.4339 17.2799 33.6961 15.9103 34.5665 12.5284C34.6229 12.3095 34.6734 12.0821 34.7178 11.8462C34.7256 11.8038 34.7332 11.7619 34.7404 11.7203Z\" fill=\"#A39F8A\"><\/path>\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" stroke=\"#A39F8A\"><\/rect>\n<\/svg>\n[]\n<svg width=\"56\" height=\"33\" viewbox=\"0 0 56 33\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" fill=\"#FBF0DF\"><\/rect>\n<path d=\"M37.5336 9.97737C36.8626 9.70316 35.7982 9.40039 34.4821 9.40039C31.1222 9.40039 28.7562 11.2457 28.7417 13.884C28.7138 15.8305 30.4356 16.9116 31.7235 17.5607C33.0398 18.2239 33.4872 18.6568 33.4872 19.2479C33.4738 20.1558 32.4236 20.5743 31.444 20.5743C30.0857 20.5743 29.3579 20.3586 28.2518 19.8534L27.8038 19.6369L27.3277 22.6791C28.1256 23.0536 29.5958 23.3858 31.1222 23.4004C34.6921 23.4004 37.0162 21.5836 37.0438 18.7721C37.0574 17.2294 36.1481 16.0472 34.1879 15.0813C32.9979 14.4612 32.2692 14.043 32.2692 13.4086C32.2831 12.8318 32.8856 12.241 34.2288 12.241C35.3349 12.2121 36.1476 12.4859 36.7632 12.7599L37.0709 12.9038L37.5336 9.97737Z\" fill=\"#A39F8A\"><\/path>\n<path d=\"M25.2 23.1984H21.7977L23.9258 9.64606H27.3279L25.2 23.1984Z\" fill=\"#A39F8A\"><\/path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M46.2552 9.64606H43.6236C42.812 9.64606 42.1955 9.89095 41.8453 10.7705L36.7916 23.1982H40.3616C40.3616 23.1982 40.9493 21.5255 41.0756 21.1653H45.4439C45.5415 21.6411 45.8498 23.1982 45.8498 23.1982H49L46.2552 9.64606ZM42.0555 18.3973C42.3357 17.6187 43.4139 14.6055 43.4139 14.6055C43.4082 14.6171 43.4527 14.49 43.5189 14.3011L43.5193 14.2998C43.617 14.021 43.7615 13.6083 43.8615 13.308L44.0993 14.4757C44.0993 14.4757 44.7436 17.7197 44.8835 18.3973H42.0555Z\" fill=\"#A39F8A\"><\/path>\n<path d=\"M18.9559 9.64606L15.624 18.8875L15.2599 17.0132L15.2595 17.0121L14.0699 10.7853C13.874 9.9197 13.2719 9.67461 12.53 9.64606H7.056L7 9.91989C8.33508 10.2715 9.52918 10.7782 10.5755 11.4082L13.6079 23.1841H17.2058L22.5536 9.64606H18.9559Z\" fill=\"#A39F8A\"><\/path>\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" stroke=\"#A39F8A\"><\/rect>\n<\/svg>\n[]\n<svg width=\"56\" height=\"33\" viewbox=\"0 0 56 33\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" fill=\"#FBF0DF\"><\/rect>\n<path d=\"M27.9524 9.32812C27.8331 9.41895 27.7168 9.5127 27.6025 9.60938C25.6552 11.2598 24.4229 13.6885 24.4229 16.4004C24.4229 19.1113 25.6552 21.54 27.6025 23.1904C27.7168 23.2871 27.8331 23.3809 27.9524 23.4727C28.0707 23.3809 28.1881 23.2871 28.3024 23.1904C30.2486 21.54 31.482 19.1113 31.482 16.4004C31.482 13.6885 30.2486 11.2598 28.3024 9.60938C28.1881 9.5127 28.0707 9.41895 27.9524 9.32812ZM33.6628 7.40039C31.7717 7.40039 30.012 7.9541 28.548 8.9043C28.6222 8.96387 28.6984 9.02246 28.7706 9.08398C30.9485 10.9287 32.1969 13.5957 32.1969 16.4004C32.1969 19.2041 30.9485 21.8711 28.7716 23.7158C28.6984 23.7764 28.6222 23.8359 28.548 23.8955C30.012 24.8457 31.7717 25.4004 33.6628 25.4004C38.7666 25.4004 42.9038 21.3701 42.9038 16.4004C42.9038 11.4297 38.7666 7.40039 33.6628 7.40039ZM27.1332 23.7158C27.2054 23.7764 27.2816 23.8359 27.3568 23.8955C25.8918 24.8457 24.1331 25.4004 22.241 25.4004C17.1372 25.4004 13 21.3701 13 16.4004C13 11.4297 17.1372 7.40039 22.241 7.40039C24.1331 7.40039 25.8918 7.9541 27.3568 8.9043C27.2816 8.96387 27.2054 9.02246 27.1332 9.08398C24.9563 10.9287 23.7079 13.5957 23.7079 16.4004C23.7079 19.2051 24.9563 21.8711 27.1332 23.7158Z\" fill=\"#A39F8A\"><\/path>\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" stroke=\"#A39F8A\"><\/rect>\n<\/svg>\n[]\n<svg width=\"56\" height=\"33\" viewbox=\"0 0 56 33\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" fill=\"#FBF0DF\"><\/rect>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.1915 10.4004L5 22.2268H11.2149L11.9854 20.3412H13.7465L14.517 22.2268H21.3579V20.7877L21.9674 22.2268H25.5061L26.1156 20.7573V22.2268H40.3428L42.0728 20.3902L43.6926 22.2268L51 22.2421L45.7921 16.3466L51 10.4004H43.806L42.122 12.2031L40.5531 10.4004H25.0758L23.7467 13.4529L22.3865 10.4004H16.1846V11.7906L15.4947 10.4004H10.1915ZM11.3942 12.0798H14.4236L17.8671 20.0994V12.0798H21.1858L23.8455 17.8298L26.2967 12.0798H29.5988V20.566H27.5895L27.5731 13.9162L24.6439 20.566H22.8465L19.9009 13.9162V20.566H15.7674L14.9838 18.6635H10.7502L9.96821 20.5644H7.75357L11.3942 12.0798ZM39.6069 12.0798H31.437V20.561H39.4805L42.073 17.7502L44.5718 20.561H47.1839L43.3872 16.345L47.1839 12.0798H44.6851L42.1057 14.8583L39.6069 12.0798ZM12.8677 13.5156L11.4729 16.9048H14.2609L12.8677 13.5156ZM33.4543 15.386V13.8354H38.5521L40.7764 16.3129L38.4535 18.8039H33.4543V17.1127H37.9113V15.386H33.4543Z\" fill=\"#A39F8A\"><\/path>\n<rect x=\"0.5\" y=\"0.900391\" width=\"55\" height=\"31\" rx=\"0.5\" stroke=\"#A39F8A\"><\/rect>\n<\/svg>",
+              "subscribe_block_title": "KIES FREQUENTIE:",
+              "content_title_1": "Abonneer & Bespaar",
+              "content_info": "Ontvang 15% korting met herhaalgemak",
+              "selector_default_option": "Bezorg elke",
+              "content_title_2": "Eenmalige aankoop"
+            }
+          },
+          "eb10c9cc-23e6-42f2-81af-625819478aa7": {
+            "type": "feature",
+            "settings": {
+              "image_svg": "<svg width=\"39\" height=\"40\" viewbox=\"0 0 39 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M26.8125 12.5879H33.3023C33.5452 12.5863 33.7828 12.6582 33.984 12.7942C34.1852 12.9301 34.3406 13.1238 34.4297 13.3496L36.5625 18.6817\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M2.4375 22.3379H26.8125\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M28.6406 33.3066C30.6599 33.3066 32.2969 31.6697 32.2969 29.6504C32.2969 27.6311 30.6599 25.9941 28.6406 25.9941C26.6213 25.9941 24.9844 27.6311 24.9844 29.6504C24.9844 31.6697 26.6213 33.3066 28.6406 33.3066Z\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-miterlimit=\"10\"><\/path>\n<path d=\"M10.3594 33.3066C12.3787 33.3066 14.0156 31.6697 14.0156 29.6504C14.0156 27.6311 12.3787 25.9941 10.3594 25.9941C8.34008 25.9941 6.70312 27.6311 6.70312 29.6504C6.70312 31.6697 8.34008 33.3066 10.3594 33.3066Z\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-miterlimit=\"10\"><\/path>\n<path d=\"M24.9844 29.6504H14.0156\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M6.70312 29.6504H3.65625C3.33302 29.6504 3.02302 29.522 2.79446 29.2934C2.5659 29.0649 2.4375 28.7549 2.4375 28.4316V11.3691C2.4375 11.0459 2.5659 10.7359 2.79446 10.5074C3.02302 10.2788 3.33302 10.1504 3.65625 10.1504H26.8125V26.4816\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M26.8125 18.6816H36.5625V28.4316C36.5625 28.7549 36.4341 29.0649 36.2055 29.2934C35.977 29.522 35.667 29.6504 35.3438 29.6504H32.2969\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+              "title": "Vóór 21:00 besteld (ZO-VR), morgen in huis* *BELGIË 14:30"
+            }
+          },
+          "f3bee7dd-b69c-4136-967d-6d9ce65a595b": {
+            "type": "feature",
+            "settings": {
+              "image_svg": "<svg width=\"39\" height=\"40\" viewbox=\"0 0 39 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M6.09375 10.1504V29.6504C6.09375 30.2969 6.35056 30.9168 6.80768 31.374C7.2648 31.8311 7.88478 32.0879 8.53125 32.0879H32.9062C33.2295 32.0879 33.5395 31.9595 33.768 31.7309C33.9966 31.5024 34.125 31.1924 34.125 30.8691V13.8066C34.125 13.4834 33.9966 13.1734 33.768 12.9449C33.5395 12.7163 33.2295 12.5879 32.9062 12.5879H8.53125C7.88478 12.5879 7.2648 12.3311 6.80768 11.874C6.35056 11.4168 6.09375 10.7969 6.09375 10.1504ZM6.09375 10.1504C6.09375 9.50393 6.35056 8.88394 6.80768 8.42682C7.2648 7.9697 7.88478 7.71289 8.53125 7.71289H29.25\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M29.1875 22.3379C29.1875 23.313 28.397 24.1035 27.4219 24.1035C26.4467 24.1035 25.6562 23.313 25.6562 22.3379C25.6562 21.3628 26.4467 20.5723 27.4219 20.5723C28.397 20.5723 29.1875 21.3628 29.1875 22.3379Z\" fill=\"black\" stroke=\"#2D392E\" stroke-width=\"0.125\"><\/path>\n<\/svg>",
+              "title": "Gratis verzending vanaf €59, anders €4,90"
+            }
+          },
+          "f434067a-d8a7-44fd-9c0e-baabe38b48f2": {
+            "type": "feature",
+            "settings": {
+              "image_svg": "<svg width=\"39\" height=\"40\" viewbox=\"0 0 39 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M19.5 30.8692C21.9375 30.8692 25.9746 30.8387 30.6059 28.1575C35.2371 25.4762 36.7453 22.1399 37.2176 20.4184C37.2611 20.2634 37.273 20.1011 37.2527 19.9414C37.2323 19.7816 37.1801 19.6275 37.0991 19.4883C37.0181 19.3491 36.91 19.2275 36.7812 19.1309C36.6524 19.0342 36.5055 18.9643 36.3492 18.9255C35.2371 18.636 33.2871 18.377 30.7887 18.9712\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M8.2113 18.9557C5.71286 18.3768 3.76286 18.6357 2.65075 18.9252C2.49445 18.9641 2.34754 19.0339 2.21873 19.1306C2.08992 19.2273 1.98182 19.3488 1.90085 19.4881C1.81987 19.6273 1.76766 19.7813 1.74731 19.9411C1.72697 20.1009 1.73889 20.2631 1.78239 20.4182C2.25466 22.1397 3.76286 25.4912 8.39411 28.1572C13.0254 30.8232 17.0625 30.869 19.5 30.869\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M19.5 30.8697C19.5 30.8697 25.5938 27.5486 25.5938 18.6822C25.5938 11.7353 21.8461 8.20094 20.2313 6.98219C20.0193 6.82628 19.7631 6.74219 19.5 6.74219C19.2369 6.74219 18.9807 6.82628 18.7687 6.98219C17.1539 8.20094 13.4062 11.7353 13.4062 18.6822C13.4062 27.5486 19.5 30.8697 19.5 30.8697Z\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M19.5 30.8693C21.3281 30.4732 26.2488 27.7005 29.2043 22.5818C32.1598 17.463 31.4285 13.3954 30.8496 11.613C30.7611 11.3264 30.5674 11.0838 30.3074 10.934C30.0474 10.7843 29.7404 10.7384 29.448 10.8056C27.6989 11.1973 26.0626 11.9842 24.6645 13.106\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M14.3355 13.106C12.9374 11.9842 11.3011 11.1973 9.55189 10.8056C9.2595 10.7384 8.9525 10.7843 8.69253 10.934C8.43256 11.0838 8.23886 11.3264 8.15033 11.613C7.57142 13.3954 6.84017 17.4782 9.79564 22.5818C12.7511 27.6853 17.6718 30.4732 19.4999 30.8693\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+              "title": "Hoogste kwaliteit producten, bezorgd in heel Europa"
+            }
+          },
+          "ec2510b0-f907-4103-af73-859168e227dc": {
+            "type": "feature",
+            "settings": {
+              "image_svg": "<svg width=\"39\" height=\"40\" viewbox=\"0 0 39 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M34.3535 19.8999H29.4785C28.8321 19.8999 28.2121 20.1567 27.7549 20.6139C27.2978 21.071 27.041 21.691 27.041 22.3374V28.4312C27.041 29.0776 27.2978 29.6976 27.7549 30.1547C28.2121 30.6119 28.8321 30.8687 29.4785 30.8687H31.916C32.5625 30.8687 33.1825 30.6119 33.6396 30.1547C34.0967 29.6976 34.3535 29.0776 34.3535 28.4312V19.8999ZM34.3535 19.8999C34.3536 17.969 33.9713 16.0573 33.2287 14.2749C32.4861 12.4925 31.3979 10.8748 30.027 9.51516C28.656 8.15549 27.0293 7.08078 25.2408 6.35301C23.4523 5.62524 21.5375 5.25883 19.6066 5.27492C17.6771 5.26085 15.7639 5.62875 13.9771 6.35743C12.1904 7.0861 10.5656 8.16114 9.1962 9.5206C7.82683 10.8801 6.74001 12.4971 5.99837 14.2784C5.25674 16.0598 4.87495 17.9703 4.875 19.8999M4.875 19.8999V28.4312C4.875 29.0776 5.13181 29.6976 5.58893 30.1547C6.04605 30.6119 6.66603 30.8687 7.3125 30.8687H9.75C10.3965 30.8687 11.0165 30.6119 11.4736 30.1547C11.9307 29.6976 12.1875 29.0776 12.1875 28.4312V22.3374C12.1875 21.691 11.9307 21.071 11.4736 20.6139C11.0165 20.1567 10.3965 19.8999 9.75 19.8999H4.875Z\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M34.3535 28.4316V32.0879C34.3535 33.3808 33.8399 34.6208 32.9257 35.535C32.0114 36.4493 30.7714 36.9629 29.4785 36.9629H20.7188\" stroke=\"#2D392E\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+              "title": "Beste klantenservice & retourneren mogelijk"
+            }
+          }
+        },
+        "block_order": [
+          "2ee65552-7122-4359-8958-361a39d1081e",
+          "8f30c41f-00d7-48a2-9722-412c07644bf2",
+          "4da96bc6-2305-484a-afe5-a03cb1dcb841",
+          "ab5ac516-46c4-4887-b7e9-ac943344804a",
+          "dbbdb5d1-5441-41d9-8426-6e4f3e695eb4",
+          "eb10c9cc-23e6-42f2-81af-625819478aa7",
+          "f3bee7dd-b69c-4136-967d-6d9ce65a595b",
+          "f434067a-d8a7-44fd-9c0e-baabe38b48f2",
+          "ec2510b0-f907-4103-af73-859168e227dc"
+        ],
+        "settings": {
+          "show_breadcrumbs": false,
+          "show_vendor": true,
+          "show_sku": false,
+          "show_share_buttons": true,
+          "show_taxes_included": false,
+          "show_quantity_selector": true,
+          "show_payment_button": false,
+          "show_inventory_quantity": false,
+          "low_inventory_threshold": 0,
+          "enable_reviews": false,
+          "show_reviews_badge": false,
+          "show_payment_icons": true,
+          "show_shipping_estimator": false,
+          "shipping_estimator_default_country": "United States",
+          "background": "#f5f2ea"
+        }
+      },
+      "product-videos": {
+        "type": "product-videos",
+        "blocks": {
+          "96ac9465-c4f7-4f8c-b329-9a4d79c385e1": {
+            "type": "block",
+            "settings": {
+              "title": "LOREM IPSUM DOLOREM",
+              "content": "<p>Rijk aan mineralen en antioxidanten<br\/>Bevat 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer. Bevat daarnaast vitamine A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen)<br\/><\/p>",
+              "video_position": "right",
+              "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/58979f112329486cbf30ee709641b3b7.mp4"
+            }
+          },
+          "0d4c8a5d-3196-4f86-8f10-6ad4d2a9b2f9": {
+            "type": "block",
+            "settings": {
+              "title": "LOREM IPSUM DOLOREM",
+              "content": "<p>Rijk aan mineralen en antioxidanten<br\/>Bevat 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer. Bevat daarnaast vitamine A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen)<br\/><\/p>",
+              "video_position": "left",
+              "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/58979f112329486cbf30ee709641b3b7.mp4"
+            }
+          }
+        },
+        "block_order": [
+          "96ac9465-c4f7-4f8c-b329-9a4d79c385e1",
+          "0d4c8a5d-3196-4f86-8f10-6ad4d2a9b2f9"
+        ],
+        "settings": {
+          "padding_top": 80,
+          "padding_bottom": 80,
+          "background_image": "shopify:\/\/shop_images\/Mask_group.png",
+          "background_color": "#f9efe0",
+          "play_icon": "<svg width=\"48\" height=\"56\" viewbox=\"0 0 48 56\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M45.3083 24.3118L6.54186 0.648124C5.89612 0.238915 5.15037 0.014967 4.38602 0.000724425C3.62167 -0.0135181 2.86809 0.182493 2.20755 0.56736C1.53725 0.935122 0.978459 1.47676 0.589981 2.13527C0.201504 2.79379 -0.0022976 3.54484 1.95403e-05 4.3094V51.6906C-0.0022976 52.4552 0.201504 53.2062 0.589981 53.8647C0.978459 54.5232 1.53725 55.0649 2.20755 55.4326C2.86809 55.8175 3.62167 56.0135 4.38602 55.9993C5.15037 55.985 5.89612 55.7611 6.54186 55.3519L45.3083 31.6882C45.9437 31.3049 46.4693 30.7639 46.8341 30.1177C47.199 29.4715 47.3907 28.7421 47.3907 28C47.3907 27.2579 47.199 26.5285 46.8341 25.8823C46.4693 25.2361 45.9437 24.6951 45.3083 24.3118Z\" fill=\"#CA9065\"><\/path>\n<\/svg>",
+          "gradient_overlay": true
+        }
+      },
+      "product-banner": {
+        "type": "product-banner",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Rectangle_576.png",
+          "title": "LOREM IPSUM DOLOREM",
+          "title_color": "#f5f2ea",
+          "use_gradient": true
+        }
+      },
+      "product-description": {
+        "type": "product-description",
+        "blocks": {
+          "fcb02849-ba80-4831-a2b7-83861b834c5f": {
+            "type": "content",
+            "settings": {
+              "title": "Wat betekent sea moss nu eigenlijk?",
+              "content": "<p>Sea moss is de Engelse naam voor zeemos, ook wel Iris sea moss genoemd. Irish moss, ook wel bekend als carrageenmos, is afgeleid van het Ierse woord “carraigin” wat “kleine rots” betekent. Eigenlijk is Irish sea moss helemaal geen mos maar een zeewier dat voornamelijk langs de Europese en Amerikaanse kust van de Atlantische Oceaan groeit.<\/p>"
+            }
+          },
+          "a5c39fed-9c52-4ce9-89d7-9feb9e49c691": {
+            "type": "content",
+            "settings": {
+              "title": "De gezondheidsvoordelen van Iris Sea Moss",
+              "content": "<p>Zeemos is een heilzaam zeewier dat zeer rijk is aan vitamines, mineralen en antioxidanten. Zo bevat sea moss maar liefst 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer. Daarnaast levert dit mos ook vitamines als A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen). Daarmee is sea moss een van de meest voedzame superfoods die bestaat!<\/p>"
+            }
+          },
+          "0b87bd00-5629-45a7-82e7-d8897a72a74b": {
+            "type": "content",
+            "settings": {
+              "title": "Maar dit heilige zeewier doet meer…",
+              "content": "<p>Sea moss gaat daarnaast ook nog eens de veroudering van de huid tegen en werkt bovendien verzachtend, voedend en beschermend. Irish sea moss wordt om die reden vaak gebruikt in huidcrèmes, body lotions, shampoos en gels. Zo kan het huidproblemen helpen verlichten, zoals psoriasis, allergieën, uitslag, snijwonden, roos, eczeem en zelfs een verbrande huid.<\/p>"
+            }
+          },
+          "7312ed3e-025b-43ee-a661-99fde2d9725f": {
+            "type": "content",
+            "settings": {
+              "title": "Hoe herken en gebruik ik sea moss dan?",
+              "content": "<p>Verse Irish Sea Moss is een zeewier die groeit langs de rotsachtige delen van de oceaan. Het is groengeel tot rood met donkerpaarse of paarsbruine tinten en voelt zacht en wat kraakbeenachtig aan. Je kunt het zo eten of als bindmiddel gebruiken. Al met al is sea moss een gezonde toevoeging op je dagelijks dieet.<\/p>"
+            }
+          },
+          "48ea265d-2e3f-420d-a0ea-a8f775f4dc93": {
+            "type": "content",
+            "settings": {
+              "title": "Ook sea moss kopen? Ga voor puur en onbewerkt",
+              "content": "<p>Wil jij ook de bijzondere werking van dit heilige zeewier ervaren? Kies dan voor de meest pure en onbewerkte biologische kwaliteit omdat daar nog de meeste voedingsstoffen in zitten. Zeemos van Superfoodies is onbewerkt, niet verhit boven 42 graden (rawfood) en biologisch gecertificeerd. Zodat jij profiteert van de hoogste kwaliteit tegen de scherpste prijs.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "fcb02849-ba80-4831-a2b7-83861b834c5f",
+          "a5c39fed-9c52-4ce9-89d7-9feb9e49c691",
+          "0b87bd00-5629-45a7-82e7-d8897a72a74b",
+          "7312ed3e-025b-43ee-a661-99fde2d9725f",
+          "48ea265d-2e3f-420d-a0ea-a8f775f4dc93"
+        ],
+        "settings": {
+          "title": "PRODUCTBESCHRIJVING",
+          "more_btn": "MEER LEZEN",
+          "less_btn": "INSTORTEN",
+          "background": "#f9efe0",
+          "padding_top": 68,
+          "padding_bottom": 76
+        }
+      },
+      "product-info-blocks": {
+        "type": "product-info-blocks",
+        "blocks": {
+          "d22480a6-9ba6-4c22-8500-9e396a218f90": {
+            "type": "block",
+            "settings": {
+              "title": "VOORDELEN VAN HET PRODUCT",
+              "content": "<ul><li>Rijk aan mineralen en antioxidanten<\/li><li>Bevat 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer<\/li><li>Bevat daarnaast vitamine A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen)<\/li><li>Irish moss gaat de veroudering van de huid tegen en werkt als een fantastische huidverzachter die de huid voedt en beschermt<\/li><li>Irish moss kan ook huidproblemen helpen verlichten, zoals psoriasis, allergieën, uitslag, snijwonden, roos, eczeem en zelfs door de zon verbrande huid<\/li><li>Irish moss is rijk aan taurine, een voedingsstof waar vooral veganisten vaak een tekort aan hebben<\/li><\/ul>",
+              "image": "shopify:\/\/shop_images\/Rectangle_577-1.png",
+              "background": "#eeecca",
+              "position": "left"
+            }
+          },
+          "fff0befa-f533-4185-ab7d-0d02bc94f691": {
+            "type": "block",
+            "settings": {
+              "title": "GEBRUIK EN DOSERING",
+              "content": "<p>Irish moss is een ideaal bindmiddel voor smoothies, lassies, shakes en soepen. Daarnaast kan het gebruikt worden als geleermiddel in rauwe taarten en gebak en als rauw ingrediënt voor salades.<br\/><br\/>Spoel Irish moss goed af met water en laat het vervolgens ongeveer 4-24 uur weken in lauwwarm water. Je kunt de Irish moss daarna eten of er een gel\/geleermiddel van maken. Maal het daartoe fijn met wat water in de blender zodat een smeuïge gel ontstaat en laat dit nogmaals 1 uur rusten.<br\/><br\/>Geweekte Irish moss kan maximaal 3 weken in de koelkast worden bewaard. Ook de gel van Irish moss kan 3 weken in de koelkast worden bewaard, mits het water dagelijks ververst wordt. In de verpakking is Irish moss ongeveer 1 jaar houdbaar.<br\/>Gebruik 1 eetlepel Irish moss gel als bindmiddel voor 4 smoothies. <\/p>",
+              "image": "shopify:\/\/shop_images\/Rectangle_577.png",
+              "background": "#f9efe0",
+              "position": "right"
+            }
+          },
+          "91c0922b-9898-4d58-a896-b706333fe978": {
+            "type": "block",
+            "settings": {
+              "title": "GOLDEN PUMKIN OATS – VERWENONTBIJT MET GOLDEN MILK",
+              "content": "<h4><strong>Ingrediënten<\/strong><\/h4><ul><li>125 gram amandelmeel<\/li><li>25 gram kokosrasp<\/li><li>120 gram zachte dadels, zonder pit<\/li><li>2 el gemalen lijnzaad<\/li><li>2 el lucumapoeder<\/li><li>3 el Irish moss gel<\/li><li>1 tl vanillepoeder<\/li><li>1 tl kaneel<\/li><li>4 el hennepzaad<\/li><\/ul><p><\/p><h4><strong>Instructies<\/strong><\/h4><ol><li>Doe alle ingrediënten, behalve het hennepzaad in een keukenmachine.<\/li><li>Mix tot een grof 'deeg' en rol daar balletjes van.<\/li><li>Rol de balletjes door het hennepzaad en laat even opstijven in de koelkast voor het serveren.<\/li><\/ol>",
+              "image": "shopify:\/\/shop_images\/Rectangle_577-2.png",
+              "background": "#eeecca",
+              "position": "left"
+            }
+          }
+        },
+        "block_order": [
+          "d22480a6-9ba6-4c22-8500-9e396a218f90",
+          "fff0befa-f533-4185-ab7d-0d02bc94f691",
+          "91c0922b-9898-4d58-a896-b706333fe978"
+        ],
+        "settings": {
+        }
+      },
+      "NewHeader": {
+        "type": "NewHeader",
+        "blocks": {
+          "bf2e2f64-8d9a-454a-8d2b-30d63443f115": {
+            "type": "block",
+            "settings": {
+              "title": "FOOD",
+              "image-2": "shopify:\/\/shop_images\/image_10.png",
+              "image-3": "shopify:\/\/shop_images\/image_11.png",
+              "image-4": "shopify:\/\/shop_images\/image_12.png"
+            }
+          },
+          "83327242-9c55-44eb-bba2-073168b73114": {
+            "type": "block",
+            "settings": {
+              "title": "DRINKS"
+            }
+          },
+          "21e1f1ee-6387-4496-98dc-4af7761833ef": {
+            "type": "block",
+            "settings": {
+              "title": "SUPERFOOD"
+            }
+          },
+          "a5a21273-b1fb-443f-9b49-d6b4f3276465": {
+            "type": "block",
+            "settings": {
+              "title": "EIWITTEN"
+            }
+          },
+          "c1a8fdf3-79b9-4517-b5e9-de630eade5c8": {
+            "type": "block",
+            "settings": {
+              "title": "SUPPLEMENTEN"
+            }
+          },
+          "8d9c1a1f-90f2-4f7a-b9dd-2099b0788a6a": {
+            "type": "block",
+            "settings": {
+              "title": "BEAUTY"
+            }
+          },
+          "728507fa-5410-4223-ac6a-cdc774d9719e": {
+            "type": "block",
+            "settings": {
+              "title": "ACCESSOIRES"
+            }
+          },
+          "13bf4200-977d-4a78-8def-8d05ab8a6f93": {
+            "type": "block",
+            "disabled": true,
+            "settings": {
+              "title": "ACTIES"
+            }
+          }
+        },
+        "block_order": [
+          "bf2e2f64-8d9a-454a-8d2b-30d63443f115",
+          "83327242-9c55-44eb-bba2-073168b73114",
+          "21e1f1ee-6387-4496-98dc-4af7761833ef",
+          "a5a21273-b1fb-443f-9b49-d6b4f3276465",
+          "c1a8fdf3-79b9-4517-b5e9-de630eade5c8",
+          "8d9c1a1f-90f2-4f7a-b9dd-2099b0788a6a",
+          "728507fa-5410-4223-ac6a-cdc774d9719e",
+          "13bf4200-977d-4a78-8def-8d05ab8a6f93"
+        ],
+        "settings": {
+          "announcement": "Gratis verzending vanaf €59"
+        }
+      },
+      "NewFooter": {
+        "type": "NewFooter",
+        "blocks": {
+          "c873e121-c53e-4da3-b8d3-fac970581924": {
+            "type": "block",
+            "settings": {
+              "icon": "<svg width=\"25\" height=\"22\" viewbox=\"0 0 25 22\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M4.59267 11.3686C5.86098 11.3686 6.88915 10.3089 6.88915 9.00174C6.88915 7.69457 5.86098 6.6349 4.59267 6.6349C3.32435 6.6349 2.29618 7.69457 2.29618 9.00174C2.29618 10.3089 3.32435 11.3686 4.59267 11.3686Z\" fill=\"#BD8737\"><\/path>\n<path d=\"M2.74793 12.3774H6.43737V19.1287H2.74793V12.3774Z\" fill=\"#BD8737\"><\/path>\n<path d=\"M16.226 9.23457H16.2378L16.226 9.27337V9.23457Z\" fill=\"#BD8737\"><\/path>\n<path d=\"M16.2378 9.23457L16.6025 8.03175H16.6401L16.9789 9.23457H16.2378Z\" fill=\"#BD8737\"><\/path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.2544 6.82894H19.2003V11.1746H21.8356C21.7226 15.9083 19.4261 19.1288 12.6873 19.1288H8.28254V11.1746H8.96019C10.1273 11.1746 10.8426 10.3598 10.8426 9.00178C10.8426 7.64376 10.1273 6.82894 8.92254 6.82894H8.28254V2.83247H12.6873C16.8285 2.83247 21.3838 4.15169 21.7979 10.0882H20.2544V6.82894ZM14.1179 11.1746V10.0882H12.5744V9.50618H13.9673V8.41976H12.5367V7.91536H14.0426V6.82894H11.4826V11.1746H14.1179ZM15.8495 6.82894L14.5694 11.1746H15.6989L15.9248 10.3598H17.3177L17.5436 11.1746H18.6354L17.3553 6.82894H15.8495Z\" fill=\"#BD8737\"><\/path>\n<path d=\"M8.28245 7.91536V10.0882H8.92245C9.37422 10.0882 9.78834 9.9718 9.78834 9.00178C9.78834 8.03177 9.33658 7.91536 8.92245 7.91536H8.28245Z\" fill=\"#BD8737\"><\/path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.6871 0H0V22H12.6871C19.9907 22 24.6213 18.3139 24.6213 10.9806C24.6213 4.85009 21.3084 0 12.6871 0ZM1.2048 20.7584V1.31922H12.6872C19.3131 1.31922 23.3791 4.42328 23.3791 11.0194C23.3791 17.4215 19.6143 20.7584 12.6872 20.7584H1.2048Z\" fill=\"#BD8737\"><\/path>\n<\/svg>"
+            }
+          },
+          "09db2831-f0b6-4a75-89ac-57765e76efb7": {
+            "type": "block",
+            "settings": {
+              "icon": "<svg width=\"18\" height=\"21\" viewbox=\"0 0 18 21\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.8661 3.98909C14.8582 2.99611 14.5717 2.22404 13.964 1.50779C13.0669 0.451855 11.4478 0 9.37602 0H3.36119C2.93803 0 2.57701 0.318007 2.51163 0.750926L0.00641144 17.1642C-0.0429817 17.4889 0.199314 17.7818 0.516149 17.7818H3.21849L2.98544 19.3097L2.98525 19.311C2.85688 20.1598 3.49102 21 4.41962 21H7.54953C8.43182 21 9.14116 20.3466 9.27859 19.5153L9.31007 19.3469L9.89997 15.4778L9.90585 15.4448H10.1631C11.8086 15.4448 13.3943 15.1006 14.6822 14.1541C15.9878 13.1947 16.8628 11.7084 17.2459 9.67509C17.5597 8.00928 17.4497 6.35509 16.3983 5.11675L16.3972 5.11539C16.076 4.73853 15.6883 4.43872 15.259 4.20397L14.8661 3.98909ZM14.7404 5.3199C14.7548 5.23918 14.7679 5.1598 14.7796 5.08155C15.0392 5.22353 15.2697 5.39043 15.468 5.58423L15.4717 5.58782C15.5292 5.64425 15.584 5.70295 15.636 5.76396C15.6465 5.77634 15.6569 5.78879 15.6672 5.80131C16.407 6.70255 16.5489 7.97285 16.2632 9.49001C15.5694 13.1724 13.1954 14.4448 10.1631 14.4448H9.69499C9.32445 14.4448 9.00887 14.7233 8.95122 15.1024L8.91332 15.3144L8.32402 19.1796L8.2933 19.3439C8.23493 19.7217 7.92007 20 7.54953 20H4.41962C4.14266 20 3.93108 19.7444 3.97401 19.4605L5.1334 11.8594L5.1343 11.8536C5.19841 11.4502 5.51661 11.1476 5.90493 11.1126C5.92964 11.1104 5.95463 11.1092 5.97986 11.1092H7.74454C8.01421 11.1092 8.27932 11.1004 8.53933 11.0822C11.4339 10.8795 13.6961 9.50995 14.5665 6.12798C14.6229 5.90908 14.6734 5.68176 14.7178 5.44577C14.7256 5.40344 14.7332 5.36149 14.7404 5.3199Z\" fill=\"#BD8737\"><\/path>\n<\/svg>"
+            }
+          },
+          "80be91c7-1301-4fe5-93fa-9216f356f979": {
+            "type": "block",
+            "settings": {
+              "icon": "<svg width=\"42\" height=\"14\" viewbox=\"0 0 42 14\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M30.5336 0.576978C29.8626 0.302765 28.7982 0 27.4821 0C24.1222 0 21.7562 1.84533 21.7417 4.4836C21.7138 6.43011 23.4356 7.51125 24.7235 8.16028C26.0398 8.82349 26.4872 9.25636 26.4872 9.84752C26.4738 10.7554 25.4236 11.1739 24.444 11.1739C23.0857 11.1739 22.3579 10.9582 21.2518 10.4531L20.8038 10.2365L20.3277 13.2787C21.1256 13.6532 22.5958 13.9854 24.1222 14C27.6921 14 30.0162 12.1832 30.0438 9.37172C30.0574 7.82896 29.1481 6.64684 27.1879 5.68087C25.9979 5.06077 25.2692 4.64265 25.2692 4.00819C25.2831 3.4314 25.8856 2.84062 27.2288 2.84062C28.3349 2.81169 29.1476 3.08552 29.7632 3.35954L30.0709 3.50345L30.5336 0.576978Z\" fill=\"#BD8737\"><\/path>\n<path d=\"M18.2 13.798H14.7977L16.9258 0.245666H20.3279L18.2 13.798Z\" fill=\"#BD8737\"><\/path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M39.2552 0.245666H36.6236C35.812 0.245666 35.1955 0.490561 34.8453 1.37011L29.7916 13.7978H33.3616C33.3616 13.7978 33.9493 12.1252 34.0756 11.7649H38.4439C38.5415 12.2407 38.8498 13.7978 38.8498 13.7978H42L39.2552 0.245666ZM35.0555 8.99691C35.3357 8.21834 36.4139 5.20507 36.4139 5.20507C36.4082 5.21675 36.4527 5.08965 36.5189 4.90072L36.5193 4.89946C36.617 4.62063 36.7615 4.20786 36.8615 3.90759L37.0993 5.07534C37.0993 5.07534 37.7436 8.31933 37.8835 8.99691H35.0555Z\" fill=\"#BD8737\"><\/path>\n<path d=\"M11.9559 0.245666L8.62397 9.48709L8.25987 7.61282L8.25954 7.61167L7.0699 1.38487C6.87399 0.519304 6.27193 0.274218 5.52996 0.245666H0.0560008L0 0.519496C1.33508 0.871128 2.52918 1.37783 3.57547 2.00785L6.60793 13.7837H10.2058L15.5536 0.245666H11.9559Z\" fill=\"#BD8737\"><\/path>\n<\/svg>"
+            }
+          },
+          "8b8f90f5-e466-42d8-9548-a8916d0b59ba": {
+            "type": "block",
+            "settings": {
+              "icon": "<svg width=\"31\" height=\"18\" viewbox=\"0 0 31 18\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M14.9524 1.92773C14.8331 2.01855 14.7168 2.1123 14.6025 2.20898C12.6552 3.85938 11.4229 6.28809 11.4229 9C11.4229 11.7109 12.6552 14.1396 14.6025 15.79C14.7168 15.8867 14.8331 15.9805 14.9524 16.0723C15.0707 15.9805 15.1881 15.8867 15.3024 15.79C17.2486 14.1396 18.482 11.7109 18.482 9C18.482 6.28809 17.2486 3.85938 15.3024 2.20898C15.1881 2.1123 15.0707 2.01855 14.9524 1.92773ZM20.6628 0C18.7717 0 17.012 0.553711 15.548 1.50391C15.6222 1.56348 15.6984 1.62207 15.7706 1.68359C17.9485 3.52832 19.1969 6.19531 19.1969 9C19.1969 11.8037 17.9485 14.4707 15.7716 16.3154C15.6984 16.376 15.6222 16.4355 15.548 16.4951C17.012 17.4453 18.7717 18 20.6628 18C25.7666 18 29.9038 13.9697 29.9038 9C29.9038 4.0293 25.7666 0 20.6628 0ZM14.1332 16.3154C14.2054 16.376 14.2816 16.4355 14.3568 16.4951C12.8918 17.4453 11.1331 18 9.24098 18C4.13718 18 0 13.9697 0 9C0 4.0293 4.13718 0 9.24098 0C11.1331 0 12.8918 0.553711 14.3568 1.50391C14.2816 1.56348 14.2054 1.62207 14.1332 1.68359C11.9563 3.52832 10.7079 6.19531 10.7079 9C10.7079 11.8047 11.9563 14.4707 14.1332 16.3154Z\" fill=\"#BD8737\"><\/path>\n<\/svg>"
+            }
+          },
+          "ff5a95c9-fdaf-4c25-86ff-29b9eed84553": {
+            "type": "block",
+            "settings": {
+              "icon": "<svg width=\"46\" height=\"12\" viewbox=\"0 0 46 12\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.19147 0L0 11.8265H6.21492L6.98539 9.94083H8.74651L9.51698 11.8265H16.3579V10.3873L16.9674 11.8265H20.5061L21.1156 10.3569V11.8265H35.3428L37.0728 9.9898L38.6926 11.8265L46 11.8417L40.7921 5.94624L46 0H38.806L37.122 1.80272L35.5531 0H20.0758L18.7467 3.05251L17.3865 0H11.1846V1.3902L10.4947 0H5.19147ZM6.39419 1.67938H9.42363L12.8671 9.69897V1.67938H16.1858L18.8455 7.42938L21.2967 1.67938H24.5988V10.1656H22.5895L22.5731 3.51586L19.6439 10.1656H17.8465L14.9009 3.51586V10.1656H10.7674L9.98382 8.26313H5.75021L4.96821 10.164H2.75357L6.39419 1.67938ZM34.6069 1.67938H26.437V10.1606H34.4805L37.073 7.34981L39.5718 10.1606H42.1839L38.3872 5.94458L42.1839 1.67938H39.6851L37.1057 4.45793L34.6069 1.67938ZM7.86772 3.11521L6.47291 6.50438H9.26091L7.86772 3.11521ZM28.4543 4.98561V3.43496H33.5521L35.7764 5.91247L33.4535 8.40352H28.4543V6.71228H32.9113V4.98561H28.4543Z\" fill=\"#BD8737\"><\/path>\n<\/svg>"
+            }
+          }
+        },
+        "block_order": [
+          "c873e121-c53e-4da3-b8d3-fac970581924",
+          "09db2831-f0b6-4a75-89ac-57765e76efb7",
+          "80be91c7-1301-4fe5-93fa-9216f356f979",
+          "8b8f90f5-e466-42d8-9548-a8916d0b59ba",
+          "ff5a95c9-fdaf-4c25-86ff-29b9eed84553"
+        ],
+        "settings": {
+          "facebook-url": "\/",
+          "instagram-url": "\/",
+          "youtube-url": "\/",
+          "footer-menu": "footer-new-menu",
+          "contact-phone": "+31 (0) 20 700 98 57",
+          "contact-whatsapp": "+31 (0) 6 2790 5385",
+          "contact-email": "info@superfoodies.nl"
+        }
+      }
+    },
+    "content_for_index": [
+      "1596030265087",
+      "1632312758574c49d6",
+      "1590480766957",
+      "1590490910622",
+      "1590491063956",
+      "16323127720b04cf99",
+      "1590605512705",
+      "collection-list",
+      "1590574892380",
+      "1632312770b36fc457",
+      "1590582677444",
+      "16304054625596474f",
+      "1590610074976",
+      "1590609201096",
+      "1590652490979",
+      "1602688565274",
+      "1590649518586"
+    ]
   }
+}

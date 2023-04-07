@@ -63,6 +63,7 @@
 
         .swiper-button-prev,
         .swiper-button-next {
+            display: none;
             top: 50%;
             transform: translateY(-50%);
             width: 40px;

@@ -21,7 +21,7 @@
     {% render 'Preloader' %}
     {% section 'NewHeader' %}
     {{ content_for_layout }}
-    {% comment %} {% section 'footer' %} {% endcomment %}
+    {% section 'NewFooter' %}
     <script src="{{ 'application.js' | asset_url }}" defer></script>
     {% comment %} <script src="{{ 'header.js' | asset_url }}" defer></script> {% endcomment %}
     {% comment %} {% if template.name != 'page' %}

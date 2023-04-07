@@ -22,6 +22,20 @@
         {% endif %}
         <h2 class="section-contact__title">{{ section.settings.title }}</h2>
         <div class="section-contact__description">{{ section.settings.description }}</div>
+        {% form 'contact' %}
+            <input name="contact[tags]" type="hidden" value="prospect, newsletter">
+            <input id="subscription-input" name="contact[email]" type="input" placeholder="{{ section.settings.form-email-placeholder }}" class="input">
+            <button type="submit" class="submit">{{ section.settings.form-submit-title }}</button>
+            
+            {% if form.posted_successfully? %}
+                <div class="success-modal active" id="success-modal">
+                    <div class="success-modal__modal">
+                        <div class="success-modal__close">{% render 'icon-close' %}</div>
+                        Je bericht is succesvol verzonden
+                    </div>
+                </div>
+            {% endif %}
+        {% endform %}
     </div>
 </section>
 
@@ -52,6 +66,18 @@
                 "label": "Description",
                 "info": "Use <br> to break a line",
                 "default": "Meld je aan voor GRATIS gezondheidstips, kortingscodes, meldingen over productlanceringen en speciale aanbiedingen"
+            },
+            {
+                "type": "text",
+                "id": "form-email-placeholder",
+                "label": "Email input placeholder",
+                "default": "Uw e-mailadres"
+            },
+            {
+                "type": "text",
+                "id": "form-submit-title",
+                "label": "Submit button title",
+                "default": "AANMELDEN"
             },
             {
                 "type": "range",
