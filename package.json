@@ -1,8 +1,10 @@
 {
     "name": "superfoodies",
     "scripts": {
-        "build": "gulp dev",
-        "dev": "concurrently \"gulp watch\" \"shopify theme dev -s superfoodies-nl.myshopify.com\""
+        "watch": "concurrently \"webpack --mode=development --watch\" \"gulp watch\"",
+        "dev": "concurrently \"gulp dev\" \"webpack --mode=development\"",
+        "build": "concurrently \"gulp build\" \"webpack --mode=production\" ",
+        "shopify": "concurrently \"gulp watch\" \"shopify theme dev -s superfoodies-nl.myshopify.com\""
     },
     "license": "ISC",
     "devDependencies": {
@@ -10,7 +12,10 @@
         "gulp": "^4.0.2",
         "gulp-clean-css": "^4.3.0",
         "gulp-sass": "^5.1.0",
-        "sass": "^1.60.0"
+        "sass": "^1.60.0",
+        "path": "^0.12.7",
+        "webpack": "^5.78.0",
+        "webpack-cli": "^5.0.1"
     },
     "dependencies": {
         "gsap": "^3.11.5"
