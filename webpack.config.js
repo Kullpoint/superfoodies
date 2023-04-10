@@ -5,7 +5,11 @@ module.exports = {
         extensions: ['.js'],
     },
     entry: {
-        'section-gallery': path.resolve(__dirname, 'src/scripts/sections/section-gallery.js')
+        //main
+        'application': path.resolve(__dirname, 'src/scripts/application.js'),
+        //sections
+        'section-pwi': path.resolve(__dirname, 'src/scripts/sections/section-pwi.js'),
+        'section-gallery': path.resolve(__dirname, 'src/scripts/sections/section-gallery.js'),
     },
     output: {
         path: path.resolve(__dirname, 'assets'),

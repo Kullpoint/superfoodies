@@ -1,0 +1,46 @@
+<aside class="mobile-menu dn" id="mobile-menu">
+    <div class="mobile-menu__head">
+        <a href="/" class="logo">{% render 'Logo', variant: 'header' %}</a>
+        <div class="close-btn" data-mobile-menu-close-btn>
+            {% render 'Icons-header', icon: 'close' %}
+        </div>
+    </div>
+    <div class="mobile-menu__menu">
+        {% for link in linklists['new-main-menu'].links %}
+            {% if link.links.size > 0 %}
+                <div class="link" data-mobile-megamenu-link="{{ link.title | upcase }}">
+                    {{ link.title }}
+                    {% render 'Icons-chevron', chevron: 'right' %}
+                </div>
+
+                {% for block in section.blocks %}
+                    {% assign megaMenu = block.settings %}
+                    {% assign linkTitle = link.title | upcase %}
+
+                    {% if megaMenu.title == linkTitle %}
+                        <div class="megamenu dn" data-mobile-megamenu="{{ megaMenu.title }}">
+                            <div class="megamenu__head">
+                                <div class="back-btn" data-mobile-megamenu-back-btn>
+                                    {% render 'Icons-chevron', chevron: 'left' %}
+                                    {{ settings.mobile-menu-back-button }}
+                                </div>
+                                <div class="close-btn" data-mobile-menu-close-btn>
+                                    {% render 'Icons-header', icon: 'close' %}
+                                </div>
+                            </div>
+                            <div class="megamenu__menu">
+                                {% for subLink in link.links %}
+                                    <a href="{{ subLink.url }}" class="megamenu__link">{{ subLink.title }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>    
+
+                        {% break %}
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</aside>

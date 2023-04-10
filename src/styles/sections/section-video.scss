@@ -16,6 +16,7 @@
 
     &__title {
         margin-bottom: 25px;
+        padding: 0 45px;
         font-size: 60px;
         font-feature-settings: 'swsh' on;
         text-align: center;
@@ -73,5 +74,17 @@
         width: 100%;
         height: 600px;
         object-fit: cover;
+    }
+
+    @media screen and (max-width: $tablet) {
+        &__title {
+            padding: 0 15px;
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        &__video {
+            height: 260px;
+        }
     }
 }

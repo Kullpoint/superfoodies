@@ -53,4 +53,10 @@
             color: $primary-color;
         }
     }
+
+    @media screen and (max-width: $tablet) {
+        &__title {
+            font-size: 20px;
+        }
+    }
 }

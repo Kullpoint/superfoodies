@@ -19,6 +19,12 @@
         "id": "product-card-button",
         "label": "Product card add to cart button",
         "default": "NU WINKELEN"
+      },
+      {
+        "type": "text",
+        "id": "mobile-menu-back-button",
+        "label": "Mobile menu back button",
+        "default": "Ga terug"
       }
     ]
   },

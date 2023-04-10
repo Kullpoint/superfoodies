@@ -5,11 +5,12 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 45px 0;
+    padding: 0 45px;
 
     &__wrapper {
         position: relative;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 50px;
         width: 100%;
@@ -50,8 +51,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 225px;
+        width: fit-content;
         height: 50px;
+        padding: 0 50px;
         font-size: 16px;
         border: 1px solid $primary-color;
         background-color: $primary-color;
@@ -72,6 +74,25 @@
             &:nth-child(2n + 2) {
                 background-color: $secondary-color  ;
             }
+        }
+    }
+
+    @media screen and (max-width: $tabletXL) {
+        &__title {
+            font-size: 28px;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 0 15px;
+
+        &__wrapper {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        &__image {
+            max-width: 100%;
         }
     }
 }

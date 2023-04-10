@@ -17,7 +17,7 @@ cols.forEach((col, i) => {
     // SET ANIMATION
     images.forEach((item) => {
         let columnHeight = item.parentElement.clientHeight;
-        let direction = i % 2 !== 0 ? "+=" : "-="; // Change direction for odd columns
+        let direction = i % 2 !== 0 ? "+" : "-"; // Change direction for odd columns
 
         gsap.to(item, {
             y: direction + Number(columnHeight / 2),
@@ -26,7 +26,7 @@ cols.forEach((col, i) => {
             ease: "none",
             modifiers: {
                 y: gsap.utils.unitize((y) => {
-                    if (direction == "+=") {
+                    if (direction == "+") {
                         y = (parseFloat(y) - 300) % (columnHeight / 2);
                     } 
                     else {

@@ -1,4 +1,5 @@
 @import '../variables.scss';
+@import '../modules/swiper.scss';
 
 .section-pwi {
     position: relative;
@@ -64,13 +65,90 @@
         }
     }
 
-    &__products {
-        display: flex;
+    &__slider {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        overflow: hidden;
 
         .product-card {
             &:nth-child(2n + 2) {
                 background-color: $secondary-color  ;
             }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border: 2px solid $light_brown-color;
+            border-radius: 50%;
+            
+
+            &::after {
+                font-size: 17px;
+                font-weight: 900;
+                color: $light_brown-color;
+            }
+        }
+
+        .swiper-button-prev {
+            left: 20px;
+        }
+
+        .swiper-button-next {
+            right: 20px;
+        }
+    }
+
+    &__slider.overflow-hidden {
+        overflow: hidden;
+    }
+
+    .swiper-container {
+        width: 100%;
+    
+        .swiper-wrapper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            height: auto;
+        }
+    }
+
+    @media screen and (max-width: $desktopXL) {
+        &__info {
+            margin: 0 45px;
+        }
+    }
+
+    @media screen and (max-width: $laptop) {
+        &__wrapper {
+            flex-direction: column;
+            gap: 30px;
+            padding: 0 45px;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100%;
+            padding: 0;
+        }
+    }
+    
+    @media screen and (max-width: $tablet) {
+        &__wrapper {
+            padding: 0 15px;
+        }
+
+        &__title {
+            font-size: 28px;
         }
     }
 }

@@ -1,7 +1,7 @@
 {% liquid
     render 'Section-styles', name: 'section-pwi'
+    render 'Section-scripts', name: 'section-pwi'
 %}
-{% comment %} render 'Section-scripts', name: 'section-pwi' {% endcomment %}
 
 <style>
     .section-pwi {
@@ -21,10 +21,17 @@
                 <a href="{{ section.settings.link-url }}" class="section-pwi__link">{{ section.settings.link-title }}</a>
             {% endif %}
         </div>
-        <div class="section-pwi__products">
-            {% for block in section.blocks %}
-                {% render 'Product-card', product: block.settings.product %}
-            {% endfor %}
+        <div class="section-pwi__slider" data-pwi-slider="{{ section.id }}">
+            <div class="swiper-container" data-swiper-container>
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        {% render 'Product-card', product: block.settings.product, doppleClass: 'swiper-slide' %}
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-prev" data-wiper-button-prev="{{ section.id }}"></div>
+            <div class="swiper-button-next" data-wiper-button-next="{{ section.id }}"></div>
         </div>
     </div>
 </section>
@@ -100,7 +107,6 @@
             {
                 "name": "Product",
                 "type": "block",
-                "limit": 3,
                 "settings": [
                     {
                         "type": "product",

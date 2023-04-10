@@ -11,6 +11,7 @@
     width: 100%;
     height: calc(100vh - 120px);
     margin-top: 120px;
+    padding: 0 45px;
 
     &__bg-image,
     &__bg-gradient {
@@ -49,11 +50,16 @@
         font-family: 'Helvetica';
         margin-bottom: 20px;
         font-size: 22px;
+        font-weight: 400;
         line-height: 1.36;
     }
 
     &__title {
         font-size: 80px;
+    }
+
+    &__link {
+        display: none;
     }
 
     &__slider {
@@ -102,6 +108,51 @@
 
         .swiper-slide {
             height: auto;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        height: calc(100vh - 110px);
+        margin-top: 110px;
+        padding: 40px 15px;
+
+        &__wrapper {
+            align-items: flex-end;
+        }
+
+        &__title {
+            margin-bottom: 30px;
+            font-size: 40px;
+        }
+
+        &__slider {
+            display: none;
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 345px;
+            height: 50px;
+            font-size: 16px;
+            border: 1px solid $primary-color;
+            background-color: $primary-color;
+            color: $white-color;
+            transition: background-color .2s ease, color .2s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $white-color;
+                color: $primary-color;
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        &__link {
+            margin: 0 auto;
         }
     }
 }

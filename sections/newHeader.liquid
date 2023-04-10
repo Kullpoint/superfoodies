@@ -1,16 +1,23 @@
 <header class="header">
+    {% render 'NewMobile-menu' %}
     <div class="header__announcebar">
         <h3 class="announcement">{{ section.settings.announcement }}</h3>
     </div>
     <div class="header__main">
         <a href="/" class="header__logo">{% render 'Logo', variant: 'header' %}</a>
+        <div class="header__burger" data-mobile-menu-open-btn>
+            {% render 'Icons-header', icon: 'burger' %}
+        </div>
+        <div class="header__search-btn" data-mobile-search-open-btn>
+            {% render 'Icons-header', icon: 'search' %}
+        </div>
         <nav class="header__menu">
             {% for link in linklists['new-main-menu'].links %}
                 {% if link.links.size > 0 %}
-                    <div class="link" data-mega-menu-link="{{ link.title | upcase }}">
+                    <a href="{{ link.url }}" class="link" data-mega-menu-link="{{ link.title | upcase }}">
                         {{ link.title }}
                         {% render 'Chevron-down' %}
-                    </div>
+                    </a>
 
                     {% for block in section.blocks %}
                         {% assign megaMenu = block.settings %}
@@ -59,12 +66,17 @@
             {% endfor %}
         </nav>
         <nav class="header__navigation">
-            <form action="{{ routes.search_url }}" class="header__search">
-                <button type="submit" class="search__button">{% render 'Icon-search' %}</button>
-                <input type="text" name="q" class="search__field" placeholder="Search">
-                <input type="hidden" name="type" value="product">
-                <input type="hidden" name="options[unavailable_products]" value="hide">
-                <input type="hidden" name="options[prefix]" value="last">
+            <form action="{{ routes.search_url }}" class="header__search dn" data-header-search>
+                <div class="search-wrapper">
+                    <button type="submit" class="search__button">{% render 'Icon-search' %}</button>
+                    <input type="text" name="q" class="search__field" placeholder="Search">
+                    <input type="hidden" name="type" value="product">
+                    <input type="hidden" name="options[unavailable_products]" value="hide">
+                    <input type="hidden" name="options[prefix]" value="last">
+                    <div class="search__close-btn" data-mobile-search-close-btn>
+                        {% render 'Icons-header', icon: 'rounded-close' %}
+                    </div>
+                </div>
             </form>
             <div class="header__favourites">
                 {% render 'Icon-favourites' %}
