@@ -7,7 +7,11 @@ const sassFiles = [
     //application
     "src/styles/application.scss",
     //sections
+    //main page
     "src/styles/sections/mainPage/section-hero.scss",
+    //product page
+    "src/styles/sections/productPage/section-product.scss",
+    //all reusable sections
     "src/styles/sections/section-pwi.scss",
     "src/styles/sections/section-iwi.scss",
     "src/styles/sections/section-articles.scss",

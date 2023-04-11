@@ -1,4 +1,4 @@
-<div class="product-card {{ doppleClass }}">
+<a href="{{ product.url }}" class="product-card {{ doppleClass }}">
     <img src="{{ product.featured_image | image_url }}" alt="{{ product.alt }}" width="auto" height="auto" loading="lazy" class="product-card__image">
     <h3 class="product-card__title">{{ product.title }}</h3>
     <div class="product-card__collection">{{ product.collections[0].title }}</div>
@@ -9,4 +9,4 @@
             {{ settings.product-card-button }}
         {% endif %}
     </div>
-</div>
+</a>

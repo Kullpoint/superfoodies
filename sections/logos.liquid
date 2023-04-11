@@ -1,4 +1,9 @@
-<section class="logos section lazyload" data-section-id="{{ section.id }}" data-section-type="logos" style="background-image: url({{ section.settings.bg | img_url: '50x' }})" data-bg="{{ section.settings.bg | img_url: 'master' }}">
+<section
+  class="logos section lazyload"
+  data-section-id="{{ section.id }}"
+  data-section-type="logos"
+  style="background-image: url({{ section.settings.bg | img_url: '50x' }})"
+  data-bg="{{ section.settings.bg | img_url: 'master' }}">
   <div class="container">
     <div class="logos__title">
       {{ section.settings.title }}
@@ -9,7 +14,11 @@
     <div class="logos__list">
       {% for block in section.blocks %}
         <div class="logos__item">
-          <img loading="lazy" src="{{ block.settings.image | img_url: '400x' }}" alt="" class="lazyload logos__image">
+          <img
+            loading="lazy"
+            src="{{ block.settings.image | img_url: '400x' }}"
+            alt=""
+            class="lazyload logos__image">
         </div>
       {% endfor %}
     </div>
@@ -17,43 +26,41 @@
 </section>
 
 {% schema %}
-{
-  "name": "Logos",
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Title"
-    },
-    {
-      "type": "text",
-      "id": "subtitle",
-      "label": "Subtitle"
-    },
-    {
-      "type": "image_picker",
-      "id": "bg",
-      "label": "Background"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "logo",
-      "name": "Logo",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "category": "Advanced",
-      "name": "Logos"
-    }
-  ]
-}
+  {
+    "name": "Logos",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }, {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+      }, {
+        "type": "image_picker",
+        "id": "bg",
+        "label": "Background"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Advanced",
+        "name": "Logos"
+      }
+    ]
+  }
 {% endschema %}

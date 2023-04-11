@@ -1,0 +1,99 @@
+{% liquid
+    render 'Section-styles', name: 'section-product'
+    render 'Section-scripts', name: 'section-product'
+%}
+
+<style>
+    .section-product {
+        margin-top: {{ section.settings.margin-top }}px;
+        margin-bottom: {{ section.settings.margin-bottom }}px;
+    }
+</style>
+
+<section class="section-product">
+    <div class="section-product__wrapper">
+        <div class="section-product__images">
+            <img src="{{ product.featured_image | image_url }}" alt="{{ product.alt }}" width="auto" height="auto" loading="lazy" class="featured-image">
+        </div>
+        <div class="section-product__info">
+            <div class="wrapper">
+                <div class="head">
+                    <div class="head__title">“Heerlijke Zaadjes Voor In De Havermout Of Over Een Smoothie.”</div>
+                    <div class="head__subtitle">— Lotte A., Gepelde hennep zaden klant</div>
+                </div>
+                <h1 class="title">{{ product.title }}</h1>
+                <div class="reviews">
+                    4.7
+                    <span class="reviews__stars">
+                        {% for start in (1..5) %}
+                            {% render 'Icon-star' %}
+                        {% endfor %}
+                    </span>
+                    MEER DAN 1.000 REVIEWS
+                </div>
+                <div class="description">{{ product.description }}</div>
+                {% if product.metafields.labels != blank %}
+                    <div class="labels">
+                        {% for label in product.metafields.labels.label %}
+                            <div class="labels__item">
+                                {% render 'Icons', icon: 'label' %} {{ label }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                <div class="format">
+                    <div class="format__title">KIES FORMAAT:</div>
+                    <div class="format__wrapper">
+                        {% for variant in product %}
+                            
+                        {% endfor %}
+                        <div class="format__item">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Product section",
+        "settings": [
+            {
+                "type": "textarea",
+                "id": "description",
+                "label": "Description",
+                "info": "Use <br> to break a line"
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Item",
+                "type": "block",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "item-logo",
+                        "label": "Partner logo"
+                    },
+                    {
+                        "type": "url",
+                        "id": "item-url",
+                        "label": "Partner link"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Product section",
+                "settings": {
+
+                }
+            }
+        ]
+    }
+{% endschema %}
+

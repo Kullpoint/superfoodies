@@ -29,7 +29,7 @@
                 {% assign recipe = block.settings.recipe %}
                 <a href="{{ recipe.url }}" class="recipe">
                     <div class="recipe__image">
-                        <img src="{{ recipe.image | image_url }}" alt="{{ recipe.alt }}" width="auto" height="auto" loading="lazy" class="img">
+                        <img src="{{ recipe.image | image_url }}" alt="{{ recipe.alt }}" width="auto" height="auto" loading="auto" class="img">
                     </div>
                     <div class="recipe__title">{{ recipe.title }}</div>
                 </a>
