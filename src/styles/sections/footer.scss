@@ -13,12 +13,10 @@
     }
 
     &__top {
-        padding: 65px 0 30px;
-
-        .right {
-            display: flex;
-            gap: 40px;
-        }
+        display: grid;
+        grid-template-columns: 1fr repeat(3, auto);
+        grid-gap: 30px;
+        padding: 65px 45px 30px;
 
         .minititle {
             margin-bottom: 10px;
@@ -114,7 +112,7 @@
 
     &__bottom {
         align-items: center;
-        padding: 25px 0 20px;
+        padding: 25px 45px 20px;
 
         .watermark {
             font-family: 'Helvetica';
@@ -156,6 +154,56 @@
                 width: 56px;
                 height: 32px;
                 border: 1px solid $primary-color;
+            }
+        }
+    }
+
+    @media screen and (max-width: $laptop) {
+        &__top {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__bottom {
+            flex-direction: column-reverse;
+            gap: 30px;  
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        &__top {
+            padding: 25px 15px 15px;
+        }
+
+        &__line {
+            display: none;
+        }
+
+        &__bottom {
+            padding: 15px 15px 35px;
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        &__top {
+            grid-template-columns: 1fr;
+        }
+
+        &__bottom {
+            display: grid;
+            align-items: flex-start;
+
+            .menu {
+                grid-row: 1/2;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .payments {
+                grid-row: 2/3;
+            }
+
+            .watermark {
+                grid-row: 3/4;
             }
         }
     }

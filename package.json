@@ -4,7 +4,7 @@
         "watch": "concurrently \"webpack --mode=development --watch\" \"gulp watch\"",
         "dev": "concurrently \"gulp dev\" \"webpack --mode=development\"",
         "build": "concurrently \"gulp build\" \"webpack --mode=production\" ",
-        "shopify": "concurrently \"gulp watch\" \"shopify theme dev -s superfoodies-nl.myshopify.com\""
+        "shopify": "concurrently \"gulp watch\" \"shopify theme dev --live-reload=off -s superfoodies-nl.myshopify.com\""
     },
     "license": "ISC",
     "devDependencies": {

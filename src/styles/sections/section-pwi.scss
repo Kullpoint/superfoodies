@@ -127,6 +127,8 @@
     }
 
     @media screen and (max-width: $laptop) {
+        overflow: hidden;
+
         &__wrapper {
             flex-direction: column;
             gap: 30px;

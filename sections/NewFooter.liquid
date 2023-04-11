@@ -21,25 +21,23 @@
                 {% endif %}
             </div>
         </div>
-        <div class="right">
-            {% for link in linklists[section.settings.footer-menu].links %}
-                <div class="menu">
-                    <div class="minititle">{{ link.title }}</div>
-                    <div class="menu__list">
-                        {% for sublink in link.links %}
-                            <a href="{{ sublink.url }}" class="menu__link">{{ sublink.title }}</a>
-                        {% endfor %}
-                    </div>
+        {% for link in linklists[section.settings.footer-menu].links %}
+            <div class="menu">
+                <div class="minititle">{{ link.title }}</div>
+                <div class="menu__list">
+                    {% for sublink in link.links %}
+                        <a href="{{ sublink.url }}" class="menu__link">{{ sublink.title }}</a>
+                    {% endfor %}
                 </div>
-            {% endfor %}
-                <div class="menu">
-                    <div class="minititle">DIRECT CONTACT</div>
-                    <div class="menu__list">
-                        <a href="tel: {{ section.settings.contact-phone }}" class="menu__link">Bellen: {{ section.settings.contact-phone }}</a>
-                        <a class="menu__link">Whatsapp: {{ section.settings.contact-whatsapp }}</a>
-                        <a href="mailto: {{ section.settings.contact-phone }}" class="menu__link">Email: {{ section.settings.contact-email }}</a>
-                    </div>
-                </div>
+            </div>
+        {% endfor %}
+        <div class="menu">
+            <div class="minititle">DIRECT CONTACT</div>
+            <div class="menu__list">
+                <a href="tel: {{ section.settings.contact-phone }}" class="menu__link">Bellen: {{ section.settings.contact-phone }}</a>
+                <a class="menu__link">Whatsapp: {{ section.settings.contact-whatsapp }}</a>
+                <a href="mailto: {{ section.settings.contact-phone }}" class="menu__link">Email: {{ section.settings.contact-email }}</a>
+            </div>
         </div>
     </div>
     <div class="footer__line"></div>

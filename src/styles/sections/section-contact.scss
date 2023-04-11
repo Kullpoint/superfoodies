@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 90px 0 110px;
+    padding: 90px 45px 110px;
 
     &__background {
         position: absolute;
@@ -29,8 +29,8 @@
 
     &__slogan {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: -30px;
+        right: -30px;
     }
 
     &__title,
@@ -88,6 +88,38 @@
             &:hover {
                 background-color: $white-color;
                 color: $primary-color;
+            }
+        }
+    }
+    
+    @media screen and (max-width: $tabletXL) {
+        padding: 90px 45px 310px;
+
+        &__slogan {
+            top: unset;
+            right: 50%;
+            transform: translateX(50%);
+            bottom: -250px;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 30px 15px 280px;
+
+        &__title {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        #contact_form {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            .input,
+            .submit {
+                width: 100%;
+                max-width: 100%;
             }
         }
     }

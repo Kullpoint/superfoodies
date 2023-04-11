@@ -55,13 +55,20 @@
         }
     }
 
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: calc(100% - 80px);
+        padding: 25px 45px;
+    }
+
     &__menu {
         display: flex;
         flex-direction: column;
         gap: 30px;
         width: 100%;
-        height: 100%;
-        padding: 25px 45px;
 
         .link {
             display: flex;
@@ -166,6 +173,25 @@
         }
     }
 
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .link {
+            font-family: 'Teko';
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: 0.05em;
+            color: $silver-color;
+            transition: color .2s ease;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
     @media screen and (max-width: $desktopXL) {
         display: block;
     }
@@ -175,7 +201,7 @@
             padding: 0 25px 0 15px;
         }
 
-        &__menu {
+        &__wrapper {
             padding: 25px;
         }
     }

@@ -6,10 +6,19 @@ const slider = () => {
         loop: false,
         allowTouchMove: true,
         autoplay: false,
+        spaceBetween: 20,
         breakpoints: {
             0: {
-                slidesPerView: 3.7,
-                spaceBetween: 20
+                slidesPerView: 1.1
+            },
+            577: {
+                slidesPerView: 1.9
+            },
+            769: {
+                slidesPerView: 2.7
+            },
+            992: {
+                slidesPerView: 3.7
             }
         },
         navigation: {
