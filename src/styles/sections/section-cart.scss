@@ -1,2 +1,234 @@
 @import '../variables.scss';
 
+.section-cart{
+
+    &__wrapper{
+        max-width: $second-wrapper;
+        margin: 0 auto;
+    }
+
+    &__title{
+        margin-bottom: 30px;
+        font-weight: 600;
+        font-size: 46px;
+        line-height: 45px;
+        font-feature-settings: 'swsh' on;
+        color: $silver-color;
+    }
+
+    &__form{
+        display: flex;
+        gap: 80px;
+    }
+
+    &__products-block{
+        margin-top: 17px;
+        max-width: 735px;
+        width: 100%;
+    }
+
+    &__static-product-data{
+        display: grid;
+        grid-template-columns: 68% 1fr 1fr;
+        padding-bottom: 13px;
+        border-bottom: 1px solid $border_silver-color;
+    }
+
+    h6{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: $new_light_silver-color;
+    }
+
+    h6:nth-child(2){
+        margin-left: 17px;
+    }
+
+    h6:last-child{
+        text-align: end;
+    }
+
+    h4 {
+        font-weight: 600;
+        color: $silver-color;
+    }
+}
+
+.cart-product{
+
+    
+
+    &__inner{
+        display: grid;
+        grid-template-columns: 68% 1fr 1fr;
+        padding: 16px 0;
+        border-bottom: 1px solid $border_silver-color;
+    }
+
+    &__info{
+        display: flex;
+    }
+
+    &__info img{
+        display: block;
+        aspect-ratio: 1/1;
+        max-width: 100px;
+        max-height: 100px;
+        width: 100%;
+        height: auto;
+        border: 1px solid $border_silver-color;
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 15px;
+
+        h4{
+            font-size: 18px;
+        }
+
+        h4:first-child{
+            margin-top: 7px;
+            line-height: 20px;
+        }
+
+        h4:last-child{
+            margin-bottom: 11px;
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+
+    // &__counter{
+    //     display: flex;
+    //     justify-content: center;
+    // }
+
+    &__price{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: end;
+        margin-bottom: 11px;
+
+
+        h4:first-child{
+            display: flex;
+            height: 100%;
+            align-items: center;
+            font-size: 20px;
+            padding-bottom: 13px;
+        }
+
+        h4:last-child{
+            font-size: 16px;
+            color: $new_light_silver-color;
+            padding-right: 3px;
+        }
+
+    }
+}
+
+.product-counter{
+
+    &__inner{
+        max-width: 82px;
+        width: 100%;
+        height: 46px;
+        display: flex;
+        margin-top: 7px;
+        border: 1px solid $border_silver-color;
+    }
+
+    input{
+        width: 50%;
+        border: none;
+        background-color: transparent;
+        padding-left: 15px;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0;
+        font-family: 'Helvetica';
+        font-weight: 400;
+        font-size: 18px;
+        color: $silver-color;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    &__buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        gap: 10px;
+        width: 50%;
+        padding-right: 15px;
+
+        svg{
+            cursor: pointer;
+        }
+
+    }
+}
+
+.cart-total{
+
+    &__inner{
+        border: 1px solid $light_brown-color;
+        padding: 21px 25px 28px;
+    }
+
+    &__header{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        h5{
+            font-size: 20px;
+            color: $silver-color;
+            line-height: 24px;
+        }
+
+        h4{
+            font-size: 24px;
+            line-height: 24px;
+        }
+    }
+
+    &__text{
+        margin-bottom: 21px;
+        font-family: 'Helvetica';
+        font-weight: 400;
+        line-height: 24px;
+        font-size: 16px;
+        color: $new_light_silver-color;
+    }
+
+    &__button{
+        border: 1px solid $dark__orange-color;
+        width: 100%;
+        height: 52px;
+        background-color: $dark__orange-color;
+        color: $white-color;
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+    }
+
+    &__button:hover{
+        background-color: transparent;
+        color: $dark__orange-color;
+        transition: .3s ease-in-out;
+    }
+}
