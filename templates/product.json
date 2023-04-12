@@ -1,10 +1,39 @@
 {
     "sections": {
-        "section-product": {
-            "type": "Section-product"
+      "section-product": {
+        "type": "Section-product",
+        "settings": {
+          "description": ""
         }
+      },
+      "section-iwv": {
+        "type": "Section-IWV",
+        "settings": {
+          "reversed": "false",
+          "title": "Lorem Ipsum Dolorem",
+          "description": "Rijk aan mineralen en antioxidanten <br> Bevat 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer. Bevat daarnaast vitamine A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen)",
+          "padding-top": 80,
+          "padding-bottom": 15,
+          "video": "shopify:\/\/files\/videos\/cappugreeno.mp4.mp4",
+          "background": "rays"
+        }
+      },
+      "5a551bbc-bbf8-4827-b9ce-7a8a8d193804": {
+        "type": "Section-IWV",
+        "settings": {
+          "reversed": "true",
+          "title": "Lorem Ipsum Dolorem",
+          "description": "Rijk aan mineralen en antioxidanten <br> Bevat 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer. Bevat daarnaast vitamine A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen)",
+          "padding-top": 15,
+          "padding-bottom": 40,
+          "video": "shopify:\/\/files\/videos\/cappugreeno.mp4.mp4",
+          "background": "none"
+        }
+      }
     },
     "order": [
-        "section-product"
+      "section-product",
+      "section-iwv",
+      "5a551bbc-bbf8-4827-b9ce-7a8a8d193804"
     ]
-}
+  }

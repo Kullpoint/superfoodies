@@ -24,6 +24,7 @@ const sassFiles = [
     "src/styles/sections/section-reviews.scss",
     "src/styles/sections/section-recipes.scss",
     "src/styles/sections/section-contact.scss",
+    "src/styles/sections/section-iwv.scss",
 ];
 
 gulp.task("dev", () => {
