@@ -53,6 +53,12 @@
         font-weight: 600;
         color: $silver-color;
     }
+
+    @media screen and (max-width: $laptop) {
+        &__wrapper{
+            margin: 0 20px;
+        }
+    }
 }
 
 .cart-product{
@@ -231,4 +237,5 @@
         color: $dark__orange-color;
         transition: .3s ease-in-out;
     }
+
 }
