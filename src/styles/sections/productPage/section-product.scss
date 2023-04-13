@@ -1,11 +1,14 @@
 @import '../../variables.scss';
 
 .section-product {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin-top: 120px;
+    background-color: $secondary-color;
 
     &__wrapper {
         display: flex;
@@ -100,12 +103,13 @@
             color: $silver-color;
 
             p {
-                margin: 0;
+                margin-top: 0;
             }
         }
 
         .labels {
             display: flex;
+            gap: 20px;
             flex-wrap: wrap;
             margin-bottom: 25px;
 
@@ -121,6 +125,8 @@
         }
 
         .format {
+            margin-bottom: 30px;
+
             &__title {
                 margin-bottom: 10px;
                 font-size: 20px;
@@ -130,7 +136,98 @@
             &__wrapper {
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
                 gap: 10px;
+            }
+
+            &__item,
+            &__stock {
+                font-family: 'Helvetica';
+                font-weight: 400;
+                color: $silver-color;
+            }
+
+            &__item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 35px;
+                padding: 0 20px;
+                border: 1px solid $pre_light-silver;
+                font-size: 16px;
+                transition: border-color .2s ease, background-color .2s ease;
+                cursor: pointer;
+            }
+
+            &__item.active {
+                background-color: $light_gray-color;
+                cursor: default;
+            }
+            
+            &__stock {
+                font-size: 14px;
+            }
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-gap: 20px;
+
+            &__counter-wrapper {
+                position: relative;
+
+                .icon {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 15px;
+                }
+            }
+
+            &__counter,
+            &__favourites {
+                width: 80px;
+                height: 50px;
+                border: 1px solid $light_brown-color;
+                background-color: transparent;
+                cursor: pointer;
+            }
+
+            &__counter {
+                appearance: none;
+                position: relative;
+                z-index: 1;
+                padding: 0 15px;
+                font-family: 'Helvetica';
+                font-weight: 400;
+                font-size: 18px;
+                color: $silver-color;
+            }
+
+            &__submit {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+                width: 100%;
+                font-size: 16px;
+                border: 1px solid $primary-color;
+                background-color: $primary-color;
+                color: $white-color;
+                transition: background-color .2s ease, color .2s ease;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $white-color;
+                    color: $primary-color;
+                }
+            }
+
+            &__favourites {
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }

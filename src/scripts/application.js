@@ -1,3 +1,5 @@
+import { productQuantityChanger } from './modules/productQuantityChanger';
+
 const removePreloader = () => {
     const preloader = document.getElementById('preloader');
 
@@ -236,4 +238,5 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileSearchLogic();
     videoLogic();
     yearChanger();
+    productQuantityChanger();
 });
