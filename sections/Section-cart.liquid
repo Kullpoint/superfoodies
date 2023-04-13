@@ -1,0 +1,132 @@
+{% liquid
+    render 'Section-styles', name: 'section-cart'
+    render 'Section-scripts', name: 'section-cart'
+%}
+
+<style>
+    .section-cart {
+        margin-top: {{ section.settings.margin-top }}px;
+        margin-bottom: {{ section.settings.margin-bottom }}px;
+    }
+</style>
+
+<section class="section-cart">
+    <div class="section-cart__wrapper">
+        {% if cart.item_count >= 0 %}
+            <h2 class="section-cart__title">{{ section.settings.title }}</h2>
+            <form action="{{ routes.cart_url }}" method="post" novalidate class="section-cart__form">
+                <div class="section-cart__products-block">
+                    <div class="section-cart__static-product-data">
+                        <h6>Product</h6>
+                        <h6>Aantal</h6>
+                        <h6>Totaal</h6>
+                    </div>
+                    {% comment %} for item in cart.items  {% endcomment %}
+                        <div class="section-cart__product cart-product">
+                            <div class="cart-product__inner">
+                               <a href="" class="cart-product__info">
+                                    {{ 'Cart-test-img.png' | asset_url | img_tag }}
+                                    <div class="cart-product__text">
+                                        <h4>Bruine rijst eiwit poeder chocolade - Superfoodies - 500 gram</h4>
+                                        <h4>€71,00</h4>
+                                    </div>
+                               </a>
+                               <div class="cart-product__counter product-counter">
+                                    <div class="product-counter__inner">
+                                        <input type="number" max="10" value="1" step="1" readonly id="counterInput">
+                                        <div class="product-counter__buttons">
+                                            {% render 'Icon-product-counter-arrow-top' %}
+                                            {% render 'Icon-product-counter-arrow-bottom' %}
+                                        </div>
+                                    </div>
+                               </div>
+                               <div class="cart-product__price">
+                                    <h4 >€71,00</h4>
+                                    <h4>Verwijderen</h4>
+                               </div>
+                            </div>
+                        </div>
+                    {% comment %} endfor  {% endcomment %}
+                </div>
+                <div class="section-cart__total-block cart-total">
+                    <div class="cart-total__inner">
+                        <div class="cart-total__header">
+                            <h5>Totaal</h5>
+                            <h4>€71,00</h4>
+                        </div>
+                        <p class="cart-total__text">Inclusief BTW. Verzendkosten worden berekend bij Afrekenen</p>
+                        <button class="cart-total__button">AFREKENEN</button>
+                    </div>
+                </div>
+            </form>
+        {% else %}
+            
+        {% endif %}
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Cart",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "Mijn winkelmandje"
+            },
+            {
+                "type": "textarea",
+                "id": "description",
+                "label": "Description",
+                "info": "Use <br> to break a line"
+            },
+            {
+                "type": "range",
+                "id": "margin-top",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Margin top",
+                "default": 185
+            },
+            {
+                "type": "range",
+                "id": "margin-bottom",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Margin bottom",
+                "default": 45
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Item",
+                "type": "block",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "item-logo",
+                        "label": "Partner logo"
+                    },
+                    {
+                        "type": "url",
+                        "id": "item-url",
+                        "label": "Partner link"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Example section",
+                "settings": {
+
+                }
+            }
+        ]
+    }
+{% endschema %}

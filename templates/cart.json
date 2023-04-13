@@ -1,0 +1,11 @@
+{
+    "sections": {
+        "template": {
+            "type": "Section-cart"
+        },
+        "contact": {
+            "type": "Section-contact"
+        }
+    },
+    "order": ["template","contact"]
+}
