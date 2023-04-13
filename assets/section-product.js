@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/scripts/sections/section-pwi.js":
-/*!*********************************************!*\
-  !*** ./src/scripts/sections/section-pwi.js ***!
-  \*********************************************/
+/***/ "./src/scripts/productPage/section-product.js":
+/*!****************************************************!*\
+  !*** ./src/scripts/productPage/section-product.js ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ \"./node_modules/swiper/swiper-bundle.esm.js\");\n\n\nconst sliderLogic = () => {\n    const sliders = document.querySelectorAll('[data-pwi-slider]');\n    \n    for (const slider of sliders) {\n        if (!slider.classList.contains('initialized')) {\n            const container = slider.querySelector('[data-swiper-container]');\n\n            new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__[\"default\"](container, {\n                speed: 1200,\n                loop: false,\n                allowTouchMove: true,\n                autoplay: false,\n                breakpoints: {\n                    0: {\n                        slidesPerView: 1\n                    },\n                    577: {\n                        slidesPerView: 2\n                    },\n                    769: {\n                        slidesPerView: 3\n                    }\n                },\n                navigation: {\n                    prevEl: `[data-wiper-button-prev=\"${slider.getAttribute('data-pwi-slider')}\"]`,\n                    nextEl: `[data-wiper-button-next=\"${slider.getAttribute('data-pwi-slider')}\"]`\n                }\n            });\n\n            slider.classList.add(\"initialized\");\n        }\n    }\n}\n\nsliderLogic();\n\n\n//# sourceURL=webpack://superfoodies/./src/scripts/sections/section-pwi.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ \"./node_modules/swiper/swiper-bundle.esm.js\");\n\n\nconst sliderLogic = () => {\n    const slider = document.querySelector('[data-product-slider]');\n    const container = slider.querySelector('[data-swiper-container]');\n    const slides = container.querySelectorAll('[data-swiper-slide]');\n    const featuredImage = document.getElementById('product_feature-image');\n\n    new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__[\"default\"](container, {\n        speed: 1200,\n        loop: false,\n        allowTouchMove: true,\n        spaceBetween: 20,\n        autoplay: false,\n        breakpoints: {\n            0: {\n                slidesPerView: 3\n            },\n            // 577: {\n            //     slidesPerView: 2\n            // },\n            // 769: {\n            //     slidesPerView: 3\n            // }\n        },\n        navigation: {\n            prevEl: `[data-swiper-button-prev=\"product\"]`,\n            nextEl: `[data-swiper-button-next=\"product\"]`\n        }\n    });\n\n    const slideChanger = () => {\n        for (const slide of slides) {\n            const slideImg = slide.querySelector('[data-swiper-slide-img]');\n\n            slide.addEventListener('click', () => {                \n                for (const s of slides) {\n                    s.classList.remove('current');\n                }\n\n                slide.classList.add('current');\n                featuredImage.setAttribute('src', slideImg.getAttribute('src'));\n            });\n        }\n    }\n\n    slideChanger();\n}\n\nsliderLogic();\n\n\n//# sourceURL=webpack://superfoodies/./src/scripts/productPage/section-product.js?");
 
 /***/ }),
 
@@ -1060,7 +1060,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/scripts/sections/section-pwi.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/scripts/productPage/section-product.js");
 /******/ 	
 /******/ })()
 ;

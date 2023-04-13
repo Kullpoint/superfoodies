@@ -1,0 +1,58 @@
+{% liquid
+    render 'Section-styles', name: 'section-pd'
+    render 'Section-scripts', name: 'section-pd'
+%}
+
+<style>
+    #shopify-section-{{ section.id }} .section-pd {
+        padding-top: {{ section.settings.padding-top }}px;
+        padding-bottom: {{ section.settings.padding-bottom }}px;
+    }
+</style>
+
+<section class="section-pd">
+    <div class="section-pd__wrapper">
+        <h2 class="section-pd__title">{{ section.settings.title }}</h2>
+        <div class="section-pd__description">{{ section.settings.description }}</div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Product description",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "Productbeschrijving"
+            },
+            {
+                "type": "richtext",
+                "id": "description",
+                "label": "Default description",
+                "info": "This description will be shown when product doesn't have a description"
+            },
+            {
+                "type": "range",
+                "id": "padding-top",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Padding top",
+                "default": 70
+            },
+            {
+                "type": "range",
+                "id": "padding-bottom",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Padding bottom",
+                "default": 70
+            }
+        ]
+    }
+{% endschema %}

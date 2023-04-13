@@ -31,7 +31,7 @@
         display: grid;
         grid-template-columns: 68% 1fr 1fr;
         padding-bottom: 13px;
-        border-bottom: 1px solid $border_silver-color;
+        border-bottom: 1px solid $light_brown-color;
     }
 
     h6{
@@ -69,7 +69,7 @@
         display: grid;
         grid-template-columns: 68% 1fr 1fr;
         padding: 16px 0;
-        border-bottom: 1px solid $border_silver-color;
+        border-bottom: 1px solid $light_brown-color;
     }
 
     &__info{
@@ -83,7 +83,7 @@
         max-height: 100px;
         width: 100%;
         height: auto;
-        border: 1px solid $border_silver-color;
+        border: 1px solid $light_brown-color;
     }
 
     &__text{
@@ -146,7 +146,7 @@
         height: 46px;
         display: flex;
         margin-top: 7px;
-        border: 1px solid $border_silver-color;
+        border: 1px solid $light_brown-color;
     }
 
     input{

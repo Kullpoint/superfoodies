@@ -13,7 +13,20 @@
 <section class="section-product">
     <div class="section-product__wrapper">
         <div class="section-product__images">
-            <img src="{{ product.featured_image | image_url }}" alt="{{ product.alt }}" width="auto" height="auto" loading="lazy" class="featured-image">
+            <img src="{{ product.featured_image | image_url }}" alt="{{ product.alt }}" width="auto" height="auto" loading="lazy" class="featured-image" id="product_feature-image">
+            <div class="slider" data-product-slider>
+                <div class="swiper-button-prev" data-swiper-button-prev="product"></div>
+                <div class="swiper-container" data-swiper-container>
+                    <div class="swiper-wrapper">
+                        {% for image in product.images %}
+                            <div class="swiper-slide {% if forloop.first %}current{% endif %}" data-swiper-slide>
+                                <img src="{{ image | image_url }}" alt="{{ image.alt }}" width="auto" height="auto" loading="lazy" class="img" data-swiper-slide-img>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="swiper-button-next" data-swiper-button-next="product"></div>
+            </div>
         </div>
         <div class="section-product__info">
             <div class="wrapper">
@@ -62,6 +75,7 @@
                 </div>
                 <div class="buttons">
                     <div class="buttons__counter-wrapper">
+                        <div class="price">{{ product.variants[0].price | money | replace: '.' , ',' }}</div>
                         <select name="quantity" autocomplete="off" id="quantity" class="buttons__counter">
                             {% assign inventoryQuantity = product.variants[0].inventory_quantity %}
                             {% assign inventoryQuantityRange = (1..inventoryQuantity) %}
@@ -75,8 +89,26 @@
                     <div class="buttons__favourites">
                         {% render 'Icons', icon: 'hearth' %}
                     </div>
-                    {% render 'Payments', color: 'primary' %}
                 </div>
+                {% if product.metafields.labels != blank %}
+                    <div class="labels mobile">
+                        {% for label in product.metafields.labels.label %}
+                            <div class="labels__item">
+                                {% render 'Icons', icon: 'label' %} {{ label }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                <div class="reviews mobile">
+                    4.7
+                    <span class="reviews__stars">
+                        {% for start in (1..5) %}
+                            {% render 'Icon-star' %}
+                        {% endfor %}
+                    </span>
+                </div>
+                {% render 'Payments', color: 'light-brown', margin: '0 0 30px 0' %}
+                {% render 'Info-items' %}
             </div>
         </div>
     </div>
@@ -91,32 +123,58 @@
                 "id": "description",
                 "label": "Description",
                 "info": "Use <br> to break a line"
-            }
-        ],
-        "blocks": [
+            },
             {
-                "name": "Item",
-                "type": "block",
-                "settings": [
-                    {
-                        "type": "image_picker",
-                        "id": "item-logo",
-                        "label": "Partner logo"
-                    },
-                    {
-                        "type": "url",
-                        "id": "item-url",
-                        "label": "Partner link"
-                    }
-                ]
-            }
-        ],
-        "presets": [
+                "type": "header",
+                "content": "Info items"
+            },
             {
-                "name": "Product section",
-                "settings": {
-
-                }
+                "type": "textarea",
+                "id": "item-icon-1",
+                "info": "Put an svg icon code here",
+                "label": "Item 1 icon"
+            },
+            {
+                "type": "textarea",
+                "id": "item-title-1",
+                "label": "Item 1 title",
+                "default": "Vóór 21:00 besteld (ZO-VR), morgen in huis* *BELGIË 14:30"
+            },
+            {
+                "type": "textarea",
+                "id": "item-icon-2",
+                "info": "Put an svg icon code here",
+                "label": "Item 2 icon"
+            },
+            {
+                "type": "textarea",
+                "id": "item-title-2",
+                "label": "Item 2 title",
+                "default": "Gratis verzending vanaf €59, anders €4,90"
+            },
+            {
+                "type": "textarea",
+                "id": "item-icon-3",
+                "info": "Put an svg icon code here",
+                "label": "Item 3 icon"
+            },
+            {
+                "type": "textarea",
+                "id": "item-title-3",
+                "label": "Item 3 title",
+                "default": "Hoogste kwaliteit producten, bezorgd in heel Europa"
+            },
+            {
+                "type": "textarea",
+                "id": "item-icon-4",
+                "info": "Put an svg icon code here",
+                "label": "Item 4 icon"
+            },
+            {
+                "type": "textarea",
+                "id": "item-title-4",
+                "label": "Item 4 title",
+                "default": "Beste klantenservice & retourneren mogelijk"
             }
         ]
     }

@@ -7,8 +7,10 @@ const slider = () => {
         speed: 1200,
         loop: true,
         allowTouchMove: true,
-        autoplay: true,
-        delay: 5000,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
         lidesPerView: 1,
         effect: 'cube',
         runCallbacksOnInit: true,

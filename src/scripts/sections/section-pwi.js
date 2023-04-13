@@ -34,6 +34,4 @@ const sliderLogic = () => {
     }
 }
 
-// document.addEventListener('DOMContentLoaded', () => {
-    sliderLogic();
-// });
+sliderLogic();

@@ -9,6 +9,17 @@
         justify-content: center;
         width: 56px;
         height: 32px;
+    }
+}
+
+.payments.primary {
+    .payments__item {
         border: 1px solid $primary-color;
+    }
+}
+
+.payments.light-brown {
+    .payments__item {
+        border: 1px solid $light_brown-color;
     }
 }

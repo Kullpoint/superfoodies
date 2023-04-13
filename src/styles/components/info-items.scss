@@ -1,0 +1,19 @@
+.info-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .text {
+            font-family: 'Helvetica';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.3;
+            color: $silver-color;
+        }
+    }
+}

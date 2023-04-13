@@ -1,5 +1,7 @@
 @import '../../variables.scss';
+@import '../../modules/swiper.scss';
 @import '../../components/payments.scss';
+@import '../../components/info-items.scss';
 
 .section-product {
     position: relative;
@@ -24,10 +26,83 @@
     }
 
     &__images {
+        // position: relative;
+        position: sticky;
+        top: 121px;
+        height: fit-content;
+
         .featured-image {
             width: 100%;
-            height: 100%;
+            max-inline-size: 100%;
+            block-size: auto;
+            aspect-ratio: auto;  
             object-fit: cover;
+            object-position: top center;
+            border: 1px solid transparent;
+            transition: border-color .2s ease;
+        }
+
+        .slider {
+            position: absolute;
+            bottom: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            width: 100%;
+            padding: 0 40px;
+
+            .swiper-container {
+                width: 100%;
+                max-width: 295px;
+                margin: 0 auto;
+                overflow: hidden;
+            
+                .swiper-wrapper {
+                    width: 100%;
+                    height: 100%;
+                }
+        
+                .swiper-slide {
+                    height: auto;
+                    border: 1px solid $light_brown-color;
+                    opacity: .5;
+                    cursor: pointer;
+
+                    .img {
+                        display: block;
+                        aspect-ratio: 1/1;
+                        max-width: 85px;
+                        max-height: 85px;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .swiper-slide.current {
+                    border-color: $primary-color;
+                    opacity: 1;
+                    cursor: default;
+                }
+            }
+    
+            .swiper-button-prev,
+            .swiper-button-next {
+                position: unset;
+                min-width: 40px;
+                height: 40px;
+                margin: 0;
+                border: 2px solid $primary-color;
+                border-radius: 50%;
+                
+                
+    
+                &::after {
+                    font-size: 17px;
+                    font-weight: 900;
+                    color: $primary-color;
+                }
+            }
         }
     }
 
@@ -95,6 +170,10 @@
             }
         }
 
+        .reviews.mobile {
+            display: none;
+        }
+
         .description {
             margin-bottom: 25px;
             font-family: 'Helvetica';
@@ -110,7 +189,7 @@
 
         .labels {
             display: flex;
-            gap: 20px;
+            gap: 7px 20px;
             flex-wrap: wrap;
             margin-bottom: 25px;
 
@@ -121,8 +200,13 @@
                 font-family: 'Helvetica';
                 font-weight: 400;
                 font-size: 14px;
+                text-transform: uppercase;
                 color: $silver-color;
             }
+        }
+
+        .labels.mobile {
+            display: none;
         }
 
         .format {
@@ -174,9 +258,19 @@
             display: grid;
             grid-template-columns: auto 1fr auto;
             grid-gap: 20px;
+            width: 100%;
+            margin-bottom: 25px;
 
             &__counter-wrapper {
                 position: relative;
+                width: fit-content;
+
+                .price {
+                    display: none;
+                    font-size: 46px;
+                    text-transform: uppercase;
+                    color: $silver-color;
+                }
 
                 .icon {
                     position: absolute;
@@ -229,6 +323,123 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+            }
+        }
+    }
+
+    @media screen and (max-width: $tabletXL) {
+        &__images {
+            .slider {
+                padding: 0 15px;
+            }
+        }
+
+        &__info {
+            .info-items {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__images,
+        &__info {
+            width: 100%;
+        }
+
+        &__images {
+            position: relative;
+            top: unset;
+        }
+
+        &__info {
+            padding: 30px 15px;
+
+            .wrapper {
+                max-width: 100%;
+            }
+            
+            .title {
+                font-size: 24px;
+            }
+
+            .description {
+                display: none;
+            }
+
+            .labels {
+                display: none;
+            }
+
+            .labels.mobile {
+                display: flex;
+            }
+
+            .format {
+                &__stock {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    height: 35px;
+                }
+            }
+
+            .reviews {
+                display: none;
+
+                font-weight: 700;
+                font-size: 30px;
+
+                &__stars {
+                    .star {
+                        width: 20px;
+                        height: 18.4px;
+                    }
+                }
+            }
+
+            .reviews.mobile {
+                display: flex;
+                width: fit-content;
+                margin: 0 auto 25px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        &__info {
+            .buttons {
+                grid-template-columns: 1fr;
+                grid-gap: 25px;
+
+                &__counter-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 40px;
+                    margin: 0 auto;
+
+                    .price {
+                        display: block;
+                    }
+                }
+
+                &__favourites {
+                    display: none;
+                }
+            }
+
+            .info-items {
+                &__item {
+                    .text {
+                        max-width: 135px;
+                    }
+                }
             }
         }
     }

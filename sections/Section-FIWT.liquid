@@ -1,0 +1,72 @@
+{% liquid
+    render 'Section-styles', name: 'section-fiwt'
+%}
+
+{% comment %} render 'Section-scripts', name: 'section-fiwt' {% endcomment %}
+
+<style>
+    #shopify-section-{{ section.id }} .section-fiwt {
+        margin-top: {{ section.settings.margin-top }}px;
+        margin-bottom: {{ section.settings.margin-bottom }}px;
+    }
+</style>
+
+<section class="section-fiwt">
+    {% if section.settings.background != blank %}
+        <img src="{{ section.settings.background | image_url }}" width="auto" height="auto" loading="lazy" class="section-fiwt__img">
+    {% else %}
+        <img src="{{ 'Default-FIWT-image.png' | asset_url }}" width="auto" height="auto" loading="lazy" class="section-fiwt__img">
+    {% endif %}
+    <div class="section-fiwt__wrapper">
+        <h2 class="section-fiwt__title">{{ section.settings.title }}</h2>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Fullscrn image with title",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "info": "Use <br> to break a line",
+                "default": "Lorem Ipsum Dolorem"
+            },
+            {
+                "type": "image_picker",
+                "id": "background",
+                "label": "Background image"
+            },
+            {
+                "type": "range",
+                "id": "margin-top",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Margin top",
+                "default": 40
+            },
+            {
+                "type": "range",
+                "id": "margin-bottom",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Margin bottom",
+                "default": 35
+            }
+        ],
+        "presets": [
+            {
+                "name": "Fullscrn image with title",
+                "settings": {
+
+                }
+            }
+        ]
+    }
+{% endschema %}
+

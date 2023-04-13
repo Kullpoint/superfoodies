@@ -20,7 +20,9 @@
   <body style="overflow: hidden;">
     {% render 'Preloader' %}
     {% section 'NewHeader' %}
-    {{ content_for_layout }}
+    <main class="main">
+        {{ content_for_layout }}
+    </main>
     {% section 'NewFooter' %}
     <script src="{{ 'application.js' | asset_url }}" defer></script>
     {% comment %} <script src="{{ 'header.js' | asset_url }}" defer></script> {% endcomment %}

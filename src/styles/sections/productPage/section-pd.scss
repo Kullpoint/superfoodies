@@ -1,0 +1,51 @@
+@import '../../variables.scss';
+
+.section-pd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: $second-wrapper;
+    }
+
+    &__title,
+    &__description {
+        width: 100%;
+        margin-bottom: 25px;
+        color: $silver-color;
+    }
+
+    &__title {
+        font-size: 60px;
+        font-feature-settings: 'swsh' on;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        height: 215px; 
+        overflow: hidden;
+
+        h3,
+        p {
+            font-family: 'Helvetica';
+            font-size: 18px;
+            line-height: 1.44;
+        }
+
+        h3 {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 0 0 20px 0;
+            font-weight: 400;
+        }
+    }
+}

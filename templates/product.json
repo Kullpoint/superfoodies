@@ -1,39 +1,66 @@
 {
-    "sections": {
-      "section-product": {
-        "type": "Section-product",
-        "settings": {
-          "description": ""
-        }
-      },
-      "section-iwv": {
-        "type": "Section-IWV",
-        "settings": {
-          "reversed": "false",
-          "title": "Lorem Ipsum Dolorem",
-          "description": "Rijk aan mineralen en antioxidanten <br> Bevat 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer. Bevat daarnaast vitamine A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen)",
-          "padding-top": 80,
-          "padding-bottom": 15,
-          "video": "shopify:\/\/files\/videos\/cappugreeno.mp4.mp4",
-          "background": "rays"
-        }
-      },
-      "5a551bbc-bbf8-4827-b9ce-7a8a8d193804": {
-        "type": "Section-IWV",
-        "settings": {
-          "reversed": "true",
-          "title": "Lorem Ipsum Dolorem",
-          "description": "Rijk aan mineralen en antioxidanten <br> Bevat 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer. Bevat daarnaast vitamine A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen)",
-          "padding-top": 15,
-          "padding-bottom": 40,
-          "video": "shopify:\/\/files\/videos\/cappugreeno.mp4.mp4",
-          "background": "none"
-        }
+  "sections": {
+    "section-product": {
+      "type": "Section-product",
+      "settings": {
+        "description": "",
+        "item-icon-1": "",
+        "item-title-1": "Vóór 21:00 besteld (ZO-VR), morgen in huis* *BELGIË 14:30",
+        "item-icon-2": "",
+        "item-title-2": "Gratis verzending vanaf €59, anders €4,90",
+        "item-icon-3": "",
+        "item-title-3": "Hoogste kwaliteit producten, bezorgd in heel Europa",
+        "item-icon-4": "",
+        "item-title-4": "Beste klantenservice & retourneren mogelijk"
       }
     },
-    "order": [
-      "section-product",
-      "section-iwv",
-      "5a551bbc-bbf8-4827-b9ce-7a8a8d193804"
-    ]
-  }
+    "section-iwv": {
+      "type": "Section-IWV",
+      "settings": {
+        "reversed": "false",
+        "title": "Lorem Ipsum Dolorem",
+        "description": "Rijk aan mineralen en antioxidanten <br> Bevat 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer. Bevat daarnaast vitamine A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen)",
+        "padding-top": 80,
+        "padding-bottom": 15,
+        "video": "shopify:\/\/files\/videos\/cappugreeno.mp4.mp4",
+        "background": "rays"
+      }
+    },
+    "5a551bbc-bbf8-4827-b9ce-7a8a8d193804": {
+      "type": "Section-IWV",
+      "settings": {
+        "reversed": "true",
+        "title": "Lorem Ipsum Dolorem",
+        "description": "Rijk aan mineralen en antioxidanten <br> Bevat 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer. Bevat daarnaast vitamine A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen)",
+        "padding-top": 15,
+        "padding-bottom": 75,
+        "video": "shopify:\/\/files\/videos\/cappugreeno.mp4.mp4",
+        "background": "none"
+      }
+    },
+    "23f7eed8-2227-46f3-86e6-c49ab36a40fb": {
+      "type": "Section-FIWT",
+      "settings": {
+        "title": "Lorem Ipsum Dolorem",
+        "margin-top": 0,
+        "margin-bottom": 35
+      }
+    },
+    "section-pd": {
+      "type": "Section-PD",
+      "settings": {
+        "title": "Productbeschrijving",
+        "description": "<h3>Wat betekent sea moss nu eigenlijk? <\/h3><p>Sea moss is de Engelse naam voor zeemos, ook wel Iris sea moss genoemd. Irish moss, ook wel bekend als carrageenmos, is afgeleid van het Ierse woord “carraigin” wat “kleine rots” betekent. Eigenlijk is Irish sea moss helemaal geen mos maar een zeewier dat voornamelijk langs de Europese en Amerikaanse kust van de Atlantische Oceaan groeit. <\/p><h3>De gezondheidsvoordelen van Iris Sea Moss <\/h3><p>Zeemos is een heilzaam zeewier dat zeer rijk is aan vitamines, mineralen en antioxidanten. Zo bevat sea moss maar liefst 15 van de 18 voor de mens essentiële mineralen, waaronder calcium, jodium, kalium, magnesium en ijzer. Daarnaast levert dit mos ook vitamines als A, B, C, D, E, F en K, eiwitten en antioxidanten (bètacaroteen). Daarmee is sea moss een van de meest voedzame superfoods die bestaat! Maar dit heilige zeewier doet meer… <\/p><p>Sea moss gaat daarnaast ook nog eens de veroudering van de huid tegen en werkt bovendien verzachtend, voedend en beschermend. Irish sea moss wordt om die reden vaak gebruikt in huidcrèmes, body lotions, shampoos en gels. Zo kan het huidproblemen helpen verlichten, zoals psoriasis, allergieën, uitslag, snijwonden, roos, eczeem en zelfs een verbrande huid. Hoe herken en gebruik ik sea moss dan? Verse Irish Sea Moss is een zeewier die groeit langs de rotsachtige delen van de oceaan. Het is groengeel tot rood met donkerpaarse of paarsbruine tinten en voelt zacht en wat kraakbeenachtig aan. <\/p><p>Je kunt het zo eten of als bindmiddel gebruiken. Al met al is sea moss een gezonde toevoeging op je dagelijks dieet. Ook sea moss kopen? Ga voor puur en onbewerkt Wil jij ook de bijzondere werking van dit heilige zeewier ervaren? Kies dan voor de meest pure en onbewerkte biologische kwaliteit omdat daar nog de meeste voedingsstoffen in zitten. <\/p><p>Zeemos van Superfoodies is onbewerkt, niet verhit boven 42 graden (rawfood) en biologisch gecertificeerd. Zodat jij profiteert van de hoogste kwaliteit tegen de scherpste prijs.<\/p>",
+        "padding-top": 70,
+        "padding-bottom": 70
+      }
+    }
+  },
+  "order": [
+    "section-product",
+    "section-iwv",
+    "5a551bbc-bbf8-4827-b9ce-7a8a8d193804",
+    "23f7eed8-2227-46f3-86e6-c49ab36a40fb",
+    "section-pd"
+  ]
+}
