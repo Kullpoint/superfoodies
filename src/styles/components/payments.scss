@@ -1,0 +1,14 @@
+.payments {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 32px;
+        border: 1px solid $primary-color;
+    }
+}

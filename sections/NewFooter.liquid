@@ -48,12 +48,7 @@
                 <a href="{{ link.url }}" class="menu__link">{{ link.title }}</a>
             {% endfor %}
         </div>
-        <div class="payments">
-            {% for block in section.blocks %}
-                {% assign payment = block.settings %}
-                <div class="payments__item">{{ payment.icon }}</div>
-            {% endfor %}
-        </div>
+       {% render 'Payments', color: 'primary' %}
     </div>
 </footer>
 
