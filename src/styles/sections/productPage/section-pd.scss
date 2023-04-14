@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding: 0 45px;
 
     &__wrapper {
         display: flex;
@@ -14,22 +15,21 @@
     }
 
     &__title,
-    &__description {
+    &__description,
+    &__short-description {
         width: 100%;
-        margin-bottom: 25px;
         color: $silver-color;
     }
 
     &__title {
+        margin-bottom: 25px;
         font-size: 60px;
         font-feature-settings: 'swsh' on;
     }
 
-    &__description {
-        display: flex;
-        flex-direction: column;
-        height: 215px; 
-        overflow: hidden;
+    &__description,
+    &__short-description {
+        margin-bottom: 5px;
 
         h3,
         p {
@@ -46,6 +46,64 @@
         p {
             margin: 0 0 20px 0;
             font-weight: 400;
+        }
+    }
+
+    &__description.dn,
+    &__short-description.dn {
+        display: none;
+    }
+
+    &__showmore,
+    &__showless {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        width: fit-content;
+        height: 50px;
+        padding: 0 25px;
+        border: 2px solid $silver-color;
+        font-size: 16px;
+        color: $silver-color;
+        transition: border-color .2s ease, background-color .2s ease, color .2s ease;
+        cursor: pointer;
+
+        .icon {
+            path {
+                transition: stroke .2s ease;
+            }
+        }
+
+        &:hover {
+            border-color: $primary-color;
+            background-color: $primary-color;
+            color: $white-color;
+
+            .icon {
+                path {
+                    stroke: $white-color;
+                }
+            }
+        }
+    }
+
+    &__showmore.dn,
+    &__showless.dn {
+        display: none;
+    }
+
+    &__showless {
+        .icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 0 15px;
+
+        &__title {
+            font-size: 28px;
         }
     }
 }

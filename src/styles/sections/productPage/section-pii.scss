@@ -1,0 +1,86 @@
+@import '../../variables.scss';
+
+.section-pii {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 45px;
+    background-color: $silver-color;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 45px;
+        width: 100%;
+        max-width: $second-wrapper;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 440px;
+
+        .logo {
+            position: relative;
+        }
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .background {
+            position: unset;
+            top: unset;
+            left: unset;
+            transform: none;
+        }
+
+        .title,
+        .description {
+            text-align: center;
+            color: $lighten_secondary-color;
+        }
+
+        .title {
+            font-size: 20px;
+            line-height: 1.2;
+        }
+
+        .description {
+            font-family: 'Helvetica';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.44;
+        }
+    }
+
+    &__line {
+        height: 110px;
+        width: 1px;
+        background-color: $pre_lighten_silver-color;
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 30px 15px;
+
+        &__wrapper {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &__line {
+            width: 110px;
+            height: 1px;
+        }
+    }
+}

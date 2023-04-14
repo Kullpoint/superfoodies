@@ -15,7 +15,7 @@
   \***********************************************/
 /***/ (() => {
 
-eval("\n\n\n//# sourceURL=webpack://superfoodies/./src/scripts/productPage/section-pd.js?");
+eval("const showmoreLogic = () => {\n    const sections = document.querySelectorAll('[data-product-description-section]');\n\n    for (const section of sections) {\n        const shortDescription = section.querySelector('[data-short-description]');\n        const description = section.querySelector('[data-description]');\n        const showmoreBtn = section.querySelector('[data-showmore-btn]');\n        const showlessBtn = section.querySelector('[data-showless-btn]');\n\n        const showMore = () => {\n            shortDescription.classList.add('dn');\n            description.classList.remove('dn');\n            showmoreBtn.classList.add('dn');\n            showlessBtn.classList.remove('dn');\n        }\n\n        const showLess = () => {\n            shortDescription.classList.remove('dn');\n            description.classList.add('dn');\n            showmoreBtn.classList.remove('dn');\n            showlessBtn.classList.add('dn');\n        }\n\n        showmoreBtn.addEventListener('click', () => {\n            showMore();\n        });\n\n        showlessBtn.addEventListener('click', () => {\n            showLess();\n        });\n    }\n}\n\nshowmoreLogic();\n\n\n//# sourceURL=webpack://superfoodies/./src/scripts/productPage/section-pd.js?");
 
 /***/ })
 

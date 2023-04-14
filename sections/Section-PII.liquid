@@ -1,0 +1,101 @@
+{% liquid
+    render 'Section-styles', name: 'section-pii'
+%}
+
+<style>
+    #shopify-section-{{ section.id }} .section-pii {
+        padding-top: {{ section.settings.padding-top }}px;
+        padding-bottom: {{ section.settings.padding-bottom }}px;
+    }
+</style>
+
+<section class="section-pii">
+    <div class="section-pii__wrapper">
+        {% assign firstItem = section.blocks[0].settings %}
+        {% assign secondItem = section.blocks[1].settings %}
+
+        <div class="section-pii__item">
+            <div class="logo">
+                <svg width="104" height="101" viewBox="0 0 104 101" fill="none" class="background">
+                    <path d="M65.7617 2.00864C72.8154 4.07207 78.926 8.28918 84.5277 13.0465C90.2253 17.8852 95.4268 23.3246 98.747 30.0217C102.177 36.9412 104.199 44.573 103.985 52.2933C103.768 60.1133 101.563 67.8533 97.5118 74.5458C93.5187 81.1425 87.3019 85.8967 80.9756 90.3057C74.6712 94.6993 68.1533 99.338 60.5317 100.318C52.9813 101.289 45.6666 98.176 38.4429 95.7741C31.4098 93.4355 24.3787 91.0162 18.5998 86.3753C12.6686 81.612 7.85245 75.5685 4.67622 68.6563C1.4391 61.6116 -0.506481 53.8749 0.114411 46.1469C0.730667 38.4766 4.39875 31.5246 8.19719 24.8324C11.9755 18.1758 15.9064 11.2901 22.2933 7.07191C28.6269 2.88891 36.4562 2.06767 43.9954 1.18949C51.2988 0.338783 58.7047 -0.0557642 65.7617 2.00864Z" fill="#A39F8A"/>
+                </svg>
+                {{ firstItem.icon }}
+            </div>
+            <div class="title">{{ firstItem.title }}</div>
+            <div class="description">{{ firstItem.description }}</div>
+        </div>
+        <div class="section-pii__line"></div>
+        <div class="section-pii__item">
+            <div class="logo">
+                <svg width="104" height="101" viewBox="0 0 104 101" fill="none" class="background">
+                    <path d="M65.7617 2.00864C72.8154 4.07207 78.926 8.28918 84.5277 13.0465C90.2253 17.8852 95.4268 23.3246 98.747 30.0217C102.177 36.9412 104.199 44.573 103.985 52.2933C103.768 60.1133 101.563 67.8533 97.5118 74.5458C93.5187 81.1425 87.3019 85.8967 80.9756 90.3057C74.6712 94.6993 68.1533 99.338 60.5317 100.318C52.9813 101.289 45.6666 98.176 38.4429 95.7741C31.4098 93.4355 24.3787 91.0162 18.5998 86.3753C12.6686 81.612 7.85245 75.5685 4.67622 68.6563C1.4391 61.6116 -0.506481 53.8749 0.114411 46.1469C0.730667 38.4766 4.39875 31.5246 8.19719 24.8324C11.9755 18.1758 15.9064 11.2901 22.2933 7.07191C28.6269 2.88891 36.4562 2.06767 43.9954 1.18949C51.2988 0.338783 58.7047 -0.0557642 65.7617 2.00864Z" fill="#A39F8A"/>
+                </svg>
+                {{ secondItem.icon }}
+            </div>
+            <div class="title">{{ secondItem.title }}</div>
+            <div class="description">{{ secondItem.description }}</div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Product info items",
+        "settings": [
+            {
+                "type": "range",
+                "id": "padding-top",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Padding top",
+                "default": 65
+            },
+            {
+                "type": "range",
+                "id": "padding-bottom",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Padding bottom",
+                "default": 65
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Item",
+                "type": "block",
+                "limit": 2,
+                "settings": [
+                    {
+                        "type": "textarea",
+                        "id": "icon",
+                        "label": "Icon",
+                        "info": "Put an svg icon code here"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "description",
+                        "label": "Description",
+                        "info": "Use <br> to break a line"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Product info items",
+                "settings": {
+
+                }
+            }
+        ]
+    }
+{% endschema %}

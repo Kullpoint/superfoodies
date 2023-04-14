@@ -1,0 +1,86 @@
+@import '../variables.scss';
+
+.section-questions {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 45px;
+
+    .vegetales-bg {
+        position: absolute;
+        top: -50%;
+        left: 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: $second-wrapper;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        font-size: 60px;
+        font-feature-settings: 'swsh' on;
+        color: $silver-color;
+    }
+
+    &__container {
+        width: 100%;
+        border-top: 1px solid $light_brown-color;
+
+        .item {
+            width: 100%;
+            padding: 20px 0;
+            border-bottom: 1px solid $light_brown-color;
+
+            &__title,
+            &__content {
+                font-family: 'Helvetica';
+                font-size: 18px;
+                line-height: 1.44;
+                color: $silver-color;
+            }
+
+            &__title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 40px;
+                font-weight: 700;
+                cursor: pointer;
+
+                .minus-icon,
+                .plus-icon {
+                    min-width: 15px;
+                }
+
+                .minus-icon.dn,
+                .plus-icon.dn {
+                    display: none;
+                }
+            }
+
+            &__content {
+                max-width: 1440px;
+                font-weight: 400;
+            }
+        
+            &__content.dn {
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 0 15px;
+
+        &__title {
+            font-size: 28px;
+        }
+    }
+}

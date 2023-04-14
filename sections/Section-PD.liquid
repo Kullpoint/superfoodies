@@ -8,12 +8,22 @@
         padding-top: {{ section.settings.padding-top }}px;
         padding-bottom: {{ section.settings.padding-bottom }}px;
     }
+
+    @media screen and (max-width: 768px) {
+        #shopify-section-{{ section.id }} .section-pd {
+            padding-top: 25px;
+            padding-bottom: 50px;
+        }
+    }
 </style>
 
-<section class="section-pd">
+<section class="section-pd" data-product-description-section="{{ section.id }}">
     <div class="section-pd__wrapper">
         <h2 class="section-pd__title">{{ section.settings.title }}</h2>
-        <div class="section-pd__description">{{ section.settings.description }}</div>
+        <div class="section-pd__short-description" data-short-description>{{ section.settings.description | truncate: 740 }}</div>
+        <div class="section-pd__description dn" data-description>{{ section.settings.description }}</div>
+        <div class="section-pd__showmore" data-showmore-btn>MEER LEZEN {% render 'Chevrons', direction: 'down' %}</div>
+        <div class="section-pd__showless dn" data-showless-btn>VARSTOPPEN {% render 'Chevrons', direction: 'down' %}</div>
     </div>
 </section>
 

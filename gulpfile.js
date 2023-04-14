@@ -12,6 +12,7 @@ const sassFiles = [
     //product page
     'src/styles/sections/productPage/section-product.scss',
     'src/styles/sections/productPage/section-pd.scss',
+    'src/styles/sections/productPage/section-pii.scss',
     //all reusable sections
     'src/styles/sections/section-pwi.scss',
     'src/styles/sections/section-iwi.scss',
@@ -27,6 +28,8 @@ const sassFiles = [
     'src/styles/sections/section-contact.scss',
     'src/styles/sections/section-iwv.scss',
     'src/styles/sections/section-fiwt.scss',
+    'src/styles/sections/section-fiwi.scss',
+    'src/styles/sections/section-questions.scss',
     'src/styles/sections/section-cart.scss',
 ];
 

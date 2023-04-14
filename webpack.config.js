@@ -15,6 +15,7 @@ module.exports = {
         //sections
         'section-pwi': path.resolve(__dirname, 'src/scripts/sections/section-pwi.js'),
         'section-gallery': path.resolve(__dirname, 'src/scripts/sections/section-gallery.js'),
+        'section-questions': path.resolve(__dirname, 'src/scripts/sections/section-questions.js'),
         'section-cart': path.resolve(__dirname, 'src/scripts/sections/section-cart.js'),
     },
     output: {
