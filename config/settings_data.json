@@ -2014,6 +2014,20 @@
       "1590652490979",
       "1602688565274",
       "1590649518586"
-    ]
+    ],
+    "blocks": {
+      "10249797228608187657": {
+        "type": "shopify:\/\/apps\/smart-search-product-filter\/blocks\/core\/45de52d0-b602-4c6e-aa3b-61524a251869",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "16789939927838974014": {
+        "type": "shopify:\/\/apps\/rivyo-product-reviews-qa\/blocks\/app-embed\/f1860e84-309f-40ca-a2df-188435a622f3",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   }
 }

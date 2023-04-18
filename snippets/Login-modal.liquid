@@ -1,0 +1,35 @@
+<div class="login-modal">
+    {% form 'customer_login', class: 'login-modal__modal' %}
+        <div class="modal__wrapper">
+            <h3 class="modal__title">INLOGGEN</h3>
+            <div class="modal__close">{% render 'Icon-close-modal' %}</div>
+
+            <label class="modal__label">
+                <div class="title">Email</div>
+                <input type="email" name="customer[email]" autocorrect="off" autocapitalize="off" autocomplete="email" placeholder="balamia@gmail.com" class="input">
+            </label>
+            <label class="modal__label" data-show-hide-password-container>
+                <div class="title">
+                    Password
+                    <div class="title__recover">Wachtwoord vergeten?</div>
+                </div>
+                <input type="password" name="customer[password]" placeholder="Enter your password" class="input" data-show-hide-password-input="password">
+                <div class="show-icon dn" data-show-hide-password-button="show_password">{% render 'Icons-password', icon: 'show' %}</div>
+                <div class="hide-icon" data-show-hide-password-button="hide_password">{% render 'Icons-password', icon: 'hide' %}</div>
+            </label>
+            <button class="modal__submit" id="login_submit_btn">INLOGGEN</button>
+            <div class="one-click-social-login"></div>
+            <div class="modal__register">Account Aanmaken</div>
+        </div>
+
+        {{ form.errors | default_errors }}
+      
+        <p>
+          {{ 'Create Account Aanmaken' | customer_register_link }}
+        </p>
+        <p>
+          <a href="#recover">Forgot your password?</a>
+        </p>
+      
+      {% endform %}
+</div>

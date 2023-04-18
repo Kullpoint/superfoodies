@@ -1,4 +1,5 @@
-import { productQuantityChanger } from './modules/productQuantityChanger';
+import { loginModal } from './components/loginModal';
+import { showHidePassword } from './modules/showHidePassword';
 
 const removePreloader = () => {
     const preloader = document.getElementById('preloader');
@@ -186,18 +187,38 @@ const addToCartLogic = () => {
 
     if (products.length > 0) {
         for (const product of products) {
-            const productID = product.getAttribute('[data-product]');
-            const productQuantity = product.querySelector('[data-product-quantity]');
             const productSubmit = product.querySelector('[data-product-submit]');
-            const updateObj = {};
 
             productSubmit.addEventListener('click', () => {
-                
+                const productID = product.getAttribute('data-product');
+                const productQuantity = product.querySelector('[data-product-quantity]').value;
+                const updateObj = {};
+
+                updateObj[productID] = productQuantity;
+
+                fetch(window.Shopify.routes.root + 'cart/update.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(
+                        {
+                            updates: updateObj
+                        }
+                    )
+                })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
             });
         }
     }
 
-    if (addToCartButton) {
+    if (false) {
         addToCartButton.addEventListener("click", (e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -370,5 +391,6 @@ document.addEventListener('DOMContentLoaded', () => {
     addToCartLogic();
     videoLogic();
     yearChanger();
-    productQuantityChanger();
+    loginModal();
+    showHidePassword();
 });

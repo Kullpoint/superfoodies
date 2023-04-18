@@ -12,6 +12,7 @@ $desktopXXL:                                     1599px;
 /* ==================================================== LAYOUTS ==================================================== */
 $second-wrapper:                                 1200px;
 $big_second-wrapper:                             1260px;
+$small_main-wrapper:                             1460px;
 $main-wrapper:                                   1600px;
 /* ===================================================== COLORS ==================================================== */
 //main
@@ -23,16 +24,19 @@ $black-color:                                 #000000;
 //white
 $white-color:                                 #FFFFFF;
 $dark_white-color:                            #BBBBBB;
+$darken_white-color:                          #BEBEBF;
 //silver
 $pre_lighten_silver-color:                    #E8E8E8;
 $lighten_silver-color:                        #E1D8C7;
 $pre_light-silver:                            #989898;
 $light_silver-color:                          #7D7A66;
 $new_light_silver-color:                      #7A7777;
+$new_pre_silver-color:                        #5A5A5D;
 $pre_silver-color:                            #585858;
 $silver-color:                                #4E4A33;
 //brown
 $lighten_brown-color:                         #F3E8D2;
+$pre_light_brown-color:                       #A29F8A;
 $light_brown-color:                           #A39F8A;
 //gray
 $light_gray-color:                            #CFD3B8;

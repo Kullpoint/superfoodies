@@ -1,0 +1,62 @@
+@import '../../variables.scss';
+
+.section-collection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 121px;
+    padding: 25px 45px 65px;
+
+    &__wrapper {
+        width: 100%;
+        max-width: $small_main-wrapper;
+        display: flex;
+    }
+
+    .back-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 35px;
+        font-size: 14px;
+        color: $silver-color;
+        transition: color .2s ease;
+
+        .icon {
+            width: 18px;
+
+            path {
+                transition: fill .2s ease;
+            }
+        }
+
+        &:hover {
+            color: $primary-color;
+
+            .icon {
+                path {
+                    fill: $primary-color;
+                }
+            }
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        gap: 60px;
+    }
+
+    .filter,
+    .collection {
+        width: 100%;
+    }
+
+    .filter {
+
+    }
+
+    .collection {
+
+    }
+}

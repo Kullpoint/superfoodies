@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="section-product__info">
-            <div class="wrapper" data-product="{{ product.id }}">
+                    <div class="wrapper" data-product="{% if product.variants.size > 1 %}{{ product.variants[0].id }}{% else %}{{ product.id }}{% endif %}">
                 <div class="head">
                     <div class="head__title">“Heerlijke Zaadjes Voor In De Havermout Of Over Een Smoothie.”</div>
                     <div class="head__subtitle">— Lotte A., Gepelde hennep zaden klant</div>
