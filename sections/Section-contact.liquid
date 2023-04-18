@@ -1,0 +1,153 @@
+{% liquid
+    render 'Section-styles', name: 'section-contact'
+    render 'Section-scripts', name: 'section-contact'
+%}
+
+<style>
+    .section-contact {
+        margin-top: {{ section.settings.margin-top }}px;
+        margin-bottom: {{ section.settings.margin-bottom }}px;
+    }
+
+
+</style>
+
+<section class="section-contact">
+    <div class="section-contact__wrapper">
+        <h1 class="section-contact__title">Contact</h1>
+        <p class="section-contact__description">
+            Wil je met ons in contact komen?
+            Dat kan door simpelweg dit formulier in te vullen of door middel van e-mail, telefoon of live chat.
+            Superfoods BV is bereikbaar van maandag t/m vrijdag 09:00 — 18:00
+            (kerstdagen en nieuwjaarsdag uitgezonderd
+        </p>
+        <h3 class="section-contact__form-title">Laat een bericht achter</h3>
+        <div class="section-contact__body">
+            <div class="section-contact__form">
+                {% form 'contact' %}
+                    <input type="text" id="ContactFormName" name="contact[name]" placeholder="Name *">
+                    <input type="email" id="ContactFormEmail" name="contact[email]" placeholder="Email">
+                    <input type="tel" id="ContactFormPhone" name="contact[phone]" placeholder="telefoonnummer *">
+                    <textarea rows="10" id="ContactFormMessage" name="contact[body]" placeholder="Uw  bericht"></textarea>
+                    <input type="submit" value="Verstuur">
+                    {% if form.posted_successfully %} Thank you for your contact {% endif %}
+                    {{ form.errors | default_errors }}
+              {% endform %}
+            </div>
+            <div class="section-contact__info">
+                <div class="section-contact__phone-numbers section-contact__info-block">
+                    <h4>Telefoonnummer</h4>
+                    <ul>
+                        <li>
+                            <a href="tel:+31(0)20 700 98 57">+31(0)20 700 98 57</a>
+                        </li>
+                        <li>
+                            <a href="tel:+31(0)6 2790 5385">+31(0)6 2790 5385 (WhatsApp)</a> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="section-contact__email section-contact__info-block">
+                    <h4>Email</h4>
+                    <a href="mailto:info@superfoodies.com">info@superfoodies.com</a>
+                </div>
+                <div class="section-contact__social section-contact__info-block">
+                    <h4>Volg ons</h4>
+                    <ul>
+                        <a href="">
+                            {% render 'Icon-facebook' %}
+                        </a>
+                        <a href="">
+                            {% render 'Icon-instagram' %}
+                        </a>
+                        <a href="">
+                            {% render 'Icon-youtube' %}
+                        </a>
+                    </ul>
+                </div>
+                <div class="section-contact__text section-contact__info-block">
+                    <p>
+                        "De Europese Commissie biedt een platform voor online geschillenbeslechting aan voor consumenten, die u kunt vinden op http://ec.europa.eu/consumers/odr/. Wij nemen niet deel aan een geschillenbeslechtingsprocedure."
+                    </p>
+                </div>
+                <div class="section-contact__address section-contact__info-block">
+                    <h4>Address</h4>
+                    <p>Distributiecentrum: <br>
+                        Superfoodies.nl Antwoordnummer 101072700 VB Zoetermeer[Voor informatie over retourneren, klik Retourneren]</p>
+                    <p>Kantoor: 
+                    </p>
+                    <p>Superfoods BV </p>
+                    <p>Kanaalweg 261121</p>
+                    <p>DRLandsmeerThe Netherlands</p>
+                    <p>KvK: 54552958BTW:</p>
+                    <p> NL.851348749.B0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Contact",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "Mijn winkelmandje"
+            },
+            {
+                "type": "textarea",
+                "id": "description",
+                "label": "Description",
+                "info": "Use <br> to break a line"
+            },
+            {
+                "type": "range",
+                "id": "margin-top",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Margin top",
+                "default": 185
+            },
+            {
+                "type": "range",
+                "id": "margin-bottom",
+                "min": 0,
+                "max": 200,
+                "step": 5,
+                "unit": "px",
+                "label": "Margin bottom",
+                "default": 45
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Item",
+                "type": "block",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "item-logo",
+                        "label": "Partner logo"
+                    },
+                    {
+                        "type": "url",
+                        "id": "item-url",
+                        "label": "Partner link"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Contact section",
+                "settings": {
+
+                }
+            }
+        ]
+    }
+{% endschema %}

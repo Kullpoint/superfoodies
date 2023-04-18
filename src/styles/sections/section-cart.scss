@@ -1,4 +1,5 @@
 @import '../variables.scss';
+@import '../components/info-items.scss';
 
 .section-cart {
 
@@ -56,11 +57,16 @@
 
     @media screen and (max-width: $laptop) {
         &__wrapper {
-            margin: 0 15px;
+            padding: 0 15px;
         }
     }
 
     @media screen and (max-width: $tabletXL) {
+        &__wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
         &__form {
             flex-direction: column;
         }
@@ -72,16 +78,48 @@
     }
 
     @media screen and (max-width: $mobile) {
-        margin-top: 140px;
+        &__title {
+            font-size: 28px;
+            line-height: 34px;
+            margin-bottom: 24px;
+        }
+
+        &__static-product-data h6 {
+            display: none;
+        }
+
+        &__products-block {
+            margin-top: 0;
+        }
+
+        &__static-product-data {
+            padding: 0;
+        }
+
+        &__form{
+            gap: 32px;
+        }
 
     }
 
 }
 
+.info-items {
+    margin-top: 22px;
+    max-width: 735px;
+
+    @media screen and (max-width: $tabletXL) {
+        max-width: 100%;
+    }
+
+    @media screen and (max-width: $mobile) {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+        margin-top: 44px;
+    }
+}
+
 .cart-product {
-
-    
-
     &__inner {
         display: grid;
         grid-template-columns: 68% 1fr 1fr;
@@ -168,6 +206,29 @@
             }
         }
        
+    }
+
+    @media screen and (max-width: $mobile) {
+        &__inner {
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 75% 0fr 25%;
+        }
+
+        &__info{
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        &__price{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            display: flex;
+            width: 100%;
+        }
+
+        &__price h4:first-child{
+            display: none;
+        }
 
     }
 }
@@ -212,8 +273,21 @@
         width: 50%;
         padding-right: 15px;
 
-        svg{
+        svg {
             cursor: pointer;
+        }
+
+    }
+
+    @media screen and (max-width: $mobile) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        display: flex;
+        justify-content: end;
+        width: 100%;
+
+        &__inner{
+            margin-top: 0;
         }
 
     }
@@ -279,14 +353,22 @@
             align-items: center;
         }
 
-        &__button {
-            max-width: 388px;
-        }
     }
 
     @media screen and (max-width: $tablet) {
         &__inner {
             padding: 21px 15px 26px;
+        }
+
+        &__header {
+            padding: 0 10px;
+            margin-bottom: 10px;
+        }
+
+        &__text {
+            padding: 0 6px;
+            margin-top: 0;
+            margin-bottom: 15px;
         }
     }
 
