@@ -4,8 +4,8 @@
             "type": "Section-cart"
         },
         "contact": {
-            "type": "Section-contact"
+            "type": "Section-subscribe"
         }
     },
-    "order": ["template","contact"]
+    "order": ["template","subscribe"]
 }

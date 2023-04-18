@@ -1,27 +1,27 @@
 {% liquid
-    render 'Section-styles', name: 'section-contact'
-    render 'Section-scripts', name: 'section-contact'
+    render 'Section-styles', name: 'section-subscribe'
+    render 'Section-scripts', name: 'section-subscribe'
 %}
 
 <style>
-    .section-contact {
+    .section-subscribe {
         margin-top: {{ section.settings.margin-top }}px;
         margin-bottom: {{ section.settings.margin-bottom }}px;
     }
 </style>
 
-<section class="section-contact">
+<section class="section-subscribe">
     {% if section.settings.bg-image %}
-        <img src="{{ section.settings.bg-image | image_url }}" width="auto" height="auto" loading="lazy" class="section-contact__background">
+        <img src="{{ section.settings.bg-image | image_url }}" width="auto" height="auto" loading="lazy" class="section-subscribe__background">
     {% else %}
-        <img src="{{ 'Contact_BG.png' | asset_url }}" width="auto" height="auto" loading="lazy" class="section-contact__background">
+        <img src="{{ 'Contact_BG.png' | asset_url }}" width="auto" height="auto" loading="lazy" class="section-subscribe__background">
     {% endif %}
-    <div class="section-contact__wrapper">
+    <div class="section-subscribe__wrapper">
         {% if section.settings.slogan %}
-            <div class="section-contact__slogan">{{ section.settings.slogan }}</div>
+            <div class="section-subscribe__slogan">{{ section.settings.slogan }}</div>
         {% endif %}
-        <h2 class="section-contact__title">{{ section.settings.title }}</h2>
-        <div class="section-contact__description">{{ section.settings.description }}</div>
+        <h2 class="section-subscribe__title">{{ section.settings.title }}</h2>
+        <div class="section-subscribe__description">{{ section.settings.description }}</div>
         {% form 'contact' %}
             <input name="contact[tags]" type="hidden" value="prospect, newsletter">
             <input id="subscription-input" name="contact[email]" type="input" placeholder="{{ section.settings.form-email-placeholder }}" class="input">
@@ -41,7 +41,7 @@
 
 {% schema %}
     {
-        "name": "Contact section",
+        "name": "Subscribe section",
         "settings": [
             {
                 "type": "image_picker",
@@ -102,7 +102,7 @@
         ],
         "presets": [
             {
-                "name": "Contact section",
+                "name": "Subscribe section",
                 "settings": {
 
                 }

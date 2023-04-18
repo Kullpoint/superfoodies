@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="section-product__info">
-            <div class="wrapper">
+            <div class="wrapper" data-product="{{ product.id }}">
                 <div class="head">
                     <div class="head__title">“Heerlijke Zaadjes Voor In De Havermout Of Over Een Smoothie.”</div>
                     <div class="head__subtitle">— Lotte A., Gepelde hennep zaden klant</div>
@@ -76,7 +76,7 @@
                 <div class="buttons">
                     <div class="buttons__counter-wrapper">
                         <div class="price">{{ product.variants[0].price | money | replace: '.' , ',' }}</div>
-                        <select name="quantity" autocomplete="off" id="quantity" class="buttons__counter">
+                        <select name="quantity" autocomplete="off" class="buttons__counter" data-product-quantity>
                             {% assign inventoryQuantity = product.variants[0].inventory_quantity %}
                             {% assign inventoryQuantityRange = (1..inventoryQuantity) %}
                             {% for item in inventoryQuantityRange %}
@@ -85,11 +85,10 @@
                         </select>
                         {% render 'Chevrons', direction: 'down' %}
                     </div>
-                    <div class="buttons__submit">VOEG TOE</div>
+                    <div class="buttons__submit" data-product-submit>VOEG TOE</div>
                     <div class="buttons__favourites">
                         {% render 'Icons', icon: 'hearth' %}
                     </div>
-                    {% render 'Payments', color: 'primary' %}
                 </div>
                 {% if product.metafields.labels != blank %}
                     <div class="labels mobile">

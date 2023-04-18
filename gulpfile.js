@@ -10,6 +10,7 @@ const sassFiles = [
     //main page
     'src/styles/sections/mainPage/section-hero.scss',
     //product page
+    'src/styles/sections/productPage/productPage.scss',
     'src/styles/sections/productPage/section-product.scss',
     'src/styles/sections/productPage/section-pd.scss',
     'src/styles/sections/productPage/section-pii.scss',
@@ -25,7 +26,7 @@ const sassFiles = [
     'src/styles/sections/section-collections.scss',
     'src/styles/sections/section-reviews.scss',
     'src/styles/sections/section-recipes.scss',
-    'src/styles/sections/section-contact.scss',
+    'src/styles/sections/section-subscribe.scss',
     'src/styles/sections/section-iwv.scss',
     'src/styles/sections/section-fiwt.scss',
     'src/styles/sections/section-fiwi.scss',

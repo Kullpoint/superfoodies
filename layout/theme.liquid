@@ -16,6 +16,9 @@
             {% assign templateStyles = page.handle | append: '.css' %}
             {{ templateStyles | asset_url | stylesheet_tag }}
         {% endif %} {% endcomment %}
+        {% if template.name == 'product' %}
+            {{ 'productPage.css' | asset_url | stylesheet_tag }}
+        {% endif %}
     </head>
   <body style="overflow: hidden;">
     {% render 'Preloader' %}
