@@ -1,10 +1,23 @@
 @import '../variables.scss';
 
 .section-contact {
+    padding-top: 185px;
+    padding-bottom: 135px;
+    position: relative;
+
+    .vegetale-4-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        user-select: none;
+    }
 
     &__wrapper {
         max-width: $second-wrapper;
         margin: 0 auto;
+        position: relative;
+        z-index: 5;
     }
 
     &__title {
@@ -13,6 +26,7 @@
         font-size: 46px;
         line-height: 45px;
         color: $silver-color;
+        font-feature-settings: 'swsh' on;
     }
 
     &__description {
@@ -40,58 +54,58 @@
     }
 
     &__form {
-        display: flex;
-        flex: 0 0 490px;
         max-width: 490px;
-    }
-
-    &__form .contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
         width: 100%;
-    }
 
-    &__form :is(textarea, input) {
-        font-family: 'Helvetica';
-        box-sizing: border-box;
-        min-height: 50px;
-        background-color: transparent;
-        border: 1px solid $new_silver-color;
-        color: $new_silver-color;
-        padding-left: 20px;
-        font-family: 'Helvetica';
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 24px;
-    }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
 
-    &__form textarea {
-        padding-top: 12px;
-        height: 212px;
-    }
+        :is(textarea, input) {
+            font-family: 'Helvetica';
+            box-sizing: border-box;
+            min-height: 50px;
+            background-color: transparent;
+            border: 1px solid $new_silver-color;
+            color: $new_silver-color;
+            padding-left: 20px;
+            font-family: 'Helvetica';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+        }
 
-    &__form input[type="submit"] {
-        font-family: 'Operetta 8';
-        width: 193px;
-        height: 52px;
-        padding-left: 0;
-        background-color: $primary-color;
-        color: $white-color;
-        border: 1px solid $primary-color;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 44px;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: background-color .2s ease,color .2s ease;
-    }
+        textarea {
+            padding-top: 12px;
+            height: 212px;
+            resize: none;
+        }
 
-    &__form input[type="submit"]:hover {
-        background-color: transparent;
-        color: $primary-color;
-    }
+        input[type="submit"] {
+            font-family: 'Operetta 8';
+            width: 193px;
+            height: 52px;
+            padding-left: 0;
+            background-color: $primary-color;
+            color: $white-color;
+            border: 1px solid $primary-color;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 44px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color .2s ease,color .2s ease;
+        }
 
+        input[type="submit"]:hover {
+            background-color: transparent;
+            color: $primary-color;
+        }
+    
+    }
 
     &__info {
         flex: 0 0 auto;
@@ -103,19 +117,22 @@
         max-height: 527px;
     }
 
-    &__social ul {
-        margin-top: 6px;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
+    &__social {
 
-    &__social path {
-        transition: fill .2s ease;
-    }
+        ul {
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-    &__social a:hover path {
-        fill: $primary-color;
+        path {
+            transition: fill .2s ease;
+        }
+
+        a:hover path {
+            fill: $primary-color;
+        }
     }
 
     &__text {
@@ -124,27 +141,88 @@
 
     &__info-block {
         max-width: 300px;
+
+        h4 {
+            font-family: 'Helvetica';
+            line-height: 30px;
+            font-weight: 700;
+            font-size: 18px;
+            color: $silver-color;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        a:hover {
+            color: $primary-color;;
+        }
+
+        :is(a, li, p) {
+            font-family: 'Helvetica';
+            line-height: 30px;
+            font-weight: 400;
+            font-size: 18px;
+            color: $silver-color;
+            transition: background-color .2s ease,color .2s ease;
+        }
     }
 
-    &__info-block h4 {
-        font-family: 'Helvetica';
-        line-height: 30px;
-        font-weight: 700;
-        font-size: 18px;
-        color: $silver-color;
 
+
+    @media screen and (max-width: $laptop) {
+        &__wrapper {
+            max-width: $tabletXL;
+        }
+
+        &__info {
+            max-height: 100%;
+        }
     }
 
-    &__info-block p {
-        margin: 0;
+    @media screen and (max-width: $tabletXL) {
+        &__wrapper {
+            max-width: $tablet;
+        }
+
+        &__body {
+            flex-direction: column;
+        }
+
+        &__form {
+            max-width: 100%;
+        }
+
+        &__info {
+            max-height: 527px;
+        }
     }
 
-    &__info-block :is(a, li, p) {
-        font-family: 'Helvetica';
-        line-height: 30px;
-        font-weight: 400;
-        font-size: 18px;
-        color: $silver-color;
+    @media screen and (max-width: $tablet) {
+        &__wrapper {
+            margin: 0 15px;
+        }
+
+        &__info {
+            max-height: 100%;
+        }
     }
+
+    @media screen and (max-width: $mobile) {
+        padding-top: 142px;
+        padding-bottom: 60px;
+
+
+        &__title {
+            margin-bottom: 16px;
+            font-size: 28px;
+            line-height: 34px;
+        }
+
+        &__description {
+            margin-bottom: 16px;
+        }
+    }
+
 
 }
