@@ -14,16 +14,60 @@
 
 <section class="section-blog">
     <div class="section-blog__wrapper">
-        <h1 class="section-blog__title">Contact</h1>
-        <p class="section-blog__description">
-            Wil je met ons in blog komen?
-            Dat kan door simpelweg dit formulier in te vullen of door middel van e-mail, telefoon of live chat.
-            Superfoods BV is bereikbaar van maandag t/m vrijdag 09:00 — 18:00
-            (kerstdagen en nieuwjaarsdag uitgezonderd
-        </p>
-        <div class="section-blog__body">
-            
+        <h1 class="section-blog__title">Recepten waar superfoodies van houden</h1>
+        <div class="section-blog__filter">
+            <h4 class="section-blog__filter-title">
+                Filter by
+                {% render 'Icon-pagination-arrow' %}
+            </h4>
+            <ul class="section-blog__filter-wrapper">
+                <li class="section-blog__filter-tag section-blog__filter-tag_uppercase active" all-posts-btn>
+                    <a href="{{ blog.url }}">Alle</a>
+                </li>
+                {% for tag in blog.all_tags %}
+                    {% assign tagHandle = tag | remove: '&' | replace: '  ', '-' | replace: ' ', '-' | remove: '(' | remove: ')' %}
+                    <li class="section-blog__filter-tag" >
+                        <a href="{{ blog.url }}/tagged/{{ tagHandle }}" filter-btn>{{ tag }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
+        {% paginate blog.articles by 8 %}
+            <div class="section-blog__body">
+                {% for article in blog.articles %}
+                    <div class="article-card">
+                        <a class="article-card__image" href="{{ article.url }}">
+                            <img src="{{ article.image | image_url }}" alt="{{ article.image.src }}" loading="lazy" width="{{ article.image.width }}" height="{{ article.image.height }}">
+                        </a>
+                        <div class="article-card__date">
+                            <h6>{{ article.tags[0] }}</h6>
+                            {% render 'Icon-blog-date-star' %}
+                            <h6>{{ article.published_at | date: "%b. %d, %Y" }}</h6>
+                        </div>
+                        <a href="{{ article.url }}" class="article-card__title">{{ article.title }}</a >
+                    </div>
+                {% endfor %}
+            </div>
+            {% if paginate.pages > 1 %}
+                <nav class="section-blog__pagination">
+                    {% if paginate.previous.url %}
+                        <a href="{{ paginate.previous.url }}" class="prew-button">{% render 'Icon-pagination-arrow' %}</a>
+                    {% endif %}
+                    
+                    {% for part in paginate.parts %}
+                            {% if part.is_link %}
+                            <a href="{{ part.url }}" class="page-button">{{ part.title }}</a>
+                        {% else %}
+                            <span class="curr-page-button">{{ part.title }}</span>
+                            {% endif %}
+                    {% endfor %}
+
+                    {% if paginate.next.url %}
+                        <a href="{{ paginate.next.url }}" class="next-button">{% render 'Icon-pagination-arrow' %}</a>
+                    {% endif %}
+                </nav>
+            {% endif %}
+        {% endpaginate %}
     </div>
 </section>
 
@@ -51,7 +95,7 @@
                 "step": 5,
                 "unit": "px",
                 "label": "Margin top",
-                "default": 185
+                "default": 160
             },
             {
                 "type": "range",
@@ -61,7 +105,7 @@
                 "step": 5,
                 "unit": "px",
                 "label": "Margin bottom",
-                "default": 45
+                "default": 105
             }
         ],
         "blocks": [
@@ -83,12 +127,7 @@
             }
         ],
         "presets": [
-            {
-                "name": "Blog template",
-                "settings": {
 
-                }
-            }
         ]
     }
 {% endschema %}

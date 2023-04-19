@@ -1,7 +1,44 @@
 {
     "sections": {
         "template": {
-            "type": "Section-contact"
+            "type": "Section-contact",
+            "blocks": {
+                "phone_number": {
+                    "type": "phone_number",
+                    "settings": {
+                        "title": "Telefoonnummer",
+                        "num-1": "+31(0)20 700 98 57",
+                        "num-2": "+31(0)6 2790 5385",
+                        "num-2-text": "(WhatsApp)"
+                      }
+                },
+                "email": {
+                    "type": "email"
+                },
+                "social": {
+                    "type": "social"
+                },
+                "textual": {
+                    "type": "textual",
+                    "settings": {
+                        "text": "<p>''De Europese Commissie biedt een platform voor online geschillenbeslechting aan voor consumenten, die u kunt vinden op http://ec.europa.eu/consumers/odr/. Wij nemen niet deel aan een geschillenbeslechtingsprocedure.''</p>"
+                    }
+                },
+                "address": {
+                    "type": "address",
+                    "settings": {
+                        "title": "Address",
+                        "address": "<p>Distributiecentrum: <br/>Superfoodies.nl Antwoordnummer 101072700 VB Zoetermeer[Voor informatie over retourneren, klik Retourneren]<br/><br/>Kantoor: <br/>Superfoods BV <br/>Kanaalweg 261121 DRLandsmeerThe Netherlands<br/><br/>KvK: 54552958BTW: NL.851348749.B0</p>"
+                    }
+                }
+            },
+            "block_order": [
+                "phone_number",
+                "email",
+                "social",
+                "textual",
+                "address"
+            ]
         },
         "subscribe": {
             "type": "Section-subscribe"
