@@ -1,10 +1,11 @@
 {
-  "sections": {
-    "section-collection": {
-      "type": "Section-collection"
-    }
-  },
-  "order": [
-    "section-collection"
-  ]
+    "sections": {
+        "template": {
+            "type": "Section-blog"
+        },
+        "subscribe": {
+            "type": "Section-subscribe"
+        }
+    },
+    "order": ["template","subscribe"]
 }

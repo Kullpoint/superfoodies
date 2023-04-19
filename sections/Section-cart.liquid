@@ -8,6 +8,13 @@
         margin-top: {{ section.settings.margin-top }}px;
         margin-bottom: {{ section.settings.margin-bottom }}px;
     }
+
+    @media screen and (max-width: 576px) {
+        .section-cart {
+            margin-top: 140px;
+        }
+    }
+
 </style>
 
 <section class="section-cart">
@@ -59,6 +66,7 @@
                     </div>
                 </div>
             </form>
+            {% render 'Info-items' %}
         {% else %}
             
         {% endif %}
@@ -95,11 +103,63 @@
                 "type": "range",
                 "id": "margin-bottom",
                 "min": 0,
-                "max": 200,
+                "max": 300,
                 "step": 5,
                 "unit": "px",
                 "label": "Margin bottom",
-                "default": 45
+                "default": 290
+            },
+            {
+                "type": "header",
+                "content": "Info items"
+            },
+            {
+                "type": "textarea",
+                "id": "item-icon-1",
+                "info": "Put an svg icon code here",
+                "label": "Item 1 icon"
+            },
+            {
+                "type": "textarea",
+                "id": "item-title-1",
+                "label": "Item 1 title",
+                "default": "Vóór 21:00 besteld (ZO-VR), morgen in huis* *BELGIË 14:30"
+            },
+            {
+                "type": "textarea",
+                "id": "item-icon-2",
+                "info": "Put an svg icon code here",
+                "label": "Item 2 icon"
+            },
+            {
+                "type": "textarea",
+                "id": "item-title-2",
+                "label": "Item 2 title",
+                "default": "Gratis verzending vanaf €59, anders €4,90"
+            },
+            {
+                "type": "textarea",
+                "id": "item-icon-3",
+                "info": "Put an svg icon code here",
+                "label": "Item 3 icon"
+            },
+            {
+                "type": "textarea",
+                "id": "item-title-3",
+                "label": "Item 3 title",
+                "default": "Hoogste kwaliteit producten, bezorgd in heel Europa"
+            },
+            {
+                "type": "textarea",
+                "id": "item-icon-4",
+                "info": "Put an svg icon code here",
+                "label": "Item 4 icon"
+            },
+            {
+                "type": "textarea",
+                "id": "item-title-4",
+                "label": "Item 4 title",
+                "default": "Beste klantenservice & retourneren mogelijk"
             }
         ],
         "blocks": [
@@ -121,12 +181,6 @@
             }
         ],
         "presets": [
-            {
-                "name": "Example section",
-                "settings": {
-
-                }
-            }
         ]
     }
 {% endschema %}

@@ -1,7 +1,7 @@
 {
     "sections": {
         "template": {
-            "type": "Section-cart"
+            "type": "Section-contact"
         },
         "subscribe": {
             "type": "Section-subscribe"
