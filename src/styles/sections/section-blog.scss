@@ -1,0 +1,198 @@
+@import '../variables.scss';
+
+.section-blog{
+    &__wrapper {
+        max-width: $second-wrapper;
+        margin: 0 auto;
+    }
+
+    &__title {
+        margin-bottom: 32px;
+        max-width: 510px;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 60px;
+        font-feature-settings: 'swsh' on;
+        color: $silver-color;
+    }
+
+    &__filter-title {
+        display: none;
+        font-family: 'Teko';
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 26px;
+        text-transform: uppercase;
+        color: $silver-color;
+
+        svg {
+            transform: rotate(-90deg);
+            margin-left: 8px;
+        }
+    }
+
+    &__filter-wrapper {
+        max-width: 1022px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 13px;
+        column-gap: 40px;
+        margin-bottom: 34px;
+    }
+
+    &__filter-tag {
+        font-family: 'Helvetica';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: $silver-color;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+
+    &__filter-tag_uppercase {
+        text-transform: uppercase;
+    }
+
+    &__filter-tag.active {
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 60px 20px;
+        
+
+        .article-card {
+
+            &__image {
+                display: block;
+                margin-bottom: 11px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    aspect-ratio: 1.33;
+                }
+            }
+
+            &__date {
+                margin-bottom: 14px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                h6 {
+                    font-family: 'Helvetica';
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: $silver-color;
+                    text-transform: uppercase;
+                }
+
+                h6:last-child {
+                    white-space: nowrap;
+                }
+            }
+
+            &__title {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                color: $silver-color;
+            }
+        }
+    }
+
+
+    &__pagination {
+        margin-top: 55px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+
+        :is(.next-button, .prew-button) {
+            border: 1px solid $pre_light-silver;
+            padding: 11px 15px;
+        }
+
+        :is(.page-button, .curr-page-button) {
+            font-family: 'Helvetica';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $silver-color;
+        }
+
+        .page-button {
+            border: 1px solid $pre_light-silver;
+            padding: 5px 14.55px;
+            transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+        }
+
+        .page-button:hover, .next-button:hover, .prew-button:hover {
+            background-color: $light_gray-color;
+            border-color: transparent;
+
+        }
+
+        .curr-page-button {
+            padding: 6px 15.55px;
+            background-color: $light_gray-color;
+            cursor: default;
+        }
+
+        .next-button {
+            transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+            svg {
+                transform: rotate(180deg);
+                
+            }
+        }
+
+        .prew-button {
+            transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+        }
+    }
+
+    @media screen and (max-width: $laptop) {
+        &__wrapper {
+            max-width: $tabletXL;
+        }
+    }
+
+    @media screen and (max-width: $tabletXL) {
+        &__wrapper {
+            max-width: $tablet;
+        }
+
+        &__body {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        &__wrapper {
+            margin: 0 15px;
+        }
+
+        &__body {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__filter-title {
+            display: block;
+        }
+
+        &__filter-wrapper {
+            display: none;
+        }
+    }
+
+}
