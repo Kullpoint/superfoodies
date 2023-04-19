@@ -1,7 +1,7 @@
 {% liquid
     render 'Section-styles', name: 'section-collection'
+    render 'Section-scripts', name: 'section-collection'
 %}
-
 
 <!-- BEGIN USF -->
 {%- assign items_per_page = cart.attributes.collection_products_per_page | default: section.settings.default_products_per_page -%}
@@ -92,7 +92,7 @@
         </a>
 
         <div class="container container--flush">
-                <div class="page__sub-header">
+            <div class="page__sub-header">
                 {% comment %} <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb">
                     <ol class="breadcrumb__list">
                     <li class="breadcrumb__item">
@@ -110,50 +110,49 @@
                     </li>
                     </ol>
                 </nav> {% endcomment %}
-                </div>
-
+            </div>
             
             {%- if linklists[section.settings.quick_links].links.size > 0 -%}
-            <div class="card__section card__section--tight collection__quick-links parent" style="display:none;">
-                <p class="card__title--small heading usf-label">
-                <span>{{ "home_page.onboarding.article_category" |t }}</span> 
-                </p>
-                {% comment %}<p class="card__title--small heading">{{ linklists[section.settings.quick_links].title }} </p>{% endcomment %}
-                <ul class="collection__filter-linklist collection__filter-linklist--parent">
-                {%- for link in linklists[section.settings.quick_links].links -%}
-                <li>
-                    {%- if link.links.size > 0 -%}
-                    {%- capture link_id -%}filter-{% increment link_id %}{%- endcapture -%}
+                <div class="card__section card__section--tight collection__quick-links parent" style="display:none;">
+                    <p class="card__title--small heading usf-label">
+                    <span>{{ "home_page.onboarding.article_category" |t }}</span> 
+                    </p>
+                    {% comment %}<p class="card__title--small heading">{{ linklists[section.settings.quick_links].title }} </p>{% endcomment %}
+                    <ul class="collection__filter-linklist collection__filter-linklist--parent">
+                    {%- for link in linklists[section.settings.quick_links].links -%}
+                    <li>
+                        {%- if link.links.size > 0 -%}
+                        {%- capture link_id -%}filter-{% increment link_id %}{%- endcapture -%}
 
-                    <button class="collection__filter-link link link--primary {% if link.active or link.child_active %}is-active{% endif %}" data-action="toggle-collapsible" aria-controls="{{ link_id }}" aria-expanded="{% if link.active or link.child_active %}true{% else %}false{% endif %}">
-                    {{ link.title }} {% if link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ link.object.products_count }}){% endif %} {%- render 'icon', icon: 'arrow-bottom' -%}
-                    </button>
+                        <button class="collection__filter-link link link--primary {% if link.active or link.child_active %}is-active{% endif %}" data-action="toggle-collapsible" aria-controls="{{ link_id }}" aria-expanded="{% if link.active or link.child_active %}true{% else %}false{% endif %}">
+                        {{ link.title }} {% if link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ link.object.products_count }}){% endif %} {%- render 'icon', icon: 'arrow-bottom' -%}
+                        </button>
 
-                    <div id="{{ link_id }}" class="collection__filter-collapsible" {% if link.active or link.child_active %}aria-hidden="false" style="height: auto"{% else %}aria-hidden="true"{% endif %}>
-                    <ul class="collection__filter-linklist">
-                        {%- for sub_link in link.links -%}
-                        <li>
-                        <a style="font-size:14px;font-weight:bold;" href="{{ sub_link.url }}" class="collection__filter-link link link--primary {% if sub_link.active %}is-active{% endif %}"><span>{{ sub_link.title }} {% if sub_link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ sub_link.object.products_count }}){% endif %}</span></a>
+                        <div id="{{ link_id }}" class="collection__filter-collapsible" {% if link.active or link.child_active %}aria-hidden="false" style="height: auto"{% else %}aria-hidden="true"{% endif %}>
                         <ul class="collection__filter-linklist">
-                            {% for sub_sub_link in sub_link.links %}
+                            {%- for sub_link in link.links -%}
                             <li>
-                            <a href="{{ sub_sub_link.url }}" class="collection__filter-link link link--primary {% if sub_sub_link.active %}is-active{% endif %}"><span>{{ sub_sub_link.title }} {% if sub_sub_link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ sub_sub_link.object.products_count }}){% endif %}</span></a>
+                            <a style="font-size:14px;font-weight:bold;" href="{{ sub_link.url }}" class="collection__filter-link link link--primary {% if sub_link.active %}is-active{% endif %}"><span>{{ sub_link.title }} {% if sub_link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ sub_link.object.products_count }}){% endif %}</span></a>
+                            <ul class="collection__filter-linklist">
+                                {% for sub_sub_link in sub_link.links %}
+                                <li>
+                                <a href="{{ sub_sub_link.url }}" class="collection__filter-link link link--primary {% if sub_sub_link.active %}is-active{% endif %}"><span>{{ sub_sub_link.title }} {% if sub_sub_link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ sub_sub_link.object.products_count }}){% endif %}</span></a>
+                                </li>
+                                {% endfor %}
+                            </ul>
                             </li>
-                            {% endfor %}
+                            
+                            {%- endfor -%}
                         </ul>
-                        </li>
-                        
-                        {%- endfor -%}
+                        </div>
+                        {%- else -%}
+                        <a href="{{ link.url }}" class="collection__filter-link link link--primary {% if link.active %}is-active{% endif %}"><span>{{ link.title }} {% if link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ link.object.products_count }}){% endif %}</span></a>
+                        {%- endif -%}
+                    </li>
+                    {%- endfor -%}
+            
                     </ul>
-                    </div>
-                    {%- else -%}
-                    <a href="{{ link.url }}" class="collection__filter-link link link--primary {% if link.active %}is-active{% endif %}"><span>{{ link.title }} {% if link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ link.object.products_count }}){% endif %}</span></a>
-                    {%- endif -%}
-                </li>
-                {%- endfor -%}
-        
-                </ul>
-            </div>
+                </div>
             {%- endif -%}
                     
                         <span 
@@ -162,8 +161,8 @@
                             data-category="{{ collection.id }}">
                         </span>
                 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        {% include 'collection-info' %}
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            {% include 'collection-info' %}
         </div>
     </div> 				 
 </section>

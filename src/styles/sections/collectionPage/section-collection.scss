@@ -9,6 +9,8 @@
     padding: 25px 45px 65px;
 
     &__wrapper {
+        display: flex;
+        flex-direction: column;
         width: 100%;
         max-width: $small_main-wrapper;
         display: flex;
@@ -42,21 +44,242 @@
         }
     }
 
-    .wrapper {
-        display: flex;
-        gap: 60px;
-    }
-
-    .filter,
-    .collection {
+    //USF
+    .collection__description {
         width: 100%;
+        margin-bottom: 40px;
+
+        h2 {
+            strong {
+                font-family: 'Operetta8';
+                font-weight: 600;
+                font-size: 46px;
+                font-feature-settings: 'pnum' on, 'lnum' on, 'swsh' on;
+                color: $silver-color;
+            }
+        }
+
+        p {
+            font-family: 'Helvetica';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.4;
+            color: $silver-color;
+        }
+    }
+    
+    #usf_container {
+        display: flex;
     }
 
-    .filter {
-
+    .usf-views,
+    .usf-sr-summary {
+        display: none;
     }
 
-    .collection {
-
+    .usf-c-select {
+        margin-left: auto;
     }
+
+    .usf-c-select__input-value.usf-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: unset;
+        padding: 0;
+        border: none;
+        font-family: 'Teko';
+        font-weight: 600;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $silver-color;
+
+        &::after {
+            position: unset;
+        }
+    }
+
+    .usf-c-select__btn.usf-btn {
+        font-family: 'Teko';
+        font-weight: 600;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $silver-color;
+    }
+
+    .usf-c-select__btn.usf-btn.usf-selected {
+        color: $primary-color;
+    }
+
+    .usf-facets {
+        width: 310px;
+    }
+
+    .usf-sr-container {
+        width: 100%;
+        padding-left: 60px;
+    }
+
+    .usf-facet .usf-title .usf-label {
+        font-family: 'Helvetica';
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: capitalize;
+        color: $silver-color;
+    }
+
+    .usf-btn {
+        font-family: 'Helvetica';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.56;
+        color: $silver-color;
+    }
+
+    .usf-facet-values--List .usf-facet-value-multiple {
+        padding: 0 0 0 30px;
+    }
+
+    .usf-slider-input__from input,
+    .usf-slider-input__to input {
+        border-color: $pre_light_brown-color;
+        font-family: 'Helvetica';
+        font-weight: 400;
+        font-size: 16px;
+        color: $silver-color;
+    }
+
+    .usf-slider-pip__value {
+        font-family: 'Helvetica';
+        font-weight: 400;
+        font-size: 12px;
+        color: $silver-color;
+    }
+
+    .usf-c-slider__track {
+        border-top-color: $primary-color;
+        border-bottom-color: $primary-color;
+
+        .usf-active {
+            top: -2px;
+            background-color: $primary-color;
+        }
+    }
+
+    .usf-c-slider__handle {
+        top: -7px;
+        width: 16px;
+        height: 16px;
+        border: 6px solid $primary-color;
+    }
+
+    .usf-c-slider__handle-max {
+        margin-left: -7px;
+    }
+
+    .usf-facet {
+        border-bottom: 1px solid $new_lighten_silver-color;
+    }
+
+    .usf-facet-values.usf-scrollbar.usf-facet-values--List {
+        max-height: 100% !important;
+    }
+
+    .usf-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .grid__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px;
+
+            &:nth-child(odd) {
+                background-color: $lighten_brown-color;
+            }
+
+            .media {
+                img {
+                    display: none;
+                    width: 100%;
+                    height: 320px;
+                    margin-bottom: 40px;
+                    object-fit: contain;
+                }
+
+                img:first-child {
+                    display: flex;
+                }
+            }
+
+            .card__inner {
+                .card__heading {
+                    display: flex;
+                    width: 100%;
+                    margin-bottom: 15px;
+                    font-family: 'Operetta8';
+                    font-weight: 600;
+                    font-size: 20px;
+                    text-align: center;
+                    color: $silver-color;
+                }
+            }
+
+            .card__badge {
+                display: none;
+            }
+
+            .card__content {
+                .card__heading,
+                .visually-hidden,
+                .caption-with-letter-spacing,
+                .caption-large,
+                .price__sale {
+                    display: none;
+                }
+
+                .price__regular {
+
+                }
+
+                .price-item {
+                    display: flex;
+                    width: fit-content;
+                    margin: 0 auto 15px;
+                    font-family: 'Operetta8';
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: $new_light_silver-color;
+                }
+            }
+
+            .buy-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+                padding: 0 50px;
+                border: 1px solid $primary-color;
+                font-family: 'Operetta8';
+                font-weight: 600;
+                font-size: 16px;
+                background-color: $primary-color;
+                color: $white-color;
+                transition: background-color .2s ease, color .2s ease;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $white-color;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+//USF
+.usf-collections-page {
+    overflow-x: hidden;
 }

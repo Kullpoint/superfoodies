@@ -7,19 +7,15 @@
     }
     }, 1500);
     
-      Clerk('on','rendered','#clerk_cat', function(){
+    Clerk('on','rendered','#clerk_cat', function(){
         jQuery('#clerk_cat').appendTo('.collection__description').first();
-      });
     });
-    </script>	
+    });
+</script>	
              
-                  
-        <div id="usf_container"></div>
-       
-        
-        {% if collection.metafields.c_additional_info.content != blank %}
-          <div class="collection__description">
-            {{ collection.metafields.c_additional_info.content }}
-    
-          </div>
-        {% endif %}
+{% if collection.metafields.c_additional_info.content != blank %}
+    <div class="collection__description">
+        {{ collection.metafields.c_additional_info.content }}
+    </div>
+{% endif %}                  
+<div id="usf_container"></div>
