@@ -118,7 +118,7 @@
         align-items: center;
 
         :is(.next-button, .prew-button) {
-            border: 1px solid $pre_light-silver;
+            border: 1px solid $pre_light_silver-color;
             padding: 11px 15px;
         }
 
@@ -131,7 +131,7 @@
         }
 
         .page-button {
-            border: 1px solid $pre_light-silver;
+            border: 1px solid $pre_light_silver-color;
             padding: 5px 14.55px;
             transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
         }

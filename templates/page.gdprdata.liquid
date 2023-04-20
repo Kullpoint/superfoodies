@@ -3,40 +3,105 @@ Page Liquid for GDPR Compliance & Cookie Consent Shopify app: https://apps.shopi
 The 3 GDPR pages (Request Personal Data, My Personal Data, Edit Personal Data) should use this liquid.
 PLEASE DON'T MODIFY
 {% endcomment %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/yui/3.18.0/cssreset-context/cssreset-context-min.css" type="text/css"/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/yui/3.18.0/cssreset-context/cssreset-context-min.css"
+  type="text/css" />
 <style>
-  
-  p.pd-guest-warning {font-weight:600;} /* new */
-  .pd-section {margin-bottom: 20px} /* new */
-  .pd-section h3.pd-section-title {margin-bottom: 0;} /* new */
-  .pd-section p.pd-section-title {font-weight:bold; margin-bottom: 5px;} /* new */
-  .pd-section p.pd-section-paragraph {margin-bottom: 5px;} /* new */
-  .pd-confirmation-prompt-message {margin-right:10px;} /* new */
-  
-  .pd-request-form-container {margin-top:10px;} /* new */
-  .pd-section .pd-input-field { width: 100%; margin-bottom:5px;}/* new */
-  .pd-section .pd-horizontal-menu {margin-bottom: 4px;}/* new */
-  .pd-section .pd-horizontal-menu ul {list-style:none!important; margin: 0; display:flex; padding:0;}/* new */
-  .pd-section .pd-horizontal-menu ul li {margin-right:15px;} /* new */
-  .pd-section .pd-horizontal-menu ul li:first-child {margin:0;} /* new */
-  .pd-section .pd-horizontal-menu ul li a.pd-action-link {display: block;}
-  .pd-section .pd-horizontal-menu ul li a.pd-action-link.disabled {pointer-events:none;cursor: default; color: #bbb}
-    
-  a.pd-link {font-size: 0.9rem}  
-  
+
+  p.pd-guest-warning {
+    font-weight: 600;
+  } /* new */
+  .pd-section {
+    margin-bottom: 20px
+  } /* new */
+  .pd-section h3.pd-section-title {
+    margin-bottom: 0;
+  } /* new */
+  .pd-section p.pd-section-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  } /* new */
+  .pd-section p.pd-section-paragraph {
+    margin-bottom: 5px;
+  } /* new */
+  .pd-confirmation-prompt-message {
+    margin-right: 10px;
+  } /* new */
+
+  .pd-request-form-container {
+    margin-top: 10px;
+  } /* new */
+  .pd-section .pd-input-field {
+    width: 100%;
+    margin-bottom: 5px;
+  } /* new */
+  .pd-section .pd-horizontal-menu {
+    margin-bottom: 4px;
+  } /* new */
+  .pd-section .pd-horizontal-menu ul {
+    list-style: none !important;
+    margin: 0;
+    display: flex;
+    padding: 0;
+  } /* new */
+  .pd-section .pd-horizontal-menu ul li {
+    margin-right: 15px;
+  } /* new */
+  .pd-section .pd-horizontal-menu ul li:first-child {
+    margin: 0;
+  } /* new */
+  .pd-section .pd-horizontal-menu ul li a.pd-action-link {
+    display: block;
+  }
+  .pd-section .pd-horizontal-menu ul li a.pd-action-link.disabled {
+    pointer-events: none;
+    cursor: default;
+    color: #bbb
+  }
+
+  a.pd-link {
+    font-size: 0.9rem
+  }
+
   div.pd-empty-table {} /* new */
-  div.pd-rectify-data, div#pd-rectify-data-container {
+  div.pd-rectify-data,
+  div#pd-rectify-data-container {
     margin-top: 4px;
   }
 
-  div#pd-access-contents {margin-top: 4px}
-  div.yui3-cssreset p { padding: 2px;}
-  div.yui3-cssreset .label {font-weight: 600}
-  div.yui3-cssreset table {margin-top:10px; display:block; overflow-x:auto; overflow-y: auto; white-space: nowrap; margin-bottom:0; max-height: 400px } /* new */
-  div.yui3-cssreset table th {font-weight:600; padding:0 2px;} /* new */
-  div.yui3-cssreset table td {padding: 0 2px; min-width: 60px}
-  div.yui3-cssreset table .caption {text-align: left; font-weight: 600; padding: 2px;}
-  
+  div#pd-access-contents {
+    margin-top: 4px
+  }
+  div.yui3-cssreset p {
+    padding: 2px;
+  }
+  div.yui3-cssreset .label {
+    font-weight: 600
+  }
+  div.yui3-cssreset table {
+    margin-top: 10px;
+    display: block;
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: nowrap;
+    margin-bottom: 0;
+    max-height: 400px
+  } /* new */
+  div.yui3-cssreset table th {
+    font-weight: 600;
+    padding: 0 2px;
+  } /* new */
+  div.yui3-cssreset table td {
+    padding: 0 2px;
+    min-width: 60px
+  }
+  div.yui3-cssreset table .caption {
+    text-align: left;
+    font-weight: 600;
+    padding: 2px;
+  }
+
 
 
   .pd-section .pd-loader {
@@ -66,7 +131,7 @@ PLEASE DON'T MODIFY
   /* :not(:required) hides these rules from IE9 and below */
   .pd-section .pd-loader:not(:required) {
     /* hide "loading..." text */
-    font: 0/0 a;
+    font: 0 / 0 a;
     color: transparent;
     text-shadow: none;
     background-color: transparent;
@@ -158,7 +223,8 @@ PLEASE DON'T MODIFY
   <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb">
     <ol class="breadcrumb__list">
       <li class="breadcrumb__item">
-        <a class="breadcrumb__link link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a> {%- render 'icon', icon: 'arrow-right' -%}
+        <a class="breadcrumb__link link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a>
+        {%- render 'icon', icon: 'arrow-right' -%}
       </li>
       <li class="breadcrumb__item">
         <span class="breadcrumb__link" aria-current="page">{{ page.title }}</span>
@@ -172,22 +238,26 @@ PLEASE DON'T MODIFY
   <div class="page__content rte">
     {{ page.content }}
     <!-- <div class="page__content--left">
-     
+
     </div>
     <div class="page__content--right">
-      {% section 'page-featured-products' %}
-    </div> -->
-    
-  </div>
+    {% section 'page-featured-products' %}
+    </div> --></div>
 </div>
 
-{% section 'activecampaign-NL' %}
+{% section 'Section-subscribe' %}
 <div>
   {% if customer %}
     {% assign hash_id = customer.id | append: '-' | append: "18645043" %}
   {% else %}
     {% assign hash_id = '0-' | append: "18645043" %}
-  {% endif %}  
-  <input type="hidden" value="{{ hash_id | hmac_sha256: "FDK__D9382943FF__D_" }}" id="gdpr_hmac" />
-  <input type="hidden" id="accounts_enabled" value="{{ shop.customer_accounts_enabled }}" />
+  {% endif %}
+  <input
+    type="hidden"
+    value="{{ hash_id | hmac_sha256: "FDK__D9382943FF__D_" }}"
+    id="gdpr_hmac" />
+  <input
+    type="hidden"
+    id="accounts_enabled"
+    value="{{ shop.customer_accounts_enabled }}" />
 </div>

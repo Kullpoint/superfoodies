@@ -1,21 +1,76 @@
 <script defer>
-    var catWidth = jQuery('.collection__dynamic-part').width();
-    document.addEventListener('DOMContentLoaded', (event) => {
-    setTimeout(function(){
-    if(jQuery('.collection__description').first().text().length > 1){
-        Clerk('content', '#clerk_cat');
-    }
-    }, 1500);
-    
-    Clerk('on','rendered','#clerk_cat', function(){
-        jQuery('#clerk_cat').appendTo('.collection__description').first();
-    });
-    });
+    setInterval(() => {
+        const usfFiltersBody = document.querySelector('.usf-facets__body');
+        if (usfFiltersBody && usfFiltersBody.querySelector('[data-secondary-filter]')) {
+            const secondaryFilterInner = usfFiltersBody.querySelector('[data-secondary-filter]');
+            if (!secondaryFilterInner.classList.contains('imlemented')) {
+                secondaryFilterInner.classList.add('imlemented');
+                secondaryFilterInner.setAttribute('data-implemented-secondary-filter', '');
+            }
+        }
+        else if (usfFiltersBody && !usfFiltersBody.querySelector('[data-secondary-filter]')) {
+            const secondaryFilter = document.querySelector('[data-secondary-filter]');
+            usfFiltersBody.prepend(secondaryFilter);
+        }
+    }, 10);
 </script>	
              
 {% if collection.metafields.c_additional_info.content != blank %}
     <div class="collection__description">
         {{ collection.metafields.c_additional_info.content }}
     </div>
-{% endif %}                  
+    <h1 class="collection__title dn">{{ collection.title }}</h1>
+{% else %}
+    <h1 class="collection__title">{{ collection.title }}</h1>
+{% endif %}
+{%- if has_filters -%}
+        <div class="layout__section layout__section--secondary hidden-pocket" data-secondary-filter>
+          <div class="card collection__sidebar">
+            {%- if quick_links_menu.links.size > 0 -%}
+              <div class="card__section card__section--tight collection__quick-links">
+                <p class="card__title--small heading">{{ quick_links_menu.title }}</p>
+
+                <ul class="collection__filter-linklist collection__filter-linklist--parent">
+                  {%- for link in quick_links_menu.links -%}
+                    <li>
+                      {%- if link.links.size > 0 -%}
+                        {%- capture link_id -%}filter-{% increment link_id %}{%- endcapture -%}
+
+                        <button class="collection__filter-link link link--primary {% if link.active or link.child_active %}is-active{% endif %}" data-action="toggle-collapsible" aria-controls="{{ link_id }}" aria-expanded="{% if link.active or link.child_active %}true{% else %}false{% endif %}" data-categories-link>
+                          {{ link.title }} {% if link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ link.object.products_count }}){% endif %} {%- render 'icon', icon: 'arrow-bottom' -%}
+                        </button>
+
+                        <div id="{{ link_id }}" class="collection__filter-collapsible" {% if link.active or link.child_active %}aria-hidden="false" style="height: auto"{% else %}aria-hidden="true"{% endif %}>
+                          <ul class="collection__filter-linklist">
+                            {%- for sub_link in link.links -%}
+                              <li>
+                                <a href="{{ sub_link.url }}" class="collection__filter-link link link--primary {% if sub_link.active %}is-active{% endif %}">{{ sub_link.title | downcase }} {% if sub_link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ sub_link.object.products_count }}){% endif %}</a>
+                                <ul>
+                                    {% for sub_sub_link in sub_link.links %}
+                                        <li>
+                                            <a href="{{ sub_sub_link.url }}" class="collection__filter-link sublink link link--primary {% if sub_sub_link.active %}is-active{% endif %}">{{ sub_sub_link.title | downcase }} {% if sub_sub_link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ sub_sub_link.object.products_count }}){% endif %}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        </div>
+                      {%- else -%}
+                        <a href="{{ link.url }}" class="collection__filter-link link link--primary {% if link.active %}is-active{% endif %}">{{ link.title }} {% if link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ link.object.products_count }}){% endif %}</a>
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endif -%}
+
+            <div class="collection__filters">
+                <div class="collection__filters-header {% if current_tags != blank and current_tags.size > 0 %}active{% endif %}">
+                <p class="card__title--small heading">{{ 'collection.filter.all' | t }}</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}       
 <div id="usf_container"></div>

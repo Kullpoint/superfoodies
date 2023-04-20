@@ -1,3 +1,7 @@
+{% liquid
+    render 'Section-styles', name: 'section-search'
+%}
+
 {% comment %}
 
 <!-- BEGIN USF -->
@@ -74,25 +78,6 @@
 
 {% comment %}USF
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {%- comment -%}We start by creating a lot of useful variables !{%- endcomment -%}
 
 {%- assign view_mode = cart.attributes.collection_layout | default: section.settings.default_view_layout -%}
@@ -125,11 +110,6 @@
   "gridClasses": {{ grid_classes | json }}
 }
 {%- endcapture -%}
-
-
-
-
-
 
 <section data-section-id="{{ section.id }}" data-section-type="collection" data-section-settings='{{ section_settings }}'>
   <div class="container {% if search.performed and search.results_count > 0 %}container--flush{% endif %}">
@@ -625,6 +605,17 @@
 {% endcomment %}
 
 <div class="page-width clerk-page-width">
+  <h1 class="search-title"></h1>
+  <script>
+    const searchTitle = document.querySelector('.search-title');
+
+    setInterval(() => {
+      if (document.getElementById('kdDZiIR4') && searchTitle.innerHTML == '') {
+        searchTitle.innerHTML = document.getElementById('kdDZiIR4').innerHTML;
+        searchTitle.innerHTML += `(${ document.querySelectorAll('[data-clerk-product-id]').length })`
+      }
+    }, 10);
+  </script>
 <span
     id="clerk-search"
     class="clerk"

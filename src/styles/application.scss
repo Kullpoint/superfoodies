@@ -108,3 +108,41 @@ ul {
         color: $silver-color;
     }
 }
+
+/* ================================================ DEFAULT PAGES =================================================  */
+
+.breadcrumb {
+    display: none;
+}
+
+.container--narrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 121px;
+    padding: 30px 45px 60px;
+
+    .page__content,
+    .page__header {
+        width: 100%;
+        max-width: $main-wrapper;
+        color: $silver-color;
+    }
+
+    .page__header {
+        margin: 0 auto;
+        font-weight: 600;
+        font-size: 21px;
+        font-feature-settings: 'pnum' on, 'lnum' on, 'swsh' on;
+        text-align: center;
+    }
+
+    .page__content {
+        p {
+            font-family: 'Helvetica';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.44;
+        }
+    }
+}

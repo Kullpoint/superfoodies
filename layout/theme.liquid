@@ -8,16 +8,27 @@
         <meta name="format-detection" content="address=no">
         <meta name="format-detection" content="email=no">
         {{ content_for_header }}
-        {{ 'application.css' | asset_url | stylesheet_tag }}    
-        {% comment %} {% if template.name != 'page' %}
-            {% assign templateStyles = template.name | append: '.css' %}
-            {{ templateStyles | asset_url | stylesheet_tag }}
-        {% else %}
-            {% assign templateStyles = page.handle | append: '.css' %}
-            {{ templateStyles | asset_url | stylesheet_tag }}
-        {% endif %} {% endcomment %}
+        {{ 'application.css' | asset_url | stylesheet_tag }}
         {% if template.name == 'product' %}
             {{ 'productPage.css' | asset_url | stylesheet_tag }}
+        {% endif %}
+
+        {% if template.name == 'search' %}
+            <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
+            <!-- Start of Clerk.io E-commerce Personalisation tool - www.clerk.io -->
+                <script type="text/javascript">
+                (function(w,d){
+                var e=d.createElement('script');e.type='text/javascript';e.async=true;
+                e.src=(d.location.protocol=='https:'?'https':'http')+'://cdn.clerk.io/clerk.js';
+                var s=d.getElementsByTagName('script')[0];s.parentNode.insertBefore(e,s);
+                w.__clerk_q=w.__clerk_q||[];w.Clerk=w.Clerk||function(){w.__clerk_q.push(arguments)};
+                })(window,document);
+
+                Clerk('config', {
+                key: 'uy2y57rwCkAYQ7WeEa3IEzLIHhGmUJZb'
+                });
+            </script>
+            <!-- End of Clerk.io E-commerce Personalisation tool - www.clerk.io -->
         {% endif %}
     </head>
   <body style="overflow: hidden;">
@@ -28,13 +39,5 @@
     </main>
     {% section 'NewFooter' %}
     <script src="{{ 'application.js' | asset_url }}" defer></script>
-    {% comment %} <script src="{{ 'header.js' | asset_url }}" defer></script> {% endcomment %}
-    {% comment %} {% if template.name != 'page' %}
-        {% assign templateScripts = template.name | append: '.js' %}
-        <script type="module" src="{{ templateScripts | asset_url }}" defer></script>
-    {% else %}
-        {% assign templateScripts = page.handle | append: '.js' %}
-        <script type="module" src="{{ templateScripts | asset_url }}" defer></script>
-    {% endif %} {% endcomment %}
   </body>
 </html>

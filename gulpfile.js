@@ -16,6 +16,8 @@ const sassFiles = [
     'src/styles/sections/productPage/section-pii.scss',
     //collection page
     'src/styles/sections/collectionPage/section-collection.scss',
+    //search page
+    'src/styles/sections/searchPage/section-search.scss',
     //all reusable sections
     'src/styles/sections/section-pwi.scss',
     'src/styles/sections/section-iwi.scss',

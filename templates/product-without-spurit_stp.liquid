@@ -13,16 +13,18 @@ If the product contains the special __gift tag, we prevent it to be completely a
   {% section 'featured-posts' %}
   {% section 'product-recommendations' %}
   {% section 'product-best' %}
-  {% section 'activecampaign-NL' %}
-  
-<div style="display: none">
-  {% section 'static-promotion-list' %}
-  {% section 'static-recently-viewed-products' %}
-</div>
+  {% section 'Section-subscribe' %}
+
+  <div style="display: none">
+    {% section 'static-promotion-list' %}
+    {% section 'static-recently-viewed-products' %}
+  </div>
 
 
   <script>
-    window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)};
+    window.ShopifyXR = window.ShopifyXR || function() {
+      (ShopifyXR.q = ShopifyXR.q || []).push(arguments)
+    };
     ShopifyXR('addModels', {{ product.media | where: 'media_type', 'model' | json }});
   </script>
 {%- endif -%}
