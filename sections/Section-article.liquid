@@ -1,10 +1,10 @@
 {% liquid
-    render 'Section-styles', name: 'section-blog'
-    render 'Section-scripts', name: 'section-blog'
+    render 'Section-styles', name: 'section-article'
+    render 'Section-scripts', name: 'section-article'
 %}
 
 <style>
-    .section-blog {
+    .section-article {
         margin-top: {{ section.settings.margin-top }}px;
         margin-bottom: {{ section.settings.margin-bottom }}px;
     }
@@ -12,24 +12,73 @@
 
 </style>
 
-<section class="section-blog">
-    <div class="section-blog__wrapper">
-        <h1 class="section-blog__title">Contact</h1>
-        <p class="section-blog__description">
-            Wil je met ons in blog komen?
-            Dat kan door simpelweg dit formulier in te vullen of door middel van e-mail, telefoon of live chat.
-            Superfoods BV is bereikbaar van maandag t/m vrijdag 09:00 — 18:00
-            (kerstdagen en nieuwjaarsdag uitgezonderd
-        </p>
-        <div class="section-blog__body">
-            
+<section class="section-article">
+    <div class="section-article__wrapper">
+       <div class="section-article__image-wrapper">
+            <img class="section-article__image" src="{{ article.image | image_url }}" alt="{{ article.image.src }}" loading="lazy" width="{{ article.image.width }}" height="{{ article.image.height }}">
+       </div>
+       <div class="section-article__text">
+        <div class="section-article__text-inner">
+            <h1 class="section-article__titile">{{ article.title }}</h1>
+            <div class="section-article__info">
+                <div class="section-article__date">
+                    <h6>{{ article.tags[0] }}</h6>
+                    {% render 'Icon-blog-date-star' %}
+                    <h6>{{ article.published_at | date: "%b. %d, %Y" }}</h6>
+                </div>
+                <div class="section-article__social">
+                    <h6>Delen:</h6>
+                    <ul>
+                        <a href="">
+                            {% render 'Icon-facebook' %}
+                        </a>
+                        <a href="">
+                            {% render 'Icon-twitter' %}
+                        </a>
+                        <a href="">
+                            {% render 'Icon-pinterest' %}
+                        </a>
+                        <a href="">
+                            {% render 'Icon-telegram' %}
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-article__description">
+                {{ article.content }}
+            </div>
+            <div class="section-article__info">
+                <div class="section-article__date">
+                    <h6>{{ article.tags[0] }}</h6>
+                    {% render 'Icon-blog-date-star' %}
+                    <h6>{{ article.published_at | date: "%b. %d, %Y" }}</h6>
+                </div>
+                <div class="section-article__social">
+                    <h6>Delen:</h6>
+                    <ul>
+                        <a href="">
+                            {% render 'Icon-facebook' %}
+                        </a>
+                        <a href="">
+                            {% render 'Icon-twitter' %}
+                        </a>
+                        <a href="">
+                            {% render 'Icon-pinterest' %}
+                        </a>
+                        <a href="">
+                            {% render 'Icon-telegram' %}
+                        </a>
+                    </ul>
+                </div>
+            </div>
         </div>
+       </div>
     </div>
 </section>
 
 {% schema %}
     {
-        "name": "Blog template",
+        "name": "Article template",
         "settings": [
             {
                 "type": "text",
@@ -51,7 +100,7 @@
                 "step": 5,
                 "unit": "px",
                 "label": "Margin top",
-                "default": 185
+                "default": 120
             },
             {
                 "type": "range",
@@ -83,12 +132,6 @@
             }
         ],
         "presets": [
-            {
-                "name": "Blog template",
-                "settings": {
-
-                }
-            }
         ]
     }
 {% endschema %}

@@ -20,7 +20,7 @@
 
 <section class="section-blog">
     <div class="section-blog__wrapper">
-        <h1 class="section-blog__title">Recepten waar superfoodies van houden</h1>
+        <h1 class="section-blog__title">{{ section.settings.title }}</h1>
         <div class="section-blog__filter">
             <h4 class="section-blog__filter-title" open-filter>
                 Filter by
@@ -85,13 +85,7 @@
                 "type": "text",
                 "id": "title",
                 "label": "Title",
-                "default": "Mijn winkelmandje"
-            },
-            {
-                "type": "textarea",
-                "id": "description",
-                "label": "Description",
-                "info": "Use <br> to break a line"
+                "default": "Recepten waar superfoodies van houden"
             },
             {
                 "type": "range",
