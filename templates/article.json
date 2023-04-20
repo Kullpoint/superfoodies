@@ -1,11 +1,72 @@
 {
     "sections": {
         "template": {
-            "type": "Section-article"
+            "type": "Section-article",
+            "blocks": {
+                "title-block": {
+                  "type": "title"
+                },
+                "social-block": {
+                    "type": "social"
+                },
+                "desc-block": {
+                    "type": "description"
+                },
+                "social-block-2": {
+                    "type": "social"
+                }
+              },
+              "block_order": [
+                "title-block",
+                "social-block",
+                "desc-block",
+                "social-block-2"
+              ]
+        },
+        "section-recipes": {
+            "type": "Section-featured-articles",
+            "blocks": {
+              "74f8e1d5-f23a-44c0-a050-17e5ef29122b": {
+                "type": "block",
+                "settings": {
+                  "recipe": "news\/de-grootste-fout-bij-het-maken-van-een-smoothie"
+                }
+              },
+              "b9b04c54-63f6-49fb-9808-9c9854d1f411": {
+                "type": "block",
+                "settings": {
+                  "recipe": "recepten\/pasta-met-vegan-kaas-saus"
+                }
+              },
+              "1b7f76ff-b3e0-4381-b456-7053bfdd3f1a": {
+                "type": "block",
+                "settings": {
+                  "recipe": "recepten\/green-protein-smoothie-bowl-met-bloemkool"
+                }
+              },
+              "018b7b25-85d8-4f32-9752-eee3906b66eb": {
+                "type": "block",
+                "settings": {
+                  "recipe": "recepten\/gezonde-crispy-cacao-rijst-snacks"
+                }
+              }
+            },
+            "block_order": [
+              "74f8e1d5-f23a-44c0-a050-17e5ef29122b",
+              "b9b04c54-63f6-49fb-9808-9c9854d1f411",
+              "1b7f76ff-b3e0-4381-b456-7053bfdd3f1a",
+              "018b7b25-85d8-4f32-9752-eee3906b66eb"
+            ],
+            "settings": {
+              "title": "Andere recepten die u misschien leuk vindt",
+              "padding-top": 70,
+              "padding-bottom": 85,
+              "link-title": "BEKIJK ALLES"
+            }
         },
         "subscribe": {
             "type": "Section-subscribe"
         }
     },
-    "order": ["template","subscribe"]
+    "order": ["template","section-recipes","subscribe"]
 }
