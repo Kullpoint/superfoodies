@@ -1,22 +1,50 @@
-// counter
+const productQuantityChangeLogic = () => {
+    const products = document.querySelectorAll('[product-selector]');
+    const cartCounter = document.querySelector('[data-cart-count]');
+    const cartPrice = document.querySelector('[data-cart-price]');
 
-const counterIncreaseBtn = document.querySelector('[counter-btn-top]');
-const counterDecreaseBtn = document.querySelector('[counter-btn-bottom]');
-const counterInput = document.getElementById('counterInput');
+    if (products.length > 0) {
+        for (const product of products) {
+            const productID = product.getAttribute('product-selector');
+            const productQuantitySelect = product.querySelector('[data-product-quantity]');
+            const productTotalPrice = product.querySelector('[data-product-total-price]');
+            
+            productQuantitySelect.addEventListener('change', () => {
+                const updateObj = {};
 
-const counter = () => {
-    counterIncreaseBtn.addEventListener('click', () => {
-        if(counterInput.value < 10){
-            counterInput.value = +counterInput.value + 1;
+                updateObj[productID] = productQuantitySelect.value;
+
+                fetch(window.Shopify.routes.root + 'cart/update.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(
+                        {
+                            updates: updateObj
+                        }
+                    )
+                })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+
+                    for (const item of data.items) {
+                        if (item.id == productID) {
+                            productTotalPrice.innerHTML = ("€" + (item.final_line_price / 100));
+                            productQuantitySelect.value = item.quantity;
+                        }
+                    }
+                    
+                    cartCounter.innerHTML = data.item_count;
+                    cartPrice.innerHTML = ("€" + (data.total_price / 100));
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            });
         }
-        
-    });
-
-    counterDecreaseBtn.addEventListener('click', () => {
-        if(counterInput.value > 0){
-            counterInput.value = +counterInput.value - 1;
-        }
-    })
+    }
 }
 
-counter()
+productQuantityChangeLogic();

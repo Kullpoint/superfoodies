@@ -49,12 +49,15 @@
         font-family: 'Operetta8';
         font-weight: 600;
         font-size: 46px;
-        font-feature-settings: 'pnum' on, 'lnum' on, 'swsh' on;
         color: $silver-color;
     }
 
     .collection__title {
         margin-bottom: 25px;
+    }
+
+    .collection__description h2 strong {
+        font-feature-settings: 'pnum' on, 'lnum' on, 'swsh' on;
     }
 
     .collection__title.dn {

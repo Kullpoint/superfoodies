@@ -35,6 +35,22 @@
         border-bottom: 1px solid $light_brown-color;
     }
 
+    .product__counter {
+        width: 80px;
+        height: 50px;
+        border: 1px solid $light_brown-color;
+        background-color: transparent;
+        cursor: pointer;
+        appearance: none;
+        position: relative;
+        z-index: 1;
+        padding: 0 15px;
+        font-family: 'Helvetica';
+        font-weight: 400;
+        font-size: 18px;
+        color: $silver-color;
+    }
+
     h6 { 
         font-weight: 600;
         font-size: 16px;
@@ -233,50 +249,24 @@
     }
 }
 
-.product-counter {
+.cart-product__counter {
+    .counter-wrapper {
+        position: relative;
+        width: fit-content;
 
-    &__inner {
-        max-width: 82px;
-        width: 100%;
-        height: 46px;
-        display: flex;
-        margin-top: 7px;
-        border: 1px solid $light_brown-color;
-    }
-
-    input {
-        width: 50%;
-        border: none;
-        background-color: transparent;
-        padding-left: 15px;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        appearance: none;
-        margin: 0;
-        font-family: 'Helvetica';
-        font-weight: 400;
-        font-size: 18px;
-        color: $silver-color;
-    }
-
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        display: none;
-    }
-
-    &__buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        justify-content: center;
-        gap: 10px;
-        width: 50%;
-        padding-right: 15px;
-
-        svg {
-            cursor: pointer;
+        .price {
+            display: none;
+            font-size: 46px;
+            text-transform: uppercase;
+            color: $silver-color;
         }
 
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 15px;
+        }
     }
 
     @media screen and (max-width: $mobile) {
@@ -285,11 +275,6 @@
         display: flex;
         justify-content: end;
         width: 100%;
-
-        &__inner{
-            margin-top: 0;
-        }
-
     }
 }
 
@@ -328,22 +313,22 @@
     }
 
     &__button {
-        border: 1px solid $dark__orange-color;
+        border: 1px solid $primary-color;
         width: 100%;
         height: 52px;
-        background-color: $dark__orange-color;
+        background-color: $primary-color;
         color: $white-color;
         font-weight: 600;
         font-size: 16px;
         text-transform: uppercase;
+        color: $white-color;
         cursor: pointer;
-        transition: .3s ease-in-out;
+        transition: background-color .2s ease, color .2s ease;
     }
 
     &__button:hover {
-        background-color: transparent;
-        color: $dark__orange-color;
-        transition: .3s ease-in-out;
+        background-color: $white-color;
+        color: $primary-color;
     }
 
     @media screen and (max-width: $tabletXL) {

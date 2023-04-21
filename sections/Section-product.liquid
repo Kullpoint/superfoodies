@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="section-product__info">
-                    <div class="wrapper" data-product="{% if product.variants.size > 1 %}{{ product.variants[0].id }}{% else %}{{ product.id }}{% endif %}">
+                    <div class="wrapper" product-selector="{% if product.variants.size > 1 %}{{ product.variants[0].id }}{% else %}{{ product.id }}{% endif %}">
                 <div class="head">
                     <div class="head__title">“Heerlijke Zaadjes Voor In De Havermout Of Over Een Smoothie.”</div>
                     <div class="head__subtitle">— Lotte A., Gepelde hennep zaden klant</div>
@@ -85,7 +85,7 @@
                         </select>
                         {% render 'Chevrons', direction: 'down' %}
                     </div>
-                    <div class="buttons__submit" data-product-submit>VOEG TOE</div>
+                    <div class="buttons__submit" data-procut-cart-buybtn>VOEG TOE</div>
                     <div class="buttons__favourites">
                         {% render 'Icons', icon: 'hearth' %}
                     </div>

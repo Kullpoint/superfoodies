@@ -7,27 +7,29 @@ const showmoreLogic = () => {
         const showmoreBtn = section.querySelector('[data-showmore-btn]');
         const showlessBtn = section.querySelector('[data-showless-btn]');
 
-        const showMore = () => {
-            shortDescription.classList.add('dn');
-            description.classList.remove('dn');
-            showmoreBtn.classList.add('dn');
-            showlessBtn.classList.remove('dn');
+        if (showmoreBtn) {
+            const showMore = () => {
+                shortDescription.classList.add('dn');
+                description.classList.remove('dn');
+                showmoreBtn.classList.add('dn');
+                showlessBtn.classList.remove('dn');
+            }
+    
+            const showLess = () => {
+                shortDescription.classList.remove('dn');
+                description.classList.add('dn');
+                showmoreBtn.classList.remove('dn');
+                showlessBtn.classList.add('dn');
+            }
+    
+            showmoreBtn.addEventListener('click', () => {
+                showMore();
+            });
+    
+            showlessBtn.addEventListener('click', () => {
+                showLess();
+            });
         }
-
-        const showLess = () => {
-            shortDescription.classList.remove('dn');
-            description.classList.add('dn');
-            showmoreBtn.classList.remove('dn');
-            showlessBtn.classList.add('dn');
-        }
-
-        showmoreBtn.addEventListener('click', () => {
-            showMore();
-        });
-
-        showlessBtn.addEventListener('click', () => {
-            showLess();
-        });
     }
 }
 

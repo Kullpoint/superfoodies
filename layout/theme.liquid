@@ -39,5 +39,15 @@
     </main>
     {% section 'NewFooter' %}
     <script src="{{ 'application.js' | asset_url }}" defer></script>
+    <script>
+        if ({% if template.name == 'collection' %}true{% else %}false{% endif %}) {
+            window.allPageProducts = {{ collection.products | json }};
+        }
+        else {
+            window.allPageProducts == false;
+        }
+        
+        console.log(window.allPageProducts);
+    </script>
   </body>
 </html>

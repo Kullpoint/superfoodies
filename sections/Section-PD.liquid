@@ -17,32 +17,28 @@
     }
 </style>
 
-<section class="section-pd" data-product-description-section="{{ section.id }}">
-    <div class="section-pd__wrapper">
-        <h2 class="section-pd__title">{{ section.settings.title }}</h2>
-        <div class="section-pd__short-description" data-short-description>{{ section.settings.description | truncate: 740 }}</div>
-        <div class="section-pd__description dn" data-description>{{ section.settings.description }}</div>
-        <div class="section-pd__showmore" data-showmore-btn>MEER LEZEN {% render 'Chevrons', direction: 'down' %}</div>
-        <div class="section-pd__showless dn" data-showless-btn>VARSTOPPEN {% render 'Chevrons', direction: 'down' %}</div>
-    </div>
-</section>
+{% if product.metafields.tabs.tab_title != blank %}
+    {% for tab_title in product.metafields.tabs.tab_title %}
+        {% if tab_title == 'Productbeschrijving' %}
+            <section class="section-pd" data-product-description-section="{{ section.id }}">
+                <div class="section-pd__wrapper">
+                    <h2 class="section-pd__title">{{ tab_title }}</h2>
+                    <div class="section-pd__short-description" data-short-description>{{ product.metafields.tabs.tab_content[forloop.index0] | truncate: 740 }}</div>
+                    <div class="section-pd__description dn" data-description>{{ product.metafields.tabs.tab_content[forloop.index0] }}</div>
+                    {% if product.metafields.tabs.tab_content[forloop.index0].size > 740 %}
+                        <div class="section-pd__showmore" data-showmore-btn>MEER LEZEN {% render 'Chevrons', direction: 'down' %}</div>
+                        <div class="section-pd__showless dn" data-showless-btn>VARSTOPPEN {% render 'Chevrons', direction: 'down' %}</div>
+                    {% endif %}
+                </div>
+            </section>
+        {% endif %}
+    {% endfor %}
+{% endif %}
 
 {% schema %}
     {
         "name": "Product description",
         "settings": [
-            {
-                "type": "text",
-                "id": "title",
-                "label": "Title",
-                "default": "Productbeschrijving"
-            },
-            {
-                "type": "richtext",
-                "id": "description",
-                "label": "Default description",
-                "info": "This description will be shown when product doesn't have a description"
-            },
             {
                 "type": "range",
                 "id": "padding-top",

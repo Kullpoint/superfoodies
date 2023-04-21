@@ -93,10 +93,10 @@
             <div class="header__user">
                 {% render 'Icon-user' %}
             </div>
-            <div class="header__cart">
+            <a href="/cart" class="header__cart">
                 {% render 'Icon-cart' %}
-                <div class="count">0</div>
-            </div>
+                <div class="count" data-cart-count>{{ cart.item_count }}</div>
+            </a>
         </nav>
     </div>
 </header>

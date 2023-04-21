@@ -5,8 +5,14 @@
 <section class="section-fiwi" style="background-color: {{ section.settings.background }};">
     <div class="section-fiwi__wrapper {% if section.settings.reversed %}reversed{% endif %}">
         <div class="section-fiwi__info">
-            <h2 class="title">{{ section.settings.title }}</h2>
-            <div class="description">{{ section.settings.description }}</div>
+            {% if product.metafields.tabs.tab_title != blank %}
+                {% for tab_title in product.metafields.tabs.tab_title %}
+                    {% if tab_title == 'Gebruik en dosering' and tab_title == section.settings.title %}
+                        <h2 class="title">{{ tab_title }}</h2>
+                        <div class="description">{{ product.metafields.tabs.tab_content[forloop.index0] }}</div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
         </div>
         <img src="{{ section.settings.image | image_url }}" width="auto" height="auto" loading="lazy" class="section-fiwi__img">
     </div>
@@ -20,12 +26,6 @@
                 "type": "text",
                 "id": "title",
                 "label": "Title"
-            },
-            {
-                "type": "richtext",
-                "id": "description",
-                "label": "Description",
-                "info": "Use <br> to break a line"
             },
             {
                 "type": "image_picker",

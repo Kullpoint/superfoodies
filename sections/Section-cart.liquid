@@ -14,7 +14,6 @@
             margin-top: 140px;
         }
     }
-
 </style>
 
 <section class="section-cart">
@@ -28,38 +27,46 @@
                         <h6>Aantal</h6>
                         <h6>Totaal</h6>
                     </div>
-                    {% comment %} for item in cart.items  {% endcomment %}
-                        <div class="section-cart__product cart-product">
+                    {% for item in cart.items %}
+                        <div class="section-cart__product cart-product" product-selector="{{ item.id }}">
                             <div class="cart-product__inner">
-                               <a href="" class="cart-product__info">
-                                    {{ 'Cart-test-img.png' | asset_url | img_tag }}
+                               <a href="{{ item.url }}" class="cart-product__info">
+                                    {{ item.image | image_url | img_tag }}
                                     <div class="cart-product__text">
-                                        <h4>Bruine rijst eiwit poeder chocolade - Superfoodies - 500 gram</h4>
-                                        <h4>€71,00</h4>
+                                        <h4>{{ item.title }}</h4>
+                                        <h4>{{ item.final_price | money }}</h4>
                                     </div>
                                </a>
-                               <div class="cart-product__counter product-counter">
-                                    <div class="product-counter__inner">
-                                        <input type="number" max="10" value="1" step="1" readonly id="counterInput">
-                                        <div class="product-counter__buttons">
-                                            {% render 'Icon-product-counter-arrow-top' %}
-                                            {% render 'Icon-product-counter-arrow-bottom' %}
-                                        </div>
+                               <div class="cart-product__counter">
+                                    <div class="counter-wrapper">
+                                        {% for cartItem in cart.items %}
+                                            {% if cartItem.id == item.id %}
+                                                <select name="quantity" autocomplete="off" class="product__counter" data-product-quantity>
+                                                    {% assign inventoryQuantity = item.variant.inventory_quantity %}
+                                                    {% assign inventoryQuantityRange = (1..inventoryQuantity) %}
+                                                    {% for i in inventoryQuantityRange %}
+                                                        <option value="{{ i }}" {% if i == cartItem.quantity %}selected{% endif %}>{{ i }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                                {% render 'Chevrons', direction: 'down' %}
+                                                {% break %}
+                                            {% endif %}
+                                        {% endfor %}
                                     </div>
-                               </div>
+                                </div>
                                <div class="cart-product__price">
-                                    <h4 >€71,00</h4>
+                                    <h4 data-product-total-price>{{ item.final_line_price | money }}</h4>
                                     <h4>Verwijderen</h4>
                                </div>
                             </div>
                         </div>
-                    {% comment %} endfor  {% endcomment %}
+                    {% endfor %}
                 </div>
                 <div class="section-cart__total-block cart-total">
                     <div class="cart-total__inner">
                         <div class="cart-total__header">
                             <h5>Totaal</h5>
-                            <h4>€71,00</h4>
+                            <h4 data-cart-price>{{ cart.total_price | money }}</h4>
                         </div>
                         <p class="cart-total__text">Inclusief BTW. Verzendkosten worden berekend bij Afrekenen</p>
                         <button class="cart-total__button">AFREKENEN</button>

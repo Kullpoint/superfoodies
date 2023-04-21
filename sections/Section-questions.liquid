@@ -17,41 +17,41 @@
     }
 </style>
 
-<section class="section-questions">
-    {% render 'Section-backgrounds', background: 'vegetables-3' %}
-    <div class="section-questions__wrapper">
-        <h2 class="section-questions__title">{{ section.settings.title }}</h2>
-        <div class="section-questions__container">
-            {% for block in section.blocks %}
-                {% assign questionItem = block.settings %}
-                <div class="item" data-questions-item>
-                    <div class="item__title" data-questions-item-title>
-                        {{ questionItem.title }}
-                        <svg width="15" height="2" viewBox="0 0 15 2" fill="none" class="minus-icon dn" data-questions-item-minus-icon>
-                            <path d="M14.28 1.99949V0.354492H0V1.99949H14.28Z" fill="#4E4A33"/>
-                        </svg>
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" class="plus-icon" data-questions-item-plus-icon>
-                            <path d="M14.78 7.99949V6.35449H0.5V7.99949H14.78Z" fill="#4E4A33"/>
-                            <path d="M6.81752 14.3171L8.46252 14.3171L8.46252 0.0371094L6.81752 0.0371093L6.81752 14.3171Z" fill="#4E4A33"/>
-                        </svg>
+{% if product.metafields.tabs.tab_title != blank %}
+    {% for tab_title in product.metafields.tabs.tab_title %}
+        {% if tab_title == 'Veelgestelde vragen' %}
+            <section class="section-questions">
+                {% render 'Section-backgrounds', background: 'vegetables-3' %}
+                <div class="section-questions__wrapper">
+                    <h2 class="section-questions__title">{{ tab_title }}</h2>
+                    <div class="section-questions__container">
+                        {% for block in section.blocks %}
+                            {% assign questionItem = block.settings %}
+                            <div class="item" data-questions-item>
+                                <div class="item__title" data-questions-item-title>
+                                    {{ questionItem.title }}
+                                    <svg width="15" height="2" viewBox="0 0 15 2" fill="none" class="minus-icon dn" data-questions-item-minus-icon>
+                                        <path d="M14.28 1.99949V0.354492H0V1.99949H14.28Z" fill="#4E4A33"/>
+                                    </svg>
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" class="plus-icon" data-questions-item-plus-icon>
+                                        <path d="M14.78 7.99949V6.35449H0.5V7.99949H14.78Z" fill="#4E4A33"/>
+                                        <path d="M6.81752 14.3171L8.46252 14.3171L8.46252 0.0371094L6.81752 0.0371093L6.81752 14.3171Z" fill="#4E4A33"/>
+                                    </svg>
+                                </div>
+                                <div class="item__content dn" data-questions-item-content>{{ questionItem.content }}</div>
+                            </div>
+                        {% endfor %}
                     </div>
-                    <div class="item__content dn" data-questions-item-content>{{ questionItem.content }}</div>
                 </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
+            </section>
+        {% endif %}
+    {% endfor %}
+{% endif %}
 
 {% schema %}
     {
         "name": "Questions section",
         "settings": [
-            {
-                "type": "text",
-                "id": "title",
-                "label": "Title",
-                "default": "Veelgestelde vragen"
-            },
             {
                 "type": "range",
                 "id": "margin-top",

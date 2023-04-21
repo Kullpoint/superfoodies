@@ -172,6 +172,10 @@ ul {
     }
 }
 
+.grecaptcha-badge {
+    display: none !important;
+}
+
 @media screen and (max-width: $tablet) {
     .container--narrow {
         padding: 30px 15px 30px;
