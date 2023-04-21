@@ -1,48 +1,88 @@
 {% liquid
-    render 'Section-styles', name: 'section-blog'
-    render 'Section-scripts', name: 'section-blog'
+    render 'Section-styles', name: 'section-article'
+    render 'Section-scripts', name: 'section-article'
 %}
 
 <style>
-    .section-blog {
+    .section-article {
         margin-top: {{ section.settings.margin-top }}px;
         margin-bottom: {{ section.settings.margin-bottom }}px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .section-article {
+            margin-top: 110px;
+        }
     }
 
 
 </style>
 
-<section class="section-blog">
-    <div class="section-blog__wrapper">
-        <h1 class="section-blog__title">Contact</h1>
-        <p class="section-blog__description">
-            Wil je met ons in blog komen?
-            Dat kan door simpelweg dit formulier in te vullen of door middel van e-mail, telefoon of live chat.
-            Superfoods BV is bereikbaar van maandag t/m vrijdag 09:00 — 18:00
-            (kerstdagen en nieuwjaarsdag uitgezonderd
-        </p>
-        <div class="section-blog__body">
-            
+<section class="section-article">
+    <div class="section-article__wrapper">
+       <div class="section-article__image-wrapper">
+            <img class="section-article__image" src="{{ article.image | image_url }}" alt="{{ article.image.src }}" loading="lazy" width="{{ article.image.width }}" height="{{ article.image.height }}">
+       </div>
+       <div class="section-article__text">
+        <div class="section-article__text-inner">
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'title' %}
+                        <h1 class="section-article__title">{{ article.title }}</h1>
+                    {% when 'social' %}
+                        <div class="section-article__info">
+                            <div class="section-article__date">
+                                <div class="section-article__tags">
+                                    {%- for tag in article.tags -%}
+                                        <a href="/blogs/{{ blog.handle }}/tagged/{{ tag | handle }}" class="link link--accented {% if settings.underline_links %}link--underline{% endif %}">{{ tag | capitalize }}</a>{%- unless forloop.last -%},&nbsp;{%- endunless -%}
+                                    {%- endfor -%}
+                                </div>
+                                
+                                {% render 'Icon-blog-date-star' %}
+                                <h6>{{ article.published_at | date: "%b. %d, %Y" }}</h6>
+                            </div>
+                            <div class="section-article__social">
+                                <h6>{{ block.settings.label }}</h6>
+                                <ul>
+                                    {% if block.settings.facebook %}
+                                        <a href="{{ block.settings.facebook }}">
+                                            {% render 'Icon-facebook' %}
+                                        </a>
+                                    {% endif %}
+                                    {% if block.settings.twitter %}
+                                        <a href="{{ block.settings.twitter }}">
+                                            {% render 'Icon-twitter' %}
+                                        </a>
+                                    {% endif %}
+                                    {% if block.settings.pinterest %}
+                                        <a href="{{ block.settings.pinterest }}">
+                                            {% render 'Icon-pinterest' %}
+                                        </a>
+                                    {% endif %}
+                                    {% if block.settings.telegram %}
+                                        <a href="{{ block.settings.telegram }}">
+                                            {% render 'Icon-telegram' %}
+                                        </a>
+                                    {% endif %}
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    {% when 'description' %}
+                        <div class="section-article__description">
+                            {{ article.content }}
+                        </div>
+                {% endcase %}
+            {% endfor %}
         </div>
+       </div>
     </div>
 </section>
 
 {% schema %}
     {
-        "name": "Blog template",
+        "name": "Article template",
         "settings": [
-            {
-                "type": "text",
-                "id": "title",
-                "label": "Title",
-                "default": "Mijn winkelmandje"
-            },
-            {
-                "type": "textarea",
-                "id": "description",
-                "label": "Description",
-                "info": "Use <br> to break a line"
-            },
             {
                 "type": "range",
                 "id": "margin-top",
@@ -51,7 +91,7 @@
                 "step": 5,
                 "unit": "px",
                 "label": "Margin top",
-                "default": 185
+                "default": 120
             },
             {
                 "type": "range",
@@ -66,29 +106,51 @@
         ],
         "blocks": [
             {
-                "name": "Item",
-                "type": "block",
+                "name": "Title",
+                "type": "title"
+            },
+            {
+                "name": "Social media and tags",
+                "type": "social",
                 "settings": [
                     {
-                        "type": "image_picker",
-                        "id": "item-logo",
-                        "label": "Partner logo"
+                        "type": "text",
+                        "id": "label",
+                        "label": "Social media label",
+                        "default": "DELEN:"
                     },
                     {
                         "type": "url",
-                        "id": "item-url",
-                        "label": "Partner link"
+                        "id": "facebook",
+                        "label": "Facebook url",
+                        "default": "/"
+                    },
+                    {
+                        "type": "url",
+                        "id": "twitter",
+                        "label": "Twitter url",
+                        "default": "/"
+                    },
+                    {
+                        "type": "url",
+                        "id": "pinterest",
+                        "label": "Pinterest url",
+                        "default": "/"
+                    },
+                    {
+                        "type": "url",
+                        "id": "telegram",
+                        "label": "Telegram url",
+                        "default": "/"
                     }
                 ]
+            },
+            {
+                "name": "Description",
+                "type": "description"
             }
         ],
         "presets": [
-            {
-                "name": "Blog template",
-                "settings": {
-
-                }
-            }
         ]
     }
 {% endschema %}

@@ -14,3 +14,12 @@ for(let btn of filterBtn) {
 
 }
 
+//open filter for mobile devices
+const openBtn = document.querySelector('[open-filter]');
+const filterBody = document.querySelector('[filter-body]');
+
+openBtn.addEventListener('click', () => {
+    filterBody.classList.toggle('active');
+    openBtn.classList.toggle('active');
+})
+

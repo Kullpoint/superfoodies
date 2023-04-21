@@ -9,18 +9,24 @@
         margin-bottom: {{ section.settings.margin-bottom }}px;
     }
 
+    @media screen and (max-width: 576px) {
+        .section-blog {
+            margin-top: 140px;
+            margin-bottom: 65px;
+        }
+    }
 
 </style>
 
 <section class="section-blog">
     <div class="section-blog__wrapper">
-        <h1 class="section-blog__title">Recepten waar superfoodies van houden</h1>
+        <h1 class="section-blog__title">{{ section.settings.title }}</h1>
         <div class="section-blog__filter">
-            <h4 class="section-blog__filter-title">
+            <h4 class="section-blog__filter-title" open-filter>
                 Filter by
                 {% render 'Icon-pagination-arrow' %}
             </h4>
-            <ul class="section-blog__filter-wrapper">
+            <ul class="section-blog__filter-wrapper" filter-body>
                 <li class="section-blog__filter-tag section-blog__filter-tag_uppercase active" all-posts-btn>
                     <a href="{{ blog.url }}">Alle</a>
                 </li>
@@ -32,7 +38,7 @@
                 {% endfor %}
             </ul>
         </div>
-        {% paginate blog.articles by 8 %}
+        {% paginate blog.articles by 12 %}
             <div class="section-blog__body">
                 {% for article in blog.articles %}
                     <div class="article-card">
@@ -79,13 +85,7 @@
                 "type": "text",
                 "id": "title",
                 "label": "Title",
-                "default": "Mijn winkelmandje"
-            },
-            {
-                "type": "textarea",
-                "id": "description",
-                "label": "Description",
-                "info": "Use <br> to break a line"
+                "default": "Recepten waar superfoodies van houden"
             },
             {
                 "type": "range",

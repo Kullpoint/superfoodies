@@ -15,7 +15,7 @@
   \**********************************************/
 /***/ (() => {
 
-eval("//blog posts filter\nconst allPostsBtn = document.querySelector('[all-posts-btn]');\nconst tagHandle = window.location.href.split('/').slice(-1)[0];\nconst filterBtn = document.querySelectorAll('[filter-btn]');\n\nfor(let btn of filterBtn) {\n    const btnHref = btn.getAttribute('href').split('/').slice(-1)[0];\n    btn.parentElement.classList.remove('active');\n    \n    if (btnHref === tagHandle) {\n        allPostsBtn.classList.remove('active');\n        btn.parentElement.classList.add('active');\n    }\n\n}\n\n\n\n//# sourceURL=webpack://superfoodies/./src/scripts/sections/section-blog.js?");
+eval("//blog posts filter\nconst allPostsBtn = document.querySelector('[all-posts-btn]');\nconst tagHandle = window.location.href.split('/').slice(-1)[0];\nconst filterBtn = document.querySelectorAll('[filter-btn]');\n\nfor(let btn of filterBtn) {\n    const btnHref = btn.getAttribute('href').split('/').slice(-1)[0];\n    btn.parentElement.classList.remove('active');\n    \n    if (btnHref === tagHandle) {\n        allPostsBtn.classList.remove('active');\n        btn.parentElement.classList.add('active');\n    }\n\n}\n\n//open filter for mobile devices\nconst openBtn = document.querySelector('[open-filter]');\nconst filterBody = document.querySelector('[filter-body]');\n\nopenBtn.addEventListener('click', () => {\n    filterBody.classList.toggle('active');\n    openBtn.classList.toggle('active');\n})\n\n\n\n//# sourceURL=webpack://superfoodies/./src/scripts/sections/section-blog.js?");
 
 /***/ })
 
