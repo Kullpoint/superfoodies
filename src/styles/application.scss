@@ -125,24 +125,55 @@ ul {
     .page__content,
     .page__header {
         width: 100%;
-        max-width: $main-wrapper;
+        max-width: $second-wrapper;
         color: $silver-color;
     }
 
     .page__header {
-        margin: 0 auto;
+        margin: 0 auto 20px;
         font-weight: 600;
         font-size: 21px;
         font-feature-settings: 'pnum' on, 'lnum' on, 'swsh' on;
         text-align: center;
+
+        .page-date {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+        }
     }
 
     .page__content {
-        p {
+        p,
+        li,
+        em,
+        .std {
             font-family: 'Helvetica';
             font-weight: 400;
             font-size: 18px;
             line-height: 1.44;
         }
+
+        a {
+            color: $primary-color;
+        }
+
+        ul {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid $new_silver-color;
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .container--narrow {
+        padding: 30px 15px 30px;
     }
 }
