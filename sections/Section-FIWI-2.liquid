@@ -1,0 +1,55 @@
+{% liquid
+    render 'Section-styles', name: 'section-fiwi-2'
+%}
+
+<section class="section-fiwi" style="background-color: {{ section.settings.background }};">
+    <div class="section-fiwi__wrapper {% if section.settings.reversed %}reversed{% endif %}">
+        <div class="section-fiwi__info">
+            <h2 class="title">{{ section.settings.title }}</h2>
+            <div class="description">{{ section.settings.description }}</div>
+        </div>
+        <img src="{{ section.settings.image | image_url }}" width="auto" height="auto" loading="lazy" class="section-fiwi__img">
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Fullscr info with image 2",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "richtext",
+                "id": "description",
+                "label": "Description",
+                "info": "Use <br> to break a line"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "checkbox",
+                "id": "reversed",
+                "label": "Reversed"
+            },
+            {
+                "type": "color",
+                "id": "background",
+                "label": "Info background color"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Fullscr info with image 2",
+                "settings": {
+
+                }
+            }
+        ]
+    }
+{% endschema %}

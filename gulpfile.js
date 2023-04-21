@@ -32,12 +32,17 @@ const sassFiles = [
     'src/styles/sections/section-iwv.scss',
     'src/styles/sections/section-fiwt.scss',
     'src/styles/sections/section-fiwi.scss',
+    'src/styles/sections/section-fiwi-2.scss',
     'src/styles/sections/section-questions.scss',
     'src/styles/sections/section-cart.scss',
     'src/styles/sections/section-contact.scss',
     'src/styles/sections/section-contact.scss',
     'src/styles/sections/section-blog.scss',
     'src/styles/sections/section-article.scss',
+    'src/styles/sections/section-hero-2.scss',
+    'src/styles/sections/section-aiwt.scss',
+    'src/styles/sections/section-ats.scss',
+    'src/styles/sections/section-ats-2.scss',
 ];
 
 gulp.task('dev', () => {

@@ -1,0 +1,78 @@
+{
+    "sections": {
+        "hero": {
+            "type": "Section-hero-2",
+            "settings": {
+                "suptitle": "About us",
+                "title": "Superfoodies.nl pure food for body and soul "
+            }
+        },
+        "aiwt": {
+            "type": "Section-AIWT",
+            "settings": {
+                "description": "<p>''Superfoods is voeding voor lichaam en geest vanaf de allerbeste plekken ter aarde. Het is voedsel in al zijn puurheid en volledig op eigen kracht gegroeid. Deze voeding is zoals de natuur het voor ons heeft bedoeld: vol voedingsstoffen die onze cellen op het meest fundamentele niveau geven wat ze nodig hebben voor energie, balans, schoonheid en een slank lichaam.''</p>",
+                "image": "shopify:\/\/shop_images\/about-icon-1.jpg",
+                "background": "#F3E8D2"
+            }
+        },
+        "ats":{
+            "type": "Section-ATS",
+            "settings": {
+                "title": "Hervind je oorspronkelijke vitaliteit",
+                "description": "<p>Gezondheid is tegenwoordig niet meer vanzelfsprekend. Onder invloed van ontelbare prikkels uit je omgeving, is het een hele opgave om in balans te blijven. De cellen van je lichaam leven het langst wanneer ze maximaal worden voorzien van zuivere zuurstof, pure voeding en ze daarnaast al hun afvalstoffen weer kwijt kunnen. Hiervoor is een volledige samenwerking tussen lichaam en geest nodig. In het hele proces van mentale, emotionele en fysieke voeding opnemen, verwerken en weer loslaten, kan veel storing optreden. Dit ervaar je in de vorm van vermoeidheid en lusteloosheid, overgewicht of als ziekteverschijnselen. Herkenbaar?</p>"
+            }
+        },
+        "fiwi-1":{
+            "type": "Section-FIWI-2",
+            "settings": {
+                "title": "Voor Superfoodies is het onze levenstaak om je oorspronkelijke vitaliteit te her (vinden)",
+                "image": "shopify:\/\/shop_images\/about-2.jpg",
+                "description": "<p>Dit doen we door je te voorzien van voeding rechtstreeks uit de natuur van de beste plaatsen der aarde. Maar ook in de vorm van mentale voeding, door middel van boeken, DVD’s, seminars en workshops</p><h6>Puur leven met superfoods</h6><p>Het is de hoogste tijd om weer terug naar de basis te gaan. Alles wat je als mens nodig hebt om vitaal te leven is aanwezig op aarde. In het bijzonder in Superfoods. Deze 100% natuurlijke producten hebben een hoge concentratie aan stoffen die je lichaam écht voeden. Doordat de planten vaak op extreme plaatsen groeien; hoog in de Himalaya ’s, diep in de jungle of in woestijnen, hebben ze een bijzonder hoge concentratie natuurlijke afweerstoffen in zich. Die vormen het immuunsysteem van de plant. Deze bessen, bonen, vruchten of zaden worden daarom sinds mensenheugenis gebruikt als medicijn en als superbrandstof voor het lichaam. Door superfoods te eten ondersteun je jouw eigen afweersysteem om je lijf te reinigen, gezond en gifvrij te houden.</p>",
+                "reversed": true,
+                "background": "#CFD3B8"
+            
+            }
+        },
+        "fiwi-2":{
+            "type": "Section-FIWI-2",
+            "settings": {
+                "title": "Superfoodies stelt alles in het werk om de puurheid van deze superfoods te behouden",
+                "image": "shopify:\/\/shop_images\/about-3.jpg",
+                "description": "<p>De inkoop, het transport, de opslag en de verpakking van deze ‘pareltjes uit de natuur’ staan onder voortdurende controle. Met hart voor de oorspronkelijke plaatsen waar de superfoods vandaan komen.</p> <h6> Gezond kan ook lekker zijn </h6> <p>Lekker heeft vooral te maken met liefde voor jezelf. Je lichaam weet heel goed wat voedend en gezond is. In eerste instantie moet je lichaam weer wennen aan een oorspronkelijke smaak. Al het voedsel wat je normaal in de supermarkt vind zit vol met geur, kleur, smaak en conserveringsmiddelen. Hierdoor zijn je smaakpapillen behoorlijk beïnvloed.</p>",
+                "background": "#FBF0DF"
+            
+            }
+        },
+        "fiwi-3":{
+            "type": "Section-FIWI-2",
+            "settings": {
+                "title": "Superfoodies herinnert je aan jouw oorspronkelijke smaakbeleving",
+                "image": "shopify:\/\/shop_images\/about-4.jpg",
+                "description": "<p>Met zorgvuldig uitgeschreven menu’s, gebruiksaanwijzingen, workshops en instructie filmpjes ga je op ‘smaaksafari’. Wanneer je weer leert genieten van pure voeding, zal je behoefte naar ongezonde ‘lege’ voeding vanzelf wegebben. Je bent sneller vervuld op alle gebieden van je leven. Je hoeft niets meer na te jagen. Je voelt je gevoed. Dat geeft rust.</p> <h6>Zoveel mensen, zoveel superfood wensen</h6> <p>Je bent al een eind gekomen op je ontdekkingsreis. Het feit dat je deze informatie leest, wil zeggen dat je waarschijnlijk al het nodige hebt onderzocht op het gebied van jouw gezondheid. De reden voor deze bewustwording is meestal terug te brengen naar twee oorzaken; je bent uit balans geraakt of je wil nog meer uit jezelf halen.<p> <p>Superfoods helpen je om het evenwicht in je lichaam en geest te herstellen. Bovendien geven ze je de energie om optimaal te presteren.</p>",
+                "reversed": true,
+                "background": "#CFD3B8"
+            
+            }
+        },
+        "ats-2":{
+            "type": "Section-ATS-2",
+            "settings": {
+                "title": "Superfoodies heeft voor iedere doelgroep speciale superfood toepassingen.",
+                "description": "<p>Herstel na een (ernstige) lichamelijke ziekte, burn-out, schoonheid van binnenuit, peak-performance voor sporters en topmanagers, anti-aging en voor iedereen die bewust in het leven staat.</p>"
+            }
+        },
+        "subscribe": {
+            "type": "Section-subscribe"
+        }
+    },
+    "order": [
+        "hero",
+        "aiwt",
+        "ats",
+        "fiwi-1",
+        "fiwi-2",
+        "fiwi-3",
+        "ats-2",
+        "subscribe"
+    ]
+}

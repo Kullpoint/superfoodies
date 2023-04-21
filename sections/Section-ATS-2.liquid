@@ -1,0 +1,57 @@
+{% liquid
+    render 'Section-styles', name: 'section-ats-2'
+%}
+
+<section class="section-ats-2" style="background-color: {{ section.settings.background }};">
+    <div class="section-ats-2__wrapper">
+        <h1 class="section-ats-2__title">{{ section.settings.title }}</h1>
+        <div class="section-ats-2__text">
+            {{ section.settings.description }}
+        </div>
+    </div>
+    {% if section.settings.background-icon %}
+        {% render 'Section-backgrounds', background: 'vegetable-4' %}
+    {% endif %}
+</section>
+
+
+
+
+{% schema %}
+    {
+        "name": "About text section 2",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "Hervind je oorspronkelijke vitaliteit"
+            },
+            {
+                "type": "richtext",
+                "id": "description",
+                "label": "Description",
+                "info": "Use <br> to break a line"
+            },
+            {
+                "type": "checkbox",
+                "id": "background-icon",
+                "label": "Show background icon",
+                "default": true
+            },
+            {
+                "type": "color",
+                "id": "background",
+                "label": "Info background color"
+            }
+        ],
+        "presets": [
+            {
+                "name": "About text section 2",
+                "settings": {
+
+                }
+            }
+        ]
+    }
+{% endschema %}

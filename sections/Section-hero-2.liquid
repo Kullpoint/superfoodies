@@ -1,0 +1,44 @@
+{% liquid
+    render 'Section-styles', name: 'section-hero-2'
+    render 'Section-scripts', name: 'section-hero'
+%}
+
+<section class="section-hero">
+    {% if section.settings.bg-image != blank %}
+        <img src="{{ section.settings.bg-image | image_url }}" alt="{{ section.settings.bg-image.alt }}" width="auto" height="auto" loading="lazy" class="section-hero__bg-image gradient">
+        <div class="section-hero__bg-gradient"></div>
+    {% else %}
+        <img src="{{ 'Hero_BG.png' | asset_url }}" alt="hero background image" width="auto" height="auto" loading="lazy" class="section-hero__bg-image">
+    {% endif %}
+    <div class="section-hero__wrapper">
+        <div>
+            <div class="section-hero__suptitle">{{ section.settings.suptitle }}</div>
+            <h1 class="section-hero__title">{{ section.settings.title }}</h1>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Hero section",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "bg-image",
+                "label": "Background image"
+            },
+            {
+                "type": "textarea",
+                "id": "suptitle",
+                "label": "Suptitle",
+                "info": "Use <br> to break a line"
+            },
+            {
+                "type": "textarea",
+                "id": "title",
+                "label": "Title",
+                "info": "Use <br> to break a line"
+            }
+        ]
+    }
+{% endschema %}
