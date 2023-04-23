@@ -43,6 +43,7 @@
         if ({% if template.name == 'collection' %}true{% else %}false{% endif %}) {
             window.allPageProducts = {{ collection.products | json }};
         }
+            
         else {
             window.allPageProducts == false;
         }

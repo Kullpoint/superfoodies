@@ -1,11 +1,30 @@
 const collectionBuyButtons = () => {
-    const productCards = document.querySelectorAll('[product-selector]');
+    if (window.allPageProducts) {
+        const products = document.querySelectorAll('[product-selector]');
 
-    for (const productCard of productCards) {
-        if (!productCard.querySelector('[data-procut-cart-buybtn]')) {
-            productCard.innerHTML += `
-                <div class="buy-button" data-procut-cart-buybtn>VOEG TOE</div>
-            `;
+        if (products.length > 0) {
+            for (const product of products) {
+                const productID = product.getAttribute('product-selector');
+    
+                for (const allPageProduct of window.allPageProducts) {
+                    if (allPageProduct.id == productID) {
+                        if (allPageProduct.available != false) {
+                            if (!product.querySelector('[data-procut-cart-buybtn]')) {
+                                product.innerHTML += `
+                                    <div class="buy-button" data-procut-cart-buybtn>VOEG TOE</div>
+                                `;
+                            }
+                        }
+                        else {
+                            if (!product.querySelector('[data-procut-cart-subscribe]')) {
+                                product.innerHTML += `
+                                    <a href="${product.closest('[product-selector]').querySelector('a').getAttribute('href')}" class="buy-button" data-procut-cart-subscribe>BEKIJKEN</a>
+                                `;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

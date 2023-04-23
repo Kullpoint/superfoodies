@@ -231,6 +231,27 @@
         display: none;
     }
 
+    .buy-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        padding: 0 50px;
+        border: 1px solid $primary-color;
+        font-family: 'Operetta8';
+        font-weight: 600;
+        font-size: 16px;
+        background-color: $primary-color;
+        color: $white-color;
+        transition: background-color .2s ease, color .2s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $white-color;
+            color: $primary-color;
+        }
+    }
+
     @media screen and (max-width: $laptop) {
         #clerk-search-results {
             .clerk-grid {

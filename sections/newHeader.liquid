@@ -93,10 +93,27 @@
             <div class="header__user">
                 {% render 'Icon-user' %}
             </div>
-            <a href="/cart" class="header__cart">
-                {% render 'Icon-cart' %}
-                <div class="count" data-cart-count>{{ cart.item_count }}</div>
-            </a>
+            <div class="header__cart">
+                <div class="button" data-header-cart>
+                    {% render 'Icon-cart' %}
+                    <div class="count" data-cart-count>{{ cart.item_count }}</div>
+                </div>
+                <div class="cart-modal dn" data-cart-modal>
+                    <div class="cart-modal__wrapper">
+                        <div class="cart-modal__shipping" data-free-shipping>Spendeer <span>€<span data-free-shipping-price>59</span></span> meer voor gratis verzending!</div>
+                        <div class="cart-modal__bottom">
+                            <div class="total-block">
+                                <div class="title">Totaal</div>
+                                <div class="price" data-cart-modal-total-price>{{ cart.total_price | money }}</div>
+                            </div>
+                            <div class="buttons-block">
+                                <div class="back-button">Verder winkelen</div>
+                                <a href="/cart" class="cart-button">Bekijk winkelmandje</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
     </div>
 </header>
