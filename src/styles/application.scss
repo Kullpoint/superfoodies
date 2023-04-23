@@ -176,8 +176,25 @@ ul {
     display: none !important;
 }
 
+#wc_review_section {
+    max-width: $laptop;
+    margin: 0 auto;
+    display: flex;
+
+    .wc_review_top_title.wc_wf_cls {
+        display: none;
+    }
+
+    .wc_overall_review.wc_review_layout_1 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width: $tablet) {
     .container--narrow {
         padding: 30px 15px 30px;
     }
+
+
 }
