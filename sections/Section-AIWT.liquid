@@ -1,0 +1,62 @@
+{% liquid
+    render 'Section-styles', name: 'section-aiwt'
+%}
+
+<section class="section-aiwt" style="background-color: {{ section.settings.background }};">
+    <div class="section-aiwt__wrapper">
+       <div class="section-aiwt__text-block">
+            <div class="section-aiwt__text">
+                {{ section.settings.description }}
+            </div>
+       </div>
+       <div class="section-aiwt__image-block">
+            <div class="section-aiwt__image">
+                <img src="{{ section.settings.image | image_url }}" alt="{{ section.settings.image.alt }}" loading="lazy" width="{{ section.settings.image.width }}" height="{{ section.settings.image.height }}">
+            </div>
+       </div>
+    </div>
+    {% if section.settings.background-icon %}
+        {% render 'Section-backgrounds', background: 'rays-3' %}
+    {% endif %}
+</section>
+
+
+
+
+{% schema %}
+    {
+        "name": "About icon with text",
+        "settings": [
+            {
+                "type": "richtext",
+                "id": "description",
+                "label": "Description",
+                "info": "Use <br> to break a line"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "checkbox",
+                "id": "background-icon",
+                "label": "Show background icon",
+                "default": true
+            },
+            {
+                "type": "color",
+                "id": "background",
+                "label": "Info background color"
+            }
+        ],
+        "presets": [
+            {
+                "name": "About icon with text",
+                "settings": {
+
+                }
+            }
+        ]
+    }
+{% endschema %}

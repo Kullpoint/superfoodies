@@ -1,0 +1,122 @@
+@import '../variables.scss';
+
+.section-aiwt {
+    padding: 95px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &__wrapper {
+        max-width: 1600px;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    &__text-block {
+        max-width: 58.75%;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    &__text {
+        display: flex;
+        max-width: 694px;
+        margin: 98px 49px 0 0;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+
+        p {
+            font-family: 'Helvetica';
+            font-weight: 400;
+            font-size: 26px;
+            line-height: 41px;
+            color: $silver-color;
+            margin: 0;
+        }
+    }
+
+    &__image-block {
+        max-width: 41.25%;
+        width: 100%;
+    }
+
+    &__image {
+        position: relative;
+        z-index: 1;
+
+        img {
+            aspect-ratio: 0.823;
+            max-width: 511px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+
+    @media screen and (max-width: $laptopXL) {
+        &__wrapper {
+            max-width: $tabletXL;
+        }
+
+        &__text-block {
+            align-items: center;
+        }
+
+        &__text {
+            margin-top: 0;
+        }
+    }
+
+    @media screen and (max-width: $tabletXL) {
+        &__wrapper {
+            flex-wrap: wrap;
+            max-width: $tablet;
+            gap: 40px;
+        }
+
+        &__text-block, &__image-block {
+            max-width: 100%;
+        }
+
+        &__text-block {
+            justify-content: start;
+        }
+
+        &__image {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        &__text {
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 36px 0 47px;
+
+        &__wrapper {
+            margin: 0 15px;
+        }
+
+        &__text {
+            
+            p {
+                font-size: 22px;
+                line-height: 30px;
+            }
+        }
+    }
+}

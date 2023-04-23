@@ -1,0 +1,70 @@
+@import '../variables.scss';
+
+.section-ats {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 108px 0 136px;
+
+    &__wrapper {
+        max-width: $tablet;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    &__title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 60px;
+        color: $silver-color;
+        font-feature-settings: 'swsh' on;
+        text-align: center;
+        z-index: 1;
+
+    }
+
+    &__text {
+        text-align: center;
+        max-width: 747px;
+        z-index: 1;
+
+        
+        p {
+            margin: 0;
+            font-family: 'Helvetica';
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: $silver-color;
+        }
+    }
+
+    .vegetale-5-bg {
+        position: absolute;
+        top: -30%;
+        left: 0;
+        z-index: 0;
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 34px 0 59px;
+
+        &__wrapper {
+            margin: 0 15px;
+        }
+
+        &__title {
+            line-height: 45px;
+        }
+
+        &__text {
+            p {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+    }
+}

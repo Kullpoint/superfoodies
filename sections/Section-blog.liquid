@@ -38,7 +38,7 @@
                 {% endfor %}
             </ul>
         </div>
-        {% paginate blog.articles by 12 %}
+        {% paginate blog.articles by section.settings.articles-quant %}
             <div class="section-blog__body">
                 {% for article in blog.articles %}
                     <div class="article-card">
@@ -86,6 +86,15 @@
                 "id": "title",
                 "label": "Title",
                 "default": "Recepten waar superfoodies van houden"
+            },
+            {
+                "type": "range",
+                "id": "articles-quant",
+                "min": 0,
+                "max": 16,
+                "step": 1,
+                "label": "Articles quantity",
+                "default": 12
             },
             {
                 "type": "range",
